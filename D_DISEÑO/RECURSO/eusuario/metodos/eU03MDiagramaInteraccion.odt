@@ -1,0 +1,24 @@
+# Diagramas de Interacción
+
+## ¿Qué es?
+  - Representación visual del flujo de acciones entre el usuario y el sistema durante una tarea.
+  - Muestra cómo se comunican ambos y qué sucede en cada paso del proceso.
+
+## Objetivo
+  - Identificar puntos de fricción o confusión.
+  - Visualizar la experiencia completa del usuario.
+  - Facilitar la mejora del diseño desde la perspectiva del usuario.
+
+## Elementos comunes
+  - Pantallas o estados del sistema
+  - Acciones del usuario
+  - Decisiones o bifurcaciones
+  - Retroalimentación del sistema
+
+## Ventajas
+  - Ayuda a equipos multidisciplinares a entender la secuencia de interacción.
+  - Permite identificar errores antes del desarrollo.
+  - Es especialmente útil en prototipos tempranos.
+
+## Aplicación
+  - Ideal para mapear flujos como registro, compra, búsqueda, navegación, etc.

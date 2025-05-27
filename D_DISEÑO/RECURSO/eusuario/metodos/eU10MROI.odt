@@ -1,0 +1,44 @@
+# ROI - Retorno de Inversión
+
+## ¿Qué es?
+  - Métrica que permite medir el valor económico obtenido frente al coste invertido en una iniciativa o mejora.
+  - En experiencia de usuario, se usa para justificar inversiones en usabilidad, diseño y evaluación basada en datos reales.
+
+## Objetivo
+  - Justificar la importancia de invertir en experiencia de usuario ante stakeholders no técnicos.
+  - Mostrar cómo mejoras en UX pueden traducirse en beneficios económicos tangibles.
+  - Comparar diferentes estrategias o proyectos desde un punto de vista financiero.
+
+## Fórmula básica
+  - **ROI = (Beneficio – Coste) / Coste**
+  - Ejemplo: Si inviertes $1000 y obtienes $3000, tu ROI es (3000-1000)/1000 = 2 → 200%
+
+## Tipos de beneficios relacionados a UX
+  - Aumento de conversiones
+  - Reducción de costes en soporte técnico
+  - Disminución de errores del usuario
+  - Mejora en la fidelidad del cliente
+  - Menor tiempo de formación
+  - Mayor satisfacción del usuario
+
+## Ventajas
+  - Permite tomar decisiones informadas basadas en datos.
+  - Ayuda a priorizar inversiones en diseño UX cuando hay recursos limitados.
+  - Sirve como herramienta de comunicación con equipos no técnicos o gerenciales.
+
+## Limitaciones
+  - Algunos beneficios de la UX son intangibles y difíciles de cuantificar.
+  - Requiere recolección de datos históricos precisos para ser efectivo.
+  - Puede llevar tiempo ver resultados claros después de una mejora UX.
+
+## Aplicación práctica
+  - Comunicar a los directivos que cada segundo ahorrado al usuario puede significar miles de euros ahorrados a escala.
+  - Medir cómo una mejora en el proceso de registro aumenta la conversión de usuarios nuevos.
+
+## Buenas prácticas
+  - Usar métricas cualitativas y cuantitativas.
+  - No enfocarse solo en el número, sino también en la experiencia real del usuario.
+  - Comparar antes-después usando datos reales.
+
+## Ejemplo interactivo
+  - A continuación se muestra un ejemplo sencillo de calculadora de ROI en HTML/JS.

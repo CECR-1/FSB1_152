@@ -1,0 +1,45 @@
+# Pruebas A/B
+
+## ¿Qué es?
+  - Técnica de evaluación cuantitativa que compara dos o más versiones de un mismo elemento (como un botón, formulario o página completa) para ver cuál tiene mejor rendimiento.
+  - Se utiliza principalmente para optimizar conversiones, engagement y otros indicadores clave.
+
+## Objetivo
+  - Identificar qué diseño, texto, color o disposición genera mejores resultados medibles.
+  - Tomar decisiones basadas en datos reales de comportamiento de usuarios, no en suposiciones.
+
+## Tipos comunes
+  - **A/B Testing**: Comparación de solo dos versiones (A y B).
+  - **Multivariate Testing**: Comparación de múltiples variaciones de distintos elementos dentro de una misma página.
+
+## Métricas típicas
+  - Clics en botones
+  - Tiempo en página
+  - Tasa de conversión
+  - Scroll completado
+  - Porcentaje de formularios completados
+
+## Ventajas
+  - Resultados cuantitativos y medibles.
+  - Fácil de implementar con herramientas como Google Optimize, Optimizely o AB Tasty.
+  - Permite pequeñas iteraciones rápidas con impacto real.
+
+## Limitaciones
+  - No explica *por qué* una versión funciona mejor, solo cuál lo hace.
+  - Puede requerir grandes volúmenes de tráfico para obtener resultados significativos.
+  - Puede llevar a optimizaciones locales sin mejorar la experiencia general.
+
+## Buenas prácticas
+  - Probar una sola variable a la vez (en pruebas A/B simples).
+  - Establecer claramente la métrica principal antes de comenzar.
+  - Ejecutar la prueba hasta alcanzar significancia estadística.
+  - Documentar los resultados para aprendizaje futuro.
+
+## Herramientas comunes
+  - Google Optimize (ahora parte de GA4)
+  - Optimizely
+  - AB Tasty
+  - VWO
+
+## Ejemplo interactivo
+  - A continuación se muestra un ejemplo sencillo de cómo simular una prueba A/B entre dos versiones de un botón usando HTML/JS.

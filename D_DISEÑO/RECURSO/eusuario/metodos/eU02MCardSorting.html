@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Card Sorting Básico</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+        }
+
+        .category {
+            border: 2px dashed #999;
+            padding: 10px;
+            margin: 20px 0;
+            min-height: 100px;
+        }
+
+        .card {
+            display: inline-block;
+            background-color: #e0f7fa;
+            border: 1px solid #ccc;
+            padding: 10px;
+            margin: 5px;
+            cursor: move;
+        }
+
+        h2 {
+            color: #00796b;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Card Sorting Abierto - Ejemplo</h1>
+    <p>Arrastra las tarjetas a una categoría o crea tu propia clasificación.</p>
+
+    <div class="category" id="categoria1" ondrop="drop(event)" ondragover="allowDrop(event)">
+        <strong>Categoría 1</strong>
+    </div>
+
+    <div class="category" id="categoria2" ondrop="drop(event)" ondragover="allowDrop(event)">
+        <strong>Categoría 2</strong>
+    </div>
+
+    <div class="category" id="categoria3" ondrop="drop(event)" ondragover="allowDrop(event)">
+        <strong>Categoría 3</strong>
+    </div>
+
+    <h2>Tarjetas disponibles:</h2>
+    <div id="cards">
+        <div class="card" draggable="true" ondragstart="dragStart(event)" id="card1">Productos</div>
+        <div class="card" draggable="true" ondragstart="dragStart(event)" id="card2">Servicios</div>
+        <div class="card" draggable="true" ondragstart="dragStart(event)" id="card3">Blog</div>
+        <div class="card" draggable="true" ondragstart="dragStart(event)" id="card4">Soporte</div>
+        <div class="card" draggable="true" ondragstart="dragStart(event)" id="card5">Contacto</div>
+    </div>
+
+    <script>
+        let draggedItem = null;
+
+        function dragStart(event) {
+            draggedItem = event.target;
+        }
+
+        function allowDrop(event) {
+            event.preventDefault();
+        }
+
+        function drop(event) {
+            event.preventDefault();
+            if (draggedItem) {
+                event.currentTarget.appendChild(draggedItem);
+                draggedItem = null;
+            }
+        }
+    </script>
+
+</body>
+
+</html>

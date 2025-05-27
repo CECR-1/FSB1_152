@@ -1,0 +1,40 @@
+# Personajes y Escenarios
+
+## ¿Qué es?
+  - Técnicas de diseño centradas en el usuario que permiten crear representaciones ficticias pero realistas de los tipos de usuarios que utilizarán el producto.
+  - Los escenarios narran situaciones concretas en las que estos personajes interactúan con el sistema para lograr sus objetivos.
+
+## Objetivo
+  - Facilitar decisiones de diseño basadas en necesidades reales de los usuarios.
+  - Comunicar de forma clara quién es el usuario objetivo y cuáles son sus motivaciones, objetivos y contextos de uso.
+  - Guiar la creación de tareas, prototipos y pruebas con usuarios.
+
+## Tipos de personajes
+  - **Primarios**: Son los usuarios principales que definen el diseño del producto.
+  - **Secundarios**: Usuarios importantes pero no centrales.
+  - **Negativos o excluyentes**: Representan a usuarios para los que el producto no está diseñado.
+
+## Elementos clave de un personaje
+  - Nombre y foto (para humanizarlo)
+  - Edad, género, ubicación
+  - Profesión y nivel tecnológico
+  - Objetivos y motivaciones
+  - Necesidades y frustraciones
+  - Comportamiento frente al producto
+
+## Ventajas
+  - Ayudan a mantener el enfoque centrado en el usuario durante todo el proceso de diseño.
+  - Mejoran la empatía del equipo hacia los usuarios reales.
+  - Permiten priorizar funcionalidades según su relevancia para los usuarios.
+  - Sirven como base para crear escenarios y guiones de prueba.
+
+## Escenarios
+  - Narrativas breves que describen cómo un personaje interactúa con el producto en un contexto específico.
+  - Pueden incluir:
+    - El objetivo del personaje
+    - Su punto de partida
+    - La secuencia de acciones
+    - Las expectativas y resultados deseados
+
+## Ejemplo interactivo
+  - A continuación se muestra un ejemplo sencillo de una página web que presenta un personaje y un escenario asociado.

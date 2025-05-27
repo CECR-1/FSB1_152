@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Cuestionario Post-Prueba</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+            max-width: 700px;
+            margin: auto;
+            background-color: #f9f9f9;
+        }
+
+        h1 {
+            color: #00796b;
+        }
+
+        label {
+            display: block;
+            margin-top: 15px;
+            font-weight: bold;
+        }
+
+        input[type="text"],
+        textarea,
+        select,
+        input[type="range"] {
+            width: 100%;
+            padding: 8px;
+            margin-top: 5px;
+            border-radius: 4px;
+            border: 1px solid #ccc;
+        }
+
+        .btn {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 10px 20px;
+            background-color: #00796b;
+            color: white;
+            text-decoration: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Cuestionario Post-Prueba</h1>
+    <p>Gracias por participar. Por favor responde este breve cuestionario.</p>
+
+    <form id="cuestionarioForm">
+
+        <!-- Nombre (opcional) -->
+        <label for="nombre">¿Cuál es tu nombre? (opcional)</label>
+        <input type="text" id="nombre" name="nombre">
+
+        <!-- Facilidad de uso -->
+        <label>¿Cómo calificarías la facilidad de uso del producto?</label>
+        <input type="range" min="1" max="5" name="facilidad" value="3">
+        <div>
+            <span>1 - Muy difícil</span> &nbsp;&nbsp;&nbsp; <span>5 - Muy fácil</span>
+        </div>
+
+        <!-- Claridad de las tareas -->
+        <label>¿Las instrucciones y objetivos eran claros?</label>
+        <select name="claridad">
+            <option value="">Seleccione una opción</option>
+            <option value="si">Sí</option>
+            <option value="no">No</option>
+            <option value="parcial">En parte</option>
+        </select>
+
+        <!-- Dificultad encontrada -->
+        <label>¿Encontraste alguna dificultad durante la prueba?</label>
+        <textarea name="dificultades" rows="4" placeholder="Describe brevemente..."></textarea>
+
+        <!-- Satisfacción general -->
+        <label>¿Cómo calificarías tu experiencia general?</label>
+        <input type="range" min="1" max="5" name="satisfaccion" value="3">
+        <div>
+            <span>1 - Muy insatisfecho</span> &nbsp;&nbsp;&nbsp; <span>5 - Muy satisfecho</span>
+        </div>
+
+        <!-- Comentarios finales -->
+        <label>¿Tienes algún comentario adicional o sugerencia?</label>
+        <textarea name="comentarios" rows="4" placeholder="Escribe aquí..."></textarea>
+
+        <!-- Botón de envío -->
+        <button type="submit" class="btn">Enviar Respuestas</button>
+
+    </form>
+
+    <script>
+        document.getElementById("cuestionarioForm").addEventListener("submit", function (event) {
+            event.preventDefault();
+            alert("¡Gracias por completar el cuestionario!");
+            // Aquí podrías enviar los datos a un servidor o guardarlos localmente
+        });
+    </script>
+
+</body>
+
+</html>

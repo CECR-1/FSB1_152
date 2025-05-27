@@ -1,0 +1,49 @@
+# Wireframes
+
+## ¿Qué es?
+  - Representaciones esquemáticas de una interfaz sin estilo ni color, enfocadas en funcionalidad, estructura y jerarquía visual.
+  - Sirven para planificar la disposición de elementos antes de desarrollar o diseñar visualmente el producto.
+
+## Objetivo
+  - Comunicar la lógica del diseño antes de invertir en desarrollo o estilos visuales.
+  - Validar con stakeholders o usuarios que la propuesta responde a las necesidades funcionales.
+  - Servir como base para prototipos interactivos y pruebas tempranas.
+
+## Ventajas clave
+  - Rápidos de crear y fáciles de modificar.
+  - Centrados en contenido y funcionalidad, no en detalles estéticos.
+  - Útiles para alinear equipos multidisciplinares.
+  - Reducen costes al detectar problemas temprano.
+
+## Niveles de detalle
+  - **Bajo**: Estructura general (ej: encabezado, menú, contenido, pie).
+  - **Medio**: Incluye interacciones básicas y relaciones entre pantallas.
+  - **Alto**: Detalles sobre estados, comportamientos dinámicos y microinteracciones.
+
+## Elementos comunes en un wireframe
+  - Contenedores de texto e imágenes (sin imagen real)
+  - Botones y llamadas a la acción
+  - Menús y navegación
+  - Formularios y campos
+  - Zonas de interacción
+
+## Herramientas comunes
+  - Figma
+  - Balsamiq
+  - Adobe XD
+  - Sketch
+  - Pencil Project (open source)
+
+## Aplicación
+  - Ideal para presentar ideas tempranas a clientes o equipos.
+  - Base para prototipos interactivos.
+  - Referencia para desarrolladores durante la implementación.
+
+## Buenas prácticas
+  - Evitar colores brillantes o tipografías decorativas.
+  - Usar grises y blanco/negro para mantener el enfoque en estructura.
+  - Mantener consistencia en tamaño y posición de elementos clave.
+  - Etiquetar claramente cada sección o componente.
+
+## Ejemplo interactivo
+  - A continuación se muestra un ejemplo sencillo de wireframe estático usando HTML/CSS.

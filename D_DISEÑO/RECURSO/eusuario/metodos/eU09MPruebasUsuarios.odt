@@ -1,0 +1,51 @@
+# Pruebas con Usuarios
+
+## ¿Qué es?
+  - Método cualitativo de evaluación de la experiencia de usuario que consiste en observar cómo usuarios reales interactúan con un producto, identificando puntos de confusión, errores y oportunidades de mejora.
+
+## Objetivo
+  - Detectar problemas de usabilidad antes del lanzamiento.
+  - Validar si el diseño cumple con las expectativas y necesidades de los usuarios.
+  - Entender cómo piensan los usuarios mientras realizan tareas específicas.
+
+## Tipos comunes
+  - **Pruebas moderadas**: Conducidas por un facilitador que guía al usuario durante la sesión.
+  - **Pruebas no moderadas**: Realizadas de forma remota sin intervención directa.
+  - **Pruebas formativas**: Durante el desarrollo para mejorar el diseño.
+  - **Pruebas sumativas**: Al final del proceso para medir la usabilidad global.
+
+## Número recomendado de participantes
+  - Generalmente se recomienda trabajar con **5 usuarios**, ya que este número permite detectar hasta el **85% de los problemas de usabilidad**.
+  - Añadir más usuarios incrementa la cobertura pero disminuye el rendimiento marginal de nuevos hallazgos.
+
+## Características clave
+  - Se deben seleccionar usuarios con perfil cercano al del público objetivo.
+  - Las pruebas deben simular contextos reales de uso.
+  - Es importante grabar las sesiones (audio, video e interacción en pantalla) para análisis posterior.
+
+## Técnicas comunes
+  - **Think-aloud**: El usuario verbaliza sus pensamientos mientras realiza las tareas.
+  - **Test de 5 segundos**: Se muestra la interfaz durante 5 segundos y luego se pregunta qué recuerda o cuál fue su impresión.
+  - **Tareas definidas**: Se le pide al usuario realizar acciones específicas para observar cómo lo hace.
+
+## Métricas típicas
+  - Tiempo de tarea
+  - Éxito de tarea (completada / fallida)
+  - Número y tipo de errores cometidos
+  - Satisfacción percibida (post-prueba)
+
+## Buenas prácticas
+  - No ayudar al usuario durante la prueba: solo observar y registrar.
+  - Usar un guion estructurado para mantener consistencia entre sesiones.
+  - Crear un ambiente relajado para fomentar la naturalidad en la interacción.
+  - Combinar datos objetivos (qué hizo el usuario) con subjetivos (qué dijo sentir).
+
+## Herramientas comunes
+  - **Silverback**
+  - **Morae**
+  - **Lookback**
+  - **Hotjar** (para pruebas remotas)
+  - **UserTesting.com**
+
+## Ejemplo interactivo
+  - A continuación se muestra un ejemplo sencillo de una plantilla HTML para registrar las respuestas de un cuestionario post-prueba con usuarios.

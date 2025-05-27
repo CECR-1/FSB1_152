@@ -1,0 +1,29 @@
+# Diseño Modular
+
+## ¿Qué es?
+  - Enfoque de diseño basado en bloques o componentes reutilizables que se combinan para crear interfaces coherentes y escalables.
+  - Cada módulo tiene una función definida, puede ser reutilizado y adaptado a distintos contextos.
+
+## Objetivo
+  - Lograr consistencia visual y funcional.
+  - Facilitar la escalabilidad y mantenimiento del diseño.
+  - Mejorar la eficiencia del proceso de diseño y desarrollo.
+
+## Ventajas clave
+  - Reutilización: Ahorro de tiempo y recursos.
+  - Consistencia: Experiencia uniforme para el usuario.
+  - Escalabilidad: Fácil de ampliar o adaptar a nuevos contextos.
+  - Colaboración: Facilita el trabajo entre diseñadores y desarrolladores.
+
+## Aplicación común
+  - Ideal para sistemas grandes, páginas dinámicas o multiplataforma.
+  - Ampliamente usado en metodologías como Atomic Design, BEM (Block Element Modifier), y sistemas de diseño como Material Design o Bootstrap.
+
+## Principios relacionados
+  - Jerarquía visual
+  - Gestalt
+  - Relevancia
+  - Eficiencia
+
+## Ejemplo interactivo
+  - A continuación se muestra un ejemplo sencillo de diseño modular usando HTML/CSS.

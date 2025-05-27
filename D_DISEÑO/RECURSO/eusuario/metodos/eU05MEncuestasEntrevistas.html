@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Encuesta de Satisfacción</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+            max-width: 600px;
+            margin: auto;
+            background-color: #f9f9f9;
+        }
+
+        h1 {
+            color: #00796b;
+        }
+
+        label {
+            display: block;
+            margin-top: 15px;
+            font-weight: bold;
+        }
+
+        input[type="text"],
+        textarea,
+        select {
+            width: 100%;
+            padding: 8px;
+            margin-top: 5px;
+            border-radius: 4px;
+            border: 1px solid #ccc;
+        }
+
+        .btn {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 10px 20px;
+            background-color: #00796b;
+            color: white;
+            text-decoration: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Encuesta de Satisfacción</h1>
+    <p>Por favor, dedique unos minutos a responder esta breve encuesta.</p>
+
+    <form id="encuestaForm">
+
+        <!-- Pregunta abierta -->
+        <label for="nombre">¿Cuál es su nombre? (opcional)</label>
+        <input type="text" id="nombre" name="nombre">
+
+        <!-- Pregunta de opción múltiple -->
+        <label>¿Cómo se enteró de nuestro producto?</label>
+        <select name="referencia">
+            <option value="">Seleccione una opción</option>
+            <option value="redes">Redes sociales</option>
+            <option value="amigo">Recomendación</option>
+            <option value="web">Búsqueda web</option>
+            <option value="otros">Otros</option>
+        </select>
+
+        <!-- Escala Likert -->
+        <label>¿Cómo califica la facilidad de uso del producto?</label>
+        <div>
+            <label><input type="radio" name="facilidad" value="1"> Muy difícil</label>
+            <label><input type="radio" name="facilidad" value="2"> Difícil</label>
+            <label><input type="radio" name="facilidad" value="3"> Neutro</label>
+            <label><input type="radio" name="facilidad" value="4"> Fácil</label>
+            <label><input type="radio" name="facilidad" value="5"> Muy fácil</label>
+        </div>
+
+        <!-- Comentario abierto -->
+        <label for="sugerencias">¿Tiene alguna sugerencia o comentario adicional?</label>
+        <textarea id="sugerencias" name="sugerencias" rows="4"></textarea>
+
+        <!-- Botón de envío -->
+        <button type="submit" class="btn">Enviar Encuesta</button>
+
+    </form>
+
+    <script>
+        document.getElementById("encuestaForm").addEventListener("submit", function (event) {
+            event.preventDefault();
+            alert("¡Gracias por completar la encuesta!");
+            // Aquí se podría enviar el formulario a un servidor
+        });
+    </script>
+
+</body>
+
+</html>

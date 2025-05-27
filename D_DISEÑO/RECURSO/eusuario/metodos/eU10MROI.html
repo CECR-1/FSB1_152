@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Calculadora de ROI</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 40px;
+            max-width: 600px;
+            margin: auto;
+            background-color: #f9f9f9;
+        }
+
+        h1 {
+            color: #00796b;
+        }
+
+        label {
+            display: block;
+            margin-top: 20px;
+            font-weight: bold;
+        }
+
+        input[type="number"] {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            border-radius: 4px;
+            border: 1px solid #ccc;
+        }
+
+        .resultado {
+            margin-top: 30px;
+            padding: 15px;
+            background-color: #e0f7fa;
+            border-left: 5px solid #00796b;
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+        .btn {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 10px 20px;
+            background-color: #00796b;
+            color: white;
+            text-decoration: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Calculadora de Retorno de Inversión (ROI)</h1>
+    <p>Ingresa el costo de la inversión y el beneficio obtenido para calcular el ROI.</p>
+
+    <label for="costo">Costo de la inversión:</label>
+    <input type="number" id="costo" placeholder="Ej: 1000">
+
+    <label for="beneficio">Beneficio obtenido:</label>
+    <input type="number" id="beneficio" placeholder="Ej: 3000">
+
+    <button class="btn" onclick="calcularROI()">Calcular ROI</button>
+
+    <div class="resultado" id="resultado"></div>
+
+    <script>
+        function calcularROI() {
+            const costo = parseFloat(document.getElementById("costo").value);
+            const beneficio = parseFloat(document.getElementById("beneficio").value);
+
+            if (isNaN(costo) || isNaN(beneficio)) {
+                document.getElementById("resultado").textContent = "Por favor, ingresa valores válidos.";
+                return;
+            }
+
+            const roi = ((beneficio - costo) / costo) * 100;
+
+            if (roi >= 0) {
+                document.getElementById("resultado").textContent = `ROI: +${roi.toFixed(2)}%` + " de retorno";
+            } else {
+                document.getElementById("resultado").textContent = `ROI: ${roi.toFixed(2)}%` + " (pérdida)";
+            }
+        }
+    </script>
+
+</body>
+
+</html>

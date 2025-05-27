@@ -1,0 +1,42 @@
+# Evaluación Heurística
+
+## ¿Qué es?
+  - Método de evaluación experta basado en revisar una interfaz o producto aplicando un conjunto de principios de usabilidad reconocidos.
+  - Es rápido, económico y efectivo para detectar problemas antes de pruebas con usuarios.
+
+## Objetivo
+  - Identificar violaciones a principios de diseño.
+  - Detectar errores de usabilidad sin necesidad de involucrar a usuarios reales.
+  - Proporcionar recomendaciones para mejorar la experiencia del usuario.
+
+## Principios comunes
+  - Estado del sistema visible (feedback)
+  - Libertad y control del usuario
+  - Consistencia y estandarización
+  - Reconocimiento antes que recordatorio
+  - Prevención de errores
+  - Flexibilidad y eficiencia de uso
+  - Estética y diseño minimalista
+  - Ayuda al usuario
+
+## Metodología típica
+  - Seleccionar heurísticas relevantes (ej: Nielsen, ISO 9241).
+  - Expertos revisan la interfaz buscando violaciones.
+  - Se listan los problemas encontrados y se priorizan.
+  - Se proponen soluciones prácticas.
+
+## Número recomendado de evaluadores
+  - Entre 3 y 5 expertos para maximizar la detección de problemas.
+  - Cada uno evalúa por separado y luego se consolidan resultados.
+
+## Ventajas
+  - Rápida de realizar.
+  - No requiere usuarios ni entorno de prueba.
+  - Detecta muchos problemas de usabilidad tempranos.
+
+## Limitaciones
+  - No detecta problemas relacionados con comportamiento real de usuarios.
+  - Puede haber sesgos según la experiencia del evaluador.
+
+## Ejemplo interactivo
+  - A continuación se muestra un ejemplo sencillo de formulario para guiar una evaluación heurística básica.

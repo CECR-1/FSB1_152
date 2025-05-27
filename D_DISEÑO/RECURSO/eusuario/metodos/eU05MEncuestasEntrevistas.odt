@@ -1,0 +1,36 @@
+# Encuestas y Entrevistas
+
+## ¿Qué es?
+  - Métodos cualitativos de investigación que permiten recoger información directa de los usuarios sobre sus necesidades, motivaciones, comportamientos y percepciones.
+  - Las encuestas son más escalables; las entrevistas ofrecen mayor profundidad.
+
+## Objetivo
+  - Comprender el contexto de uso.
+  - Identificar necesidades reales, no declaradas.
+  - Validar hipótesis o diseños tempranos.
+  - Recopilar feedback para mejorar la experiencia del usuario.
+
+## Tipos principales
+  - **Encuestas**:
+    - Escalables y cuantitativas.
+    - Pueden ser abiertas o cerradas.
+    - Útiles para medir actitudes generales.
+  - **Entrevistas**:
+    - Profundidad y contexto.
+    - Permiten explorar temas complejos o no previstos.
+    - Ideal para construir personajes y escenarios realistas.
+
+## Características clave
+  - Deben evitarse preguntas ambiguas o sesgadas.
+  - Usar preguntas abiertas para obtener respuestas ricas y no guiadas.
+  - Asegurar anonimato si se busca honestidad.
+  - Adaptar el lenguaje al perfil del usuario.
+
+## Buenas prácticas
+  - Comenzar con preguntas generales y avanzar hacia las específicas.
+  - Evitar preguntar por más de un concepto en una sola pregunta.
+  - Usar escalas de puntuación coherentes.
+  - Incluir espacio para comentarios abiertos.
+
+## Ejemplo interactivo
+  - A continuación se muestra un ejemplo sencillo de formulario de encuesta usando HTML/CSS/JS.

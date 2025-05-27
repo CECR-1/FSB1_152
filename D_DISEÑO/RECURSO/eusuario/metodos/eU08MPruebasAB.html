@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Prueba A/B - Botones</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 40px;
+            text-align: center;
+        }
+
+        .boton {
+            display: inline-block;
+            margin: 20px;
+            padding: 15px 30px;
+            border-radius: 5px;
+            color: white;
+            font-size: 16px;
+            cursor: pointer;
+            border: none;
+        }
+
+        .boton-a {
+            background-color: #2196F3;
+            /* Azul */
+        }
+
+        .boton-b {
+            background-color: #4CAF50;
+            /* Verde */
+        }
+
+        .contador {
+            margin-top: 20px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Prueba A/B: Versión del Botón</h1>
+    <p>Haz clic en cualquiera de los botones para simular una interacción.</p>
+
+    <!-- Botón Versión A -->
+    <div id="botonA" class="boton boton-a">Haz clic aquí (Versión A)</div>
+
+    <!-- Botón Versión B -->
+    <div id="botonB" class="boton boton-b">Haz clic aquí (Versión B)</div>
+
+    <!-- Contadores -->
+    <div class="contador">
+        <p><span id="contadorA">0</span> clics en el botón A</p>
+        <p><span id="contadorB">0</span> clics en el botón B</p>
+    </div>
+
+    <script>
+        let countA = 0;
+        let countB = 0;
+
+        document.getElementById("botonA").addEventListener("click", () => {
+            countA++;
+            document.getElementById("contadorA").textContent = countA;
+        });
+
+        document.getElementById("botonB").addEventListener("click", () => {
+            countB++;
+            document.getElementById("contadorB").textContent = countB;
+        });
+    </script>
+
+</body>
+
+</html>

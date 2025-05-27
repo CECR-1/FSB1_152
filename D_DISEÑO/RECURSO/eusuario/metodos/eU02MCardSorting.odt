@@ -1,0 +1,26 @@
+eU04MAnaliticaWeb# Card Sorting
+
+## ¿Qué es?
+  - Técnica participativa donde los usuarios organizan conceptos o contenidos en categorías según su lógica y comprensión.
+  - Es útil para validar estructuras de información, menús o taxonomías.
+
+## Objetivo
+  - Descubrir cómo piensan los usuarios sobre la organización del contenido.
+  - Validar si la arquitectura de información es coherente con su modelo mental.
+
+## Tipos principales
+  - **Abierto**: Los usuarios crean sus propias categorías.
+  - **Cerrado**: Se les da un conjunto predefinido de categorías que deben usar.
+
+## Recomendación
+  - Usar entre 15 y 30 participantes para obtener resultados estadísticamente significativos.
+  - Ideal para sitios web o apps con gran cantidad de contenido.
+
+## Herramientas comunes
+  - OptimalSort
+  - Miro
+  - UXPressia
+  - Treejack
+
+## Ejemplo interactivo
+  - A continuación se muestra un ejemplo sencillo de card sorting abierto usando HTML/CSS/JS.

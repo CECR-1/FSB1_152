@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Evaluación Heurística</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+            max-width: 700px;
+            margin: auto;
+            background-color: #f9f9f9;
+        }
+
+        h1 {
+            color: #00796b;
+        }
+
+        label {
+            display: block;
+            margin-top: 15px;
+            font-weight: bold;
+        }
+
+        input[type="text"],
+        textarea,
+        select {
+            width: 100%;
+            padding: 8px;
+            margin-top: 5px;
+            border-radius: 4px;
+            border: 1px solid #ccc;
+        }
+
+        .btn {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 10px 20px;
+            background-color: #00796b;
+            color: white;
+            text-decoration: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Formulario de Evaluación Heurística</h1>
+    <p>Registra los problemas encontrados durante tu revisión de usabilidad.</p>
+
+    <form id="evaluacionForm">
+
+        <!-- Nombre del evaluador -->
+        <label for="nombre">Nombre del evaluador:</label>
+        <input type="text" id="nombre" name="nombre" required>
+
+        <!-- Heurística infringida -->
+        <label for="heuristica">Heurística infringida:</label>
+        <select name="heuristica" id="heuristica" required>
+            <option value="">Seleccione una opción</option>
+            <option value="estado">Estado del sistema visible</option>
+            <option value="libertad">Libertad y control del usuario</option>
+            <option value="consistencia">Consistencia y estandarización</option>
+            <option value="reconocimiento">Reconocimiento antes que recordatorio</option>
+            <option value="prevencion">Prevención de errores</option>
+            <option value="flexibilidad">Flexibilidad y eficiencia de uso</option>
+            <option value="estetica">Estética y diseño minimalista</option>
+            <option value="ayuda">Ayuda al usuario</option>
+        </select>
+
+        <!-- Descripción del problema -->
+        <label for="descripcion">Descripción del problema:</label>
+        <textarea id="descripcion" name="descripcion" rows="4" required></textarea>
+
+        <!-- Gravedad -->
+        <label>Gravedad del problema:</label>
+        <div>
+            <label><input type="radio" name="gravedad" value="baja"> Baja</label>
+            <label><input type="radio" name="gravedad" value="media"> Media</label>
+            <label><input type="radio" name="gravedad" value="alta"> Alta</label>
+        </div>
+
+        <!-- Botón de envío -->
+        <button type="submit" class="btn">Registrar Problema</button>
+
+    </form>
+
+    <script>
+        document.getElementById("evaluacionForm").addEventListener("submit", function (event) {
+            event.preventDefault();
+            alert("Problema registrado correctamente.");
+            // Aquí se podría enviar el formulario a un servidor o guardar localmente
+        });
+    </script>
+
+</body>
+
+</html>

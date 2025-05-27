@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Ejemplo Analítica Web</title>
+    <style>
+        body {
+            font-family: Arial;
+            padding: 20px;
+        }
+
+        .metric {
+            margin: 10px 0;
+            font-weight: bold;
+            color: #333;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Bienvenido a nuestra página</h1>
+    <p>Este es un ejemplo básico de cómo podrías empezar a medir la interacción del usuario.</p>
+
+    <div class="metric" id="start-time">Inicio de sesión: Cargando...</div>
+    <div class="metric" id="time-spent">Tiempo en página: 0 segundos</div>
+
+    <script>
+        // Registrar hora de inicio
+        const startTime = new Date();
+        document.getElementById("start-time").textContent =
+            "Inicio de sesión: " + startTime.toLocaleTimeString();
+
+        // Calcular tiempo transcurrido
+        setInterval(() => {
+            const now = new Date();
+            const diffSeconds = Math.round((now - startTime) / 1000);
+            document.getElementById("time-spent").textContent =
+                "Tiempo en página: " + diffSeconds + " segundos";
+        }, 1000);
+
+        // Enviar datos al cerrar pestaña (solo simulado)
+        window.addEventListener("beforeunload", () => {
+            const totalTime = Math.round((new Date() - startTime) / 1000);
+            console.log(`Usuario estuvo ${totalTime} segundos en la página`);
+            // Aquí se enviaría esta información a un servidor usando fetch o sendBeacon
+        });
+    </script>
+
+</body>
+
+</html>
