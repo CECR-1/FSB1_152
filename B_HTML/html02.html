@@ -6,6 +6,227 @@
     <title>DWFSP1_152. HTML</title>
 </head>
 <body>
+    <h1 id="inicio">DESARROLLO WEB FULL STACK BASICO - DWFSP1_152</h1>
+    <hr>
+    <hr>
+    <h2><u>II. HTML Elementos& Atributos</u></h2>
+    <hr>
+    <h3>II.1.HTML.Introducción.Documento 01</h3>
+    <p>Código: A pie</p>
+    <pre><code>
+    &lt;!DOCTYPE html&gt;
+    &lt;html lang="en"&gt;
+        &lt;head&gt;
+            &lt;title&gt;Documento_01&lt;/title&gt;
+        &lt;/head&gt;
+        &lt;body&gt;
+            &lt;p&gt;Documento 01&lt;/p&gt;
+        &lt;/body&gt;
+    &lt;/html&gt;
+    </code></pre>
+    <p>Con Emmet: !</p>
+
+    <a href="./RECURSO/file01.html">Ver file01.html</a>
+
+    <h4>Explicación Documento 01</h4>
+
+    <p>La primera línea &lt;!DOCTYPE html&gt; es la declaración de la versión del tipo de documento HTML.</p>
+    <p>Indica al navegador web que este documento es HTML5. No distingue entre mayúsculas y minúsculas.</p>
+    <p>---</p>
+    <p>El elemento &lt;html&gt; es el elemento raíz de un documento HTML.</p>
+    <p>El atributo <b><i>lang="en"</i></b> indica que el contenido está en inglés.</p>
+    <p>---</p>
+    <p>El elemento &lt;head&gt; es un contenedor para las etiquetas que proporcionan información sobre el documento, por ejemplo:</p>
+    <p>&lt;title&gt; define el título del documento.</p>
+    <p>&lt;meta charset="UTF-8"&gt; indica que el documento utiliza la codificación de caracteres UTF-8, permitiendo mostrar correctamente caracteres especiales y acentuados.</p>
+    <p>&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;</code> permite que la página sea responsiva, adaptando su tamaño y escala a diferentes dispositivos, especialmente móviles.</p>
+    <p>---</p>
+    <p>El elemento &lt;body&gt; contiene el contenido real del documento (párrafos, enlaces, imágenes, tablas, etc.) que se representa en el navegador web y se muestra al usuario.</p>
+    <p>El elemento &lt;p&gt; permite escribir un párrafo dentro del <b><i>body</i></b></p>
+    <p>---</p>
+    <pre>
+    <p>Nota: La declaración DOCTYPE aparece en la parte superior de una página web, 
+        antes que cualquier otro elemento; sin embargo, la declaración DOCTYPE en sí no es una etiqueta HTML.
+        Todo documento HTML requiere una declaración de tipo de documento para garantizar que las páginas se muestren correctamente.</p>
+    <p>Atencióm: Los tags etiquetas &lt;html&gt;, &lt;head&gt;, y &lt;body&gt; conforman la estructura básica de cada página web. 
+        El contenido dentro de las etiquetas &lt;head&gt;y &lt;/head&gt; es invisible para los usuarios, 
+        con una excepción: el texto entre &lt;title&gt; y &lt;/title&gt; que aparece como título en una pestaña del navegador.</p>
+    </pre>
+    <hr>
+    <h3>II.2.HTML.TAGS & Elementos</h3>
+    <p>HTML se escribe en forma de elementos HTML que consisten en etiquetas (tags) de marcado.</p>
+    <p>Estas etiquetas son la característica fundamental de HTML. Cada etiqueta de marcado se compone de una palabra clave,</p>
+    <p>entre corchetes angulares, signos de menor & mayor (&lt; y &gt;), como por ejemplo:</p>
+    <p>&lt;html&gt;, &lt;head&gt;, &lt;body&gt;, &lt;title&gt;, &lt;p&gt;, etc.</p>
+    <img src="./RECURSO/estructuraElemento.jpg" alt="Estructura de un elemento HTML" width="400" height="200">
+    <p>---</p>
+    <p>Las etiquetas HTML suelen venir en pares, como &lt;html&gt;y &lt;/html&gt;. La primera etiqueta de cada par suele llamarse</p>
+    <p>etiqueta de apertura (o etiqueta inicial), y la segunda, etiqueta de cierre (o etiqueta final).</p>
+    <p>Una etiqueta de apertura y una etiqueta de cierre son idénticas, excepto por una barra ( /) después del corchete angular de</p>
+    <p>apertura de la etiqueta de cierre, para indicarle al navegador que el comando se ha completado.</p>
+    <p>Entre las etiquetas de inicio y fin se puede colocar el contenido apropiado. Por ejemplo, un párrafo, se escribiría así:</p>
+    <pre><code>
+        &lt;p&gt;Este es un párrafo.&lt;/p&gt;
+        &lt;!-- Este es un comentario para un párrafo que tiene un elemento anidado --&gt;
+        &lt;p&gt;
+            Este es &lt;b&gt;otro&lt;/b&gt; párrafo con un elemento de negrilla.
+        &lt;/p&gt;
+    </code></pre>
+    <hr>
+    <h3>II.3.HTML.Elementos Vacíos</h3>
+    <p>Los elementos vacíos (también llamados auto-cerrados o void elements) no son contenedores, por lo que no puedes escribir <code>&lt;br&gt;contenido&lt;/br&gt;</code>.</p>
+    <p>Ejemplos comunes de elementos vacíos son: <code>&lt;br&gt;</code>, <code>&lt;img&gt;</code>, <code>&lt;input&gt;</code>.</p>
+
+    <p>Este párrafo contiene<br>un salto de línea.</p>
+    <img src="https://picsum.photos/200/300" alt="Imagen aleatoria de Lorem Picsum">
+    <br>
+    <input type="text" name="username">
+
+    <p>---</p>
+    <pre><code>
+        &lt;p&gt;Este párrafo contiene&lt;br&gt;un salto de línea.&lt;/p&gt;
+        &lt;img src="https://picsum.photos/200/300" alt="Imagen aleatoria de Lorem Picsum"&gt;
+        &lt;br&gt;
+        &lt;input type="text" name="username"&gt;
+    </code></pre>
+    <hr>
+    <h3>II.4.HTML.Anidación de Elementos HTML</h3>
+    <p>La mayoría de los elementos HTML pueden contener otros elementos. Los elementos deben anidarse correctamente.</p>
+    <p><strong>Estas etiquetas están anidadas correctamente.</strong></p>
+    <p><strong>Estas etiquetas no están anidadas correctamente.</p></strong>
+
+    <pre><code>
+        &lt;p&gt;&lt;strong&gt;Estas etiquetas están anidadas correctamente.&lt;/strong&gt;&lt;/p&gt;
+        &lt;p&gt;&lt;strong&gt;Estas etiquetas no están anidadas correctamente.&lt;/p&gt;&lt;/strong&gt;
+    </code></pre>
+    <hr>
+    <h3>II.5.HTML.Comentarios en HTML</h3>
+    <p>Los comentarios no se muestran en el navegador y se utilizan para explicar el código.</p>
+    <!-- Esto es un comentario -->
+    <!-- Esto es un comentario multilínea que abarca más de una línea -->
+    <p>Esto es un texto normal.</p>
+
+    <pre><code>
+        &lt;!-- Esto es un comentario --&gt;
+        &lt;!-- Esto es un comentario multilínea que abarca más de una línea --&gt;
+        &lt;p&gt;Esto es un texto normal.&lt;/p&gt; 
+    </code></pre>
+    <hr>
+    <h3>II.6.HTML.Tipos de Elementos HTML</h3>
+    <p>Los elementos se dividen en dos grupos: de nivel bloque y de nivel inline.</p>
+    <ul>
+        <li>Los elementos de nivel bloque ocupan el 100% del ancho disponible. Ejemplos: <code>&lt;div&gt;</code>, <code>&lt;p&gt;</code>, <code>&lt;h1&gt;</code>.</li>
+        <li>Los elementos de nivel inline ocupan solo el espacio necesario. Ejemplos: <code>&lt;img&gt;</code>, <code>&lt;a&gt;</code>, <code>&lt;span&gt;</code>.</li>
+    </ul>
+
+    <p>Los elementos de nivel bloque pueden contener otros elementos de nivel bloque o inline, mientras que los elementos de nivel inline solo pueden contener otros elementos de nivel inline.</p>
+    <p>Ejemplo de elemento de nivel bloque:</p>
+    <pre><code>
+        &lt;div&gt;
+            &lt;p&gt;Este es un párrafo dentro de un div.&lt;/p&gt;
+        &lt;/div&gt;
+    </code></pre>
+    <p>Ejemplo de elemento de nivel inline:</p> 
+    <pre><code>
+        &lt;span&gt;Este es un texto dentro de un span.&lt;/span&gt;
+    </code></pre>
+    <hr>
+    <h3>II.7.HTML.Atributos</h3>
+    <p>Los atributos HTML proporcionan información adicional sobre un elemento HTML. Se colocan dentro de la etiqueta de apertura.</p>      
+    <p>Los atributos HTML tienen un nombre y un valor, separados por un signo igual (=).</p>
+    <p>Ejemplo de un atributo HTML:</p>
+    <pre><code>
+        &lt;a href="https://picsum.photos/"&gt;Visitar ejemplo&lt;/a&gt;
+        &lt;img src="https://picsum.photos/200/300" alt="Imagen aleatoria de Lorem Picsum"&gt;
+        &lt;input type="text" name="username"&gt;       
+        &lt;input type="password" name="password"&gt;
+        &lt;input type="submit" value="Enviar"&gt;
+        &lt;input type="reset" value="Restablecer"&gt;
+        &lt;input type="checkbox" name="opcion1"&gt; Opción 1   
+    </pre></code>
+    <p>Los atributos <code>type</code>, <code>name</code>, <code>value</code>, <code>src</code>, y <code>alt</code> son ejemplos de atributos HTML.</p>
+    <p>El atributo <code>href</code> se utiliza para especificar la URL de un enlace.</p>
+    <p>El atributo <code>src</code> se utiliza para especificar la URL de una imagen.</p>
+    <p>El atributo <code>alt</code> proporciona un texto alternativo para la imagen, que se muestra si la imagen no se puede cargar.</p>    
+    <p>El atributo <code>type</code> se utiliza para especificar el tipo de entrada en un formulario.</p>
+    <p>El atributo <code>name</code> se utiliza para identificar un elemento en un formulario.</p>
+    <p>El atributo <code>value</code> se utiliza para especificar el valor de un elemento de formulario.</p>
+    <p>El atributo <code>checked</code> se utiliza para especificar que un elemento de formulario debe estar seleccionado por defecto.</p>  
+       
+    <p>Los atributos HTML son sensibles a mayúsculas y minúsculas, por lo que <code>src</code> y <code>Src</code> son diferentes.</p>
+    <p>Los atributos HTML pueden tener valores vacíos, como en el caso de los atributos booleanos.</p>
+    <p>Los atributos HTML pueden tener valores de cadena, como en el caso de los atributos <code>href</code>, <code>src</code>, y <code>alt</code>.</p>
+    <p>Los atributos HTML pueden tener valores numéricos, como en el caso de los atributos <code>width</code> y <code>height</code>.</p>
     
+    <h3>II.7.1.HTML.Atributos Booleanos</h3>
+    <p>Algunos atributos no consisten en pares nombre/valor sino solo en un nombre. Estos se llaman atributos booleanos.</p>
+    
+    <input type="email" required>
+    <input type="submit" value="Submit" disabled>
+    <input type="checkbox" checked>
+    <input type="text" value="Read only text" readonly>
+    
+    <pre><code>
+        &lt;input type="email" required&gt;
+        &lt;input type="submit" value="Submit" disabled&gt;
+        &lt;input type="checkbox" checked&gt;
+        &lt;input type="text" value="Read only text" readonly&gt;
+    </code></pre>
+    
+    <h3>II.7.2.HTML.Atributos de Propósito General</h3>
+    
+    <h4>II.7.2.1.HTML.El atributo id</h4>
+    <p>Se utiliza para dar un nombre o identificador único a un elemento dentro de un documento.</p>
+    <input type="text" id="firstName">
+    <div id="container">Contenido</div>
+    <p id="infoText">Este es un párrafo</p>
+
+    <pre><code>
+        &lt;input type="text" id="firstName"&gt;
+        &lt;div id="container"&gt;Contenido&lt;/div&gt;
+        &lt;p id="infoText"&gt;Este es un párrafo.&lt;/p&gt;
+    </code></pre>
+    
+    <h4>II.7.2.2.HTML.El atributo class</h4>
+    <p>Se utiliza para identificar elementos y puede aplicarse a múltiples elementos en un documento.</p>
+    <input type="text" class="highlight">
+    <div class="box highlight">Contenido</div>
+    <p class="highlight">Este es un párrafo</p>
+
+    <pre><code>
+        &lt;input type="text" class="highlight"&gt;
+        &lt;div class="box highlight"&gt;Contenido&lt;/div&gt;
+        &lt;p class="highlight"&gt;Este es un párrafo&lt;/p&gt;
+    </code></pre>
+    
+    <h4>II.7.2.3.HTML.El atributo title</h4>
+    <p>Se utiliza para proporcionar texto informativo sobre un elemento o su contenido.</p>
+    
+    <abbr title="Lorem Picsum">Lorem Picsum</abbr>
+    <br>
+    <a href="https://picsum.photos/" title="Click para acceder a imágenes aleatorias">
+        <img src="https://picsum.photos/200/300" alt="foto alternativa">
+    </a>
+
+    <pre><code>
+        &lt;abbr title="Lorem Picsum"&gt;Lorem Picsum&lt;/abbr&gt;
+        &lt;br&gt;
+        &lt;a href="https://picsum.photos/" title="Click para acceder a imágenes aleatorias"&gt;
+            &lt;img src="https://picsum.photos/200/300" alt="foto alternativa"&gt;
+        &lt;/a&gt;
+    </code></pre>
+    
+    <h4>II.7.2.4.HTML.El atributo style</h4>
+    <p>Permite especificar reglas de estilo CSS directamente dentro del elemento.</p>
+    <p style="color: blue;">Esto es un párrafo</p>
+    <img src="https://picsum.photos/200/300" style="width: 300px;" alt="Foto Aleatoria">
+    <div style="border: 1px solid red;">Contenido</div>
+
+    <pre><code>
+        &lt;p style="color: blue;"&gt;Esto es un párrafo&lt;/p&gt;
+        &lt;img src="https://picsum.photos/200/300" style="width: 300px;" alt="Foto Aleatoria"&gt;
+        &lt;div style="border: 1px solid red;"&gt;Contenido&lt;/div&gt;
+    </code></pre>
+
 </body>
 </html>
