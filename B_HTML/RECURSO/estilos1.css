@@ -1,0 +1,14 @@
+body {
+    background-color: blue;
+    color: white;
+}
+
+ul {
+    color: white;
+}
+
+ul a {
+    color: yellow;
+    text-decoration: underline; /* Opcional, para que se vean como enlaces */
+}
+

@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DWFSP1_152. HTML</title>
+</head>
+<body>
+    <h1 id="inicio">DESARROLLO WEB FULL STACK BASICO - DWFSP1_152</h1>
+    <hr>
+    <hr>
+    <h2><u>II.6 HTML.Imágenes, video, audio</u></h2>
+    <hr>
+
+    <h3 id="imagenes">II.6.1 HTML.Imágenes</h3>
+    <article>
+
+        <p>Las imágenes se introducen mediante el elemento <b>&lt;img&gt;</b>. Se trata de un elemento vacío, pues no tiene etiqueta de cierre. Dentro de la etiqueta de apertura se introducen los atributos que permiten especificar la ruta de la imagen y algunas de sus características, como pueden ser el alto y el ancho de la misma.</p>
+
+        <h4>Ejemplo de código HTML de una imagen:</h4>
+        <pre><code>&lt;img src='https://picsum.photos/200/300' width='186' height='114' alt='Foto Aleatoria'&gt;</code></pre>
+        <pre><code><img src='https://picsum.photos/200/300' width='186' height='114' alt='Foto Aleatoria'></code></pre>
+
+        <h4>Atributos de imagen</h4>
+        <p>Las imágenes tienen algunos atributos específicos, y dado que el elemento <b>&lt;image&gt;</b> es un elemento vacío, algunos atributos son imprescindibles, como es el caso de <b>src</b> para indicar la ubicación de la imagen.</p>
+
+        <h4>El atributo src</h4>
+        <p>Con el atributo <b>src</b> se indica la ruta de la imagen. Este atributo es obligatorio: si no se coloca, no aparecerá ninguna imagen; si el valor de <b>src</b> es incorrecto, aparecerá un icono en el lugar de la imagen, señalando que no se ha podido cargar correctamente.</p>
+
+        <p>El valor del atributo <b>src</b> debe ser la ruta del recurso de imagen. Es una buena práctica almacenar las imágenes en un directorio separado. La ruta se puede especificar como una URL absoluta (incluyendo el protocolo, el dominio y el camino) o relativa. En este caso, el navegador resolverá la ruta completa.</p>
+
+        <h4>Ejemplo de código HTML de imagen con URL absoluta:</h4>
+        <pre><code>&lt;img src='https://picsum.photos/200/300'&gt;</code></pre>
+        <pre><code><img src='https://picsum.photos/200/300'></code></pre> 
+
+        <h4>Ejemplo de código HTML de imagen con URL relativa:</h4>
+        <pre><code>&lt;img src='../A_INTRO/RECURSO/701-536x354.jpg'&gt;</code></pre>
+        <pre><code><img src='../A_INTRO/RECURSO/701-536x354.jpg'></code></pre>
+
+        <h4>El atributo alt</h4>
+        <p>El atributo <b>alt</b> permite establecer una descripción de la imagen. Por lo tanto, el valor de este atributo será una cadena de texto con una breve descripción de su contenido. Los usuarios no verán la descripción mientras la imagen se cargue correctamente; pero si la carga no finaliza, verán el texto descriptivo.</p>
+
+        <p>Pero la razón principal por la que se creó este atributo es otra muy distinta: que las personas con discapacidad visual sepan sobre el contenido de la imagen. Y es que muchas personas utilizan lectores de voz del contenido de la web, ya sea porque no quieren o no pueden leer la página o el documento HTML.</p>
+
+        <p>Existe un tercer motivo por el que es bueno usar este atributo: el posicionamiento web (SEO). Google y otros buscadores utilizan este atributo para conocer y comprender mejor el contenido de la imagen —junto con algoritmos visuales de imagen— con el fin de clasificarla mejor y ofrecerla en los resultados de búsqueda.</p>
+
+        <p>Este atributo debe tener una longitud inferior a los 1024 caracteres.</p>
+
+        <h4>Ejemplo de código HTML usando el atributo <b>alt</b>:</h4>
+        <pre><code>&lt;img src='https://picsum.photos/200/300' alt='Imagen Aleatoria'&gt;</code></pre>
+        <pre><code><img src='https://picsum.photos/200/300' alt='Imagen Aleatoria'></code></pre>
+
+        <h4>El atributo longdesc</h4>
+        <p>El atributo <b>longdesc</b> es muy parecido al atributo <b>alt</b>, pero con la particularidad de permitir una descripción más larga: puede ser superior a los 1024 caracteres. Se trata de un atributo poco habitual. Con este atributo se pueden aportar descripciones más largas e incluso añadiendo una URL de referencia que pueda contener más información sobre la imagen en cuestión.</p>
+
+        <h4>Ejemplo de código HTML usando el atributo <code>longdesc</code>:</h4>
+        <pre><code>&lt;img src='https://picsum.photos/200/300' longdesc='Esta imagen es tomada en forma aleatoria a partir de lorem picusm.'&gt;</code></pre>
+        <pre><code><img src='https://picsum.photos/200/300' longdesc='Esta imagen es tomada en forma aleatoria a partir de lorem picusm.'></code></pre>
+
+        <h4>Los atributos width y height</h4>
+        <p>Los atributos <b>width</b> y <b>height</b> permiten especificar el ancho y el alto de una imagen, respectivamente. No son obligatorios, aunque tienen una gran utilidad. El valor de estos dos atributos es un número entero; si no se indica la unidad, por defecto serán píxeles. Pero también podría indicarse un porcentaje usando como sufijo el símbolo <b>%</b>. Por ejemplo: <b>width='50%'</b>. El porcentaje tendrá como referencia el elemento contenedor de la imagen.</p>
+
+        <p>El ancho y alto de la imagen no debe coincidir necesariamente con sus medidas reales. Las medidas que se indiquen son las medidas con las que el navegador la mostrará. Pero si se modifican, es importante cuidar la proporción de las dos medidas, ya que de lo contrario se verá deformada.</p>
+
+        <p>Si se establece únicamente la anchura o la altura, el navegador web calculará la otra medida necesaria para que se mantenga la proporción de la imagen. En general, lo más habitual es que sólo se necesita establecer una u otra, por lo tanto se podrá ignorar la otra y estar tranquilo de que la imagen se verá bien.</p>
+
+        <h4>Ejemplo de código HTML usando los atributos <b>width</b> y <b>height</b>:</h4>
+        <pre><code>&lt;img src='https://picsum.photos/200/300' width='186' height='114' alt='Foto Aleatoria'&gt;</code></pre>
+        <pre><code><img src='https://picsum.photos/200/300' width='186' height='114'></code></pre>
+
+        <h4>El atributo srcet</h4>
+        <p>El atributo <b>srcset</b> se creó a partir de la versión HTML5 y permite indicar una lista de cadenas de imágenes separadas por coma. Este atributo está pensado para disponer de varias imágenes para distintos tamaños de dispositivo. Cada cadena está compuesta por los siguientes valores:</p>
+
+        <ol>
+            <li>Una URL válida de imagen (valor mínimo).</li>
+            <li>Opcionalmente, uno de los siguientes valores:
+            <ul>
+                <li>El ancho de imagen en píxeles y la letra <b>w</b>.</li>
+                <li>La densidad del píxel con la letra <b>x</b>.</li>
+            </ul>
+            </li>
+        </ol>
+
+        <p>Los valores se separan con espacios. Referente al punto 2, sólo se admite uno de los dos valores. En caso de incluir los dos se considerará que hay descriptores duplicados y no será válido; por tanto, no deben mezclarse. En caso de que no se especifique ningún descriptor, el valor por defecto será <b>1x</b>.</p>
+
+        <h4>Ejemplo de código HTML del atributo <b>srcset</b>:</h4>
+        <pre><code>
+            &lt;img 
+                src="https://picsum.photos/300/200" 
+                srcset="
+                    https://picsum.photos/300/200 300w,
+                    https://picsum.photos/600/400 600w,
+                    https://picsum.photos/900/600 900w
+                "
+                sizes="(max-width: 600px) 300px, (max-width: 900px) 600px, 900px"
+                alt="Imagen aleatoria de Lorem Picsum"&gt;
+        </code></pre>
+            <img 
+                src="https://picsum.photos/300/200" 
+                srcset="
+                    https://picsum.photos/300/200 300w,
+                    https://picsum.photos/600/400 600w,
+                    https://picsum.photos/900/600 900w
+                "
+                sizes="(max-width: 600px) 300px, (max-width: 900px) 600px, 900px"
+                alt="Imagen aleatoria de Lorem Picsum">
+
+        <p>En el ejemplo anterior, el navegador web seleccionará la imagen más adecuada según las características del dispositivo y la pantalla. Si la pantalla es de alta resolución, se seleccionará una imagen con una densidad de píxel mayor. Si la pantalla es pequeña, se seleccionará una imagen más pequeña.</p>
+
+        <h4>El atributo sizes</h4>
+        <p>El atributo <b>sizes</b> funciona en concordancia con el atributo <b>srcset</b> y requiere que este último esté definido. Con <b>sizes</b> se especifica una lista de cadenas de tamaños válidos separados por coma. Cada cadena está compuesta por:</p>
+
+        <ol>
+            <li>Una propiedad CSS entre paréntesis; es opcional.</li>
+            <li>El ancho de la imagen en unidades de CSS.</li>
+        </ol>
+
+        <h4>Ejemplo de código HTML del atributo <b>sizes</b>:</h4>
+        <pre><code>
+            &lt;img
+                alt='Imagen de ejemplo'
+                src='https://picsum.photos/300/200'
+                srcset='imagen-400.png 400w, imagen-500.png 500w, imagen-600.png 600w'
+                sizes='(max-width: 400px) 400px, (max-width: 500px) 500px, 600px'
+            &gt;
+        </code></pre>
+        <img 
+            alt='Imagen de ejemplo'
+            src='https://picsum.photos/300/200'
+            srcset='
+                https://picsum.photos/400/200 400w,
+                https://picsum.photos/500/200 500w,
+                https://picsum.photos/600/200 600w
+            '
+            sizes='(max-width: 400px) 400px, (max-width: 500px) 500px, 600px'
+        >
+
+        <h4>Formatos de imagen</h4>
+        <p>Existen muchos formatos de imagen diferentes. HTML no impone ninguna norma sobre el formato que se debe usar; pero si se usa un formato inusual es probable que algún navegador tenga problemas y no pueda mostrarla correctamente. Los formatos más habituales son: BMP, JPEG, PNG, GIF y SVG.</p>
+
+        <p>Pero, ¿qué formato es conveniente usar?</p>
+
+        <h4>Formato BMP</h4>
+        <p>El formato BMP (Windows Bitmap) fue creado en los 90 por Microsoft e IBM, y puede guardar imágenes con una profundidad de color de 24 bits (16,7 millones de colores). Este formato de imagen asigna a cada píxel un valor cromático sin comprimir. No se recomienda usar este formato para compartir imágenes en Internet porque ocupan una mayor cantidad de memoria, pero sí para guardarlas offline.</p>
+
+        <h4>Formato JPEG</h4>
+        <p>El formato JPEG (Joint Photographic Experts Group) utiliza un algoritmo de compresión con pérdida de calidad, reduciendo considerablemente el tamaño del archivo de imagen. Una vez que se ha comprimido la imagen, es imposible descomprimirla y recuperar la versión original. Se puede comprimir con diferentes grados de pérdida de calidad, y es el formato más utilizado.</p>
+
+        <h4>Formato GIF</h4>
+        <p>El formato GIF (Graphics Interchange Format) utiliza un algoritmo de compresión sin pérdida de calidad, pero tiene la limitación de alcanzar una profundidad de color de 256 colores. Por lo tanto, este formato es útil para imágenes con pocos colores, como gráficos sin gradientes, mapas conceptuales o dibujos simples. El formato GIF permite guardar varios fotogramas que pueden componer una animación.</p>
+
+        <h4>Formato PNG</h4>
+        <p>El formato PNG (Portable Network Graphics) utiliza un algoritmo de compresión sin pérdida de calidad. A diferencia del formato GIF, el PNG permite guardar imágenes con una profundidad de color de 24 bits, solventando las deficiencias del formato GIF. Las imágenes comprimidas en formato PNG ocupan menos que en formato BMP, pero algo más que en formato JPEG.</p>
+
+        <h4>Formato SVG</h4>
+        <p>El formato SVG (Scalable Vector Graphics) permite guardar gráficos vectoriales, por lo que contiene código XML en vez de un mapa de bits. Su especificación es un estándar abierto creado por la W3C en 1999. Cada vez se utiliza más en el desarrollo web, ya que se puede manipular con CSS y JavaScript.</p>
+
+        <h4>Conclusión</h4>
+        <p>Para fotos normales usa el formato JPEG comprimido a una calidad aceptable; para imágenes en las que se quiera conservar la calidad (logos, anuncios, gráficos, presentaciones) o se requiera que tengan transparencia usa el formato PNG; para imágenes en las que se quiera conservar la calidad pero que tengan una paleta de máximo 256 colores, o animaciones simples, use el formato GIF; y para gráficos vectoriales escalables use el formato SVG.</p>
+    </article>
+
+    <hr>
+    <h3 id="video">II.6.2 HTML.Video</h3>
+
+    <article>
+        <p>
+            El vídeo se ha convertido en un elemento más del diseño web. El elemento <b>&lt;video&gt;</b> permite incrustar vídeos en un documento HTML, ofreciendo a su vez un amplio abanico de opciones. Este elemento tiene mucha adaptabilidad y es compatible con la mayoría de los navegadores web.
+        </p>
+        <p>
+            Los autores tienen dos caminos para indicarle a los navegadores la ruta del vídeo que se debe cargar. El primero es usando el atributo <b>src</b>, que permite indicarle una URL válida. El segundo es usando el elemento <b>&lt;source&gt;</b>, que permite proveer alternativas distintas del mismo recurso, y que sea el navegador el que decida qué recurso se adapta mejor a sus características.
+        </p>
+        <p>
+            El elemento <b>&lt;video&gt;</b> tiene dos etiquetas: una para indicar la apertura del elemento (<b>&lt;video&gt;</b>) y otra para indicar el cierre (<b>&lt;/video&gt;</b>). Dentro de este elemento se definirá un contenido alternativo que se usará cuando no se haya definido una URL válida o cuando el navegador no tenga soporte para el elemento <b>&lt;video&gt;</b>. Si el navegador web lo soporta, simplemente se ignorará el contenido alternativo.
+        </p>
+
+        <h4>Ejemplo de código HTML con un vídeo insertado:</h4>
+        <pre>
+            &lt;video controls width="320"&gt;
+                &lt;source src="/resources/html/flor-320.mp4" type="video/mp4"&gt;
+                Tu navegador no soporta vídeos incrustados.
+            &lt;/video&gt;
+        </pre>
+        <p>El código de arriba se verá así:</p>        
+        <video controls width="320">
+            <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
+            Tu navegador no soporta vídeos incrustados.
+        </video>
+
+        <h4>Atributos de vídeo</h4>
+        <p>
+            El elemento <b>&lt;video&gt;</b> tiene todos los atributos globales y algunos atributos específicos que permiten configurar sus opciones. Algunos de los más importantes son <b>src</b> para indicar la ruta del vídeo con una URL válida y controles para activar una interfaz que permita controlar la reproducción del vídeo.
+        </p>
+
+        <h4>El atributo src</h4>
+        <p>
+            Con el atributo <b>src</b> se indica la ruta de la ubicación del archivo de vídeo. El valor de este atributo debe ser una URL válida, y tanto puede ser una URL relativa como una URL absoluta. Sólo permite declarar un recurso.
+        </p>
+
+        <h4>El atributo crossorigin</h4>
+        <p>
+            El atributo <b>crossorigin</b> permite indicar si la petición que se ha realizado a un servidor externo debe presentar credenciales de origen cruzado (CORS) o no. Los dos valores posibles de este atributo son los siguientes:
+        </p>
+        <ul>
+            <li><strong>anonymous:</strong> se establece la etiqueta “omit credentials”.</li>
+            <li><strong>use-credentials:</strong> no se establece la etiqueta “omit credentials”.</li>
+        </ul>
+
+        <h4>El atributo poster</h4>
+        <p>
+            El atributo <b>poster</b> se utiliza para mostrar una imagen de portada en el espacio que ocupa el vídeo. El valor de este atributo debe ser una URL válida.
+        </p>
+
+        <h4>El atributo playsinline</h4>
+        <p>
+            Con el atributo <b>playsinline</b> se indica al navegador web que el vídeo se debe reproducir dentro del área de reproducción. Esto implica que no se podrá maximizar a pantalla completa ni reproducirse en una ventana que se pueda escalar. Se trata de un atributo binario, por lo que no se debe indicar ningún valor.
+        </p>
+
+        <h4>El atributo preload</h4>
+        <p>
+            El atributo <b>preload</b> tiene por objetivo proporcionar una sugerencia al navegador sobre el momento de carga del recurso, y puede definir tres estados:
+        </p>
+        <ul>
+            <li><strong>none:</strong> con este valor no se requiere la precarga de ninguna información.</li>
+            <li><strong>metadata:</strong> sólo se precargan los metadatos y los primeros fotogramas.</li>
+            <li><strong>auto:</strong> el recurso de vídeo se precarga a discreción del navegador web.</li>
+        </ul>
+
+        <h4>El atributo autoplay</h4>
+        <p>
+            El atributo <b>autoplay</b> activa la reproducción automática del vídeo tan pronto como al navegador web le sea posible. Se trata de un atributo binario, por lo que su inclusión ya activa esta opción, y no requiere otro valor.
+        </p>
+
+        <h4>El atributo loop</h4>
+        <p>
+            Con el atributo loop se indica que cuando se termine una reproducción de vídeo, empiece a reproducirse de nuevo de forma automática, una y otra vez. También se trata de un atributo binario.
+        </p>
+
+        <h4>El atributo muted</h4>
+        <p>
+            Para que un vídeo se reproduzca en silencio se usa el atributo muted. Este atributo también es binario, por lo que su presencia desactivará el sonido.
+        </p>
+
+        <h4>El atributo controls</h4>
+        <p>
+            Gracias al atributo controls puede mostrarse una interfaz que permite interactuar con la reproducción del vídeo, ya sea pausar la reproducción, subir o bajar el volumen, etc. Este atributo también es binario.
+        </p>
+
+        <h4>Los atributos width y height</h4>
+        <p>
+            Con los atributos width y height se especifica el ancho y alto del contenedor del vídeo, respectivamente. Su valor será un número entero que representa el total de píxeles. Se recomienda usar los valores de la resolución del vídeo.
+        </p>
+
+        <h4>Recursos alternativos: elemento &lt;source&gt;</h4>
+        <p>
+            Un elemento de vídeo puede contener uno o más elementos <b>&lt;source&gt;</b>. Cada uno de los elementos &lt;source&gt; que se use dentro del elemento <b>&lt;video&gt;</b> proveerá una versión diferente del vídeo, es decir, que esté codificada usando un códec diferente. El navegador web decidirá qué recurso cargar.
+        </p>
+        <p>
+            Este elemento no debería usarse en caso de que se haya definido una URL válida mediante el atributo src del elemento <b>&lt;video&gt;</b>.
+        </p>
+
+        <h4>Tipos de medio más comunes para vídeo</h4>
+        <ul>
+            <li><strong>Para MP4:</strong> video/mp4</li>
+            <li><strong>Para WebM:</strong> video/webm</li>
+            <li><strong>Para Ogg:</strong> video/ogg</li>
+        </ul>
+
+        <h4>Añadir pista de texto: elemento &lt;track&gt;</h4>
+        <p>
+            Mediante el elemento <b>&lt;track&gt;</b> es posible aportar pistas de texto para el vídeo incrustado. Gracias a este elemento será posible proveer títulos, subtítulos, descripciones y metadatos que pueden ser de utilidad para el usuario. Los archivos de las pistas de texto deben estar en formato VTT.
+        </p>
+    </article>
+ 
+    <hr>
+    <h3 id="audio">II.6.3 HTML.Audio</h3>
+    
+    <article>
+
+        <h4>Elemento &lt;audio&gt;</h4>
+        <p>HTML provee un elemento para incrustar audios: el elemento <b>&lt;audio&gt;</b>. Los autores tienen dos métodos para especificar a los navegadores web la ruta del audio que se debe cargar. El primer método es el más directo: mediante el atributo <b>src</b>, en el que se indicará una URL válida. El segundo es mediante el elemento <b>&lt;source&gt;</b>, cuya particularidad es la de permitir proveer alternativas del recurso de audio; así, será el propio navegador el que decidirá qué recurso cargar.</p>
+
+        <h4>Estructura del Elemento &lt;audio&gt;</h4>
+        <p>El elemento <b>&lt;audio&gt;</b> consta de dos etiquetas para indicar el inicio (<b>&lt;audio&gt;</b>) y el final (<b>&lt;/audio&gt;</b>) de su contenido. Dentro de estas dos etiquetas se define el contenido que se usará cuando no se haya definido una URL válida de un recurso de audio o cuando el navegador web no tenga soporte para el elemento <b>&lt;audio&gt;</b>. Si lo soporta, se ignorará el contenido alternativo.</p>
+
+        <h4>Ejemplo de Código HTML</h4>
+        <p>Ejemplo de código HTML con un audio insertado:</p>
+        <pre><code>&lt;audio controls src="https://www.w3schools.com/html/horse.mp3"&gt;Tu navegador no soporta audios incrustados.&lt;/audio&gt;</code></pre>
+        <pre><code><audio controls src="https://www.w3schools.com/html/horse.mp3">Tu navegador no soporta audios incrustados.</audio></code></pre>
+
+        <h4>Atributos de &lt;audio&gt;</h4>
+        <p>El elemento <b>&lt;audio&gt;</b> puede hacer uso de todos los atributos globales; además, tiene algunos atributos específicos que permiten configurar sus variadas opciones.</p>
+
+        <h4>Atributo src</h4>
+        <p>Como ya se ha dicho, el atributo <b>src</b> permite indicar la ruta en la que se encuentra el archivo de audio. El valor de <b>src</b> deberá ser una URL válida, sin importar si se trata de una URL absoluta o una URL relativa. Es importante señalar que sólo se permite enlazar un recurso. Para usar múltiples recursos es conveniente usar el elemento <b>&lt;source&gt;</b>.</p>
+
+        <h4>Atributo crossorigin</h4>
+        <p>Gracias al atributo <b>crossorigin</b> es posible indicar si la petición que se ha realizado a un servidor externo debe presentar credenciales de origen cruzado (CORS). Este atributo tiene dos valores posibles: anonymous: se establece la etiqueta “omit credentials”. use-credentials: no se establece la etiqueta “omit credentials”.</p>
+
+        <h4>Atributo preload</h4>
+        <p>Si lo que se quiere es especificar el momento de carga del recurso multimedia, el atributo <b>preload</b> permite proporcionar una sugerencia de este tipo al navegador web. Este atributo puede tener tres valores: <b>none</b>: no se requiere la precarga de ninguna información. <b>metadata</b>: sólo se precargan los metadatos y los primeros segundos. <b>auto</b>: el recurso de audio se precarga a discreción del navegador web.</p>
+
+        <h4>Atributo autoplay</h4>
+        <p>Es posible activar la reproducción de audio de forma automática con ayuda del atributo <b>autoplay</b>. Tan pronto como al navegador le sea posible comenzará la reproducción. Este atributo es binario, así que su inclusión lo activa.</p>
+
+        <h4>Atributo loop</h4>
+        <p>El atributo <b>loop</b> permite que cuando la reproducción de un audio termine vuelva a empezar, indefinidamente. Este atributo también es binario, por lo que su inclusión repetirá el audio en un bucle infinito.</p>
+
+        <h4>Atributo muted</h4>
+        <p>El atributo <b>muted</b> puede ser de utilidad cuando se quiere que, por defecto, un archivo de audio esté silenciado. Si los controles están presentes será posible quitar el silencio, es decir, subir el volumen para escuchar el audio. Este atributo también es binario, por lo que su inclusión silenciará el audio.</p>
+
+        <h4>Atributo controls</h4>
+        <p>Mediante el atributo binario controls se puede mostrar una interfaz gráfica que permite interactuar con la reproducción del audio. Así será posible pausar la reproducción, subir o bajar el volumen y descargar el archivo de audio.</p>
+
+        <h4>Recursos Alternativos: Elemento <b>&lt;source&gt;</b></h4>
+        <p>Los elementos de audio pueden contener recursos alternativos, y estos se insertan con la ayuda del elemento <b>&lt;source&gt;</b>. El elemento <b>&lt;source&gt;</b> debe figurar como elemento hijo del elemento &lt;audio&gt;, y se pueden añadir tantos recursos como sea necesario. Cada recurso proveerá una versión diferente del archivo de audio, que estará lógicamente codificada usando un códec distinto. Finalmente, será el navegador el que decida qué recurso cargar.</p>
+
+        <h4>Tipos de Medio para Archivos de Audio</h4>
+        <p>Estos son los tipos de medio más habituales para los archivos de audio:</p>
+        <ul>
+            <li>Para MP3: audio/mpeg</li>
+            <li>Para OGG: audio/ogg</li>
+            <li>Para WAV: audio/wav</li>
+        </ul>
+
+        <h4>Añadir Pista de Texto: Elemento &lt;track&gt;</h4>
+        <p>Con la ayuda del elemento <b>&lt;track&gt;</b> se puede proveer pistas de texto para el audio en cuestión. Este elemento es de gran utilidad para aportar títulos, subtítulos, descripciones y metadatos que serán de ayuda para el usuario. Los archivos de las pistas de texto deben estar en formato VTT.</p>
+    </article>
+
+
+    <hr>
+    <hr>    
+</body>
+</html>

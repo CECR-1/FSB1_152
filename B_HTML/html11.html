@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DWFSP1_152. HTML</title>
+</head>
+<body>
+    <h1 id="inicio">DESARROLLO WEB FULL STACK BASICO - DWFSP1_152</h1>
+    <hr>
+    <hr>
+    <h2><u>II.10 HTML.Añadir CSS, añadir JS, elementos &lt;link&gt;, elementos &lt;meta&gt;</u></h2>
+    <hr>
+
+    <h3 id="acss">II.10.1 HTML.Añadir CSS</h3>
+
+    <article>
+        <p>El CSS es un lenguaje de diseño gráfico que permite aplicar estilos al HTML. Sus siglas significan "hojas de estilo en cascada" (traducción del inglés Cascading Style Sheets). Este lenguaje es muy utilizado para establecer la apariencia visual de una página web.</p>
+
+        <h4>Ventajas del CSS</h4>
+        <p>Gracias al CSS es posible definir el color de los elementos HTML, ya sea el color de fondo, de los bordes, de las sombras o del texto. También es posible definir el espaciado y el alineamiento de los elementos, configurar las fuentes y todo lo que tenga que ver con la apariencia y el diseño de una página web.</p>
+
+        <h4>Formas de añadir CSS a HTML</h4>
+        <table border="1">
+            <tr><th>Método</th><th>Medio</th><th>Descripción</th></tr>
+            <tr><td>CSS en línea</td><td>Mediante el atributo style</td><td>Inserta código CSS directamente sobre un elemento HTML específico.</td></tr>
+            <tr><td>CSS interno</td><td>Mediante el elemento &lt;style&gt;</td><td>Los estilos se aplican cuando el documento se carga.</td></tr>
+            <tr><td>CSS externo</td><td>Mediante el elemento &lt;link&gt;</td><td>Enlaza un archivo CSS externo.</td></tr>
+        </table>
+
+        <h4>Atributos y elementos utilizados</h4>
+        <table border="1">
+            <tr><th>Elemento/Atributo</th><th>Descripción</th></tr>
+            <tr><td>style</td><td>Para insertar código CSS en línea, sobre un elemento HTML.</td></tr>
+            <tr><td>&lt;style&gt;</td><td>Para insertar código CSS en el documento actual.</td></tr>
+            <tr><td>&lt;link&gt;</td><td>Para incrustar un recurso externo con código CSS.</td></tr>
+        </table>
+
+        <h4>Ejemplos de uso</h4>
+        <p><strong>CSS en línea:</strong></p>
+        <pre>&lt;p style="color: red"&gt;Párrafo de color rojo.&lt;/p&gt;</pre>
+        <p style="color: green">Párrafo de color verde.</p>
+
+        <p><strong>CSS interno:</strong></p>
+        <pre>
+            &lt;html&gt;
+            &lt;head&gt;
+                &lt;style&gt;
+                p{ color: blue }
+                &lt;/style&gt;
+            &lt;/head&gt;
+            &lt;body&gt;
+                &lt;p&gt;Párrafo azul.&lt;/p&gt;
+            &lt;/body&gt;
+            &lt;/html&gt;
+        </pre>
+
+        <a href="html11a.html">Ir a la página ejemplo de CSS interno</a>
+
+        <p><strong>CSS externo:</strong></p>
+
+        <pre>&lt;link rel='stylesheet' href='./RECURSO/estilos.css'&gt;</pre>
+
+        <html>
+            <head>
+                <link rel='stylesheet' href='./RECURSO/estilos.css'>
+            </head>
+            <body>
+                <span>Span con fondo azul y caracteres blancos con archivo: estilos.css.</span>
+            </body>
+        </html>
+        
+        <h4>Selectores CSS</h4>
+        <p>Los selectores son fundamentales para aplicar estilos a los elementos HTML. Existen tres tipos principales:</p>
+        <table border="1">
+            <tr><th>Tipo de selector</th><th>Uso</th></tr>
+            <tr><td>Atributo id</td><td>Selector único. Ejemplo: #foo { color: red }</td></tr>
+            <tr><td>Atributo class</td><td>Selector múltiple. Ejemplo: .centrado { text-align: center }</td></tr>
+            <tr><td>Selectores de tipo</td><td>Aplican a todos los elementos del mismo tipo. Ejemplo: p { color: blue }</td></tr>
+        </table>
+    </article>
+
+    <hr>
+    <h3 id="ajs">II.10.2 HTML.Añadir JS</h3>
+
+    <article>
+        <p>JavaScript (JS) es un lenguaje de programación interpretado que permite añadir interactividad a una página web. Es muy usado en el lado del cliente, aunque también puede usarse en el lado del servidor.</p>
+        <p>Hay dos maneras de añadir código JavaScript a un documento HTML o página web:</p>
+
+        <table border="1">
+            <tr>
+            <th>Método</th>
+            <th>Descripción</th>
+            </tr>
+            <tr>
+            <td>Elemento &lt;script&gt;</td>
+            <td>Permite insertar código directamente en el documento actual o enlazar un recurso externo.</td>
+            </tr>
+            <tr>
+            <td>Atributos de eventos</td>
+            <td>Se usan para ejecutar acciones concretas mediante código JS cuando ocurren ciertos eventos.</td>
+            </tr>
+        </table>
+
+        <h4>Añadir código JS: elemento &lt;script&gt;</h4>
+        <p>El elemento &lt;script&gt; permite insertar código JavaScript directamente en el documento HTML entre las etiquetas &lt;script&gt; y &lt;/script&gt;.</p>
+        <p>Ejemplo:</p>
+        <pre><code>
+            &lt;script&gt;
+                alert('Hola')
+            &lt;/script&gt;
+        </code></pre>
+
+        <title>Adicionar JS desde archivo externo</title>
+        <!-- Ejemplo de cómo enlazar un archivo JS externo -->
+        <script src="archivo.js" defer></script>
+        <p>También se puede enlazar un archivo JavaScript externo usando el atributo src del elemento &lt;script&gt;.</p>
+        <p>Ejemplo:</p>
+        <pre>&lt;script src='archivo.js'&gt;&lt;/script&gt;</pre>
+        <p>El atributo src especifica la ruta del archivo JavaScript externo. Es importante que el archivo tenga la extensión .js.</p>
+        <p>El atributo defer permite que el script se ejecute después de que el documento HTML se haya cargado completamente, lo que mejora la carga del documento.</p>
+        <p>Ejemplo:</p>
+        <pre>&lt;script src='archivo.js' defer&gt;&lt;/script&gt;</pre>
+        <p>El atributo async permite que el script se cargue de forma asíncrona, lo que significa que no detiene la carga del documento HTML mientras se descarga el script.</p>
+        <p>Ejemplo:</p>
+        <pre>&lt;script src='archivo.js' async&gt;&lt;/script&gt;</pre>
+
+        <p>Ejemplo completo:</p>
+
+        <pre><code>
+            //Archivo: reloj.js 
+            // Muestra la hora actual en un elemento con id="hora"
+            function mostrarHora() {
+                const ahora = new Date();
+                const hora = ahora.toLocaleTimeString();
+                document.getElementById('hora').textContent = hora;
+            }
+            setInterval(mostrarHora, 1000);
+            window.onload = mostrarHora;
+        </code></pre>
+
+        <pre><code>
+            &lt;p&gt;Hora actual: &lt;span id="hora"&gt;&lt;/span&gt;&lt;/p&gt;
+            &lt;script src="./RECURSO/reloj.js"&gt;&lt;/script&gt;
+        </code></pre>
+        
+        <p>Hora actual: <span id="hora"></span></p>
+        <script src="./RECURSO/reloj.js"></script>
+
+        <h4>Atributos del elemento &lt;script&gt;</h4>
+        <p>Los atributos permiten configurar funcionalidades avanzadas para mejorar la carga del documento HTML. Algunos de los más importantes son:</p>
+
+        <table border="1">
+            <tr>
+            <th>Atributo</th>
+            <th>Descripción</th>
+            </tr>
+            <tr>
+            <td>src</td>
+            <td>Especifica la ruta del archivo JavaScript externo (.js).</td>
+            </tr>
+            <tr>
+            <td>type</td>
+            <td>Especifica el tipo de contenido, por defecto es text/javascript.</td>
+            </tr>
+            <tr>
+            <td>nomodule</td>
+            <td>Evita que el código se ejecute en navegadores que soportan módulos.</td>
+            </tr>
+            <tr>
+            <td>async</td>
+            <td>Carga el script de forma asincrónica sin detener la carga del documento.</td>
+            </tr>
+            <tr>
+            <td>defer</td>
+            <td>Hace que el script se cargue después de que termine de cargarse todo el documento.</td>
+            </tr>
+            <tr>
+            <td>crossorigin</td>
+            <td>Controla las credenciales CORS al cargar recursos desde otro dominio.</td>
+            </tr>
+            <tr>
+            <td>integrity</td>
+            <td>Verifica la integridad del recurso con un hash seguro.</td>
+            </tr>
+            <tr>
+            <td>referrerpolicy</td>
+            <td>Especifica cómo se envía la información del referente al cargar recursos.</td>
+            </tr>
+        </table>
+
+        <h4>Añadir código JS con atributos de eventos</h4>
+        <p>Los elementos HTML pueden tener atributos de eventos que ejecutan código JavaScript cuando ocurre una acción, como hacer clic, mover el ratón o cargar la página.</p>
+        <details>
+        <summary>Ver ejemplo de evento onclick en HTML</summary>
+            <p>
+                <b>Ejemplo:</b>
+                <br>
+                <code>
+                    &lt;p onclick='alert("Mensaje de alerta.")'&gt;Pulsa este párrafo.&lt;/p&gt;
+                </code>
+            </p>
+            <p>
+                <b>Resultado en el navegador:</b>
+                <br>
+                <p onclick='alert("Mensaje de alerta.")' style="cursor:pointer; color:blue; text-decoration:underline;">Pulsa este párrafo.</p>
+            </p>
+        </details>
+
+        <h4>El elemento &lt;noscript&gt; y su utilidad</h4>
+        <p>El elemento &lt;noscript&gt; se usa para mostrar contenido alternativo si el navegador no tiene soporte para JavaScript o está deshabilitado. Tiene etiquetas de apertura y cierre obligatorias.</p>
+        <p>Ejemplo:</p>
+        <pre><code>
+            &lt;script&gt;
+                alert('Se muestra si tiene JS habilitado.')
+            &lt;/script&gt;
+            &lt;noscript&gt;Se muestra si tiene JS deshabilitado.
+            &lt;/noscript&gt;
+        </code></pre>
+    </article>
+
+    <hr>
+    <h3 id="alink">II.10.3 HTML.Elementos &lt;link&gt;</h3>
+
+    <article>  
+        <p>El elemento link permite proveer información relacionada entre el documento HTML actual y un recurso externo enlazado, como pueden ser hojas de estilo en cascada (CSS), fuentes o tipografías, y los iconos de página (favicon).</p>  
+
+        <h4>Estructura básica del elemento link</h4>  
+        <p>La etiqueta del elemento es &lt;link&gt;. Este elemento no tiene etiqueta de cierre, por lo que solo se usa la etiqueta de apertura. Debe estar anidado dentro de las etiquetas del elemento &lt;head&gt;.</p>  
+        <p>Ejemplo:</p>  
+        <pre>&lt;head&gt;<br>  &lt;link rel='stylesheet' href='estilos.css'&gt;<br>  &lt;link rel='icon' type='image/x-icon' href='favicon.ico'&gt;<br>&lt;/head&gt;</pre>  
+
+        <h4>Atributo href</h4>  
+        <p>El atributo href define la URL del recurso enlazado. Puede ser absoluta o relativa. Es obligatorio usar este atributo.</p>  
+
+        <h4>Atributo rel</h4>  
+        <p>El atributo rel indica la relación entre el documento actual y el recurso enlazado. Algunos valores comunes incluyen:</p>  
+        <ul>  
+            <li>stylesheet: para hojas de estilo CSS.</li>  
+            <li>icon: para favicones.</li>  
+            <li>preload: para recursos que se precargan.</li>  
+            <li>canonical: para evitar contenido duplicado.</li>  
+        </ul>  
+
+        <h4>Atributo crossorigin</h4>  
+        <p>Este atributo controla si se envían credenciales CORS al hacer una solicitud de origen cruzado. Sus valores posibles son:</p>  
+        <ul>  
+            <li>anonymous: sin enviar credenciales.</li>  
+            <li>use-credentials: enviando credenciales.</li>  
+        </ul>  
+
+        <h4>Atributo media</h4>  
+        <p>Especifica para qué tipo de medio está diseñado el recurso. Valores comunes:</p>  
+        <ul>  
+            <li>print: diseño para impresión.</li>  
+            <li>screen: diseño para pantallas.</li>  
+            <li>all: para todos los tipos de medio (valor por defecto).</li>  
+        </ul>  
+
+        <h4>Atributo integrity</h4>  
+        <p>Verifica la integridad del recurso enlazado con un hash codificado en Base64. Solo se usa cuando rel tiene valores como stylesheet, preload o modulepreload.</p>  
+        <p>Ejemplo:</p>  
+        <pre>&lt;link rel='stylesheet' href='style.css' integrity='sha256-yLGHRkK85JGUMJsevPaKCQ4gYknL2SIGgERVBSiP/Ks='&gt;</pre>  
+
+        <h4>Atributo hreflang</h4>  
+        <p>Especifica el idioma del recurso enlazado. Se recomienda usarlo junto con el atributo href.</p>  
+
+        <h4>Atributo type</h4>  
+        <p>Indica el tipo MIME del recurso enlazado. Ejemplos:</p>  
+        <ul>  
+            <li>text/css: para archivos CSS.</li>  
+            <li>image/x-icon: para iconos.</li>  
+        </ul>  
+
+        <h4>Atributo referrerpolicy</h4>  
+        <p>Controla cómo se envía la referencia al servidor. Valores principales:</p>  
+        <ul>  
+            <li>no-referrer: no se envía ninguna referencia.</li>  
+            <li>no-referrer-when-downgrade: valor predeterminado.</li>  
+            <li>origin: solo se envía el origen.</li>  
+            <li>unsafe-url: se envía toda la URL (no recomendado por seguridad).</li>  
+        </ul>  
+
+        <h4>Atributo sizes</h4>  
+        <p>Define los tamaños disponibles de un icono. Se usa cuando rel tiene valores como icon o apple-touch-icon.</p>  
+        <p>Ejemplo:</p>  
+        <pre>&lt;link rel='icon' href='icono.png' sizes='16x16 32x32 64x64'&gt;</pre>  
+
+        <h4>Atributo imagesrcset</h4>  
+        <p>Similar al atributo srcset de imágenes, permite definir múltiples versiones del icono según tamaño de dispositivo.</p>  
+        <p>Ejemplo:</p>  
+        <pre>&lt;link rel='icon' href='icono.png' imagesrcset='icono-400.png 400w, icono-500.png 500w'&gt;</pre>  
+
+        <h4>Atributo imagesizes</h4>  
+        <p>Funciona como el atributo sizes de imágenes. Define qué imagen usar dependiendo del tamaño del dispositivo.</p>  
+        <p>Ejemplo:</p>  
+        <pre>&lt;link rel='icon' href='icono.png' imagesrcset='icono-400.png 400w, icono-500.png 500w' imagesizes='(max-width: 400px) 400px, 500px'&gt;</pre>  
+
+        <h4>Atributo as</h4>  
+        <p>Especifica el propósito semántico del recurso enlazado. Se usa cuando rel tiene valores como preload o prefetch. Algunos valores posibles:</p>  
+        <ul>  
+            <li>font: para fuentes web.</li>  
+            <li>image: para imágenes.</li>  
+            <li>script: para archivos JavaScript.</li>  
+            <li>style: para hojas de estilo.</li>  
+        </ul>  
+
+        <a href="html11b.html">Ir a la página ejemplo de LINKS</a>
+
+    </article>
+
+    <hr>
+    <h3 id="ameta">II.10.4 HTML.Elementos &lt;meta&gt;</h3>
+
+    <article>
+        <p>El elemento &lt;meta&gt; permite especificar información adicional importante sobre el documento HTML o página web. La información de este elemento es invisible para los usuarios, pues está pensada para los navegadores web u otras aplicaciones que puedan necesitar información complementaria.
+        </p>
+
+        <p>La etiqueta de este elemento es &lt;meta&gt;; sin etiqueta de cierre. Por tanto, se trata de un elemento vacío. El contenido de este elemento se introduce por medio de sus atributos. También es conocido con el nombre de etiqueta meta o metaetiqueta; el nombre es una traducción de Meta-Tag.
+        </p>
+
+        <p>Se puede introducir tantos elementos &lt;meta&gt; como sean necesarios. Teniendo en cuenta que no son vistos por el usuario, su uso no afectará a la apariencia del documento HTML. Para introducirlos, es obligatorio que estén anidados dentro de las etiquetas del elemento &lt;head&gt;.
+        </p>
+
+        <h4>Atributos</h4>
+        <table border="1">
+            <tr>
+            <th>Atributo</th>
+            <th>Valor</th>
+            <th>Descripción</th>
+            </tr>
+            <tr>
+            <td>charset</td>
+            <td>Codificación de caracteres</td>
+            <td>Especifica la codificación de caracteres del documento HTML.</td>
+            </tr>
+            <tr>
+            <td>name</td>
+            <td>application-name, author, description, generator, keywords, viewport, robots</td>
+            <td>Especifica el nombre de la información adicional.</td>
+            </tr>
+            <tr>
+            <td>http-equiv</td>
+            <td>content-language, content-type, content-style-type, content-security-policy, refresh, allow, content-encoding, content-length, date, expires, cache-control, last-modified, location, set-cookie, X-UA-Compatible, default-style</td>
+            <td>Especifica una cabecera HTTP.</td>
+            </tr>
+            <tr>
+            <td>content</td>
+            <td>Cadena de texto</td>
+            <td>Especifica el valor asociado con el atributo name o con http-equiv.</td>
+            </tr>
+        </table>
+
+        <h4>Ejemplos comunes del elemento &lt;meta&gt;</h4>
+        <table border="1">
+            <tr>
+            <th>Tipo</th>
+            <th>Ejemplo</th>
+            <th>Uso</th>
+            </tr>
+            <tr>
+            <td>Codificación de caracteres (charset)</td>
+            <td>&lt;meta charset='UTF-8'&gt;</td>
+            <td>Especifica la codificación del documento.</td>
+            </tr>
+            <tr>
+            <td>Directiva pragma</td>
+            <td>&lt;meta http-equiv='Content-Type' content='text/html; charset=UTF-8'&gt;</td>
+            <td>Otra forma de definir la codificación.</td>
+            </tr>
+            <tr>
+            <td>Descripción de la página</td>
+            <td>&lt;meta name='description' content='Esta página web explica los algoritmos iterativos.'&gt;</td>
+            <td>Usado en SEO para describir el sitio.</td>
+            </tr>
+            <tr>
+            <td>Palabras clave</td>
+            <td>&lt;meta name='keywords' content='algoritmos, programación, Python'&gt;</td>
+            <td>Define palabras clave relevantes para el contenido.</td>
+            </tr>
+            <tr>
+            <td>Autoría</td>
+            <td>&lt;meta name='author' content='Isaac Newton'&gt;</td>
+            <td>Especifica el autor del documento.</td>
+            </tr>
+            <tr>
+            <td>Control de indexado</td>
+            <td>&lt;meta name='robots' content='noindex'&gt;</td>
+            <td>Evita que buscadores indexen la página.</td>
+            </tr>
+            <tr>
+            <td>Recarga automática</td>
+            <td>&lt;meta http-equiv='refresh' content='30'&gt;</td>
+            <td>Vuelve a cargar la página cada 30 segundos.</td>
+            </tr>
+            <tr>
+            <td>Política de seguridad</td>
+            <td>&lt;meta http-equiv='content-security-policy' content='default-src https:'&gt;</td>
+            <td>Controla qué recursos carga la página.</td>
+            </tr>
+            <tr>
+            <td>Hojas de estilo por defecto</td>
+            <td>&lt;meta http-equiv='default-style' content='/style.css'&gt;</td>
+            <td>Define una hoja de estilo predeterminada.</td>
+            </tr>
+            <tr>
+            <td>Fecha de vencimiento</td>
+            <td>&lt;meta http-equiv='expires' content='2020-01-01'&gt;</td>
+            <td>Indica cuándo expira la página.</td>
+            </tr>
+        </table>
+
+        <h4>Consideraciones importantes</h4>
+        <p>La especificación de la codificación debe estar dentro de los primeros 1024 bytes del documento HTML. Por lo tanto, lo mejor es colocarla inmediatamente después de la etiqueta de apertura del elemento &lt;head&gt;. En un documento HTML debe haber como mínimo una codificación especificada, pero nunca de las dos maneras a la vez.
+        </p>
+    </article>
+
+
+    <hr>
+    <hr>    
+</body>
+</html>

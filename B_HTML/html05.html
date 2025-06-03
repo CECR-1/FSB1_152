@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DWFSP1_152. HTML</title>
+</head>
+<body>
+    <h1 id="inicio">DESARROLLO WEB FULL STACK BASICO - DWFSP1_152</h1>
+    <hr>
+    <hr>
+    <h2><u>II.4 HTML.Formatos de texto, citaciones, anotaciones, mostar código</u></h2>
+    <hr>
+
+    <h3 id="formatosDeTexto">II.4.1 HTML.Formatos de texto</h3>
+    
+    <article>
+        
+        <p>HTML proporciona algunos elementos para formatear el texto de maneras muy diferentes. Por ejemplo, por nombrar tres formatos populares, se puede crear texto en negrita, en cursiva o subrayado. Los formatos se pueden aplicar a los elementos de texto, como sería el caso de los encabezados y los párrafos.</p>
+
+        <h4>Lista de elementos descritos en este artículo:</h4>
+        <table>
+                <tr>
+                    <th>Elemento</th>
+                    <th>Descripción</th>
+                    <th>Ejemplo</th>
+                </tr>
+                <tr>
+                    <td><code>&lt;b&gt;</code></td>
+                    <td>Texto en negrita</td>
+                    <td><b>Texto en negrita</b></td>
+                </tr>
+                <tr>
+                    <td><code>&lt;strong&gt;</code></td>
+                    <td>Texto en negrita con énfasis</td>
+                    <td><strong>Texto importante</strong></td>
+                </tr>
+                <tr>
+                    <td><code>&lt;i&gt;</code></td>
+                    <td>Texto en cursiva</td>
+                    <td><i>Texto en cursiva</i></td>
+                </tr>
+                <tr>
+                    <td><code>&lt;em&gt;</code></td>
+                    <td>Texto en cursiva con énfasis</td>
+                    <td><em>Texto enfatizado</em></td>
+                </tr>
+                <tr>
+                    <td><code>&lt;u&gt;</code></td>
+                    <td>Texto subrayado</td>
+                    <td><u>Texto subrayado</u></td>
+                </tr>
+                <tr>
+                    <td><code>&lt;ins&gt;</code></td>
+                    <td>Texto añadido</td>
+                    <td><ins>Texto añadido</ins></td>
+                </tr>
+                <tr>
+                    <td><code>&lt;del&gt;</code></td>
+                    <td>Texto eliminado</td>
+                    <td><del>Texto eliminado</del></td>
+                </tr>
+                <tr>
+                    <td><code>&lt;sup&gt;</code></td>
+                    <td>Texto superíndice</td>
+                    <td>X<sup>2</sup></td>
+                </tr>
+                <tr>
+                    <td><code>&lt;sub&gt;</code></td>
+                    <td>Texto subíndice</td>
+                    <td>H<sub>2</sub>O</td>
+                </tr>
+                <tr>
+                    <td><code>&lt;mark&gt;</code></td>
+                    <td>Texto resaltado</td>
+                    <td><mark>Texto resaltado</mark></td>
+                </tr>
+                <tr>
+                    <td><code>&lt;s&gt;</code></td>
+                    <td>Texto tachado</td>
+                    <td><s>Texto tachado</s></td>
+                </tr>
+                <tr>
+                    <td><code>&lt;small&gt;</code></td>
+                    <td>Texto pequeño</td>
+                    <td><small>Texto pequeño</small></td>
+                </tr>
+                <tr>
+                    <td><code>&lt;big&gt;</code></td>
+                    <td>Texto grande</td>
+                    <td><big>Texto grande</big></td>
+                </tr>
+            </table>
+
+    </article>
+
+    <hr>
+    <h3 id="citaciones">II.4.2 HTML.Citaciones</h3>
+
+    <article>
+    
+        <h4>Lista de elementos para citaciones descritos en este artículo:</h4>
+        <table border="1">
+            <tr>
+                <th>Elemento</th>
+                <th>Descripción</th>
+                <th>Ejemplo (código)</th>
+                <th>Ejemplo (resultado)</th>
+            </tr>
+            <tr>
+                <td><code>&lt;blockquote&gt;</code></td>
+                <td>Define una citación en un elemento de bloque</td>
+                <td>
+                    <pre><code>&lt;blockquote&gt;Texto citado en bloque.&lt;/blockquote&gt;</code></pre>
+                </td>
+                <td>
+                    <blockquote>
+                        Texto citado en bloque.
+                    </blockquote>
+                </td>
+            </tr>
+            <tr>
+                <td><code>&lt;q&gt;</code></td>
+                <td>Define una citación en un elemento de línea</td>
+                <td>
+                    <pre><code>&lt;p&gt;Esto es una &lt;q&gt;cita en línea&lt;/q&gt;.&lt;/p&gt;</code></pre>
+                </td>
+                <td>
+                    <p>Esto es una <q>cita en línea</q>.</p>
+                </td>
+            </tr>
+            <tr>
+                <td><code>&lt;address&gt;</code></td>
+                <td>Define información de contacto</td>
+                <td>
+                    <pre><code>&lt;address&gt;
+                        Contacta con el autor en: &lt;a href="/contacto/"&gt;Contacto&lt;/a&gt;.
+                        &lt;/address&gt;</code></pre>
+                </td>
+                <td>
+                    <address>
+                        Contacta con el autor en: <a href="/contacto/">Contacto</a>.
+                    </address>
+                </td>
+            </tr>
+            <tr>
+                <td><code>&lt;cite&gt;</code></td>
+                <td>Define una referencia o fuente</td>
+                <td>
+                    <pre><code>&lt;p&gt;&lt;cite&gt;Tim Berners-Lee&lt;/cite&gt; dijo: &lt;q&gt;La red no debe tener dueño&lt;/q&gt;.&lt;/p&gt;</code></pre>
+                </td>
+                <td>
+                    <p><cite>Tim Berners-Lee</cite> dijo: <q>La red no debe tener dueño</q>.</p>
+                </td>
+            </tr>
+            <tr>
+                <td><code>&lt;abbr&gt;</code></td>
+                <td>Define una abreviación o acrónimo</td>
+                <td>
+                    <pre><code>&lt;p&gt;El lenguaje &lt;abbr title="HyperText Markup Language"&gt;HTML&lt;/abbr&gt; es muy fácil de aprender.&lt;/p&gt;</code></pre>
+                </td>
+                <td>
+                    <p>El lenguaje <abbr title="HyperText Markup Language">HTML</abbr> es muy fácil de aprender.</p>
+                </td>
+            </tr>
+            <tr>
+                <td><code>&lt;dfn&gt;</code></td>
+                <td>Marca el término que se va a definir</td>
+                <td>
+                    <pre><code>&lt;p&gt;El &lt;dfn title="HyperText Markup Language"&gt;HTML&lt;/dfn&gt; es un lenguaje de marcas.&lt;/p&gt;</code></pre>
+                </td>
+                <td>
+                    <p>El <dfn title="HyperText Markup Language">HTML</dfn> es un lenguaje de marcas.</p>
+                </td>
+            </tr>
+        </table>
+        
+    </article>
+
+    <hr>
+    <h3 id="anotaciones">II.4.3 HTML.Anotaciones</h3>
+
+    <article>
+  
+        <p>
+            Las anotaciones Ruby son pequeñas porciones de texto que se representan encima, debajo o al lado del texto base,
+            es decir, se trata de anotaciones circundantes a un texto. Estas anotaciones se crean con el elemento <code><ruby></code>
+            y se utilizan, en general, para mostrar la pronunciación de tipografías asiáticas, aunque se pueden usar en cualquier tipo de anotación.
+        </p>
+
+        <p>
+            Junto con el elemento <code>&lt;ruby&gt;</code> se usan otros dos elementos:
+            <code>&lt;rt&gt;</code>, para proveer las anotaciones que se mostrarán alrededor del texto base, y
+            <code>&lt;rp&gt;</code>, para insertar caracteres ocultos (normalmente paréntesis) que se mostrarán en caso de que el navegador web no tenga soporte para las anotaciones Ruby.
+        </p>
+
+        <h4>Lista de elementos para anotaciones Ruby</h4>
+        <table border="">
+            <tr>
+            <th>Elemento</th>
+            <th>Descripción</th>
+            </tr>
+            <tr>
+            <td><code>&lt;ruby&gt;</code></td>
+            <td>Texto Ruby (anotaciones circundantes)</td>
+            </tr>
+            <tr>
+            <td><code>&lt;rt&gt;</code></td>
+            <td>Definición de anotación Ruby</td>
+            </tr>
+            <tr>
+            <td><code>&lt;rp&gt;</code></td>
+            <td>Respaldo de soporte en anotaciones Ruby</td>
+            </tr>
+        </table>
+
+        <h4>Crear anotaciones Ruby</h4>
+        <p>
+            Las anotaciones Ruby se crean con el elemento <code>>&lt;ruby&gt;</code>. Se trata de un elemento con dos etiquetas:
+            <code>>&lt;ruby&gt;</code> (de apertura) y <code>>&lt;/ruby&gt;</code> (de cierre). Dentro de estas etiquetas se añade el texto base
+            al que se le quiere hacer una anotación.
+        </p>
+
+        <p>
+            La anotación se realiza con el elemento <code>&lt;rt&gt;</code> y se representará en un tamaño más pequeño que el texto base.
+            Este elemento también tiene dos etiquetas para indicar el inicio y el fin de la anotación.
+        </p>
+
+        <h4>Ejemplo básico de anotación Ruby</h4>
+
+        <pre><code>
+            &lt;ruby&gt;Texto base&lt;rt&gt;Anotacion&lt;/rt&gt;&lt;/ruby&gt;
+        </code></pre>
+        <pre><code><ruby>Texto base<rt>Anotacion</rt></ruby></code></pre>
+
+        <p>
+            En este ejemplo, el texto "Anotacion" aparece justo encima del "Texto base". Si el navegador no tuviera soporte para este tipo de anotaciones,
+            la anotación se vería a continuación del texto base, así:
+        </p>
+
+        <p>Texto base Anotacion</p>
+
+        <h4>Otros ejemplos</h4>
+
+        <h5>Ejemplo 1</h5>
+        <p>Uso típico para tipografías asiáticas:</p>
+        <pre>
+            <code>
+                &lt;ruby&gt;
+                    漢 &lt;rt&gt;Kan&lt;/rt&gt;
+                    字 &lt;rt&gt;ji&lt;/rt&gt;
+                &lt;/ruby&gt;
+            </code>
+        </pre>
+        
+        <ruby>
+            Han <rp>(</rp><rt>Kan</rt><rp>)</rp>
+            Zi  <rp>(</rp><rt>ji</rt><rp>)</rp>
+        </ruby>
+        
+        <p>---</p>
+        <h5>Ejemplo 2</h5>
+        <p>Explicación del código hexadecimal para el color verde:</p>
+        <pre>
+            <code>
+                &lt;ruby&gt;
+                    #00FF00 &lt;rt&gt;Verde&lt;/rt&gt;
+                &lt;/ruby&gt;
+            </code>
+        </pre>
+        <ruby>
+            #00FF00<rp>(</rp><rt>Verde</rt><rp>)</rp>
+        </ruby>
+        <p>---</p>
+        <h5>Ejemplo 3</h5>
+        <p>HTML:</p>
+        <pre>
+            <code>
+                &lt;ruby&gt;
+                    HTML &lt;rt&gt;Lenguaje de marcas&lt;/rt&gt;
+                &lt;/ruby&gt;
+            </code>
+        </pre>
+        <ruby>
+            HTML
+            <rp>(</rp>
+            <rt>Lenguaje de Marcas</rt>
+            <rp>)</rp>
+        </ruby>
+        
+
+        <h4>Consideraciones sobre compatibilidad</h4>
+        <p>
+            Como se puede deducir de estos ejemplos, son muchos los usos posibles de las anotaciones Ruby, más allá de las tipografías de Asia.
+            Lo importante es tener claro que el soporte provisto por los navegadores web es incompleto, y que quizá sería buena idea recurrir
+            a técnicas de diseño CSS para garantizar una representación que funcione en cualquier navegador.
+        </p>
+    </article>
+
+    <hr>
+    <h3 id="mostrarCodigo">II.4.4 HTML.Mostar código</h3>
+
+    <article>
+    
+        <p>HTML tiene elementos que permiten mostrar código de lenguajes de programación. Y de hecho, ya se conoce un elemento que se usa para eso: <b>&lt;code&gt;&lt;pre&gt;&lt;/pre&gt;&lt;/code&gt;</b>, de preformateado, que preserva los espacios múltiples, los saltos de línea y las tabulaciones.</p>
+
+        <h4>Lista de elementos para mostrar código descritos en este artículo:</h4>
+        <table border="">
+            <tr>
+                <th>Elemento</th>
+                <th>Descripción</th>
+                <th>Ejemplo</th>
+            </tr>
+            <tr>
+                <td><code>&lt;code&gt;</code></td>
+                <td>Para representar código fuente de programación</td>
+                <td><code>var x = 5;<br>var y = 6;<br>var z = x + y;</code></td>
+            </tr>
+            <tr>
+                <td><code>&lt;samp&gt;</code></td>
+                <td>Para representar la salida de un programa</td>
+                <td><samp>¡Hola, mundo!</samp></td>
+            </tr>
+            <tr>
+                <td><code>&lt;var&gt;</code></td>
+                <td>Para representar variables</td>
+                <td><var>x</var></td>
+            </tr>
+            <tr>
+                <td><code>&lt;kbd&gt;</code></td>
+                <td>Para representar teclas</td>
+                <td><kbd>Ctrl</kbd> + <kbd>S</kbd></td>
+            </tr>
+        </table>
+    </article>
+
+    <hr>
+    <hr>    
+</body>
+</html>

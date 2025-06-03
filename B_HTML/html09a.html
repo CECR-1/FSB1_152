@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario Completo de Ejemplo</title>
+</head>
+<body>
+    <h1>Formulario Completo de Ejemplo</h1>
+
+    <pre><code>
+        &lt;form action="#" method="post" enctype="multipart/form-data"&gt;
+            &lt;fieldset&gt;
+                &lt;legend&gt;Datos Personales&lt;/legend&gt;
+                &lt;label for="nombre"&gt;Nombre:&lt;/label&gt;
+                &lt;input type="text" id="nombre" name="nombre" required&gt;&lt;br&gt;&lt;br&gt;
+
+                &lt;label for="apellido"&gt;Apellido:&lt;/label&gt;
+                &lt;input type="text" id="apellido" name="apellido" required&gt;&lt;br&gt;&lt;br&gt;
+
+                &lt;label for="email"&gt;Correo electrónico:&lt;/label&gt;
+                &lt;input type="email" id="email" name="email" required&gt;&lt;br&gt;&lt;br&gt;
+
+                &lt;label for="password"&gt;Contraseña:&lt;/label&gt;
+                &lt;input type="password" id="password" name="password" required&gt;&lt;br&gt;&lt;br&gt;
+
+                &lt;label for="fecha"&gt;Fecha de nacimiento:&lt;/label&gt;
+                &lt;input type="date" id="fecha" name="fecha"&gt;&lt;br&gt;&lt;br&gt;
+
+                &lt;label for="hora"&gt;Hora preferida de contacto:&lt;/label&gt;
+                &lt;input type="time" id="hora" name="hora"&gt;&lt;br&gt;&lt;br&gt;
+
+                &lt;label for="color"&gt;Color favorito:&lt;/label&gt;
+                &lt;input type="color" id="color" name="color"&gt;&lt;br&gt;&lt;br&gt;
+            &lt;/fieldset&gt;
+
+            &lt;fieldset&gt;
+                &lt;legend&gt;Preferencias&lt;/legend&gt;
+                &lt;label&gt;Género:&lt;/label&gt;
+                &lt;input type="radio" id="masculino" name="genero" value="masculino"&gt;
+                &lt;label for="masculino"&gt;Masculino&lt;/label&gt;
+                &lt;input type="radio" id="femenino" name="genero" value="femenino"&gt;
+                &lt;label for="femenino"&gt;Femenino&lt;/label&gt;
+                &lt;input type="radio" id="otro" name="genero" value="otro"&gt;
+                &lt;label for="otro"&gt;Otro&lt;/label&gt;&lt;br&gt;&lt;br&gt;
+
+                &lt;label&gt;Intereses:&lt;/label&gt;
+                &lt;input type="checkbox" id="musica" name="intereses" value="musica"&gt;
+                &lt;label for="musica"&gt;Música&lt;/label&gt;
+                &lt;input type="checkbox" id="deporte" name="intereses" value="deporte"&gt;
+                &lt;label for="deporte"&gt;Deporte&lt;/label&gt;
+                &lt;input type="checkbox" id="lectura" name="intereses" value="lectura"&gt;
+                &lt;label for="lectura"&gt;Lectura&lt;/label&gt;
+                &lt;input type="checkbox" id="viajes" name="intereses" value="viajes"&gt;
+                &lt;label for="viajes"&gt;Viajes&lt;/label&gt;&lt;br&gt;&lt;br&gt;
+
+                &lt;label for="pais"&gt;País:&lt;/label&gt;
+                &lt;select id="pais" name="pais"&gt;
+                    &lt;option value=""&gt;Seleccione...&lt;/option&gt;
+                    &lt;option value="colombia"&gt;Colombia&lt;/option&gt;
+                    &lt;option value="mexico"&gt;México&lt;/option&gt;
+                    &lt;option value="espana"&gt;España&lt;/option&gt;
+                    &lt;option value="argentina"&gt;Argentina&lt;/option&gt;
+                &lt;/select&gt;&lt;br&gt;&lt;br&gt;
+
+                &lt;label for="ciudad"&gt;Ciudad:&lt;/label&gt;
+                &lt;input list="ciudades" id="ciudad" name="ciudad"&gt;
+                &lt;datalist id="ciudades"&gt;
+                    &lt;option value="Bogotá"&gt;
+                    &lt;option value="Medellín"&gt;
+                    &lt;option value="Cali"&gt;
+                    &lt;option value="Barranquilla"&gt;
+                    &lt;option value="Cartagena"&gt;
+                &lt;/datalist&gt;&lt;br&gt;&lt;br&gt;
+            &lt;/fieldset&gt;
+
+            &lt;fieldset&gt;
+                &lt;legend&gt;Otros Datos&lt;/legend&gt;
+                &lt;label for="archivo"&gt;Subir archivo:&lt;/label&gt;
+                &lt;input type="file" id="archivo" name="archivo"&gt;&lt;br&gt;&lt;br&gt;
+
+                &lt;label for="web"&gt;Página web personal:&lt;/label&gt;
+                &lt;input type="url" id="web" name="web"&gt;&lt;br&gt;&lt;br&gt;
+
+                &lt;label for="rango"&gt;Nivel de satisfacción:&lt;/label&gt;
+                &lt;input type="range" id="rango" name="rango" min="0" max="10" value="5"&gt;&lt;br&gt;&lt;br&gt;
+
+                &lt;label for="comentarios"&gt;Comentarios:&lt;/label&gt;&lt;br&gt;
+                &lt;textarea id="comentarios" name="comentarios" rows="4" cols="40"&gt;&lt;/textarea&gt;&lt;br&gt;&lt;br&gt;
+            &lt;/fieldset&gt;
+
+            &lt;input type="hidden" name="formulario_id" value="12345"&gt;
+
+            &lt;button type="submit"&gt;Enviar&lt;/button&gt;
+            &lt;button type="reset"&gt;Limpiar&lt;/button&gt;
+        &lt;/form&gt;
+    </code></pre>
+    <hr>
+    
+    <form action="#" method="post" enctype="multipart/form-data">
+        <fieldset>
+            <legend>Datos Personales</legend>
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre" name="nombre" required><br><br>
+
+            <label for="apellido">Apellido:</label>
+            <input type="text" id="apellido" name="apellido" required><br><br>
+
+            <label for="email">Correo electrónico:</label>
+            <input type="email" id="email" name="email" required><br><br>
+
+            <label for="password">Contraseña:</label>
+            <input type="password" id="password" name="password" required><br><br>
+
+            <label for="fecha">Fecha de nacimiento:</label>
+            <input type="date" id="fecha" name="fecha"><br><br>
+
+            <label for="hora">Hora preferida de contacto:</label>
+            <input type="time" id="hora" name="hora"><br><br>
+
+            <label for="color">Color favorito:</label>
+            <input type="color" id="color" name="color"><br><br>
+        </fieldset>
+
+        <fieldset>
+            <legend>Preferencias</legend>
+            <label>Género:</label>
+            <input type="radio" id="masculino" name="genero" value="masculino">
+            <label for="masculino">Masculino</label>
+            <input type="radio" id="femenino" name="genero" value="femenino">
+            <label for="femenino">Femenino</label>
+            <input type="radio" id="otro" name="genero" value="otro">
+            <label for="otro">Otro</label><br><br>
+
+            <label>Intereses:</label>
+            <input type="checkbox" id="musica" name="intereses" value="musica">
+            <label for="musica">Música</label>
+            <input type="checkbox" id="deporte" name="intereses" value="deporte">
+            <label for="deporte">Deporte</label>
+            <input type="checkbox" id="lectura" name="intereses" value="lectura">
+            <label for="lectura">Lectura</label>
+            <input type="checkbox" id="viajes" name="intereses" value="viajes">
+            <label for="viajes">Viajes</label><br><br>
+
+            <label for="pais">País:</label>
+            <select id="pais" name="pais">
+                <option value="">Seleccione...</option>
+                <option value="colombia">Colombia</option>
+                <option value="mexico">México</option>
+                <option value="espana">España</option>
+                <option value="argentina">Argentina</option>
+            </select><br><br>
+
+            <label for="ciudad">Ciudad:</label>
+            <input list="ciudades" id="ciudad" name="ciudad">
+            <datalist id="ciudades">
+                <option value="Bogotá">
+                <option value="Medellín">
+                <option value="Cali">
+                <option value="Barranquilla">
+                <option value="Cartagena">
+            </datalist><br><br>
+        </fieldset>
+
+        <fieldset>
+            <legend>Otros Datos</legend>
+            <label for="archivo">Subir archivo:</label>
+            <input type="file" id="archivo" name="archivo"><br><br>
+
+            <label for="web">Página web personal:</label>
+            <input type="url" id="web" name="web"><br><br>
+
+            <label for="rango">Nivel de satisfacción:</label>
+            <input type="range" id="rango" name="rango" min="0" max="10" value="5"><br><br>
+
+            <label for="comentarios">Comentarios:</label><br>
+            <textarea id="comentarios" name="comentarios" rows="4" cols="40"></textarea><br><br>
+        </fieldset>
+
+        <input type="hidden" name="formulario_id" value="12345">
+
+        <button type="submit">Enviar</button>
+        <button type="reset">Limpiar</button>
+    </form>
+
+
+</body>
+</html>

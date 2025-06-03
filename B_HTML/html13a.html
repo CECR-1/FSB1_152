@@ -1,0 +1,5014 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DWFSP1_152. HTML</title>
+</head>
+<body>
+    <h1 id="inicio">DESARROLLO WEB FULL STACK BASICO - DWFSP1_152</h1>
+    <hr>
+    <hr>
+    <h2><u>II.12 HTML.Referencias: Etiquetas, idiomas, divisas, colores, códigos URL, paise</u></h2>
+    <hr>
+
+    <h3 id="etiquetas">II.12.1 HTML.Etiquetas</h3>
+
+    <article id="introduccion">
+        <p>En HTML, las etiquetas son elementos que se utilizan para estructurar y dar formato al contenido de una página web. Cada etiqueta tiene un propósito específico y puede contener atributos que proporcionan información adicional sobre el elemento. Las etiquetas HTML son las partes de los elementos que permiten encerrar su
+        contenido. La mayoría de elementos HTML tiene dos etiquetas para definir la apertura y el cierre, aunque existen algunos que tienen una única etiqueta de apertura, llamados elementos vacíos, cuyo contenido se indica mediante atributos.
+        </p>
+        <p>Las etiquetas de apertura tienen tres partes: el símbolo «menor que (<), la palabra clave que define el elemento y el símbolo «mayor que» (>). De este modo, la palabra clave queda encerrada entre <y>. Para las etiquetas de cierre, el símbolo menor que va seguido de una barra, así: &lt;/
+        </p>
+
+        <p>Ejemplo de etiqueta HTML con sus partes: 
+        <b>
+            <pre><code>&lt;etiqueta&gt;&lt;/etiqueta&gt;</code></pre>
+        </b>
+        </p>
+
+        <p>A continuación se muestra una lista con todas las etiquetas que definen los elementos HTML hasta la versión 5. Las etiquetas están clasificadas por tipo de elemento y contienen la versión de HTML que las publicó por primera vez. Cada etiqueta viene acompañada de una descripción y un enlace hacía su página. Cabe mencionar que algunos elementos nuevos agregados en HTML5 podrían tener un soporte parcial o limitado en algunos navegadores web. Por esta razón, se recomienda usarlos con precaución. Además, algunos elementos de versiones anteriores quedaron obsoletos y por tanto se han omitido de la lista.
+        </p>
+    </article>
+
+    <article id="elementosRaiz">
+        <h4>Elemento raíz del documento HTML</h4>
+        <table border="1">
+            <tr>
+                <th>Etiqueta</th>
+                <th>Versión</th>
+                <th>Descripción</th>
+            </tr>
+            <tr>
+                <td>&lt;html&gt;</td>
+                <td>2</td>
+                <td>Elemento raíz (contenedor principal).</td>
+            </tr>
+        </table>
+    </article>
+
+    <article id="metadatos">
+        <h4>Metadatos del documento HTML</h4>
+        <table border="1">
+            <tr>
+                <th>Etiqueta</th>
+                <th>Versión</th>
+                <th>Descripción</th>
+            </tr>
+            <tr>
+                <td>&lt;title&gt;</td>
+                <td>2</td>
+                <td>Título del documento.</td>
+            </tr>
+            <tr>
+                <td>&lt;base&gt;</td>
+                <td>2</td>
+                <td>URI base para resolver URI relativos.</td>
+            </tr>
+             <tr>
+                <td>&lt;link&gt;</td>
+                <td>2</td>
+                <td>Enlaza recursos externos para el documento.</td>
+            </tr>
+            <tr>
+                <td>&lt;style&gt;</td>
+                <td>3</td>
+                <td>Insertar estilos CSS en el documento.</td>
+            </tr>
+            <tr>
+                <td>&lt;meta&gt;</td>
+                <td>2</td>
+                <td>Aporta información adicional sobre el documento.</td>
+            </tr>
+        </table>
+    </article>
+
+    <article id="documento">
+        <h4>Secciones del documento HTML</h4>
+        <table border="1">
+            <tr>
+                <th>Etiqueta</th>
+                <th>Versión</th>
+                <th>Descripción</th>
+            </tr>
+            <tr>
+                <td>&lt;body&gt;</td>
+                <td>2</td>
+                <td>Representa el contenido del documento.</td>
+            </tr>
+            <tr>
+                <td>&lt;section&gt;</td>
+                <td>5</td>
+                <td>Define secciones genéricas del documento.</td>
+            </tr>
+            <tr>
+                <td>&lt;nav&gt;</td>
+                <td>5</td>
+                <td>Sección que proporciona enlaces de navegación.</td>
+            </tr>
+            <tr>
+                <td>&lt;header&gt;</td>
+                <td>5</td>
+                <td>Cabecera de un documento.</td>
+            </tr>
+            <tr>
+                <td>&lt;footer&gt;</td>
+                <td>5</td>
+                <td>Pie de página de un documento.</td>
+            </tr>
+            <tr>
+                <td>&lt;main&gt;</td>
+                <td>5</td>
+                <td>Sección de contenido principal del documento.</td>
+            </tr>
+            <tr>
+                <td>&lt;article&gt;</td>
+                <td>5</td>
+                <td>Indica secciones de contenido reutilizable.</td>
+            </tr>
+            <tr>
+                <td>&lt;aside&gt;</td>
+                <td>5</td>
+                <td>Sección de contenido indirectamente relacionado.</td>
+            </tr>
+            <tr>
+                <td>&lt;figure&gt;</td>
+                <td>5</td>
+                <td>Contenido independiente.</td>
+            </tr>
+            <tr>
+                <td>&lt;figcaption&gt;</td>
+                <td>5</td>
+                <td>Leyenda asociada al contenido independiente.</td>
+            </tr>
+            <tr>
+                <td>&lt;hgroup&gt;</td>
+                <td>5</td>
+                <td>Agrupa encabezados consecutivos.</td>
+            </tr>
+            <tr>
+                <td>&lt;h1&gt;</td>
+                <td>2</td>
+                <td>Encabezado de primer nivel.</td>
+            </tr>
+            <tr>
+                <td>&lt;h2&gt;</td>
+                <td>2</td>
+                <td>Encabezado de segundo nivel.</td>
+            </tr>
+            <tr>
+                <td>&lt;h3&gt;</td>
+                <td>2</td>
+                <td>Encabezado de tercero nivel.</td>
+            </tr>
+            <tr>
+                <td>&lt;h4&gt;</td>
+                <td>2</td>
+                <td>Encabezado de cuarto nivel.</td>
+            </tr>
+             <tr>
+                <td>&lt;h5&gt;</td>
+                <td>2</td>
+                <td>Encabezado de quinto nivel.</td>
+            </tr>
+            <tr>
+                <td>&lt;h6&gt;</td>
+                <td>2</td>
+                <td>Encabezado de sexto nivel.</td>
+            </tr>
+            <tr>
+                <td>&lt;div&gt;</td>
+                <td>3</td>
+                <td>Sección genérica.</td>
+            </tr>
+        </table>
+    </article>
+
+    <article id="agrupacionContenido">
+        <h4>Agrupación de contenido</h4>
+        <table border="1">
+            <tr>
+                <th>Etiqueta</th>
+                <th>Versión</th>
+                <th>Descripción</th>
+            </tr>
+            <tr>
+                <td>&lt;p&gt;</td>
+                <td>2</td>
+                <td>Párrafo.</td>
+            </tr>
+            <tr>
+                <td>&lt;hr&gt;</td>
+                <td>2</td>
+                <td>Separador horizontal de contenido.</td>
+            </tr>
+            <tr>
+                <td>&lt;pre&gt;</td>
+                <td>2</td>
+                <td>Bloque de texto sin formato.</td>
+            </tr>
+            <tr>
+                <td>&lt;ol&gt;</td>
+                <td>2</td>
+                <td>Creación de listas ordenadas.</td>
+            </tr>
+            <tr>
+                <td>&lt;ul&gt;</td>
+                <td>2</td>
+                <td>Creación de listas no ordenadas.</td>
+            </tr>
+            <tr>
+                <td>&lt;li&gt;</td>
+                <td>2</td>
+                <td>Elemento de una lista.</td>
+            </tr>
+            <tr>
+                <td>&lt;dl&gt;</td>
+                <td>2</td>
+                <td>Creación de listas de definición.</td>
+            </tr>
+            <tr>
+                <td>&lt;dt&gt;</td>
+                <td>2</td>
+                <td>Término de una lista de definición.</td>
+            </tr>
+            <tr>
+                <td>&lt;dd&gt;</td>
+                <td>2</td>
+                <td>Descripción de una lista de definición.</td>
+            </tr>
+        </table>
+    </article>
+
+    <article id="contenidoTextual">
+        <h4>Semántica de contenido textual</h4>
+        <table border="1">
+            <tr>
+                <th>Etiqueta</th>
+                <th>Versión</th>
+                <th>Descripción</th>
+            </tr>
+            <tr>
+                <td>&lt;b&gt;</td>
+                <td>2</td>
+                <td>Texto en negrita.</td>
+            </tr>
+            <tr>
+                <td>&lt;strong&gt;</td>
+                <td>2</td>
+                <td>Texto en negrita con énfasis.</td>
+            </tr>
+            <tr>
+                <td>&lt;i&gt;</td>
+                <td>2</td>
+                <td>Texto en cursiva.</td>
+            </tr>
+            <tr>
+                <td>&lt;em&gt;</td>
+                <td>2</td>
+                <td>Texto en cursiva con énfasis.</td>
+            </tr>
+            <tr>
+                <td>&lt;u&gt;</td>
+                <td>2</td>
+                <td>Texto subrayado.</td>
+            </tr>
+            <tr>
+                <td>&lt;sup&gt;</td>
+                <td>3</td>
+                <td>Texto superíndice.</td>
+            </tr>
+            <tr>
+                <td>&lt;sub&gt;</td>
+                <td>3</td>
+                <td>Texto subindice.</td>
+            </tr>
+            <tr>
+                <td>&lt;mark&gt;</td>
+                <td>5</td>
+                <td>Texto resaltado.</td>
+            </tr>
+            <tr>
+                <td>&lt;s&gt;</td>
+                <td>4</td>
+                <td>Texto tachado.</td>
+            </tr>
+            <tr>
+                <td>&lt;small&gt;</td>
+                <td>3</td>
+                <td>Texto pequeño.</td>
+            </tr>
+            <tr>
+                <td>&lt;big&gt;</td>
+                <td>3</td>
+                <td>Texto grande.</td>
+            </tr>
+            <tr>
+                <td>&lt;blockquote&gt;</td>
+                <td>2</td>
+                <td>Texto citado en un elemento de bloque.</td>
+            </tr>
+            <tr>
+                <td>&lt;q&gt;</td>
+                <td>4</td>
+                <td>Texto citado en un elemento de línea.</td>
+            </tr>
+            <tr>
+                <td>&lt;cite&gt;</td>
+                <td>2</td>
+                <td>Texto con referencia o fuente.</td>
+            </tr>
+            <tr>
+                <td>&lt;address&gt;</td>
+                <td>2</td>
+                <td>Indica información de contacto (bloque).</td>
+            </tr>
+            <tr>
+                <td>&lt;abbr&gt;</td>
+                <td>4</td>
+                <td>Texto abreviado o acrónimo.</td>
+            </tr>
+            <tr>
+                <td>&lt;dfn&gt;</td>
+                <td>3</td>
+                <td>Término descrito en el mismo párrafo.</td>
+            </tr>
+            <tr>
+                <td>&lt;ruby&gt;</td>
+                <td>5</td>
+                <td>Texto Ruby (anotaciones circundantes).</td>
+            </tr>
+            <tr>
+                <td>&lt;rt&gt;</td>
+                <td>5</td>
+                <td>Definición de anotación Ruby.</td>
+            </tr>
+            <tr>
+                <td>&lt;rp&gt;</td>
+                <td>5</td>
+                <td>Respaldo de soporte en anotaciones Ruby.</td>
+            </tr>
+            <tr>
+                <td>&lt;data&gt;</td>
+                <td>5</td>
+                <td>Información apta para programas.</td>
+            </tr>
+            <tr>
+                <td>&lt;time&gt;</td>
+                <td>5</td>
+                <td>Fecha y/u hora.</td>
+            </tr>
+            <tr>
+                <td>&lt;code&gt;</td>
+                <td>2</td>
+                <td>Código fuente de programación.</td>
+            </tr>
+            <tr>
+                <td>&lt;var&gt;</td>
+                <td>2</td>
+                <td>Representación de variables.</td>
+            </tr>
+            <tr>
+                <td>&lt;samp&gt;</td>
+                <td>2</td>
+                <td>Representación de la salida de un programa.</td>
+            </tr>
+            <tr>
+                <td>&lt;kbd&gt;</td>
+                <td>2</td>
+                <td>Representación de teclas.</td>
+            </tr>
+            <tr>
+                <td>&lt;bdi&gt;</td>
+                <td>5</td>
+                <td>Texto bidireccional.</td>
+            </tr>
+            <tr>
+                <td>&lt;bdo&gt;</td>
+                <td>4</td>
+                <td>Anula texto bidireccional.</td>
+            </tr>
+            <tr>
+                <td>&lt;span&gt;</td>
+                <td>4</td>
+                <td>Contenedor de texto en linea.</td>
+            </tr>
+            <tr>
+                <td>&lt;br&gt;</td>
+                <td>2</td>
+                <td>Salto de línea.</td>
+            </tr>
+            <tr>
+                <td>&lt;wbr&gt;</td>
+                <td>5</td>
+                <td>Oportunidad de salto de línea.</td>
+            </tr>
+        </table>
+    </article>
+
+    <article id="contenidoEnriquecido">
+        <h4>Edición de contenido</h4>
+        <table border="1">
+            <tr>
+                <th>Etiqueta</th>
+                <th>Versión</th>
+                <th>Descripción</th>
+            </tr>
+            <tr>
+                <td>&lt;ins&gt;</td>
+                <td>4</td>
+                <td>Texto agregado.</td>
+            </tr>
+            <tr>
+                <td>&lt;del&gt;</td>
+                <td>4</td>
+                <td>Texto eliminado.</td>
+            </tr>
+        </table>
+    </article>
+
+    <article id="contenidoIncrustado">
+        <h4>Incrustación de contenido</h4>
+        <table border="1">
+            <tr>
+                <th>Etiqueta</th>
+                <th>Versión</th>
+                <th>Descripción</th>
+            </tr>
+            <tr>
+                <td>&lt;img&gt;</td>
+                <td>2</td>
+                <td>Incrustar imagen.</td>
+            </tr>
+            <tr>
+                <td>&lt;iframe&gt;</td>
+                <td>4</td>
+                <td>Incrustar documento HTML.</td>
+            </tr>
+            <tr>
+                <td>&lt;object&gt;</td>
+                <td>4</td>
+                <td>Incrusta aplicaciones externas.</td>
+            </tr>
+            <tr>
+                <td>&lt;map&gt;</td>
+                <td>3</td>
+                <td>Mapa asociado a una imagen.</td>
+            </tr>
+            <tr>
+                <td>&lt;area&gt;</td>
+                <td>3</td>
+                <td>Área de un mapa de imagen.</td>
+            </tr>
+            <tr>
+                <td>&lt;picture&gt;</td>
+                <td>5</td>
+                <td>Imagen con múltiples orígenes.</td>
+            </tr>
+            <tr>
+                <td>&lt;video&gt;</td>
+                <td>5</td>
+                <td>Incrustar video.</td>
+            </tr>
+            <tr>
+                <td>&lt;audio&gt;</td>
+                <td>5</td>
+                <td>Incrustar audio.</td>
+            </tr>
+            <tr>
+                <td>&lt;source&gt;</td>
+                <td>5</td>
+                <td>Recursos de múltiples medios.</td>
+            </tr>
+            <tr>
+                <td>&lt;track&gt;</td>
+                <td>5</td>
+                <td>Texto para vídeo y audio.</td>
+            </tr>
+            <tr>
+                <td>&lt;embed&gt;</td>
+                <td>5</td>
+                <td>Incrusta un recurso externo.</td>
+            </tr>
+        </table>
+    </article>
+
+    <article id="tablas">
+        <h4>Tablas (contenido tabulado)</h4>
+        <table border="1">
+            <tr>
+                <th>Etiqueta</th>
+                <th>Versión</th>
+                <th>Descripción</th>
+            </tr>
+            <tr>
+                <td>&lt;table&gt;</td>
+                <td>3</td>
+                <td>Tabla.</td>
+            </tr>
+            <tr>
+                <td>&lt;tr&gt;</td>
+                <td>3</td>
+                <td>Fila de celdas.</td>
+            </tr>
+            <tr>
+                <td>&lt;td&gt;</td>
+                <td>3</td>
+                <td>Celda de una tabla.</td>
+            </tr>
+            <tr>
+                <td>&lt;thead&gt;</td>
+                <td>4</td>
+                <td>Cabecera de una tabla.</td>
+            </tr>
+            <tr>
+                <td>&lt;tbody&gt;</td>
+                <td>4</td>
+                <td>Cuerpo de una tabla.</td>
+            </tr>
+            <tr>
+                <td>&lt;tfoot&gt;</td>
+                <td>4</td>
+                <td>Pie de una tabla.</td>
+            </tr>
+            <tr>
+                <td>&lt;th&gt;</td>
+                <td>3</td>
+                <td>Celda de encabezado.</td>
+            </tr>
+            <tr>
+                <td>&lt;caption&gt;</td>
+                <td>3</td>
+                <td>Título de una tabla.</td>
+            </tr>
+            <tr>
+                <td>&lt;colgroup&gt;</td>
+                <td>4</td>
+                <td>Grupo de columnas.</td>
+            </tr>
+             <tr>
+                <td>&lt;col&gt;</td>
+                <td>4</td>
+                <td>Propiedades de columnas.</td>
+            </tr>
+        </table>
+    </article>
+
+    <article id ="formularios">
+        <h4>Formularios</h4>
+        <table border="1">
+            <tr>
+                <th>Etiqueta</th>
+                <th>Versión</th>
+                <th>Descripción</th>
+            </tr>
+            <tr>
+                <td>&lt;form&gt;</td>
+                <td>2</td>
+                <td>Formulario.</td>
+            </tr>
+            <tr>
+                <td>&lt;label&gt;</td>
+                <td>4</td>
+                <td>Etiqueta descriptiva de un control.</td>
+            </tr>
+            <tr>
+                <td>&lt;fieldset&gt;</td>
+                <td>4</td>
+                <td>Agrupar controles relacionados.</td>
+            </tr>
+            <tr>
+                <td>&lt;legend&gt;</td>
+                <td>4</td>
+                <td>Título de controles agrupados.</td>
+            </tr>
+            <tr>
+                <td>&lt;button&gt;</td>
+                <td>4</td>
+                <td>Control de botón.</td>
+            </tr>
+            <tr>
+                <td>&lt;input&gt;</td>
+                <td>2</td>
+                <td>Control de entrada de datos.</td>
+            </tr>
+            <tr>
+                <td>&lt;textarea&gt;</td>
+                <td>2</td>
+                <td>Caja de texto de varias líneas.</td>
+            </tr>
+            <tr>
+                <td>&lt;select&gt;</td>
+                <td>4</td>
+                <td>Menú desplegable de opciones.</td>
+            </tr>
+            <tr>
+                <td>&lt;option&gt;</td>
+                <td>2</td>
+                <td>Opción de un menú.</td>
+            </tr>
+            <tr>
+                <td>&lt;optgroup&gt;</td>
+                <td>4</td>
+                <td>Agrupación de opciones de menú.</td>
+            </tr>
+            <tr>
+                <td>&lt;datalist&gt;</td>
+                <td>5</td>
+                <td>Lista de sugerencias.</td>
+            </tr>
+            <tr>
+                <td>&lt;output&gt;</td>
+                <td>5</td>
+                <td>Salida de un cálculo o proceso.</td>
+            </tr>
+            <tr>
+                <td>&lt;progress&gt;</td>
+                <td>5</td>
+                <td>Progreso de una tarea.</td>
+            </tr>
+            <tr>
+                <td>&lt;meter&gt;</td>
+                <td>5</td>
+                <td>Medida dentro de un rango.</td>
+            </tr>
+        </table>
+    </article>
+
+    <article id>
+        <h4>Interactividad</h4>
+        <table border="1">
+            <tr>
+                <th>Etiqueta</th>
+                <th>Versión</th>
+                <th>Descripción</th>
+            </tr>
+            <tr>
+                <td>&lt;summary&gt;</td>
+                <td>5</td>
+                <td>Resumen del contenido desplegable.</td>
+            </tr>
+            <tr>
+                <td>&lt;dialog&gt;</td>
+                <td>5</td>
+                <td>Cuadro de diálogo.</td>
+            </tr>
+        </table>
+    </article>
+
+    <article id="programas">
+        <h4>Programas</h4>
+        <table border="1">
+            <tr>
+                <th>Etiqueta</th>
+                <th>Versión</th>
+                <th>Descripción</th>
+            </tr>
+            <tr>
+                <td>&lt;script&gt;</td>
+                <td>3</td>
+                <td>Insertar código JS.</td>
+            </tr>
+            <tr>
+                <td>&lt;noscript&gt;</td>
+                <td>4</td>
+                <td>Contenido alternativo para JS.</td>
+            </tr>
+            <tr>
+                <td>&lt;canvas&gt;</td>
+                <td>5</td>
+                <td>Contenedor para gráficos dinámicos.</td>
+            </tr>
+            <tr>
+                <td>&lt;template&gt;</td>
+                <td>5</td>
+                <td>Plantilla para contenido a ser agregado.</td>
+            </tr>
+             <tr>
+                <td>&lt;slot&gt;</td>
+                <td>5</td>
+                <td>Espacio en componentes para insertar contenido.</td>
+            </tr>
+
+        </table>
+    </article>
+
+    <article id="marcadores">
+        <h4>Marcadores</h4>
+        <table border="1">
+            <tr>
+                <th>Etiqueta</th>
+                <th>Versión</th>
+                <th>Descripción</th>
+            </tr>
+            <tr>
+                <td>&lt;link rel="bookmark"&gt;</td>
+                <td>5</td>
+                <td>Marcador de enlace.</td>
+            </tr>
+        </table>
+    </article>
+
+    <hr>
+    <h3 id="idiomas">II.12.2 HTML.Idiomas</h3>
+    <article id="codigosIdiomas">
+        <h4>HTML: Códigos de idiomas</h4>
+        <p>Los códigos de idiomas son abreviaturas alfabéticas que permiten especificar el idioma de una página web. De hecho, siempre se debería incluir el atributo lang en el elemento &lt;html&gt; para indicar el idioma usado en el documento HTML. Estos códigos se definen a través del estándar ISO 639.</p>
+        <p>Es importante destacar que los códigos de idiomas son diferentes de los códigos de países. Estos últimos se utilizan para indicar el país y son un aporte de información adicional a los códigos de idiomas. Código de ejemplo HTML especificando el idioma español:
+        </p>
+        <b><pre><code>
+            &lt;html lang="es"&gt;
+            &lt;/html&gt;       
+        </code></pre></b>
+        <p>En estos ejemplos de códiog HTML se puede ver el modo de especificar los idiomas alemán, español, francés y portugués. 
+        </p>
+        <b><pre><code>
+            &lt;span lang="de"&gt;Idioma alemán&lt;/span&gt;
+            &lt;span lang="es"&gt;Idioma español&lt;/span&gt;
+            &lt;span lang="fr"&gt;Idioma francés&lt;/span&gt;
+            &lt;span lang="pt"&gt;Idioma portugués&lt;/span&gt;
+        </code></pre></b>
+
+        <h4>Lista de códigos de idiomas ISO 639-1</h4>
+        <p>La tabla siguiente contiene todos los códigos de idiomas definidos por el estándar ISO 639-1 (código formado por dos letras). Existen derivados de esta norma con tres letras, pero el formato más usado es el que se muestra a continuación:
+        </p>
+        <table border="1">
+            <thead>
+                <tr>
+                    <th>Idioma</th>
+                    <th>Código</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>afar</td>
+                    <td>aa</td>
+                </tr>
+                <tr>
+                    <td>abjasio (o abjasiano)</td>
+                    <td>ab</td>
+                </tr>
+                <tr>
+                    <td>avéstico</td>
+                    <td>ae</td>
+                </tr>
+                <tr>
+                    <td>akano</td>
+                    <td>ak</td>
+                </tr>
+                <tr>
+                    <td>amhárico</td>
+                    <td>am</td>
+                </tr>
+                <tr>
+                    <td>aragonés</td>
+                    <td>an</td>
+                </tr>
+                <tr>
+                    <td>árabe</td>
+                    <td>ar</td>
+                </tr>
+                <tr>
+                    <td>asamés</td>
+                    <td>as</td>
+                </tr>
+                <tr>
+                    <td>avar (o ávaro)</td>
+                    <td>av</td>
+                </tr>
+                <tr>
+                    <td>aimara</td>
+                    <td>ay</td>
+                </tr>
+                <tr>
+                    <td>azeri</td>
+                    <td>az</td>
+                </tr>
+                <tr>
+                    <td>baskir</td>
+                    <td>ba</td>
+                </tr>
+                <tr>
+                    <td>bielorruso</td>
+                    <td>be</td>
+                </tr>
+                <tr>
+                    <td>búlgaro</td>
+                    <td>bg</td>
+                </tr>
+                <tr>
+                    <td>bhoyapuri</td>
+                    <td>bh</td>
+                </tr>
+                <tr>
+                    <td>bislama</td>
+                    <td>bi</td>
+                </tr>
+                <tr>
+                    <td>bambara</td>
+                    <td>bm</td>
+                </tr>
+                <tr>
+                    <td>bengali</td>
+                    <td>bn</td>
+                </tr>
+                <tr>
+                    <td>tibetano</td>
+                    <td>bo</td>
+                </tr>
+                <tr>
+                    <td>bretón</td>
+                    <td>br</td>
+                </tr>
+                <tr>
+                    <td>bosnio</td>
+                    <td>bs</td>
+                </tr>
+                <tr>
+                    <td>catalán</td>
+                    <td>ca</td>
+                </tr>
+                <tr>
+                    <td>checheno</td>
+                    <td>ce</td>
+                </tr>
+                <tr>
+                    <td>chamorro</td>
+                    <td>ch</td>
+                </tr>
+                <tr>
+                    <td>corso</td>
+                    <td>co</td>
+                </tr>
+                <tr>
+                    <td>cree</td>
+                    <td>cr</td>
+                </tr>
+                <tr>
+                    <td>checo</td>
+                    <td>cs</td>
+                </tr>
+                <tr>
+                    <td>eslavo eclesiástico antiguo</td>
+                    <td>cu</td>
+                </tr>
+                <tr>
+                    <td>chuvasio</td>
+                    <td>cv</td>
+                </tr>
+                <tr>
+                    <td>galés</td>
+                    <td>cy</td>
+                </tr>
+                <tr>
+                    <td>danés</td>
+                    <td>da</td>
+                </tr>
+                <tr>
+                    <td>alemán</td>
+                    <td>de</td>
+                </tr>
+                <tr>
+                    <td>maldivo (o dhivehi)</td>
+                    <td>dv</td>
+                </tr>
+                <tr>
+                    <td>dzongkha</td>
+                    <td>dz</td>
+                </tr>
+                <tr>
+                    <td>ewé</td>
+                    <td>ee</td>
+                </tr>
+                <tr>
+                    <td>griego (moderno)</td>
+                    <td>el</td>
+                </tr>
+                <tr>
+                    <td>inglés</td>
+                    <td>en</td>
+                </tr>
+                <tr>
+                    <td>esperanto</td>
+                    <td>eo</td>
+                </tr>
+                <tr>
+                    <td>español (o castellano)</td>
+                    <td>es</td>
+                </tr>
+                <tr>
+                    <td>estonio</td>
+                    <td>et</td>
+                </tr>
+                <tr>
+                    <td>euskera</td>
+                    <td>eu</td>
+                </tr>
+                <tr>
+                    <td>persa</td>
+                    <td>fa</td>
+                </tr>
+                <tr>
+                    <td>fula</td>
+                    <td>ff</td>
+                </tr>
+                <tr>
+                    <td>finés (o finlandés)</td>
+                    <td>fi</td>
+                </tr>
+                <tr>
+                    <td>fiyiano (o fiyi)</td>
+                    <td>fj</td>
+                </tr>
+                <tr>
+                    <td>feroés</td>
+                    <td>fo</td>
+                </tr>
+                <tr>
+                    <td>frisón (o frisio)</td>
+                    <td>fy</td>
+                </tr>
+                <tr>
+                    <td>irlandés (o gaélico)</td>
+                    <td>ga</td>
+                </tr>
+                <tr>
+                    <td>gaélico escocés</td>
+                    <td>gd</td>
+                </tr>
+                <tr>
+                    <td>gallego</td>
+                    <td>gl</td>
+                </tr>
+                <tr>
+                    <td>guaraní</td>
+                    <td>gn</td>
+                </tr>
+                <tr>
+                    <td>guyarati (o guyarati)</td>
+                    <td>gu</td>
+                </tr>
+                <tr>
+                    <td>manés (gaélico manés o de Isla de Man)</td>
+                    <td>gv</td>
+                </tr>
+                <tr>
+                    <td>hausa</td>
+                    <td>ha</td>
+                </tr>
+                <tr>
+                    <td>hebreo</td>
+                    <td>he</td>
+                </tr>
+                <tr>
+                    <td>hindi (o hindú)</td>
+                    <td>hi</td>
+                </tr>
+                <tr>
+                    <td>hiri motu</td>
+                    <td>ho</td>
+                </tr>
+                <tr>
+                    <td>croata</td>
+                    <td>hr</td>
+                </tr>
+                <tr>
+                    <td>haitiano</td>
+                    <td>ht</td>
+                </tr>
+                <tr>
+                    <td>húngaro</td>
+                    <td>hu</td>
+                </tr>
+                <tr>
+                    <td>armenio</td>
+                    <td>hy</td>
+                </tr>
+                <tr>
+                    <td>herero</td>
+                    <td>hz</td>
+                </tr>
+                <tr>
+                    <td>interlingua</td>
+                    <td>ia</td>
+                </tr>
+                <tr>
+                    <td>indonesio</td>
+                    <td>id</td>
+                </tr>
+                <tr>
+                    <td>occidental</td>
+                    <td>ie</td>
+                </tr>
+                <tr>
+                    <td>igbo</td>
+                    <td>ig</td>
+                </tr>
+                <tr>
+                    <td>yi de Sichuán</td>
+                    <td>ii</td>
+                </tr>
+                <tr>
+                    <td>iñupiaq</td>
+                    <td>ik</td>
+                </tr>
+                <tr>
+                    <td>ido</td>
+                    <td>io</td>
+                </tr>
+                <tr>
+                    <td>islandés</td>
+                    <td>is</td>
+                </tr>
+                <tr>
+                    <td>italiano</td>
+                    <td>it</td>
+                </tr>
+                <tr>
+                    <td>inuktitut (o inuit)</td>
+                    <td>iu</td>
+                </tr>
+                <tr>
+                    <td>japonés</td>
+                    <td>ja</td>
+                </tr>
+                <tr>
+                    <td>javanés</td>
+                    <td>jv</td>
+                </tr>
+                <tr>
+                    <td>georgiano</td>
+                    <td>ka</td>
+                </tr>
+                <tr>
+                    <td>kongo</td>
+                    <td>kg</td>
+                </tr>
+                <tr>
+                    <td>kikuyu</td>
+                    <td>ki</td>
+                </tr>
+                <tr>
+                    <td>kuanyama</td>
+                    <td>kj</td>
+                </tr>
+                <tr>
+                    <td>kazajo</td>
+                    <td>kk</td>
+                </tr>
+                <tr>
+                    <td>groenlandés (o kalaallisut)</td>
+                    <td>kl</td>
+                </tr>
+                <tr>
+                    <td>camboyano (o jemer)</td>
+                    <td>km</td>
+                </tr>
+                <tr>
+                    <td>canarés</td>
+                    <td>kn</td>
+                </tr>
+                <tr>
+                    <td>coreano</td>
+                    <td>ko</td>
+                </tr>
+                <tr>
+                    <td>kanuri</td>
+                    <td>kr</td>
+                </tr>
+                <tr>
+                    <td>cachemiro (o cachemir)</td>
+                    <td>ks</td>
+                </tr>
+                <tr>
+                    <td>kurdo</td>
+                    <td>ku</td>
+                </tr>
+                <tr>
+                    <td>komi</td>
+                    <td>kv</td>
+                </tr>
+                <tr>
+                    <td>córnico</td>
+                    <td>kw</td>
+                </tr>
+                <tr>
+                    <td>kirguís</td>
+                    <td>ky</td>
+                </tr>
+                <tr>
+                    <td>luxemburgués</td>
+                    <td>lb</td>
+                </tr>
+                <tr>
+                    <td>luganda</td>
+                    <td>lg</td>
+                </tr>
+                <tr>
+                    <td>limburgués</td>
+                    <td>li</td>
+                </tr>
+                <tr>
+                    <td>lingala</td>
+                    <td>ln</td>
+                </tr>
+                <tr>
+                    <td>lao</td>
+                    <td>lo</td>
+                </tr>
+                <tr>
+                    <td>lituano</td>
+                    <td>lt</td>
+                </tr>
+                <tr>
+                    <td>luba-katanga (o chiluba)</td>
+                    <td>lu</td>
+                </tr>
+                <tr>
+                    <td>letón</td>
+                    <td>lv</td>
+                </tr>
+                <tr>
+                    <td>malgache (o malagasy)</td>
+                    <td>mg</td>
+                </tr>
+                <tr>
+                    <td>marshalés</td>
+                    <td>mh</td>
+                </tr>
+                <tr>
+                    <td>maori</td>
+                    <td>mi</td>
+                </tr>
+                <tr>
+                    <td>macedonio</td>
+                    <td>mk</td>
+                </tr>
+                <tr>
+                    <td>malayalam</td>
+                    <td>ml</td>
+                </tr>
+                <tr>
+                    <td>mongol</td>
+                    <td>mn</td>
+                </tr>
+                <tr>
+                    <td>marati</td>
+                    <td>mr</td>
+                </tr>
+                <tr>
+                    <td>malayo</td>
+                    <td>ms</td>
+                </tr>
+                <tr>
+                    <td>maltés</td>
+                    <td>mt</td>
+                </tr>
+                <tr>
+                    <td>birmano</td>
+                    <td>my</td>
+                </tr>
+                <tr>
+                    <td>nauruano</td>
+                    <td>na</td>
+                </tr>
+                <tr>
+                    <td>noruego bokmål</td>
+                    <td>nb</td>
+                </tr>
+                <tr>
+                    <td>ndebele del norte</td>
+                    <td>nd</td>
+                </tr>
+                <tr>
+                    <td>nepali</td>
+                    <td>ne</td>
+                </tr>
+                <tr>
+                    <td>ndonga</td>
+                    <td>ng</td>
+                </tr>
+                <tr>
+                    <td>neerlandés (u holandés)</td>
+                    <td>nl</td>
+                </tr>
+                <tr>
+                    <td>nynorsk</td>
+                    <td>nn</td>
+                </tr>
+                <tr>
+                    <td>noruego</td>
+                    <td>no</td>
+                </tr>
+                <tr>
+                    <td>ndebele del sur</td>
+                    <td>nr</td>
+                </tr>
+                <tr>
+                    <td>navajo</td>
+                    <td>nv</td>
+                </tr>
+                <tr>
+                    <td>chichewa</td>
+                    <td>ny</td>
+                </tr>
+                <tr>
+                    <td>occitano</td>
+                    <td>oc</td>
+                </tr>
+                <tr>
+                    <td>ojibwa</td>
+                    <td>oj</td>
+                </tr>
+                <tr>
+                    <td>oromo</td>
+                    <td>om</td>
+                </tr>
+                <tr>
+                    <td>oriya</td>
+                    <td>or</td>
+                </tr>
+                <tr>
+                    <td>osético</td>
+                    <td>os</td>
+                </tr>
+                <tr>
+                    <td>panyabi</td>
+                    <td>pa</td>
+                </tr>
+                <tr>
+                    <td>pali</td>
+                    <td>pi</td>
+                </tr>
+                <tr>
+                    <td>polaco</td>
+                    <td>pl</td>
+                </tr>
+                <tr>
+                    <td>pastú</td>
+                    <td>ps</td>
+                </tr>
+                <tr>
+                    <td>portugués</td>
+                    <td>pt</td>
+                </tr>
+                <tr>
+                    <td>quechua</td>
+                    <td>qu</td>
+                </tr>
+                <tr>
+                    <td>romanche</td>
+                    <td>rm</td>
+                </tr>
+                <tr>
+                    <td>kirundi</td>
+                    <td>rn</td>
+                </tr>
+                <tr>
+                    <td>rumano</td>
+                    <td>ro</td>
+                </tr>
+                <tr>
+                    <td>ruandés (o kiñaruanda)</td>
+                    <td>rw</td>
+                </tr>
+                <tr>
+                    <td>sánscrito</td>
+                    <td>sa</td>
+                </tr>
+                <tr>
+                    <td>sardo</td>
+                    <td>sc</td>
+                </tr>
+                <tr>
+                    <td>sindhi</td>
+                    <td>sd</td>
+                </tr>
+                <tr>
+                    <td>sami septentrional</td>
+                    <td>se</td>
+                </tr>
+                <tr>
+                    <td>sango</td>
+                    <td>sg</td>
+                </tr>
+                <tr>
+                    <td>cingalés</td>
+                    <td>si</td>
+                </tr>
+                <tr>
+                    <td>eslovaco</td>
+                    <td>sk</td>
+                </tr>
+                <tr>
+                    <td>esloveno</td>
+                    <td>sl</td>
+                </tr>
+                <tr>
+                    <td>samoano</td>
+                    <td>sm</td>
+                </tr>
+                <tr>
+                    <td>shona</td>
+                    <td>sn</td>
+                </tr>
+                <tr>
+                    <td>somali</td>
+                    <td>so</td>
+                </tr>
+                <tr>
+                    <td>albanés</td>
+                    <td>sq</td>
+                </tr>
+                <tr>
+                    <td>serbio</td>
+                    <td>sr</td>
+                </tr>
+                <tr>
+                    <td>suazi, swati, o siSwati</td>
+                    <td>ss</td>
+                </tr>
+                <tr>
+                    <td>sesotho</td>
+                    <td>st</td>
+                </tr>
+                <tr>
+                    <td>sundanés o sondanés</td>
+                    <td>su</td>
+                </tr>
+                <tr>
+                    <td>sueco</td>
+                    <td>sv</td>
+                </tr>
+                <tr>
+                    <td>suajili</td>
+                    <td>sw</td>
+                </tr>
+                <tr>
+                    <td>tamil</td>
+                    <td>ta</td>
+                </tr>
+                <tr>
+                    <td>télugu</td>
+                    <td>te</td>
+                </tr>
+                <tr>
+                    <td>tayiko</td>
+                    <td>tg</td>
+                </tr>
+                <tr>
+                    <td>tailandés</td>
+                    <td>th</td>
+                </tr>
+                <tr>
+                    <td>tigriña</td>
+                    <td>ti</td>
+                </tr>
+                <tr>
+                    <td>turcomano</td>
+                    <td>tk</td>
+                </tr>
+                <tr>
+                    <td>tagalo</td>
+                    <td>tl</td>
+                </tr>
+                <tr>
+                    <td>setsuana</td>
+                    <td>tn</td>
+                </tr>
+                <tr>
+                    <td>tongano</td>
+                    <td>to</td>
+                </tr>
+                <tr>
+                    <td>turco</td>
+                    <td>tr</td>
+                </tr>
+                <tr>
+                    <td>tsonga</td>
+                    <td>ts</td>
+                </tr>
+                <tr>
+                    <td>tártaro</td>
+                    <td>tt</td>
+                </tr>
+                <tr>
+                    <td>twi</td>
+                    <td>tw</td>
+                </tr>
+                <tr>
+                    <td>tahitiano</td>
+                    <td>ty</td>
+                </tr>
+                <tr>
+                    <td>uigur</td>
+                    <td>ug</td>
+                </tr>
+                <tr>
+                    <td>ucraniano</td>
+                    <td>uk</td>
+                </tr>
+                <tr>
+                    <td>urdu</td>
+                    <td>ur</td>
+                </tr>
+                <tr>
+                    <td>uzbeko</td>
+                    <td>uz</td>
+                </tr>
+                <tr>
+                    <td>venda</td>
+                    <td>ve</td>
+                </tr>
+                <tr>
+                    <td>vietnamita</td>
+                    <td>vi</td>
+                </tr>
+                <tr>
+                    <td>volapük</td>
+                    <td>vo</td>
+                </tr>
+                <tr>
+                    <td>valón</td>
+                    <td>wa</td>
+                </tr>
+                <tr>
+                    <td>wolof</td>
+                    <td>wo</td>
+                </tr>
+                <tr>
+                    <td>xhosa</td>
+                    <td>xh</td>
+                </tr>
+                <tr>
+                    <td>yoruba</td>
+                    <td>yo</td>
+                </tr>
+                <tr>
+                    <td>chuan, chuang o zhuang</td>
+                    <td>za</td>
+                </tr>
+                <tr>
+                    <td>chino</td>
+                    <td>zh</td>
+                </tr>
+                <tr>
+                    <td>zulú</td>
+                    <td>zu</td>
+                </tr>
+            </tbody>
+        </table>
+    </article>
+
+    <hr>
+    <h3 id="divisas">II.12.3 HTML.Divisas</h3>
+
+    <article id="codigosDivisas">
+        <h4>HTML: Códigos de divisas</h4>
+        <p>Los códigos de divisas son un estándar internacional (ISO 4217) que permite especificar mediante códigos de tres letras todas las divisas del mundo. Gracias a este estándar se elimina ciertas confusiones provocadas por algunos nombres de divisas que, como el dólar, el franco o la libra, son utilizados por varios países, pero que sin embargo tienen tipos de cambio muy diferentes. A través del estándar ISO 4217 también se describen códigos para metales preciosos, como es el caso del oro, la plata, el paladio y el platino. También existen códigos especiales que empiezan con la letra <b>x</b> por ejemplo: el <b>código XTS</b> es para pruebas, el código <b>xxx</b> es para transacciones no monetarias, y el <b>código XAG</b> se utiliza para identificar a la plata.
+        </p>
+
+        <h4>Lista de códigos de divisas</h4>
+        <p>En la siguiente tabla se describen todos los códigos de divisas definidos por el estándar ISO 4217 mediante código, divisa y país. Los códigos se encuentran clasificados por orden alfabético de acuerdo a la columna del código.
+        </p>
+
+        <table border="1">
+            <thead>
+                <tr>
+                    <th>Divisa</th>
+                    <th>Países</th>
+                    <th>Código</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Dírham de los Emiratos Árabes Unidos</td>
+                    <td>Emiratos Árabes Unidos</td>
+                    <td>AED</td>
+                </tr>
+                <tr>
+                    <td>Afgani</td>
+                    <td>Afganistán</td>
+                    <td>AFN</td>
+                </tr>
+                <tr>
+                    <td>Lek</td>
+                    <td>Albania</td>
+                    <td>ALL</td>
+                </tr>
+                <tr>
+                    <td>Dram armenio</td>
+                    <td>Armenia</td>
+                    <td>AMD</td>
+                </tr>
+                <tr>
+                    <td>Florin antillano neerlandés</td>
+                    <td>Curazao, Sint Maarten</td>
+                    <td>ANG</td>
+                </tr>
+                <tr>
+                    <td>Kwanza</td>
+                    <td>Angola</td>
+                    <td>AOA</td> </tr>
+                <tr>
+                    <td>Peso argentino</td>
+                    <td>Argentina</td>
+                    <td>ARS</td>
+                </tr>
+                <tr>
+                    <td>Dólar australiano</td>
+                    <td>Australia, Isla de Navidad, Islas Cocos, Islas Heard y McDonald, Kiribati, Nauru, Norfolk, Tuvalu</td>
+                    <td>AUD</td>
+                </tr>
+                <tr>
+                    <td>Florin arubeño</td>
+                    <td>Aruba</td>
+                    <td>AWG</td> </tr>
+                <tr>
+                    <td>Manat azerbaiyano</td>
+                    <td>Azerbaiyán</td>
+                    <td>AZN</td>
+                </tr>
+                <tr>
+                    <td>Marco convertible</td>
+                    <td>Bosnia y Herzegovina</td>
+                    <td>BAM</td>
+                </tr>
+                <tr>
+                    <td>Dólar de Barbados</td>
+                    <td>Barbados</td>
+                    <td>BBD</td>
+                </tr>
+                <tr>
+                    <td>Taka</td>
+                    <td>Bangladés</td>
+                    <td>BDT</td>
+                </tr>
+                <tr>
+                    <td>Lev búlgaro</td>
+                    <td>Bulgaria</td>
+                    <td>BGN</td>
+                </tr>
+                <tr>
+                    <td>Dinar bareiní</td>
+                    <td>Baréin</td>
+                    <td>BHD</td>
+                </tr>
+                <tr>
+                    <td>Franco de Burundi</td>
+                    <td>Burundi</td>
+                    <td>BIF</td>
+                </tr>
+                <tr>
+                    <td>Dólar bermudeño</td>
+                    <td>Bermudas</td>
+                    <td>BMD</td>
+                </tr>
+                <tr>
+                    <td>Dólar de Brunéi</td>
+                    <td>Brunéi</td>
+                    <td>BND</td>
+                </tr>
+                <tr>
+                    <td>MVDOL</td> <td>Bolivia</td>
+                    <td>BOV</td>
+                </tr>
+                <tr>
+                    <td>Real brasileño</td>
+                    <td>Brasil</td>
+                    <td>BRL</td>
+                </tr>
+                <tr>
+                    <td>Dólar bahameño</td>
+                    <td>Bahamas</td>
+                    <td>BSD</td>
+                </tr>
+                <tr>
+                    <td>Ngultrum</td>
+                    <td>Bután</td>
+                    <td>BTN</td>
+                </tr>
+                <tr>
+                    <td>Pula</td>
+                    <td>Botsuana</td>
+                    <td>BWP</td>
+                </tr>
+                <tr>
+                    <td>Rublo bielorruso</td>
+                    <td>Bielorrusia</td>
+                    <td>BYR</td>
+                </tr>
+                <tr>
+                    <td>Dólar beliceño</td>
+                    <td>Belice</td>
+                    <td>BZD</td>
+                </tr>
+                <tr>
+                    <td>Dólar canadiense</td>
+                    <td>Canadá</td>
+                    <td>CAD</td>
+                </tr>
+                <tr>
+                    <td>Franco congoleño</td>
+                    <td>República Democrática del Congo</td>
+                    <td>CDF</td>
+                </tr>
+                <tr>
+                    <td>Euro WIR</td>
+                    <td>Suiza</td>
+                    <td>CHE</td>
+                </tr>
+                <tr>
+                    <td>Franco suizo</td>
+                    <td>Liechtenstein, Suiza</td>
+                    <td>CHF</td>
+                </tr>
+                <tr>
+                    <td>Franco WIR</td>
+                    <td>Suiza</td>
+                    <td>CHW</td>
+                </tr>
+                <tr>
+                    <td>Unidad de fomento</td>
+                    <td>Chile</td>
+                    <td>CLF</td>
+                </tr>
+                <tr>
+                    <td>Peso chileno</td>
+                    <td>Chile</td>
+                    <td>CLP</td>
+                </tr>
+                <tr>
+                    <td>Yuan chino</td>
+                    <td>China</td>
+                    <td>CNY</td>
+                </tr>
+                <tr>
+                    <td>Peso colombiano</td>
+                    <td>Colombia</td>
+                    <td>COP</td>
+                </tr>
+                <tr>
+                    <td>Unidad de valor real</td>
+                    <td>Colombia</td>
+                    <td>COU</td>
+                </tr>
+                <tr>
+                    <td>Colón costarricense</td>
+                    <td>Costa Rica</td>
+                    <td>CRC</td>
+                </tr>
+                <tr>
+                    <td>Peso convertible</td>
+                    <td>Cuba</td>
+                    <td>CUC</td>
+                </tr>
+                <tr>
+                    <td>Peso cubano</td>
+                    <td>Cuba</td>
+                    <td>CUP</td>
+                </tr>
+                <tr>
+                    <td>Escudo caboverdiano</td>
+                    <td>Cabo Verde</td>
+                    <td>CVE</td>
+                </tr>
+                <tr>
+                    <td>Corona checa</td>
+                    <td>República Checa</td>
+                    <td>CZK</td>
+                </tr>
+                <tr>
+                    <td>Franco yibutiano</td>
+                    <td>Yibuti</td>
+                    <td>DJF</td>
+                </tr>
+                <tr>
+                    <td>Corona danesa</td>
+                    <td>Dinamarca, Groenlandia, Islas Feroe</td>
+                    <td>DKK</td>
+                </tr>
+                <tr>
+                    <td>Peso dominicano</td>
+                    <td>República Dominicana</td>
+                    <td>DOP</td>
+                </tr>
+                <tr>
+                    <td>Dinar argelino</td>
+                    <td>Argelia</td>
+                    <td>DZD</td>
+                </tr>
+                <tr>
+                    <td>Libra egipcia</td>
+                    <td>Egipto</td>
+                    <td>EGP</td>
+                </tr>
+                <tr>
+                    <td>Nakfa</td>
+                    <td>Eritrea</td>
+                    <td>ERN</td>
+                </tr>
+                <tr>
+                    <td>Birr etiope</td>
+                    <td>Etiopía</td>
+                    <td>ETB</td>
+                </tr>
+                <tr>
+                    <td>Euro</td>
+                    <td>Alemania, Andorra, Austria, Bélgica, Chipre, Ciudad del Vaticano, Eslovaquia, Eslovenia, España, Estonia, Finlandia, Francia, Grecia, Guadalupe, Guayana Francesa, Irlanda, Italia, Letonia, Lituania, Luxemburgo, Malta, Martinica, Mayotte, Mónaco, Montenegro, Países Bajos, Portugal, Reunión, San Bartolomé, San Marino, San Martín, San Pedro y Miquelón, Tierras Australes y Antárticas Francesas, Unión Europea</td>
+                    <td>EUR</td>
+                </tr>
+                <tr>
+                    <td>Dólar fiyiano</td>
+                    <td>Fiyi</td>
+                    <td>FJD</td>
+                </tr>
+                <tr>
+                    <td>Libra malvinense</td>
+                    <td>Islas Malvinas</td>
+                    <td>FKP</td>
+                </tr>
+                <tr>
+                    <td>Libra esterlina</td>
+                    <td>Guernsey, Isla de Man, Jersey, Reino Unido</td>
+                    <td>GBP</td>
+                </tr>
+                <tr>
+                    <td>Lari</td>
+                    <td>Georgia</td>
+                    <td>GEL</td>
+                </tr>
+                <tr>
+                    <td>Cedi ghanés</td>
+                    <td>Ghana</td>
+                    <td>GHS</td>
+                </tr>
+                <tr>
+                    <td>Libra de Gibraltar</td>
+                    <td>Gibraltar</td>
+                    <td>GIP</td>
+                </tr>
+                <tr>
+                    <td>Franco guineano</td>
+                    <td>Guinea</td>
+                    <td>GNF</td>
+                </tr>
+                <tr>
+                    <td>Quetzal</td>
+                    <td>Guatemala</td>
+                    <td>GTQ</td>
+                </tr>
+                <tr>
+                    <td>Dólar guyanés</td>
+                    <td>Guyana</td>
+                    <td>GYD</td>
+                </tr>
+                <tr>
+                    <td>Dólar de Hong Kong</td>
+                    <td>Hong Kong</td>
+                    <td>HKD</td>
+                </tr>
+                <tr>
+                    <td>Lempira</td>
+                    <td>Honduras</td>
+                    <td>HNL</td>
+                </tr>
+                <tr>
+                    <td>Kuna</td>
+                    <td>Croacia</td>
+                    <td>HRK</td>
+                </tr>
+                <tr>
+                    <td>Gourde</td>
+                    <td>Haití</td>
+                    <td>HTG</td>
+                </tr>
+                <tr>
+                    <td>Forinto</td>
+                    <td>Hungría</td>
+                    <td>HUF</td>
+                </tr>
+                <tr>
+                    <td>Rupia indonesia</td>
+                    <td>Indonesia</td>
+                    <td>IDR</td>
+                </tr>
+                <tr>
+                    <td>Nuevo shéquel israeli</td>
+                    <td>Israel</td>
+                    <td>ILS</td>
+                </tr>
+                <tr>
+                    <td>Rupia india</td>
+                    <td>Bután, India</td>
+                    <td>INR</td>
+                </tr>
+                <tr>
+                    <td>Dinar iraquí</td>
+                    <td>Irak</td>
+                    <td>IQD</td>
+                </tr>
+                <tr>
+                    <td>Rial iraní</td>
+                    <td>Irán</td>
+                    <td>IRR</td>
+                </tr>
+                <tr>
+                    <td>Corona islandesa</td>
+                    <td>Islandia</td>
+                    <td>ISK</td>
+                </tr>
+                <tr>
+                    <td>Dólar jamaiquino</td>
+                    <td>Jamaica</td>
+                    <td>JMD</td>
+                </tr>
+                <tr>
+                    <td>Dinar jordano</td>
+                    <td>Jordania</td>
+                    <td>JOD</td>
+                </tr>
+                <tr>
+                    <td>Yen</td>
+                    <td>Japón</td>
+                    <td>JPY</td>
+                </tr>
+                <tr>
+                    <td>Chelin keniano</td>
+                    <td>Kenia</td>
+                    <td>KES</td>
+                </tr>
+                <tr>
+                    <td>Som</td>
+                    <td>Kirguistán</td>
+                    <td>KGS</td>
+                </tr>
+                <tr>
+                    <td>Riel</td>
+                    <td>Camboya</td>
+                    <td>KHR</td>
+                </tr>
+                <tr>
+                    <td>Franco comorense</td>
+                    <td>Comoras</td>
+                    <td>KMF</td>
+                </tr>
+                <tr>
+                    <td>Won norcoreano</td>
+                    <td>Corea del Norte</td>
+                    <td>KPW</td>
+                </tr>
+                <tr>
+                    <td>Won</td>
+                    <td>Corea del Sur</td>
+                    <td>KRW</td>
+                </tr>
+                <tr>
+                    <td>Dinar kuwaití</td>
+                    <td>Kuwait</td>
+                    <td>KWD</td>
+                </tr>
+                <tr>
+                    <td>Dólar de las Islas Caimán</td>
+                    <td>Islas Caimán</td>
+                    <td>KYD</td>
+                </tr>
+                <tr>
+                    <td>Tenge</td>
+                    <td>Kazajistán</td>
+                    <td>KZT</td>
+                </tr>
+                <tr>
+                    <td>Kip</td>
+                    <td>Laos</td>
+                    <td>LAK</td>
+                </tr>
+                <tr>
+                    <td>Libra libanesa</td>
+                    <td>Libano</td>
+                    <td>LBP</td>
+                </tr>
+                <tr>
+                    <td>Rupia de Sri Lanka</td>
+                    <td>Sri Lanka</td>
+                    <td>LKR</td>
+                </tr>
+                <tr>
+                    <td>Dólar liberiano</td>
+                    <td>Liberia</td>
+                    <td>LRD</td>
+                </tr>
+                <tr>
+                    <td>Loti</td>
+                    <td>Lesoto</td>
+                    <td>LSL</td>
+                </tr>
+                <tr>
+                    <td>Dinar libio</td>
+                    <td>Libia</td>
+                    <td>LYD</td>
+                </tr>
+                <tr>
+                    <td>Dirham marroqui</td>
+                    <td>Marruecos, República Árabe Saharaui Democrática</td>
+                    <td>MAD</td>
+                </tr>
+                <tr>
+                    <td>Leu moldavo</td>
+                    <td>Moldavia</td>
+                    <td>MDL</td>
+                </tr>
+                <tr>
+                    <td>Ariary malgache</td>
+                    <td>Madagascar</td>
+                    <td>MGA</td>
+                </tr>
+                <tr>
+                    <td>Denar</td>
+                    <td>Macedonia</td>
+                    <td>MKD</td>
+                </tr>
+                <tr>
+                    <td>Kyat</td>
+                    <td>Myanmar</td>
+                    <td>MMK</td>
+                </tr>
+                <tr>
+                    <td>Tugrik</td>
+                    <td>Mongolia</td>
+                    <td>MNT</td>
+                </tr>
+                <tr>
+                    <td>Pataca</td>
+                    <td>Macao</td>
+                    <td>MOP</td>
+                </tr>
+                <tr>
+                    <td>Uguiya</td>
+                    <td>Mauritania</td>
+                    <td>MRO</td>
+                </tr>
+                <tr>
+                    <td>Rupia de Mauricio</td>
+                    <td>Mauricio</td>
+                    <td>MUR</td>
+                </tr>
+                <tr>
+                    <td>Kwacha</td>
+                    <td>Malaui</td>
+                    <td>MWK</td>
+                </tr>
+                <tr>
+                    <td>Peso mexicano</td>
+                    <td>México</td>
+                    <td>MXN</td>
+                </tr>
+                <tr>
+                    <td>Unidad de Inversión (UDI) mexicana</td>
+                    <td>México</td>
+                    <td>MXV</td>
+                </tr>
+                <tr>
+                    <td>Ringgit malayo</td>
+                    <td>Malasia</td>
+                    <td>MYR</td>
+                </tr>
+                <tr>
+                    <td>Metical mozambiqueño</td>
+                    <td>Mozambique</td>
+                    <td>MZN</td>
+                </tr>
+                <tr>
+                    <td>Dólar namibio</td>
+                    <td>Namibia</td>
+                    <td>NAD</td>
+                </tr>
+                <tr>
+                    <td>Naira</td>
+                    <td>Nigeria</td>
+                    <td>NGN</td>
+                </tr>
+                <tr>
+                    <td>Córdoba</td>
+                    <td>Nicaragua</td>
+                    <td>NIO</td>
+                </tr>
+                <tr>
+                    <td>Corona noruega</td>
+                    <td>Isla Bouvet, Noruega, Svalbard y Jan Mayen</td>
+                    <td>NOK</td>
+                </tr>
+                <tr>
+                    <td>Rupia nepali</td>
+                    <td>Nepal</td>
+                    <td>NPR</td>
+                </tr>
+                <tr>
+                    <td>Dólar neozelandés</td>
+                    <td>Islas Cook, Islas Pitcairn, Niue, Nueva Zelanda, Tokelau</td>
+                    <td>NZD</td>
+                </tr>
+                <tr>
+                    <td>Rial omaní</td>
+                    <td>Omán</td>
+                    <td>OMR</td>
+                </tr>
+                <tr>
+                    <td>Balboa</td>
+                    <td>Panamá</td>
+                    <td>PAB</td>
+                </tr>
+                <tr>
+                    <td>Sol</td>
+                    <td>Perú</td>
+                    <td>PEN</td>
+                </tr>
+                <tr>
+                    <td>Kina</td>
+                    <td>Papúa Nueva Guinea</td>
+                    <td>PGK</td>
+                </tr>
+                <tr>
+                    <td>Peso filipino</td>
+                    <td>Filipinas</td>
+                    <td>PHP</td>
+                </tr>
+                <tr>
+                    <td>Rupia pakistaní</td>
+                    <td>Pakistán</td>
+                    <td>PKR</td>
+                </tr>
+                <tr>
+                    <td>Złoty</td>
+                    <td>Polonia</td>
+                    <td>PLN</td>
+                </tr>
+                <tr>
+                    <td>Guaraní</td>
+                    <td>Paraguay</td>
+                    <td>PYG</td>
+                </tr>
+                <tr>
+                    <td>Riyal qatari</td>
+                    <td>Catar</td>
+                    <td>QAR</td>
+                </tr>
+                <tr>
+                    <td>Leu rumano</td>
+                    <td>Rumania</td>
+                    <td>RON</td>
+                </tr>
+                <tr>
+                    <td>Dinar serbio</td>
+                    <td>Serbia</td>
+                    <td>RSD</td>
+                </tr>
+                <tr>
+                    <td>Rublo ruso</td>
+                    <td>Rusia</td>
+                    <td>RUB</td>
+                </tr>
+                <tr>
+                    <td>Franco ruandés</td>
+                    <td>Ruanda</td>
+                    <td>RWF</td>
+                </tr>
+                <tr>
+                    <td>Riyal saudi</td>
+                    <td>Arabia Saudita</td>
+                    <td>SAR</td>
+                </tr>
+                <tr>
+                    <td>Dólar de las Islas Salomón</td>
+                    <td>Islas Salomón</td>
+                    <td>SBD</td>
+                </tr>
+                <tr>
+                    <td>Rupia seychelense</td>
+                    <td>Seychelles</td>
+                    <td>SCR</td>
+                </tr>
+                <tr>
+                    <td>Dinar sudanés</td>
+                    <td>Sudán</td>
+                    <td>SDG</td>
+                </tr>
+                <tr>
+                    <td>Corona sueca</td>
+                    <td>Suecia</td>
+                    <td>SEK</td>
+                </tr>
+                <tr>
+                    <td>Dólar de Singapur</td>
+                    <td>Singapur</td>
+                    <td>SGD</td>
+                </tr>
+                <tr>
+                    <td>Libra de Santa Elena</td>
+                    <td>Santa Elena, Ascensión y Tristán de Acuña</td>
+                    <td>SHP</td>
+                </tr>
+                <tr>
+                    <td>Leone</td>
+                    <td>Sierra Leona</td>
+                    <td>SLL</td>
+                </tr>
+                <tr>
+                    <td>Chelin somali</td>
+                    <td>Somalia</td>
+                    <td>SOS</td>
+                </tr>
+                <tr>
+                    <td>Dólar surinamés</td>
+                    <td>Surinam</td>
+                    <td>SRD</td>
+                </tr>
+                <tr>
+                    <td>Libra sursudanesa</td>
+                    <td>Sudán del Sur</td>
+                    <td>SSP</td>
+                </tr>
+                <tr>
+                    <td>Dobra</td>
+                    <td>Santo Tomé y Principe</td>
+                    <td>STD</td>
+                </tr>
+                <tr>
+                    <td>Colon Salvadoreño</td>
+                    <td>El Salvador</td>
+                    <td>SVC</td>
+                </tr>
+                <tr>
+                    <td>Libra siria</td>
+                    <td>Siria</td>
+                    <td>SYP</td>
+                </tr>
+                <tr>
+                    <td>Lilangeni</td>
+                    <td>Suazilandia</td>
+                    <td>SZL</td>
+                </tr>
+                <tr>
+                    <td>Baht</td>
+                    <td>Tailandia</td>
+                    <td>THB</td>
+                </tr>
+                <tr>
+                    <td>Somoni tayiko</td> <td>Tayikistán</td> <td>TJS</td> </tr>
+                <tr>
+                    <td>Manat turcomano</td>
+                    <td>Turkmenistán</td>
+                    <td>TMT</td>
+                </tr>
+                <tr>
+                    <td>Dinar tunecino</td>
+                    <td>Túnez</td>
+                    <td>TND</td>
+                </tr>
+                <tr>
+                    <td>Pa'anga</td>
+                    <td>Tonga</td>
+                    <td>TOP</td>
+                </tr>
+                <tr>
+                    <td>Lira turca</td>
+                    <td>Turquía</td>
+                    <td>TRY</td>
+                </tr>
+                <tr>
+                    <td>Dólar de Trinidad y Tobago</td>
+                    <td>Trinidad y Tobago</td>
+                    <td>TTD</td>
+                </tr>
+                <tr>
+                    <td>Nuevo dólar taiwanés</td>
+                    <td>República de China</td>
+                    <td>TWD</td>
+                </tr>
+                <tr>
+                    <td>Chelin tanzano</td>
+                    <td>Tanzania</td>
+                    <td>TZS</td>
+                </tr>
+                <tr>
+                    <td>Grivna</td>
+                    <td>Ucrania</td>
+                    <td>UAH</td>
+                </tr>
+                <tr>
+                    <td>Chelín ugandés</td>
+                    <td>Uganda</td>
+                    <td>UGX</td>
+                </tr>
+                <tr>
+                    <td>Dólar estadounidense</td>
+                    <td>Caribe Neerlandés, Ecuador, El Salvador, Estados Unidos, Guam, Haití, Islas Marianas del Norte, Islas Marshall, Islas Turcas y Caicos, Islas ultramarinas de Estados Unidos, Islas Vírgenes Británicas, Islas Vírgenes de los Estados Unidos, Micronesia, Palaos, Panamá, Puerto Rico, Samoa Americana, Territorio Británico del Océano Índico, Timor Oriental</td>
+                    <td>USD</td>
+                </tr>
+                <tr>
+                    <td>Dólar estadounidense (día siguiente)</td>
+                    <td>Estados Unidos</td>
+                    <td>USN</td>
+                </tr>
+                <tr>
+                    <td>Peso en Unidades Indexadas</td>
+                    <td>Uruguay</td>
+                    <td>UYI</td>
+                </tr>
+                <tr>
+                    <td>Peso uruguayo</td>
+                    <td>Uruguay</td>
+                    <td>UYU</td>
+                </tr>
+                <tr>
+                    <td>Som uzbeko</td>
+                    <td>Uzbekistán</td>
+                    <td>UZS</td>
+                </tr>
+                <tr>
+                    <td>Bolivar</td>
+                    <td>Venezuela</td>
+                    <td>VEF</td>
+                </tr>
+                <tr>
+                    <td>Dong vietnamita</td>
+                    <td>Vietnam</td>
+                    <td>VND</td>
+                </tr>
+                <tr>
+                    <td>Vatu</td>
+                    <td>Vanuatu</td>
+                    <td>VUV</td>
+                </tr>
+                <tr>
+                    <td>Tala</td>
+                    <td>Samoa</td>
+                    <td>WST</td>
+                </tr>
+                <tr>
+                    <td>Franco CFA de África Central</td>
+                    <td>Camerún, Chad, Gabón, Guinea Ecuatorial, República Centroafricana, República del Congo</td>
+                    <td>XAF</td>
+                </tr>
+                <tr>
+                    <td>Plata (una onza troy)</td>
+                    <td></td>
+                    <td>XAG</td>
+                </tr>
+                <tr>
+                    <td>Oro (una onza troy)</td>
+                    <td></td>
+                    <td>XAU</td>
+                </tr>
+                <tr>
+                    <td>Unidad compuesta europea (EURCO) (unidad del mercados de bonos)</td>
+                    <td></td>
+                    <td>XBA</td>
+                </tr>
+                <tr>
+                    <td>Unidad Monetaria europea (E.M.U.-6) (unidad del mercado de bonos)</td>
+                    <td></td>
+                    <td>XBB</td>
+                </tr>
+                <tr>
+                    <td>Unidad europea de cuenta 9 (E.U.A.-9) (unidad del mercado de bonos)</td>
+                    <td></td>
+                    <td>XBC</td>
+                </tr>
+                <tr>
+                    <td>Unidad europea de cuenta 17 (E.U.A.-17) (unidad del mercado de bonos)</td> <td></td>
+                    <td>XBD</td>
+                </tr>
+                <tr>
+                    <td>Dólar del Caribe Oriental</td>
+                    <td>Anguila, Antigua y Barbuda, Dominica, Granada, Montserrat, San Cristóbal y Nieves, San Vicente y las Granadinas, Santa Lucía</td>
+                    <td>XCD</td>
+                </tr>
+                <tr>
+                    <td>Derechos especiales de giro</td>
+                    <td>Fondo Monetario Internacional</td>
+                    <td>XDR</td>
+                </tr>
+                <tr>
+                    <td>Franco CFA de África Occidental</td>
+                    <td>Benín, Burkina Faso, Costa de Marfil, Guinea-Bisáu, Mali, Niger, Senegal, Togo</td>
+                    <td>XOF</td>
+                </tr>
+                <tr>
+                    <td>Paladio (una onza troy)</td>
+                    <td></td>
+                    <td>XPD</td>
+                </tr>
+                <tr>
+                    <td>Franco CFP</td>
+                    <td>Nueva Caledonia, Polinesia Francesa, Wallis y Futuna</td>
+                    <td>XPF</td>
+                </tr>
+                <tr>
+                    <td>Platino (una onza troy)</td>
+                    <td></td>
+                    <td>XPT</td>
+                </tr>
+                <tr>
+                    <td>SUCRE</td>
+                    <td>Sistema Unitario de Compensación Regional</td>
+                    <td>XSU</td>
+                </tr>
+                <tr>
+                    <td>Reservado para pruebas</td>
+                    <td></td>
+                    <td>XTS</td>
+                </tr>
+                <tr>
+                    <td>Unidad de cuenta BAD</td>
+                    <td>Banco Africano de Desarrollo</td>
+                    <td>XUA</td>
+                </tr>
+                <tr>
+                    <td>Transacción no monetaria</td>
+                    <td></td>
+                    <td>XXX</td>
+                </tr>
+                <tr>
+                    <td>Rial yemení</td>
+                    <td>Yemen</td>
+                    <td>YER</td>
+                </tr>
+                <tr>
+                    <td>Rand</td>
+                    <td>Lesoto, Namibia, Sudáfrica</td>
+                    <td>ZAR</td>
+                </tr>
+                <tr>
+                    <td>Kwacha zambiano</td>
+                    <td>Zambia</td>
+                    <td>ZMW</td>
+                </tr>
+                <tr>
+                    <td>Dólar zimbabuense</td>
+                    <td>Zimbabue</td>
+                    <td>ZWL</td>
+                </tr>
+                <tr>
+                    <td>Sin divisa</td>
+                    <td>Antártida, Islas Georgias del Sur y Sandwich del Sur, Palestina</td>
+                    <td></td> </tr>
+            </tbody>
+        </table>
+    </article>
+
+    <hr>
+    <h3 id="colores">II.12.4 HTML.Colores</h3>
+
+    <article id="codigoColores">
+        <h4>HTML: Códigos de colores</h4>
+        <p>Los colores en HTML se especifican a través de los modelos de color <b>RGB</b> y <b>HSL</b>, gracias a los cuales puede indicarse más de 16 millones de colores. En el modelo RGB los colores se forman con la combinación del rojo, el verde y el azul. Cada color tiene un valor numérico que va del 0 (#00) al 255 (#FF): 
+            <b><ruby>
+                    (R)
+                    <rt>0 - 255</rt>
+                </ruby>
+                <ruby>
+                    (G)
+                    <rt>0 - 255</rt>
+                </ruby>
+                <ruby>
+                    (B)
+                    <rt>0 - 255</rt>
+            </ruby></b>
+        </p>
+        <p>Para hacerlo más fácil, en HTML existen 140 nombres predefinidos (en inglés) que permiten especificar justamente 140 colores. Los navegadores web tienen soporte para estos nombres, por lo que ya saben los códigos de colores exactos que deben usar para representar el color en el documento HTML.
+        </p>
+        <p>Por lo tanto, si se emplea el nombre blue, el navegador web ya sabrá que el código que debe representar es <b>#0000FF</b>, equivalente a <b>rgb(0, 0, 255)</b>. Para introducir el color rojo <b>(#FF0000)</b> bastará con usar el nombre red, y para introducir el color <b>fuchsia</b> <b>(#FF00FF)</b> se usa el nombre <b>fuchsia</b>.
+        </p>
+        <p>Así se ve un texto <b>fuchsia</b>:</p>
+        <p style="color:fuchsia;">Texto fucsia.</p>
+        <p>Los nombres predefinidos de los colores web pueden escribirse en mayúsculas o en minúsculas, realmente es indiferente. Y lo mismo ocurre con las letras A, B, C, D, E y F de los códigos hexadecimales.
+        </p>
+        
+        <h4>Lista de 140 códigos de colores</h4>
+        <p>Los colores están ordenados alfabéticamente según el nombre predefinido.</p>
+        <table border="1">
+            <thead>
+            <tr>
+                <th>Nombre</th>
+                <th>Código hexadecimal</th>
+                <th>Color</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>aliceblue</td>
+                <td>#f0f8ff</td>
+                <td style="background-color:#f0f8ff;"></td>
+            </tr>
+            <tr>
+                <td>antiquewhite</td>
+                <td>#faebd7</td>
+                <td style="background-color:#faebd7;"></td>
+            </tr>
+            <tr>
+                <td>aqua</td>
+                <td>#00ffff</td>
+                <td style="background-color:#00ffff;"></td>
+            </tr>
+            <tr>
+                <td>aquamarine</td>
+                <td>#7fffd4</td>
+                <td style="background-color:#7fffd4;"></td>
+            </tr>
+            <tr>
+                <td>azure</td>
+                <td>#f0ffff</td>
+                <td style="background-color:#f0ffff;"></td>
+            </tr>
+            <tr>
+                <td>beige</td>
+                <td>#f5f5dc</td>
+                <td style="background-color:#f5f5dc;"></td>
+            </tr>
+            <tr>
+                <td>bisque</td>
+                <td>#ffe4c4</td>
+                <td style="background-color:#ffe4c4;"></td>
+            </tr>
+            <tr>
+                <td>black</td>
+                <td>#000000</td>
+                <td style="background-color:#000000;"></td>
+            </tr>
+            <tr>
+                <td>blanchedalmond</td>
+                <td>#ffebcd</td>
+                <td style="background-color:#ffebcd;"></td>
+            </tr>
+            <tr>
+                <td>blue</td>
+                <td>#0000ff</td>
+                <td style="background-color:#0000ff;"></td>
+            </tr>
+            <tr>
+                <td>blueviolet</td>
+                <td>#8a2be2</td>
+                <td style="background-color:#8a2be2;"></td>
+            </tr>
+            <tr>
+                <td>brown</td>
+                <td>#a52a2a</td>
+                <td style="background-color:#a52a2a;"></td>
+            </tr>
+            <tr>
+                <td>burlywood</td>
+                <td>#deb887</td>
+                <td style="background-color:#deb887;"></td>
+            </tr>
+            <tr>
+                <td>cadetblue</td>
+                <td>#5f9ea0</td>
+                <td style="background-color:#5f9ea0;"></td>
+            </tr>
+            <tr>
+                <td>chartreuse</td>
+                <td>#7fff00</td>
+                <td style="background-color:#7fff00;"></td>
+            </tr>
+            <tr>
+                <td>chocolate</td>
+                <td>#d2691e</td>
+                <td style="background-color:#d2691e;"></td>
+            </tr>
+            <tr>
+                <td>coral</td>
+                <td>#ff7f50</td>
+                <td style="background-color:#ff7f50;"></td>
+            </tr>
+            <tr>
+                <td>cornflowerblue</td>
+                <td>#6495ed</td>
+                <td style="background-color:#6495ed;"></td>
+            </tr>
+            <tr>
+                <td>cornsilk</td>
+                <td>#fff8dc</td>
+                <td style="background-color:#fff8dc;"></td>
+            </tr>
+            <tr>
+                <td>crimson</td>
+                <td>#dc143c</td>
+                <td style="background-color:#dc143c;"></td>
+            </tr>
+            <tr>
+                <td>cyan</td>
+                <td>#00ffff</td>
+                <td style="background-color:#00ffff;"></td>
+            </tr>
+            <tr>
+                <td>darkblue</td>
+                <td>#00008b</td>
+                <td style="background-color:#00008b;"></td>
+            </tr>
+            <tr>
+                <td>darkcyan</td>
+                <td>#008b8b</td>
+                <td style="background-color:#008b8b;"></td>
+            </tr>
+            <tr>
+                <td>darkgoldenrod</td>
+                <td>#b8860b</td>
+                <td style="background-color:#b8860b;"></td>
+            </tr>
+            <tr>
+                <td>darkgray</td>
+                <td>#a9a9a9</td>
+                <td style="background-color:#a9a9a9;"></td>
+            </tr>
+            <tr>
+                <td>darkgreen</td>
+                <td>#006400</td>
+                <td style="background-color:#006400;"></td>
+            </tr>
+            <tr>
+                <td>darkkhaki</td>
+                <td>#bdb76b</td>
+                <td style="background-color:#bdb76b;"></td>
+            </tr>
+            <tr>
+                <td>darkmagenta</td>
+                <td>#8b008b</td>
+                <td style="background-color:#8b008b;"></td>
+            </tr>
+            <tr>
+                <td>darkolivegreen</td>
+                <td>#556b2f</td>
+                <td style="background-color:#556b2f;"></td>
+            </tr>
+            <tr>
+                <td>darkorange</td>
+                <td>#ff8c00</td>
+                <td style="background-color:#ff8c00;"></td>
+            </tr>
+            <tr>
+                <td>darkorchid</td>
+                <td>#9932cc</td>
+                <td style="background-color:#9932cc;"></td>
+            </tr>
+            <tr>
+                <td>darkred</td>
+                <td>#8b0000</td>
+                <td style="background-color:#8b0000;"></td>
+            </tr>
+            <tr>
+                <td>darksalmon</td>
+                <td>#e9967a</td>
+                <td style="background-color:#e9967a;"></td>
+            </tr>
+            <tr>
+                <td>darkseagreen</td>
+                <td>#8fbc8f</td>
+                <td style="background-color:#8fbc8f;"></td>
+            </tr>
+            <tr>
+                <td>darkslateblue</td>
+                <td>#483d8b</td>
+                <td style="background-color:#483d8b;"></td>
+            </tr>
+            <tr>
+                <td>darkslategray</td>
+                <td>#2f4f4f</td>
+                <td style="background-color:#2f4f4f;"></td>
+            </tr>
+            <tr>
+                <td>darkturquoise</td>
+                <td>#00ced1</td>
+                <td style="background-color:#00ced1;"></td>
+            </tr>
+            <tr>
+                <td>darkviolet</td>
+                <td>#9400d3</td>
+                <td style="background-color:#9400d3;"></td>
+            </tr>
+            <tr>
+                <td>deeppink</td>
+                <td>#ff1493</td>
+                <td style="background-color:#ff1493;"></td>
+            </tr>
+            <tr>
+                <td>dimgray</td>
+                <td>#696969</td>
+                <td style="background-color:#696969;"></td>
+            </tr>
+            <tr>
+                <td>dodgerblue</td>
+                <td>#1e90ff</td>
+                <td style="background-color:#1e90ff;"></td>
+            </tr>
+            <tr>
+                <td>firebrick</td>
+                <td>#b22222</td>
+                <td style="background-color:#b22222;"></td>
+            </tr>
+            <tr>
+                <td>floralwhite</td>
+                <td>#fffaf0</td>
+                <td style="background-color:#fffaf0;"></td>
+            </tr>
+            <tr>
+                <td>forestgreen</td>
+                <td>#228b22</td>
+                <td style="background-color:#228b22;"></td>
+            </tr>
+            <tr>
+                <td>fuchsia</td>
+                <td>#ff00ff</td>
+                <td style="background-color:#ff00ff;"></td>
+            </tr>
+            <tr>
+                <td>gainsboro</td>
+                <td>#dcdcdc</td>
+                <td style="background-color:#dcdcdc;"></td>
+            </tr>
+            <tr>
+                <td>ghostwhite</td>
+                <td>#f8f8ff</td>
+                <td style="background-color:#f8f8ff;"></td>
+            </tr>
+            <tr>
+                <td>gold</td>
+                <td>#ffd700</td>
+                <td style="background-color:#ffd700;"></td>
+            </tr>
+            <tr>
+                <td>goldenrod</td>
+                <td>#daa520</td>
+                <td style="background-color:#daa520;"></td>
+            </tr>
+            <tr>
+                <td>gray</td>
+                <td>#808080</td>
+                <td style="background-color:#808080;"></td>
+            </tr>
+            <tr>
+                <td>green</td>
+                <td>#008000</td>
+                <td style="background-color:#008000;"></td>
+            </tr>
+            <tr>
+                <td>greenyellow</td>
+                <td>#adff2f</td>
+                <td style="background-color:#adff2f;"></td>
+            </tr>
+            <tr>
+                <td>honeydew</td>
+                <td>#f0fff0</td>
+                <td style="background-color:#f0fff0;"></td>
+            </tr>
+            <tr>
+                <td>hotpink</td>
+                <td>#ff69b4</td>
+                <td style="background-color:#ff69b4;"></td>
+            </tr>
+            <tr>
+                <td>indianred</td>
+                <td>#cd5c5c</td>
+                <td style="background-color:#cd5c5c;"></td>
+            </tr>
+            <tr>
+                <td>indigo</td>
+                <td>#4b0082</td>
+                <td style="background-color:#4b0082;"></td>
+            </tr>
+            <tr>
+                <td>ivory</td>
+                <td>#fffff0</td>
+                <td style="background-color:#fffff0;"></td>
+            </tr>
+            <tr>
+                <td>khaki</td>
+                <td>#f0e68c</td>
+                <td style="background-color:#f0e68c;"></td>
+            </tr>
+            <tr>
+                <td>lavender</td>
+                <td>#e6e6fa</td>
+                <td style="background-color:#e6e6fa;"></td>
+            </tr>
+            <tr>
+                <td>lavenderblush</td>
+                <td>#fff0f5</td>
+                <td style="background-color:#fff0f5;"></td>
+            </tr>
+            <tr>
+                <td>lawngreen</td>
+                <td>#7cfc00</td>
+                <td style="background-color:#7cfc00;"></td>
+            </tr>
+            <tr>
+                <td>lemonchiffon</td>
+                <td>#fffacd</td>
+                <td style="background-color:#fffacd;"></td>
+            </tr>
+            <tr>
+                <td>lightblue</td>
+                <td>#add8e6</td>
+                <td style="background-color:#add8e6;"></td>
+            </tr>
+            <tr>
+                <td>lightcoral</td>
+                <td>#f08080</td>
+                <td style="background-color:#f08080;"></td>
+            </tr>
+            <tr>
+                <td>lightcyan</td>
+                <td>#e0ffff</td>
+                <td style="background-color:#e0ffff;"></td>
+            </tr>
+            <tr>
+                <td>lightgoldenrodyellow</td>
+                <td>#fafad2</td>
+                <td style="background-color:#fafad2;"></td>
+            </tr>
+            <tr>
+                <td>lightgray</td>
+                <td>#d3d3d3</td>
+                <td style="background-color:#d3d3d3;"></td>
+            </tr>
+            <tr>
+                <td>lightgreen</td>
+                <td>#90ee90</td>
+                <td style="background-color:#90ee90;"></td>
+            </tr>
+            <tr>
+                <td>lightpink</td>
+                <td>#ffb6c1</td>
+                <td style="background-color:#ffb6c1;"></td>
+            </tr>
+            <tr>
+                <td>lightsalmon</td>
+                <td>#ffa07a</td>
+                <td style="background-color:#ffa07a;"></td>
+            </tr>
+            <tr>
+                <td>lightseagreen</td>
+                <td>#20b2aa</td>
+                <td style="background-color:#20b2aa;"></td>
+            </tr>
+            <tr>
+                <td>lightskyblue</td>
+                <td>#87cefa</td>
+                <td style="background-color:#87cefa;"></td>
+            </tr>
+            <tr>
+                <td>lightslategray</td>
+                <td>#778899</td>
+                <td style="background-color:#778899;"></td>
+            </tr>
+            <tr>
+                <td>lightsteelblue</td>
+                <td>#b0c4de</td>
+                <td style="background-color:#b0c4de;"></td>
+            </tr>
+            <tr>
+                <td>lightyellow</td>
+                <td>#ffffe0</td>
+                <td style="background-color:#ffffe0;"></td>
+            </tr>
+            <tr>
+                <td>lime</td>
+                <td>#00ff00</td>
+                <td style="background-color:#00ff00;"></td>
+            </tr>
+            <tr>
+                <td>limegreen</td>
+                <td>#32cd32</td>
+                <td style="background-color:#32cd32;"></td>
+            </tr>
+            <tr>
+                <td>linen</td>
+                <td>#faf0e6</td>
+                <td style="background-color:#faf0e6;"></td>
+            </tr>
+            <tr>
+                <td>magenta</td>
+                <td>#ff00ff</td>
+                <td style="background-color:#ff00ff;"></td>
+            </tr>
+            <tr>
+                <td>maroon</td>
+                <td>#800000</td>
+                <td style="background-color:#800000;"></td>
+            </tr>
+            <tr>
+                <td>mediumaquamarine</td>
+                <td>#66cdaa</td>
+                <td style="background-color:#66cdaa;"></td>
+            </tr>
+            <tr>
+                <td>mediumblue</td>
+                <td>#0000cd</td>
+                <td style="background-color:#0000cd;"></td>
+            </tr>
+            <tr>
+                <td>mediumpurple</td>
+                <td>#9370db</td>
+                <td style="background-color:#9370db;"></td>
+            </tr>
+            <tr>
+                <td>mediumseagreen</td>
+                <td>#3cb371</td>
+                <td style="background-color:#3cb371;"></td>
+            </tr>
+            <tr>
+                <td>mediumslateblue</td>
+                <td>#7b68ee</td>
+                <td style="background-color:#7b68ee;"></td>
+            </tr>
+            <tr>
+                <td>mediumspringgreen</td>
+                <td>#00fa9a</td>
+                <td style="background-color:#00fa9a;"></td>
+            </tr>
+            <tr>
+                <td>mediumturquoise</td>
+                <td>#48d1cc</td>
+                <td style="background-color:#48d1cc;"></td>
+            </tr>
+            <tr>
+                <td>mediumvioletred</td>
+                <td>#c71585</td>
+                <td style="background-color:#c71585;"></td>
+            </tr>
+            <tr>
+                <td>midnightblue</td>
+                <td>#191970</td>
+                <td style="background-color:#191970;"></td>
+            </tr>
+            <tr>
+                <td>mintcream</td>
+                <td>#f5fffa</td>
+                <td style="background-color:#f5fffa;"></td>
+            </tr>
+            <tr>
+                <td>mistyrose</td>
+                <td>#ffe4e1</td>
+                <td style="background-color:#ffe4e1;"></td>
+            </tr>
+            <tr>
+                <td>moccasin</td>
+                <td>#ffe4b5</td>
+                <td style="background-color:#ffe4b5;"></td>
+            </tr>
+            <tr>
+                <td>navajowhite</td>
+                <td>#ffdead</td>
+                <td style="background-color:#ffdead;"></td>
+            </tr>
+            <tr>
+                <td>navy</td>
+                <td>#000080</td>
+                <td style="background-color:#000080;"></td>
+            </tr>
+            <tr>
+                <td>oldlace</td>
+                <td>#fdf5e6</td>
+                <td style="background-color:#fdf5e6;"></td>
+            </tr>
+            <tr>
+                <td>olive</td>
+                <td>#808000</td>
+                <td style="background-color:#808000;"></td>
+            </tr>
+            <tr>
+                <td>olivedrab</td>
+                <td>#6b8e23</td>
+                <td style="background-color:#6b8e23;"></td>
+            </tr>
+            <tr>
+                <td>orange</td>
+                <td>#ffa500</td>
+                <td style="background-color:#ffa500;"></td>
+            </tr>
+            <tr>
+                <td>orangered</td>
+                <td>#ff4500</td>
+                <td style="background-color:#ff4500;"></td>
+            </tr>
+            <tr>
+                <td>orchid</td>
+                <td>#da70d6</td>
+                <td style="background-color:#da70d6;"></td>
+            </tr>
+            <tr>
+                <td>palegoldenrod</td>
+                <td>#eee8aa</td>
+                <td style="background-color:#eee8aa;"></td>
+            </tr>
+            <tr>
+                <td>palegreen</td>
+                <td>#98fb98</td>
+                <td style="background-color:#98fb98;"></td>
+            </tr>
+            <tr>
+                <td>paleturquoise</td>
+                <td>#afeeee</td>
+                <td style="background-color:#afeeee;"></td>
+            </tr>
+            <tr>
+                <td>palevioletred</td>
+                <td>#db7093</td>
+                <td style="background-color:#db7093;"></td>
+            </tr>
+            <tr>
+                <td>papayawhip</td>
+                <td>#ffefd5</td>
+                <td style="background-color:#ffefd5;"></td>
+            </tr>
+            <tr>
+                <td>peachpuff</td>
+                <td>#ffdab9</td>
+                <td style="background-color:#ffdab9;"></td>
+            </tr>
+            <tr>
+                <td>peru</td>
+                <td>#cd853f</td>
+                <td style="background-color:#cd853f;"></td>
+            </tr>
+            <tr>
+                <td>pink</td>
+                <td>#ffc0cb</td>
+                <td style="background-color:#ffc0cb;"></td>
+            </tr>
+            <tr>
+                <td>plum</td>
+                <td>#dda0dd</td>
+                <td style="background-color:#dda0dd;"></td>
+            </tr>
+            <tr>
+                <td>powderblue</td>
+                <td>#b0e0e6</td>
+                <td style="background-color:#b0e0e6;"></td>
+            </tr>
+            <tr>
+                <td>purple</td>
+                <td>#800080</td>
+                <td style="background-color:#800080;"></td>
+            </tr>
+            <tr>
+                <td>rebeccapurple</td>
+                <td>#663399</td>
+                <td style="background-color:#663399;"></td>
+            </tr>
+            <tr>
+                <td>red</td>
+                <td>#ff0000</td>
+                <td style="background-color:#ff0000;"></td>
+            </tr>
+            <tr>
+                <td>rosybrown</td>
+                <td>#bc8f8f</td>
+                <td style="background-color:#bc8f8f;"></td>
+            </tr>
+            <tr>
+                <td>royalblue</td>
+                <td>#4169e1</td>
+                <td style="background-color:#4169e1;"></td>
+            </tr>
+            <tr>
+                <td>saddlebrown</td>
+                <td>#8b4513</td>
+                <td style="background-color:#8b4513;"></td>
+            </tr>
+            <tr>
+                <td>salmon</td>
+                <td>#fa8072</td>
+                <td style="background-color:#fa8072;"></td>
+            </tr>
+            <tr>
+                <td>sandybrown</td>
+                <td>#f4a460</td>
+                <td style="background-color:#f4a460;"></td>
+            </tr>
+            <tr>
+                <td>seagreen</td>
+                <td>#2e8b57</td>
+                <td style="background-color:#2e8b57;"></td>
+            </tr>
+            <tr>
+                <td>seashell</td>
+                <td>#fff5ee</td>
+                <td style="background-color:#fff5ee;"></td>
+            </tr>
+            <tr>
+                <td>sienna</td>
+                <td>#a0522d</td>
+                <td style="background-color:#a0522d;"></td>
+            </tr>
+            <tr>
+                <td>silver</td>
+                <td>#c0c0c0</td>
+                <td style="background-color:#c0c0c0;"></td>
+            </tr>
+            <tr>
+                <td>skyblue</td>
+                <td>#87ceeb</td>
+                <td style="background-color:#87ceeb;"></td>
+            </tr>
+            <tr>
+                <td>slateblue</td>
+                <td>#6a5acd</td>
+                <td style="background-color:#6a5acd;"></td>
+            </tr>
+            <tr>
+                <td>slategray</td>
+                <td>#708090</td>
+                <td style="background-color:#708090;"></td>
+            </tr>
+            <tr>
+                <td>springgreen</td>
+                <td>#00ff7f</td>
+                <td style="background-color:#00ff7f;"></td>
+            </tr>
+            <tr>
+                <td>steelblue</td>
+                <td>#4682b4</td>
+                <td style="background-color:#4682b4;"></td>
+            </tr>
+            <tr>
+                <td>tan</td>
+                <td>#d2b48c</td>
+                <td style="background-color:#d2b48c;"></td>
+            </tr>
+            <tr>
+                <td>teal</td>
+                <td>#008080</td>
+                <td style="background-color:#008080;"></td>
+            </tr>
+            <tr>
+                <td>thistle</td>
+                <td>#d8bfd8</td>
+                <td style="background-color:#d8bfd8;"></td>
+            </tr>
+            <tr>
+                <td>tomato</td>
+                <td>#ff6347</td>
+                <td style="background-color:#ff6347;"></td>
+            </tr>
+            <tr>
+                <td>turquoise</td>
+                <td>#40e0d0</td>
+                <td style="background-color:#40e0d0;"></td>
+            </tr>
+            <tr>
+                <td>violet</td>
+                <td>#ee82ee</td>
+                <td style="background-color:#ee82ee;"></td>
+            </tr>
+            <tr>
+                <td>wheat</td>
+                <td>#f5deb3</td>
+                <td style="background-color:#f5deb3;"></td>
+            </tr>
+            <tr>
+                <td>white</td>
+                <td>#ffffff</td>
+                <td style="background-color:#ffffff;"></td>
+            </tr>
+            <tr>
+                <td>whitesmoke</td>
+                <td>#f5f5f5</td>
+                <td style="background-color:#f5f5f5;"></td>
+            </tr>
+            <tr>
+                <td>yellow</td>
+                <td>#ffff00</td>
+                <td style="background-color:#ffff00;"></td>
+            </tr>
+            <tr>
+                <td>yellowgreen</td>
+                <td>#9acd32</td>
+                <td style="background-color:#9acd32;"></td>
+            </tr>
+            </tbody>
+        </table>
+    </article>
+
+    <hr>
+    <h3 id="codigosUrl">II.12.5 HTML.Códigos URL</h3>
+    
+    <article id="codigoUrl">
+        <h4>HTML: Códigos URL</h4>
+        <p>Los códigos URL son una forma de representar caracteres especiales en las direcciones web. Se utilizan para asegurar que los navegadores web interpreten correctamente los caracteres que no son alfanuméricos o que tienen un significado especial en las URLs.
+        </p>
+        <p>Un código URL se representa con el símbolo de porcentaje (%) seguido de dos dígitos hexadecimales que representan el valor del carácter en la codificación ASCII.</p>
+        <p>Por ejemplo, el espacio se representa como %20, y el signo de interrogación (?) se representa como %3F.</p>
+        <p>A continuación, se muestra una tabla con algunos códigos URL comunes:</p>
+        <table border="1">
+            <thead>
+            <tr>
+                <th>Carácter</th>
+                <th>Código URL</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>Espacio</td>
+                <td>%20</td>
+            </tr>
+            <tr>
+                <td>Signo de interrogación (?)</td>
+                <td>%3F</td>
+            </tr>
+            <tr>
+                <td>Signo de número (#)</td>
+                <td>%23</td>
+            </tr>
+            <tr>
+                <td>Signo de ampersand (&)</td>
+                <td>%26</td>
+            </tr>
+            <tr>
+                <td>Signo de igual (=)</td>
+                <td>%3D</td>
+            </tr>
+            </tbody>
+        </table>
+        <h4>HTML: Códigos de URL</h4>
+        <p>La sintaxis de las URL tiene una limitación en la cantidad de caracteres que se pueden usar: sólo admite caracteres ASCII. Además, algunos caracteres están reservados para funciones específicas, como la identificación de segmentos individuales para poder procesar una URL por partes. Debido a que algunos caracteres no pueden formar parte de una URL, se creó un sistema de codificación de caracteres de 8 bits. Los códigos de URL son la traducción de caracteres dentro de las URL a una representación inequívoca y universalmente aceptada por los navegadores y servidores web. Por ejemplo, el espacio no puede formar parte de una URL y se codifica con el código %20 tampoco la coma (,), que en su caso se codifica con el código %2C. En cambio, el interrogante ? es un carácter reservado que se usa de forma literal para indicar el comienzo de la cadena de una consulta. La estructura de los códigos de URL es simple: se usa el símbolo % seguido de la representación hexadecimal ASCII del carácter de reemplazo. Es por ello que estos códigos también son conocidos como códigos por ciento.
+        </p>
+        <p>Es recomendable hacer uso de las bibliotecas de compilación de URL de la plataforma que se esté usando para codificar las URL de forma automática. De este modo se garantiza que las URL tengan todos los caracteres de escape correctamente codificados, evitando cualquier error.
+        </p>
+
+        <h4>Caracteres permitidos en las URL</h4>
+        <p>Las URL sólo deben contener un subconjunto especial de caracteres ASCII, en el que forman parte los caracteres alfanuméricos conocidos (letras en minúscula, mayúscula y números), ciertos caracteres no reservados y algunos caracteres reservados para las funciones específicas.
+        </p>
+
+        <h4>Caracteres alfanuméricos:</h4>
+        <p>abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789</p>
+
+        <h4>Caracteres reservados:</h4>
+        <p>! * ' ( ) ; : @ & = + $ , / ? # [ ]</p>
+
+        <h4>Lista ASCII de códigos de URL no imprimibles</h4>
+        <p>Rango de caracteres 00-1F hexadecimal (0-31 decimal) y 7F hexadecimal (127 decimal). Se trata de caracteres no imprimibles, pues sólo representan órdenes como sería un salto de línea o la eliminación de un carácter.</p>
+        <table border="1">
+            <thead>
+                <tr>
+                    <th>Hex.</th>
+                    <th>Dec.</th>
+                    <th>ASCII</th>
+                    <th>Código URL</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>00</td>
+                    <td>0</td>
+                    <td>NUL</td>
+                    <td>%00</td>
+                </tr>
+                <tr>
+                    <td>01</td>
+                    <td>1</td>
+                    <td>SOH</td>
+                    <td>%01</td>
+                </tr>
+                <tr>
+                    <td>02</td>
+                    <td>2</td>
+                    <td>STX</td>
+                    <td>%02</td>
+                </tr>
+                <tr>
+                    <td>03</td>
+                    <td>3</td>
+                    <td>ETX</td>
+                    <td>%03</td>
+                </tr>
+                <tr>
+                    <td>04</td>
+                    <td>4</td>
+                    <td>EOT</td>
+                    <td>%04</td>
+                </tr>
+                <tr>
+                    <td>05</td>
+                    <td>5</td>
+                    <td>ENQ</td>
+                    <td>%05</td>
+                </tr>
+                <tr>
+                    <td>06</td>
+                    <td>6</td>
+                    <td>ACK</td>
+                    <td>%06</td>
+                </tr>
+                <tr>
+                    <td>07</td>
+                    <td>7</td>
+                    <td>BEL</td>
+                    <td>%07</td>
+                </tr>
+                <tr>
+                    <td>08</td>
+                    <td>8</td>
+                    <td>BS</td>
+                    <td>%08</td>
+                </tr>
+                <tr>
+                    <td>09</td>
+                    <td>9</td>
+                    <td>TAB</td>
+                    <td>%09</td>
+                </tr>
+                <tr>
+                    <td>0A</td>
+                    <td>10</td>
+                    <td>LF</td>
+                    <td>%0A</td>
+                </tr>
+                <tr>
+                    <td>0B</td>
+                    <td>11</td>
+                    <td>VT</td>
+                    <td>%0B</td>
+                </tr>
+                <tr>
+                    <td>0C</td>
+                    <td>12</td>
+                    <td>FF</td>
+                    <td>%0C</td>
+                </tr>
+                <tr>
+                    <td>0D</td>
+                    <td>13</td>
+                    <td>CR</td>
+                    <td>%0D</td>
+                </tr>
+                <tr>
+                    <td>0E</td>
+                    <td>14</td>
+                    <td>SO</td>
+                    <td>%0E</td>
+                </tr>
+                <tr>
+                    <td>0F</td>
+                    <td>15</td>
+                    <td>SI</td>
+                    <td>%0F</td>
+                </tr>
+                <tr>
+                    <td>10</td>
+                    <td>16</td>
+                    <td>DLE</td>
+                    <td>%10</td>
+                </tr>
+                <tr>
+                    <td>11</td>
+                    <td>17</td>
+                    <td>DC1</td>
+                    <td>%11</td>
+                </tr>
+                <tr>
+                    <td>12</td>
+                    <td>18</td>
+                    <td>DC2</td>
+                    <td>%12</td>
+                </tr>
+                <tr>
+                    <td>13</td>
+                    <td>19</td>
+                    <td>DC3</td>
+                    <td>%13</td>
+                </tr>
+                <tr>
+                    <td>14</td>
+                    <td>20</td>
+                    <td>DC4</td>
+                    <td>%14</td>
+                </tr>
+                <tr>
+                    <td>15</td>
+                    <td>21</td>
+                    <td>NAK</td>
+                    <td>%15</td>
+                </tr>
+                <tr>
+                    <td>16</td>
+                    <td>22</td>
+                    <td>SYN</td>
+                    <td>%16</td>
+                </tr>
+                <tr>
+                    <td>17</td>
+                    <td>23</td>
+                    <td>ETB</td>
+                    <td>%17</td>
+                </tr>
+                <tr>
+                    <td>18</td>
+                    <td>24</td>
+                    <td>CAN</td>
+                    <td>%18</td>
+                </tr>
+                <tr>
+                    <td>19</td>
+                    <td>25</td>
+                    <td>EM</td>
+                    <td>%19</td>
+                </tr>
+                <tr>
+                    <td>1A</td>
+                    <td>26</td>
+                    <td>SUB</td>
+                    <td>%1A</td>
+                </tr>
+                <tr>
+                    <td>1B</td>
+                    <td>27</td>
+                    <td>ESC</td>
+                    <td>%1B</td>
+                </tr>
+                <tr>
+                    <td>1C</td>
+                    <td>28</td>
+                    <td>FS</td>
+                    <td>%1C</td>
+                </tr>
+                <tr>
+                    <td>1D</td>
+                    <td>29</td>
+                    <td>GS</td>
+                    <td>%1D</td>
+                </tr>
+                <tr>
+                    <td>1E</td>
+                    <td>30</td>
+                    <td>RS</td>
+                    <td>%1E</td>
+                </tr>
+                <tr>
+                    <td>1F</td>
+                    <td>31</td>
+                    <td>US</td>
+                    <td>%1F</td>
+                </tr>
+                <tr>
+                    <td>7F</td>
+                    <td>127</td>
+                    <td>DEL</td>
+                    <td>%7F</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h4>Lista ASCII de códigos de URL imprimibles</h4>
+        <p>Rango de caracteres 20-7E hexadecimal (32-126 decimal). En este rango se encuentran los caracteres imprimibles, que además de abarcar letras y números también contiene los caracteres especiales.</p>
+        <table border="1">
+            <thead>
+                <tr>
+                    <th>Hex.</th>
+                    <th>Dec.</th>
+                    <th>ASCII</th>
+                    <th>Código URL</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>20</td>
+                    <td>32</td>
+                    <td>SP</td>
+                    <td>%20</td>
+                </tr>
+                <tr>
+                    <td>21</td>
+                    <td>33</td>
+                    <td>!</td>
+                    <td>%21</td>
+                </tr>
+                <tr>
+                    <td>22</td>
+                    <td>34</td>
+                    <td>"</td>
+                    <td>%22</td>
+                </tr>
+                <tr>
+                    <td>23</td>
+                    <td>35</td>
+                    <td>#</td>
+                    <td>%23</td>
+                </tr>
+                <tr>
+                    <td>24</td>
+                    <td>36</td>
+                    <td>$</td>
+                    <td>%24</td>
+                </tr>
+                <tr>
+                    <td>25</td>
+                    <td>37</td>
+                    <td>%</td>
+                    <td>%25</td>
+                </tr>
+                <tr>
+                    <td>26</td>
+                    <td>38</td>
+                    <td>&amp;</td>
+                    <td>%26</td>
+                </tr>
+                <tr>
+                    <td>27</td>
+                    <td>39</td>
+                    <td>'</td>
+                    <td>%27</td>
+                </tr>
+                <tr>
+                    <td>28</td>
+                    <td>40</td>
+                    <td>(</td>
+                    <td>%28</td>
+                </tr>
+                <tr>
+                    <td>29</td>
+                    <td>41</td>
+                    <td>)</td>
+                    <td>%29</td>
+                </tr>
+                <tr>
+                    <td>2A</td>
+                    <td>42</td>
+                    <td>*</td>
+                    <td>%2A</td>
+                </tr>
+                <tr>
+                    <td>2B</td>
+                    <td>43</td>
+                    <td>+</td>
+                    <td>%2B</td>
+                </tr>
+                <tr>
+                    <td>2C</td>
+                    <td>44</td>
+                    <td>,</td>
+                    <td>%2C</td>
+                </tr>
+                <tr>
+                    <td>2D</td>
+                    <td>45</td>
+                    <td>-</td>
+                    <td>%2D</td>
+                </tr>
+                <tr>
+                    <td>2E</td>
+                    <td>46</td>
+                    <td>.</td>
+                    <td>%2E</td>
+                </tr>
+                <tr>
+                    <td>2F</td>
+                    <td>47</td>
+                    <td>/</td>
+                    <td>%2F</td>
+                </tr>
+                <tr>
+                    <td>30</td>
+                    <td>48</td>
+                    <td>0</td>
+                    <td>%30</td>
+                </tr>
+                <tr>
+                    <td>31</td>
+                    <td>49</td>
+                    <td>1</td>
+                    <td>%31</td>
+                </tr>
+                <tr>
+                    <td>32</td>
+                    <td>50</td>
+                    <td>2</td>
+                    <td>%32</td>
+                </tr>
+                <tr>
+                    <td>33</td>
+                    <td>51</td>
+                    <td>3</td>
+                    <td>%33</td>
+                </tr>
+                <tr>
+                    <td>34</td>
+                    <td>52</td>
+                    <td>4</td>
+                    <td>%34</td>
+                </tr>
+                <tr>
+                    <td>35</td>
+                    <td>53</td>
+                    <td>5</td>
+                    <td>%35</td>
+                </tr>
+                <tr>
+                    <td>36</td>
+                    <td>54</td>
+                    <td>6</td>
+                    <td>%36</td>
+                </tr>
+                <tr>
+                    <td>37</td>
+                    <td>55</td>
+                    <td>7</td>
+                    <td>%37</td>
+                </tr>
+                <tr>
+                    <td>38</td>
+                    <td>56</td>
+                    <td>8</td>
+                    <td>%38</td>
+                </tr>
+                <tr>
+                    <td>39</td>
+                    <td>57</td>
+                    <td>9</td>
+                    <td>%39</td>
+                </tr>
+                <tr>
+                    <td>3A</td>
+                    <td>58</td>
+                    <td>:</td>
+                    <td>%3A</td>
+                </tr>
+                <tr>
+                    <td>3B</td>
+                    <td>59</td>
+                    <td>;</td>
+                    <td>%3B</td>
+                </tr>
+                <tr>
+                    <td>3C</td>
+                    <td>60</td>
+                    <td>&lt;</td>
+                    <td>%3C</td>
+                </tr>
+                <tr>
+                    <td>3D</td>
+                    <td>61</td>
+                    <td>=</td>
+                    <td>%3D</td>
+                </tr>
+                <tr>
+                    <td>3E</td>
+                    <td>62</td>
+                    <td>&gt;</td>
+                    <td>%3E</td>
+                </tr>
+                <tr>
+                    <td>3F</td>
+                    <td>63</td>
+                    <td>?</td>
+                    <td>%3F</td>
+                </tr>
+                <tr>
+                    <td>40</td>
+                    <td>64</td>
+                    <td>@</td>
+                    <td>%40</td>
+                </tr>
+                <tr>
+                    <td>41</td>
+                    <td>65</td>
+                    <td>A</td>
+                    <td>%41</td>
+                </tr>
+                <tr>
+                    <td>42</td>
+                    <td>66</td>
+                    <td>B</td>
+                    <td>%42</td>
+                </tr>
+                <tr>
+                    <td>43</td>
+                    <td>67</td>
+                    <td>C</td>
+                    <td>%43</td>
+                </tr>
+                <tr>
+                    <td>44</td>
+                    <td>68</td>
+                    <td>D</td>
+                    <td>%44</td>
+                </tr>
+                <tr>
+                    <td>45</td>
+                    <td>69</td>
+                    <td>E</td>
+                    <td>%45</td>
+                </tr>
+                <tr>
+                    <td>46</td>
+                    <td>70</td>
+                    <td>F</td>
+                    <td>%46</td>
+                </tr>
+                <tr>
+                    <td>47</td>
+                    <td>71</td>
+                    <td>G</td>
+                    <td>%47</td>
+                </tr>
+                <tr>
+                    <td>48</td>
+                    <td>72</td>
+                    <td>H</td>
+                    <td>%48</td>
+                </tr>
+                <tr>
+                    <td>49</td>
+                    <td>73</td>
+                    <td>I</td>
+                    <td>%49</td>
+                </tr>
+                <tr>
+                    <td>4A</td>
+                    <td>74</td>
+                    <td>J</td>
+                    <td>%4A</td>
+                </tr>
+                <tr>
+                    <td>4B</td>
+                    <td>75</td>
+                    <td>K</td>
+                    <td>%4B</td>
+                </tr>
+                <tr>
+                    <td>4C</td>
+                    <td>76</td>
+                    <td>L</td>
+                    <td>%4C</td>
+                </tr>
+                <tr>
+                    <td>4D</td>
+                    <td>77</td>
+                    <td>M</td>
+                    <td>%4D</td>
+                </tr>
+                <tr>
+                    <td>4E</td>
+                    <td>78</td>
+                    <td>N</td>
+                    <td>%4E</td>
+                </tr>
+                <tr>
+                    <td>4F</td>
+                    <td>79</td>
+                    <td>O</td>
+                    <td>%4F</td>
+                </tr>
+                <tr>
+                    <td>50</td>
+                    <td>80</td>
+                    <td>P</td>
+                    <td>%50</td>
+                </tr>
+                <tr>
+                    <td>51</td>
+                    <td>81</td>
+                    <td>Q</td>
+                    <td>%51</td>
+                </tr>
+                <tr>
+                    <td>52</td>
+                    <td>82</td>
+                    <td>R</td>
+                    <td>%52</td>
+                </tr>
+                <tr>
+                    <td>53</td>
+                    <td>83</td>
+                    <td>S</td>
+                    <td>%53</td>
+                </tr>
+                <tr>
+                    <td>54</td>
+                    <td>84</td>
+                    <td>T</td>
+                    <td>%54</td>
+                </tr>
+                <tr>
+                    <td>55</td>
+                    <td>85</td>
+                    <td>U</td>
+                    <td>%55</td>
+                </tr>
+                <tr>
+                    <td>56</td>
+                    <td>86</td>
+                    <td>V</td>
+                    <td>%56</td>
+                </tr>
+                <tr>
+                    <td>57</td>
+                    <td>87</td>
+                    <td>W</td>
+                    <td>%57</td>
+                </tr>
+                <tr>
+                    <td>58</td>
+                    <td>88</td>
+                    <td>X</td>
+                    <td>%58</td>
+                </tr>
+                <tr>
+                    <td>59</td>
+                    <td>89</td>
+                    <td>Y</td>
+                    <td>%59</td>
+                </tr>
+                <tr>
+                    <td>5A</td>
+                    <td>90</td>
+                    <td>Z</td>
+                    <td>%5A</td>
+                </tr>
+                <tr>
+                    <td>5B</td>
+                    <td>91</td>
+                    <td>[</td>
+                    <td>%5B</td>
+                </tr>
+                <tr>
+                    <td>5C</td>
+                    <td>92</td>
+                    <td>\</td>
+                    <td>%5C</td>
+                </tr>
+                <tr>
+                    <td>5D</td>
+                    <td>93</td>
+                    <td>]</td>
+                    <td>%5D</td>
+                </tr>
+                <tr>
+                    <td>5E</td>
+                    <td>94</td>
+                    <td>^</td>
+                    <td>%5E</td>
+                </tr>
+                <tr>
+                    <td>5F</td>
+                    <td>95</td>
+                    <td>_</td>
+                    <td>%5F</td>
+                </tr>
+                <tr>
+                    <td>60</td>
+                    <td>96</td>
+                    <td>`</td>
+                    <td>%60</td>
+                </tr>
+                <tr>
+                    <td>61</td>
+                    <td>97</td>
+                    <td>a</td>
+                    <td>%61</td>
+                </tr>
+                <tr>
+                    <td>62</td>
+                    <td>98</td>
+                    <td>b</td>
+                    <td>%62</td>
+                </tr>
+                <tr>
+                    <td>63</td>
+                    <td>99</td>
+                    <td>c</td>
+                    <td>%63</td>
+                </tr>
+                <tr>
+                    <td>64</td>
+                    <td>100</td>
+                    <td>d</td>
+                    <td>%64</td>
+                </tr>
+                <tr>
+                    <td>65</td>
+                    <td>101</td>
+                    <td>e</td>
+                    <td>%65</td>
+                </tr>
+                <tr>
+                    <td>66</td>
+                    <td>102</td>
+                    <td>f</td>
+                    <td>%66</td>
+                </tr>
+                <tr>
+                    <td>67</td>
+                    <td>103</td>
+                    <td>g</td>
+                    <td>%67</td>
+                </tr>
+                <tr>
+                    <td>68</td>
+                    <td>104</td>
+                    <td>h</td>
+                    <td>%68</td>
+                </tr>
+                <tr>
+                    <td>69</td>
+                    <td>105</td>
+                    <td>i</td>
+                    <td>%69</td>
+                </tr>
+                <tr>
+                    <td>6A</td>
+                    <td>106</td>
+                    <td>j</td>
+                    <td>%6A</td>
+                </tr>
+                <tr>
+                    <td>6B</td>
+                    <td>107</td>
+                    <td>k</td>
+                    <td>%6B</td>
+                </tr>
+                <tr>
+                    <td>6C</td>
+                    <td>108</td>
+                    <td>l</td>
+                    <td>%6C</td>
+                </tr>
+                <tr>
+                    <td>6D</td>
+                    <td>109</td>
+                    <td>m</td>
+                    <td>%6D</td>
+                </tr>
+                <tr>
+                    <td>6E</td>
+                    <td>110</td>
+                    <td>n</td>
+                    <td>%6E</td>
+                </tr>
+                <tr>
+                    <td>6F</td>
+                    <td>111</td>
+                    <td>o</td>
+                    <td>%6F</td>
+                </tr>
+                <tr>
+                    <td>70</td>
+                    <td>112</td>
+                    <td>p</td>
+                    <td>%70</td>
+                </tr>
+                <tr>
+                    <td>71</td>
+                    <td>113</td>
+                    <td>q</td>
+                    <td>%71</td>
+                </tr>
+                <tr>
+                    <td>72</td>
+                    <td>114</td>
+                    <td>r</td>
+                    <td>%72</td>
+                </tr>
+                <tr>
+                    <td>73</td>
+                    <td>115</td>
+                    <td>s</td>
+                    <td>%73</td>
+                </tr>
+                <tr>
+                    <td>74</td>
+                    <td>116</td>
+                    <td>t</td>
+                    <td>%74</td>
+                </tr>
+                <tr>
+                    <td>75</td>
+                    <td>117</td>
+                    <td>u</td>
+                    <td>%75</td>
+                </tr>
+                <tr>
+                    <td>76</td>
+                    <td>118</td>
+                    <td>v</td>
+                    <td>%76</td>
+                </tr>
+                <tr>
+                    <td>77</td>
+                    <td>119</td>
+                    <td>w</td>
+                    <td>%77</td>
+                </tr>
+                <tr>
+                    <td>78</td>
+                    <td>120</td>
+                    <td>x</td>
+                    <td>%78</td>
+                </tr>
+                <tr>
+                    <td>79</td>
+                    <td>121</td>
+                    <td>y</td>
+                    <td>%79</td>
+                </tr>
+                <tr>
+                    <td>7A</td>
+                    <td>122</td>
+                    <td>z</td>
+                    <td>%7A</td>
+                </tr>
+                <tr>
+                    <td>7B</td>
+                    <td>123</td>
+                    <td>{</td>
+                    <td>%7B</td>
+                </tr>
+                <tr>
+                    <td>7C</td>
+                    <td>124</td>
+                    <td>|</td>
+                    <td>%7C</td>
+                </tr>
+                <tr>
+                    <td>7D</td>
+                    <td>125</td>
+                    <td>}</td>
+                    <td>%7D</td>
+                </tr>
+                <tr>
+                    <td>7E</td>
+                    <td>126</td>
+                    <td>~</td>
+                    <td>%7E</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h4>Lista ASCII extendida (8 bits)</h4>
+        <p>Rango de caracteres 80-FF hexadecimal (128-255 decimal). Este rango de datos es una versión extendida del código ASCII creada añadiendo un octavo bit y se creó para adaptarla a las peculiaridades de cada país. A pesar de esa variabilidad, los 128 caracteres iniciales siempre permanecerán intactos.</p>
+        <table border="1">
+            <thead>
+                <tr>
+                    <th>Hex.</th>
+                    <th>Dec.</th>
+                    <th>ASCII</th>
+                    <th>Código URL</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>80</td>
+                    <td>128</td>
+                    <td>€</td>
+                    <td>%80</td>
+                </tr>
+                <tr>
+                    <td>81</td>
+                    <td>129</td>
+                    <td></td>
+                    <td>%81</td>
+                </tr>
+                <tr>
+                    <td>82</td>
+                    <td>130</td>
+                    <td>‚</td>
+                    <td>%82</td>
+                </tr>
+                <tr>
+                    <td>83</td>
+                    <td>131</td>
+                    <td>ƒ</td>
+                    <td>%83</td>
+                </tr>
+                <tr>
+                    <td>84</td>
+                    <td>132</td>
+                    <td>„</td>
+                    <td>%84</td>
+                </tr>
+                <tr>
+                    <td>85</td>
+                    <td>133</td>
+                    <td>…</td>
+                    <td>%85</td>
+                </tr>
+                <tr>
+                    <td>86</td>
+                    <td>134</td>
+                    <td>†</td>
+                    <td>%86</td>
+                </tr>
+                <tr>
+                    <td>87</td>
+                    <td>135</td>
+                    <td>‡</td>
+                    <td>%87</td>
+                </tr>
+                <tr>
+                    <td>88</td>
+                    <td>136</td>
+                    <td>ˆ</td>
+                    <td>%88</td>
+                </tr>
+                <tr>
+                    <td>89</td>
+                    <td>137</td>
+                    <td>‰</td>
+                    <td>%89</td>
+                </tr>
+                <tr>
+                    <td>8A</td>
+                    <td>138</td>
+                    <td>Š</td>
+                    <td>%8A</td>
+                </tr>
+                <tr>
+                    <td>8B</td>
+                    <td>139</td>
+                    <td>‹</td>
+                    <td>%8B</td>
+                </tr>
+                <tr>
+                    <td>8C</td>
+                    <td>140</td>
+                    <td>Œ</td>
+                    <td>%8C</td>
+                </tr>
+                <tr>
+                    <td>8D</td>
+                    <td>141</td>
+                    <td></td>
+                    <td>%8D</td>
+                </tr>
+                <tr>
+                    <td>8E</td>
+                    <td>142</td>
+                    <td>Ž</td>
+                    <td>%8E</td>
+                </tr>
+                <tr>
+                    <td>8F</td>
+                    <td>143</td>
+                    <td></td>
+                    <td>%8F</td>
+                </tr>
+                <tr>
+                    <td>90</td>
+                    <td>144</td>
+                    <td></td>
+                    <td>%90</td>
+                </tr>
+                <tr>
+                    <td>91</td>
+                    <td>145</td>
+                    <td>‘</td>
+                    <td>%91</td>
+                </tr>
+                <tr>
+                    <td>92</td>
+                    <td>146</td>
+                    <td>’</td>
+                    <td>%92</td>
+                </tr>
+                <tr>
+                    <td>93</td>
+                    <td>147</td>
+                    <td>“</td>
+                    <td>%93</td>
+                </tr>
+                <tr>
+                    <td>94</td>
+                    <td>148</td>
+                    <td>”</td>
+                    <td>%94</td>
+                </tr>
+                <tr>
+                    <td>95</td>
+                    <td>149</td>
+                    <td>•</td>
+                    <td>%95</td>
+                </tr>
+                <tr>
+                    <td>96</td>
+                    <td>150</td>
+                    <td>–</td>
+                    <td>%96</td>
+                </tr>
+                <tr>
+                    <td>97</td>
+                    <td>151</td>
+                    <td>—</td>
+                    <td>%97</td>
+                </tr>
+                <tr>
+                    <td>98</td>
+                    <td>152</td>
+                    <td>˜</td>
+                    <td>%98</td>
+                </tr>
+                <tr>
+                    <td>99</td>
+                    <td>153</td>
+                    <td>™</td>
+                    <td>%99</td>
+                </tr>
+                <tr>
+                    <td>9A</td>
+                    <td>154</td>
+                    <td>š</td>
+                    <td>%9A</td>
+                </tr>
+                <tr>
+                    <td>9B</td>
+                    <td>155</td>
+                    <td>›</td>
+                    <td>%9B</td>
+                </tr>
+                <tr>
+                    <td>9C</td>
+                    <td>156</td>
+                    <td>œ</td>
+                    <td>%9C</td>
+                </tr>
+                <tr>
+                    <td>9D</td>
+                    <td>157</td>
+                    <td></td>
+                    <td>%9D</td>
+                </tr>
+                <tr>
+                    <td>9E</td>
+                    <td>158</td>
+                    <td>ž</td>
+                    <td>%9E</td>
+                </tr>
+                <tr>
+                    <td>9F</td>
+                    <td>159</td>
+                    <td>Ÿ</td>
+                    <td>%9F</td>
+                </tr>
+                <tr>
+                    <td>A0</td>
+                    <td>160</td>
+                    <td>&nbsp;</td>
+                    <td>%A0</td>
+                </tr>
+                <tr>
+                    <td>A1</td>
+                    <td>161</td>
+                    <td>¡</td>
+                    <td>%A1</td>
+                </tr>
+                <tr>
+                    <td>A2</td>
+                    <td>162</td>
+                    <td>¢</td>
+                    <td>%A2</td>
+                </tr>
+                <tr>
+                    <td>A3</td>
+                    <td>163</td>
+                    <td>£</td>
+                    <td>%A3</td>
+                </tr>
+                <tr>
+                    <td>A4</td>
+                    <td>164</td>
+                    <td>¤</td>
+                    <td>%A4</td>
+                </tr>
+                <tr>
+                    <td>A5</td>
+                    <td>165</td>
+                    <td>¥</td>
+                    <td>%A5</td>
+                </tr>
+                <tr>
+                    <td>A6</td>
+                    <td>166</td>
+                    <td>¦</td>
+                    <td>%A6</td>
+                </tr>
+                <tr>
+                    <td>A7</td>
+                    <td>167</td>
+                    <td>§</td>
+                    <td>%A7</td>
+                </tr>
+                <tr>
+                    <td>A8</td>
+                    <td>168</td>
+                    <td>¨</td>
+                    <td>%A8</td>
+                </tr>
+                <tr>
+                    <td>A9</td>
+                    <td>169</td>
+                    <td>©</td>
+                    <td>%A9</td>
+                </tr>
+                <tr>
+                    <td>AA</td>
+                    <td>170</td>
+                    <td>ª</td>
+                    <td>%AA</td>
+                </tr>
+                <tr>
+                    <td>AB</td>
+                    <td>171</td>
+                    <td>«</td>
+                    <td>%AB</td>
+                </tr>
+                <tr>
+                    <td>AC</td>
+                    <td>172</td>
+                    <td>¬</td>
+                    <td>%AC</td>
+                </tr>
+                <tr>
+                    <td>AD</td>
+                    <td>173</td>
+                    <td>&shy;</td>
+                    <td>%AD</td>
+                </tr>
+                <tr>
+                    <td>AE</td>
+                    <td>174</td>
+                    <td>®</td>
+                    <td>%AE</td>
+                </tr>
+                <tr>
+                    <td>AF</td>
+                    <td>175</td>
+                    <td>¯</td>
+                    <td>%AF</td>
+                </tr>
+                <tr>
+                    <td>B0</td>
+                    <td>176</td>
+                    <td>°</td>
+                    <td>%B0</td>
+                </tr>
+                <tr>
+                    <td>B1</td>
+                    <td>177</td>
+                    <td>±</td>
+                    <td>%B1</td>
+                </tr>
+                <tr>
+                    <td>B2</td>
+                    <td>178</td>
+                    <td>²</td>
+                    <td>%B2</td>
+                </tr>
+                <tr>
+                    <td>B3</td>
+                    <td>179</td>
+                    <td>³</td>
+                    <td>%B3</td>
+                </tr>
+                <tr>
+                    <td>B4</td>
+                    <td>180</td>
+                    <td>´</td>
+                    <td>%B4</td>
+                </tr>
+                <tr>
+                    <td>B5</td>
+                    <td>181</td>
+                    <td>µ</td>
+                    <td>%B5</td>
+                </tr>
+                <tr>
+                    <td>B6</td>
+                    <td>182</td>
+                    <td>¶</td>
+                    <td>%B6</td>
+                </tr>
+                <tr>
+                    <td>B7</td>
+                    <td>183</td>
+                    <td>·</td>
+                    <td>%B7</td>
+                </tr>
+                <tr>
+                    <td>B8</td>
+                    <td>184</td>
+                    <td>¸</td>
+                    <td>%B8</td>
+                </tr>
+                <tr>
+                    <td>B9</td>
+                    <td>185</td>
+                    <td>¹</td>
+                    <td>%B9</td>
+                </tr>
+                <tr>
+                    <td>BA</td>
+                    <td>186</td>
+                    <td>º</td>
+                    <td>%BA</td>
+                </tr>
+                <tr>
+                    <td>BB</td>
+                    <td>187</td>
+                    <td>»</td>
+                    <td>%BB</td>
+                </tr>
+                <tr>
+                    <td>BC</td>
+                    <td>188</td>
+                    <td>¼</td>
+                    <td>%BC</td>
+                </tr>
+                <tr>
+                    <td>BD</td>
+                    <td>189</td>
+                    <td>½</td>
+                    <td>%BD</td>
+                </tr>
+                <tr>
+                    <td>BE</td>
+                    <td>190</td>
+                    <td>¾</td>
+                    <td>%BE</td>
+                </tr>
+                <tr>
+                    <td>BF</td>
+                    <td>191</td>
+                    <td>¿</td>
+                    <td>%BF</td>
+                </tr>
+                <tr>
+                    <td>C0</td>
+                    <td>192</td>
+                    <td>À</td>
+                    <td>%C0</td>
+                </tr>
+                <tr>
+                    <td>C1</td>
+                    <td>193</td>
+                    <td>Á</td>
+                    <td>%C1</td>
+                </tr>
+                <tr>
+                    <td>C2</td>
+                    <td>194</td>
+                    <td>Â</td>
+                    <td>%C2</td>
+                </tr>
+                <tr>
+                    <td>C3</td>
+                    <td>195</td>
+                    <td>Ã</td>
+                    <td>%C3</td>
+                </tr>
+                <tr>
+                    <td>C4</td>
+                    <td>196</td>
+                    <td>Ä</td>
+                    <td>%C4</td>
+                </tr>
+                <tr>
+                    <td>C5</td>
+                    <td>197</td>
+                    <td>Å</td>
+                    <td>%C5</td>
+                </tr>
+                <tr>
+                    <td>C6</td>
+                    <td>198</td>
+                    <td>Æ</td>
+                    <td>%C6</td>
+                </tr>
+                <tr>
+                    <td>C7</td>
+                    <td>199</td>
+                    <td>Ç</td>
+                    <td>%C7</td>
+                </tr>
+                <tr>
+                    <td>C8</td>
+                    <td>200</td>
+                    <td>È</td>
+                    <td>%C8</td>
+                </tr>
+                <tr>
+                    <td>C9</td>
+                    <td>201</td>
+                    <td>É</td>
+                    <td>%C9</td>
+                </tr>
+                <tr>
+                    <td>CA</td>
+                    <td>202</td>
+                    <td>Ê</td>
+                    <td>%CA</td>
+                </tr>
+                <tr>
+                    <td>CB</td>
+                    <td>203</td>
+                    <td>Ë</td>
+                    <td>%CB</td>
+                </tr>
+                <tr>
+                    <td>CC</td>
+                    <td>204</td>
+                    <td>Ì</td>
+                    <td>%CC</td>
+                </tr>
+                <tr>
+                    <td>CD</td>
+                    <td>205</td>
+                    <td>Í</td>
+                    <td>%CD</td>
+                </tr>
+                <tr>
+                    <td>CE</td>
+                    <td>206</td>
+                    <td>Î</td>
+                    <td>%CE</td>
+                </tr>
+                <tr>
+                    <td>CF</td>
+                    <td>207</td>
+                    <td>Ï</td>
+                    <td>%CF</td>
+                </tr>
+                <tr>
+                    <td>D0</td>
+                    <td>208</td>
+                    <td>Ð</td>
+                    <td>%D0</td>
+                </tr>
+                <tr>
+                    <td>D1</td>
+                    <td>209</td>
+                    <td>Ñ</td>
+                    <td>%D1</td>
+                </tr>
+                <tr>
+                    <td>D2</td>
+                    <td>210</td>
+                    <td>Ò</td>
+                    <td>%D2</td>
+                </tr>
+                <tr>
+                    <td>D3</td>
+                    <td>211</td>
+                    <td>Ó</td>
+                    <td>%D3</td>
+                </tr>
+                <tr>
+                    <td>D4</td>
+                    <td>212</td>
+                    <td>Ô</td>
+                    <td>%D4</td>
+                </tr>
+                <tr>
+                    <td>D5</td>
+                    <td>213</td>
+                    <td>Õ</td>
+                    <td>%D5</td>
+                </tr>
+                <tr>
+                    <td>D6</td>
+                    <td>214</td>
+                    <td>Ö</td>
+                    <td>%D6</td>
+                </tr>
+                <tr>
+                    <td>D7</td>
+                    <td>215</td>
+                    <td>×</td>
+                    <td>%D7</td>
+                </tr>
+                <tr>
+                    <td>D8</td>
+                    <td>216</td>
+                    <td>Ø</td>
+                    <td>%D8</td>
+                </tr>
+                <tr>
+                    <td>D9</td>
+                    <td>217</td>
+                    <td>Ù</td>
+                    <td>%D9</td>
+                </tr>
+                <tr>
+                    <td>DA</td>
+                    <td>218</td>
+                    <td>Ú</td>
+                    <td>%DA</td>
+                </tr>
+                <tr>
+                    <td>DB</td>
+                    <td>219</td>
+                    <td>Û</td>
+                    <td>%DB</td>
+                </tr>
+                <tr>
+                    <td>DC</td>
+                    <td>220</td>
+                    <td>Ü</td>
+                    <td>%DC</td>
+                </tr>
+                <tr>
+                    <td>DD</td>
+                    <td>221</td>
+                    <td>Ý</td>
+                    <td>%DD</td>
+                </tr>
+                <tr>
+                    <td>DE</td>
+                    <td>222</td>
+                    <td>Þ</td>
+                    <td>%DE</td>
+                </tr>
+                <tr>
+                    <td>DF</td>
+                    <td>223</td>
+                    <td>ß</td>
+                    <td>%DF</td>
+                </tr>
+                <tr>
+                    <td>E0</td>
+                    <td>224</td>
+                    <td>à</td>
+                    <td>%E0</td>
+                </tr>
+                <tr>
+                    <td>E1</td>
+                    <td>225</td>
+                    <td>á</td>
+                    <td>%E1</td>
+                </tr>
+                <tr>
+                    <td>E2</td>
+                    <td>226</td>
+                    <td>â</td>
+                    <td>%E2</td>
+                </tr>
+                <tr>
+                    <td>E3</td>
+                    <td>227</td>
+                    <td>ã</td>
+                    <td>%E3</td>
+                </tr>
+                <tr>
+                    <td>E4</td>
+                    <td>228</td>
+                    <td>ä</td>
+                    <td>%E4</td>
+                </tr>
+                <tr>
+                    <td>E5</td>
+                    <td>229</td>
+                    <td>å</td>
+                    <td>%E5</td>
+                </tr>
+                <tr>
+                    <td>E6</td>
+                    <td>230</td>
+                    <td>æ</td>
+                    <td>%E6</td>
+                </tr>
+                <tr>
+                    <td>E7</td>
+                    <td>231</td>
+                    <td>ç</td>
+                    <td>%E7</td>
+                </tr>
+                <tr>
+                    <td>E8</td>
+                    <td>232</td>
+                    <td>è</td>
+                    <td>%E8</td>
+                </tr>
+                <tr>
+                    <td>E9</td>
+                    <td>233</td>
+                    <td>é</td>
+                    <td>%E9</td>
+                </tr>
+                <tr>
+                    <td>EA</td>
+                    <td>234</td>
+                    <td>ê</td>
+                    <td>%EA</td>
+                </tr>
+                <tr>
+                    <td>EB</td>
+                    <td>235</td>
+                    <td>ë</td>
+                    <td>%EB</td>
+                </tr>
+                <tr>
+                    <td>EC</td>
+                    <td>236</td>
+                    <td>ì</td>
+                    <td>%EC</td>
+                </tr>
+                <tr>
+                    <td>ED</td>
+                    <td>237</td>
+                    <td>í</td>
+                    <td>%ED</td>
+                </tr>
+                <tr>
+                    <td>EE</td>
+                    <td>238</td>
+                    <td>î</td>
+                    <td>%EE</td>
+                </tr>
+                <tr>
+                    <td>EF</td>
+                    <td>239</td>
+                    <td>ï</td>
+                    <td>%EF</td>
+                </tr>
+                <tr>
+                    <td>F0</td>
+                    <td>240</td>
+                    <td>ð</td>
+                    <td>%F0</td>
+                </tr>
+                <tr>
+                    <td>F1</td>
+                    <td>241</td>
+                    <td>ñ</td>
+                    <td>%F1</td>
+                </tr>
+                <tr>
+                    <td>F2</td>
+                    <td>242</td>
+                    <td>ò</td>
+                    <td>%F2</td>
+                </tr>
+                <tr>
+                    <td>F3</td>
+                    <td>243</td>
+                    <td>ó</td>
+                    <td>%F3</td>
+                </tr>
+                <tr>
+                    <td>F4</td>
+                    <td>244</td>
+                    <td>ô</td>
+                    <td>%F4</td>
+                </tr>
+                <tr>
+                    <td>F5</td>
+                    <td>245</td>
+                    <td>õ</td>
+                    <td>%F5</td>
+                </tr>
+                <tr>
+                    <td>F6</td>
+                    <td>246</td>
+                    <td>ö</td>
+                    <td>%F6</td>
+                </tr>
+                <tr>
+                    <td>F7</td>
+                    <td>247</td>
+                    <td>÷</td>
+                    <td>%F7</td>
+                </tr>
+                <tr>
+                    <td>F8</td>
+                    <td>248</td>
+                    <td>ø</td>
+                    <td>%F8</td>
+                </tr>
+                <tr>
+                    <td>F9</td>
+                    <td>249</td>
+                    <td>ù</td>
+                    <td>%F9</td>
+                </tr>
+                <tr>
+                    <td>FA</td>
+                    <td>250</td>
+                    <td>ú</td>
+                    <td>%FA</td>
+                </tr>
+                <tr>
+                    <td>FB</td>
+                    <td>251</td>
+                    <td>û</td>
+                    <td>%FB</td>
+                </tr>
+                <tr>
+                    <td>FC</td>
+                    <td>252</td>
+                    <td>ü</td>
+                    <td>%FC</td>
+                </tr>
+                <tr>
+                    <td>FD</td>
+                    <td>253</td>
+                    <td>ý</td>
+                    <td>%FD</td>
+                </tr>
+                <tr>
+                    <td>FE</td>
+                    <td>254</td>
+                    <td>þ</td>
+                    <td>%FE</td>
+                </tr>
+                <tr>
+                    <td>FF</td>
+                    <td>255</td>
+                    <td>ÿ</td>
+                    <td>%FF</td>
+                </tr>
+            </tbody>
+        </table>
+    </article>
+
+    <hr>
+    <h3 id="codigosPais">II.12.6 HTML.Países</h3>
+    
+    <article id="paises">
+        <h4>HTML: Códigos de países</h4>
+        <p>Los códigos de países son abreviaturas alfabéticas que permiten representar a los países en procesos de datos. Para ello se creó el estándar ISO 3166-1, que es el más utilizado. En HTML, estos códigos se pueden usar como complemento de los códigos de idiomas en el atributo lang.</p>
+
+        <h4>Ejemplo de uso en HTML</h4>
+        <p>En este sentido, conviene aclarar que los caracteres de los códigos de idiomas definen el idioma de la página web en cuestión, mientras que los caracteres de los códigos de países definen el país. En el siguiente ejemplo se puede observar cómo se especifica el idioma inglés (en) y el país de Estados Unidos (US):</p>
+        <code><html lang="en-US"></code>
+
+        <p>También se pueden ver ejemplos más específicos para el idioma español en distintos países:</p>
+        <code><span lang="es-AR">Español de Argentina</span><br>
+        <span lang="es-CO">Español de Colombia</span><br>
+        <span lang="es-ES">Español de España</span><br>
+        <span lang="es-MX">Español de México</span><br>
+        <span lang="es-PE">Español de Perú</span></code>
+
+        <h4>Códigos de países ISO 3166-1 alfa-2</h4>
+        <p>El estándar ISO 3166-1 incluye códigos alfa-2, formados por dos letras, siendo el más utilizado. A continuación se muestra una tabla con algunos de los códigos de países reconocidos internacionalmente:</p>
+
+        <table border="1">
+            <thead>
+                <tr >
+                <th>País</th>
+                <th>Código</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr><td>Afganistán</td><td>AF</td></tr>
+                <tr><td>Åland</td><td>AX</td></tr>
+                <tr><td>Albania</td><td>AL</td></tr>
+                <tr><td>Alemania</td><td>DE</td></tr>
+                <tr><td>Andorra</td><td>AD</td></tr>
+                <tr><td>Angola</td><td>AO</td></tr>
+                <tr><td>Anguila</td><td>AI</td></tr>
+                <tr><td>Antártida</td><td>AQ</td></tr>
+                <tr><td>Antigua y Barbuda</td><td>AG</td></tr>
+                <tr><td>Arabia Saudita</td><td>SA</td></tr>
+                <tr><td>Argelia</td><td>DZ</td></tr>
+                <tr><td>Argentina</td><td>AR</td></tr>
+                <tr><td>Armenia</td><td>AM</td></tr>
+                <tr><td>Aruba</td><td>AW</td></tr>
+                <tr><td>Australia</td><td>AU</td></tr>
+                <tr><td>Austria</td><td>AT</td></tr>
+                <tr><td>Azerbaiyán</td><td>AZ</td></tr>
+                <tr><td>Bahamas</td><td>BS</td></tr>
+                <tr><td>Bangladés</td><td>BD</td></tr>
+                <tr><td>Barbados</td><td>BB</td></tr>
+                <tr><td>Baréin</td><td>BH</td></tr>
+                <tr><td>Bélgica</td><td>BE</td></tr>
+                <tr><td>Belice</td><td>BZ</td></tr>
+                <tr><td>Benín</td><td>BJ</td></tr>
+                <tr><td>Bermudas</td><td>BM</td></tr>
+                <tr><td>Bielorrusia</td><td>BY</td></tr>
+                <tr><td>Bolivia</td><td>BO</td></tr>
+                <tr><td>Bonaire, San Eustaquio y Saba</td><td>BQ</td></tr>
+                <tr><td>Bosnia y Herzegovina</td><td>BA</td></tr>
+                <tr><td>Botsuana</td><td>BW</td></tr>
+                <tr><td>Brasil</td><td>BR</td></tr>
+                <tr><td>Brunéi</td><td>BN</td></tr>
+                <tr><td>Bulgaria</td><td>BG</td></tr>
+                <tr><td>Burkina Faso</td><td>BF</td></tr>
+                <tr><td>Burundi</td><td>BI</td></tr>
+                <tr><td>Bután</td><td>BT</td></tr>
+                <tr><td>Cabo Verde</td><td>CV</td></tr>
+                <tr><td>Camboya</td><td>KH</td></tr>
+                <tr><td>Camerún</td><td>CM</td></tr>
+                <tr><td>Canadá</td><td>CA</td></tr>
+                <tr><td>Catar</td><td>QA</td></tr>
+                <tr><td>Chad</td><td>TD</td></tr>
+                <tr><td>Chile</td><td>CL</td></tr>
+                <tr><td>China</td><td>CN</td></tr>
+                <tr><td>Chipre</td><td>CY</td></tr>
+                <tr><td>Colombia</td><td>CO</td></tr>
+                <tr><td>Comoras</td><td>KM</td></tr>
+                <tr><td>Corea del Norte</td><td>KP</td></tr>
+                <tr><td>Corea del Sur</td><td>KR</td></tr>
+                <tr><td>Costa de Marfil</td><td>CI</td></tr>
+                <tr><td>Costa Rica</td><td>CR</td></tr>
+                <tr><td>Croacia</td><td>HR</td></tr>
+                <tr><td>Cuba</td><td>CU</td></tr>
+                <tr><td>Curazao</td><td>CW</td></tr>
+                <tr><td>Dinamarca</td><td>DK</td></tr>
+                <tr><td>Dominica</td><td>DM</td></tr>
+                <tr><td>Ecuador</td><td>EC</td></tr>
+                <tr><td>Egipto</td><td>EG</td></tr>
+                <tr><td>El Salvador</td><td>SV</td></tr>
+                <tr><td>Emiratos Árabes Unidos</td><td>AE</td></tr>
+                <tr><td>Eritrea</td><td>ER</td></tr>
+                <tr><td>Eslovaquia</td><td>SK</td></tr>
+                <tr><td>Eslovenia</td><td>SI</td></tr>
+                <tr><td>España</td><td>ES</td></tr>
+                <tr><td>Estados Unidos</td><td>US</td></tr>
+                <tr><td>Estonia</td><td>EE</td></tr>
+                <tr><td>Etiopía</td><td>ET</td></tr>
+                <tr><td>Filipinas</td><td>PH</td></tr>
+                <tr><td>Finlandia</td><td>FI</td></tr>
+                <tr><td>Fiyi</td><td>FJ</td></tr>
+                <tr><td>Francia</td><td>FR</td></tr>
+                <tr><td>Gabón</td><td>GA</td></tr>
+                <tr><td>Gambia</td><td>GM</td></tr>
+                <tr><td>Georgia</td><td>GE</td></tr>
+                <tr><td>Ghana</td><td>GH</td></tr>
+                <tr><td>Gibraltar</td><td>GI</td></tr>
+                <tr><td>Granada</td><td>GD</td></tr>
+                <tr><td>Grecia</td><td>GR</td></tr>
+                <tr><td>Guadalupe</td><td>GP</td></tr>
+                <tr><td>Guam</td><td>GU</td></tr>
+                <tr><td>Guatemala</td><td>GT</td></tr>
+                <tr><td>Guayana Francesa</td><td>GF</td></tr>
+                <tr><td>Guernsey</td><td>GG</td></tr>
+                <tr><td>Guinea</td><td>GN</td></tr>
+                <tr><td>Guinea-Bisáu</td><td>GW</td></tr>
+                <tr><td>Guinea Ecuatorial</td><td>GQ</td></tr>
+                <tr><td>Guyana</td><td>GY</td></tr>
+                <tr><td>Haití</td><td>HT</td></tr>
+                <tr><td>Honduras</td><td>HN</td></tr>
+                <tr><td>Hong Kong</td><td>HK</td></tr>
+                <tr><td>Hungría</td><td>HU</td></tr>
+                <tr><td>India</td><td>IN</td></tr>
+                <tr><td>Indonesia</td><td>ID</td></tr>
+                <tr><td>Irak</td><td>IQ</td></tr>
+                <tr><td>Irán</td><td>IR</td></tr>
+                <tr><td>Irlanda</td><td>IE</td></tr>
+                <tr><td>Isla Bouvet</td><td>BV</td></tr>
+                <tr><td>Isla de Man</td><td>IM</td></tr>
+                <tr><td>Isla de Navidad</td><td>CX</td></tr>
+                <tr><td>Islandia</td><td>IS</td></tr>
+                <tr><td>Islas Caimán</td><td>KY</td></tr>
+                <tr><td>Islas Cocos</td><td>CC</td></tr>
+                <tr><td>Islas Cook</td><td>CK</td></tr>
+                <tr><td>Islas Feroe</td><td>FO</td></tr>
+                <tr><td>Islas Georgias del Sur y Sandwich del Sur</td><td>GS</td></tr>
+                <tr><td>Islas Heard y McDonald</td><td>HM</td></tr>
+                <tr><td>Islas Malvinas</td><td>FK</td></tr>
+                <tr><td>Islas Marianas del Norte</td><td>MP</td></tr>
+                <tr><td>Islas Marshall</td><td>MH</td></tr>
+                <tr><td>Islas Pitcairn</td><td>PN</td></tr>
+                <tr><td>Islas Salomón</td><td>SB</td></tr>
+                <tr><td>Islas Turcas y Caicos</td><td>TC</td></tr>
+                <tr><td>Islas ultramarinas de Estados Unidos</td><td>UM</td></tr>
+                <tr><td>Islas Vírgenes Británicas</td><td>VG</td></tr>
+                <tr><td>Islas Vírgenes de los Estados Unidos</td><td>VI</td></tr>
+                <tr><td>Israel</td><td>IL</td></tr>
+                <tr><td>Italia</td><td>IT</td></tr>
+                <tr><td>Jamaica</td><td>JM</td></tr>
+                <tr><td>Japón</td><td>JP</td></tr>
+                <tr><td>Jersey</td><td>JE</td></tr>
+                <tr><td>Jordania</td><td>JO</td></tr>
+                <tr><td>Kazajistán</td><td>KZ</td></tr>
+                <tr><td>Kenia</td><td>KE</td></tr>
+                <tr><td>Kirguistán</td><td>KG</td></tr>
+                <tr><td>Kiribati</td><td>KI</td></tr>
+                <tr><td>Kuwait</td><td>KW</td></tr>
+                <tr><td>Laos</td><td>LA</td></tr>
+                <tr><td>Lesoto</td><td>LS</td></tr>
+                <tr><td>Letonia</td><td>LV</td></tr>
+                <tr><td>Líbano</td><td>LB</td></tr>
+                <tr><td>Liberia</td><td>LR</td></tr>
+                <tr><td>Libia</td><td>LY</td></tr>
+                <tr><td>Liechtenstein</td><td>LI</td></tr>
+                <tr><td>Lituania</td><td>LT</td></tr>
+                <tr><td>Luxemburgo</td><td>LU</td></tr>
+                <tr><td>Macao</td><td>MO</td></tr>
+                <tr><td>Macedonia</td><td>MK</td></tr>
+                <tr><td>Madagascar</td><td>MG</td></tr>
+                <tr><td>Malasia</td><td>MY</td></tr>
+                <tr><td>Malaui</td><td>MW</td></tr>
+                <tr><td>Maldivas</td><td>MV</td></tr>
+                <tr><td>Malí</td><td>ML</td></tr>
+                <tr><td>Malta</td><td>MT</td></tr>
+                <tr><td>Marruecos</td><td>MA</td></tr>
+                <tr><td>Martinica</td><td>MQ</td></tr>
+                <tr><td>Mauricio</td><td>MU</td></tr>
+                <tr><td>Mauritania</td><td>MR</td></tr>
+                <tr><td>Mayotte</td><td>YT</td></tr>
+                <tr><td>México</td><td>MX</td></tr>
+                <tr><td>Micronesia</td><td>FM</td></tr>
+                <tr><td>Moldavia</td><td>MD</td></tr>
+                <tr><td>Mónaco</td><td>MC</td></tr>
+                <tr><td>Mongolia</td><td>MN</td></tr>
+                <tr><td>Montenegro</td><td>ME</td></tr>
+                <tr><td>Montserrat</td><td>MS</td></tr>
+                <tr><td>Mozambique</td><td>MZ</td></tr>
+                <tr><td>Myanmar</td><td>MM</td></tr>
+                <tr><td>Namibia</td><td>NA</td></tr>
+                <tr><td>Nauru</td><td>NR</td></tr>
+                <tr><td>Nepal</td><td>NP</td></tr>
+                <tr><td>Nicaragua</td><td>NI</td></tr>
+                <tr><td>Níger</td><td>NE</td></tr>
+                <tr><td>Nigeria</td><td>NG</td></tr>
+                <tr><td>Niue</td><td>NU</td></tr>
+                <tr><td>Norfolk</td><td>NF</td></tr>
+                <tr><td>Noruega</td><td>NO</td></tr>
+                <tr><td>Nueva Caledonia</td><td>NC</td></tr>
+                <tr><td>Nueva Zelanda</td><td>NZ</td></tr>
+                <tr><td>Omán</td><td>OM</td></tr>
+                <tr><td>Países Bajos</td><td>NL</td></tr>
+                <tr><td>Pakistán</td><td>PK</td></tr>
+                <tr><td>Palaos</td><td>PW</td></tr>
+                <tr><td>Palestina</td><td>PS</td></tr>
+                <tr><td>Panamá</td><td>PA</td></tr>
+                <tr><td>Papúa Nueva Guinea</td><td>PG</td></tr>
+                <tr><td>Paraguay</td><td>PY</td></tr>
+                <tr><td>Perú</td><td>PE</td></tr>
+                <tr><td>Polinesia Francesa</td><td>PF</td></tr>
+                <tr><td>Polonia</td><td>PL</td></tr>
+                <tr><td>Portugal</td><td>PT</td></tr>
+                <tr><td>Puerto Rico</td><td>PR</td></tr>
+                <tr><td>Reino Unido</td><td>GB</td></tr>
+                <tr><td>República Árabe Saharaui Democrática</td><td>Eh</td></tr>
+                <tr><td>República Centroafricana</td><td>CF</td></tr>
+                <tr><td>República Checa</td><td>CZ</td></tr>
+                <tr><td>República del Congo</td><td>CG</td></tr>
+                <tr><td>República Democrática del Congo</td><td>CD</td></tr>
+                <tr><td>República Dominicana</td><td>DO</td></tr>
+                <tr><td>Reunión</td><td>RE</td></tr>
+                <tr><td>Ruanda</td><td>RW</td></tr>
+                <tr><td>Rumania</td><td>RO</td></tr>
+                <tr><td>Rusia</td><td>RU</td></tr>
+                <tr><td>Samoa</td><td>WS</td></tr>
+                <tr><td>Samoa Americana</td><td>AS</td></tr>
+                <tr><td>Santa Elena, Ascensión y Tristán de Acuña</td><td>SH</td></tr>
+                <tr><td>Saint Barthélemy</td><td>BL</td></tr>
+                <tr><td>Saint Kitts y Nevis</td><td>KN</td></tr>
+                <tr><td>San Marino</td><td>SM</td></tr>
+                <tr><td>Saint Martin</td><td>MF</td></tr>
+                <tr><td>San Pedro y Miquelón</td><td>PM</td></tr>
+                <tr><td>San Vicente y las Granadinas</td><td>VC</td></tr>
+                <tr><td>Santa Lucía</td><td>LC</td></tr>
+                <tr><td>Santo Tomé y Príncipe</td><td>ST</td></tr>
+                <tr><td>Senegal</td><td>SN</td></tr>
+                <tr><td>Serbia</td><td>RS</td></tr>
+                <tr><td>Seychelles</td><td>SC</td></tr>
+                <tr><td>Sierra Leona</td><td>SL</td></tr>
+                <tr><td>Singapur</td><td>SG</td></tr>
+                <tr><td>Sint Maarten</td><td>SX</td></tr>
+                <tr><td>Siria</td><td>SY</td></tr>
+                <tr><td>Somalía</td><td>SO</td></tr>
+                <tr><td>Sri Lanka</td><td>LK</td></tr>
+                <tr><td>Suazilandia</td><td>SZ</td></tr>
+                <tr><td>Sudáfrica</td><td>ZA</td></tr>
+                <tr><td>Sudán</td><td>SD</td></tr>
+                <tr><td>Sudán del Sur</td><td>SS</td></tr>
+                <tr><td>Suecia</td><td>SE</td></tr>
+                <tr><td>Surinam</td><td>SR</td></tr>
+                <tr><td>Svalbard y Jan Mayen</td><td>SJ</td></tr>
+                <tr><td>Tailandia</td><td>TH</td></tr>
+                <tr><td>Taiwán (República de China)</td><td>TW</td></tr>
+                <tr><td>Tanzania</td><td>TZ</td></tr>
+                <tr><td>Tayikistán</td><td>TJ</td></tr>
+                <tr><td>Territorio Británico del Océano Índico</td><td>IO</td></tr>
+                <tr><td>Tierras Australes y Antárticas Francesas</td><td>TF</td></tr>
+                <tr><td>Timor Oriental</td><td>TL</td></tr>
+                <tr><td>Togo</td><td>TG</td></tr>
+                <tr><td>Tokelau</td><td>TK</td></tr>
+                <tr><td>Tonga</td><td>TO</td></tr>
+                <tr><td>Trinidad y Tobago</td><td>TT</td></tr>
+                <tr><td>Túnez</td><td>TN</td></tr>
+                <tr><td>Turkmenistán</td><td>TM</td></tr>
+                <tr><td>Turquía</td><td>TR</td></tr>
+                <tr><td>Tuvalu</td><td>TV</td></tr>
+                <tr><td>Ucrania</td><td>UA</td></tr>
+                <tr><td>Uganda</td><td>UG</td></tr>
+                <tr><td>Uruguay</td><td>UY</td></tr>
+                <tr><td>Uzbekistán</td><td>UZ</td></tr>
+                <tr><td>Vanuatu</td><td>VU</td></tr>
+                <tr><td>Vaticano, Ciudad del</td><td>VA</td></tr>
+                <tr><td>Venezuela</td><td>VE</td></tr>
+                <tr><td>Vietnam</td><td>VN</td></tr>
+                <tr><td>Wallis y Futuna</td><td>WF</td></tr>
+                <tr><td>Yemen</td><td>YE</td></tr>
+                <tr><td>Yibuti</td><td>DJ</td></tr>
+                <tr><td>Zambia</td><td>ZM</td></tr>
+                <tr><td>Zimbabue</td><td>ZW</td></tr>
+            </tbody>
+        </table>
+    </article>
+
+    <hr>
+    <hr>    
+</body>
+</html>

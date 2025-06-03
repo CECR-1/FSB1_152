@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DWFSP1_152. HTML</title>
+</head>
+<body>
+    <h1 id="inicio">DESARROLLO WEB FULL STACK BASICO - DWFSP1_152</h1>
+    <hr>
+    <hr>
+    <h2><u>II.9 HTML.Semántica, estructura, microdatos</u></h2>
+    <hr>
+    
+    <ul>
+        <li><a href="#semantica">II.9.1 HTML.Semántica</a></li>
+        <li><a href="#section">Definir secciones: elemento &lt;section&gt;</a></li>
+        <li><a href="#nav">Definir menús: elemento &lt;nav&gt;</a></li>
+        <li><a href="#header">Definir la cabecera: elemento &lt;header&gt;</a></li>
+        <li><a href="#footer">Definir el pie de página: elemento &lt;footer&gt;</a></li>
+        <li><a href="#main">Definir el cuerpo principal: elemento &lt;main&gt;</a></li>
+        <li><a href="#article">Definir el artículo: elemento &lt;article&gt;</a></li>
+        <li><a href="#aside">Definir una barra lateral: elemento &lt;aside&gt;</a></li>
+        <li><a href="#figure">Representar contenido gráfico: elemento &lt;figure&gt;</a></li>
+        <li><a href="#figcaption">Describir contenido gráfico: elemento &lt;figcaption&gt;</a></li>
+        <li><a href="#hgroup">Agrupar encabezados consecutivos: elemento &lt;hgroup&gt;</a></li>
+        <li><a href="#estructura">II.9.2 HTML.Estructura</a></li>
+        <li><a href="html10a.html">Ir a la página ejemplo de estructura de página web</a></li>
+    </ul>
+
+    <h3 id="semantica">II.9.1 HTML.Semántica</h3>
+    
+
+    <article>
+
+        <p>Los elementos semánticos son aquellos que tienen un significado, es decir, que describen claramente el propósito de su contenido. Estos elementos son de gran utilidad a la hora de estructurar un documento HTML o página web, permitiendo crear divisiones de parte de una web con valor añadido. La inclusión de los elementos semánticos llegó con la versión HTML5. En las versiones anteriores se usa sobretodo el elemento <b>&lt;div&gt;</b> -que no describe nada acerca de su contenido para crear todo tipo de divisiones o regiones. Actualmente se recomienda usar los elementos semánticos cuando sea posible.</p>
+
+        <h4>Lista de elementos semánticos</h4>
+
+        <p>Los elementos semánticos más utilizados son:</p>
+        <table border="1">
+            <thead>
+                <tr>
+                    <th>Elemento</th>
+                    <th>Descripción</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><b><b>&lt;section&gt;</b></b></td>
+                    <td>Para crear secciones de una web.</td>
+                </tr>
+                <tr>
+                    <td><b>&lt;nav&gt;</b></td>
+                    <td>Para especificar un menú de navegación.</td>
+                </tr>
+                <tr>
+                    <td><b><b>&lt;header&gt;</b></b></td>
+                    <td>Para definir la cabecera.</td>
+                </tr>
+                <tr>
+                    <td><b><b>&lt;footer&gt;</b></b></td>
+                    <td>Para definir el pie de página.</td>
+                </tr>
+                <tr>
+                    <td><b><b>&lt;main&gt;</b></b></td>
+                    <td>Para definir el contenido principal.</td>
+                </tr>
+                <tr>
+                    <td><b>&lt;article&gt;</b></td>
+                    <td>Para indicar secciones de contenido.</td>
+                </tr>
+                <tr>
+                    <td><b><b>&lt;aside&gt;</b></b></td>
+                    <td>Para definir una barra lateral.</td>
+                </tr>
+                <tr>
+                    <td><b><b>&lt;figure&gt;</b></b></td>
+                    <td>Para representar contenido gráfico.</td>
+                </tr>
+                <tr>
+                    <td><b><b>&lt;figcaption&gt;</b></b></td>
+                    <td>Para describir el contenido de <b>&lt;figure&gt;</b>.</td>
+                </tr>
+                <tr>
+                    <td><b><b>&lt;hgroup&gt;</b></b></td>
+                    <td>Para agrupar titulares consecutivos.</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h4 id="section">Definir secciones: elemento <b>&lt;section&gt;</b></h4>
+
+        <p>El elemento <b>&lt;section&gt;</b> permite definir secciones genéricas de un documento HTML o página web. Una sección es una agrupación temática de contenido, normalmente con una cabecera. Se utiliza para indicar qué contenido corresponde a una parte concreta de la estructura principal del documento. Este elemento tiene dos etiquetas: <b>&lt;section&gt;</b> (de apertura) y <b>&lt;/section&gt;</b> (de cierre). El contenido que debe ir entre estas dos etiquetas puede ser cualquier tipo de contenido.
+        </p>
+
+        <h4 id="nav">Definir menús: elemento &lt;nav&gt;</h4>
+
+        <p>El elemento <b>&lt;nav&gt;</b> permite definir una región de un documento HTML con el objetivo de proveer un menú de navegación. El menú contendrá enlaces que faciliten la navegación en la web en general. Se trata de un elemento con dos etiquetas para abrir <b>(&lt;nav&gt;)</b> y cerrar <b>(&lt;/nav&gt;)</b> el contenido. El contenido más habitual de este elemento es una lista no ordenada <b>(&lt;ul&gt;)</b> con los enlaces deseados. Pero conviene señalar que no es necesario que todos los enlaces estén dentro de este elemento.
+        </p>
+
+        <h4 id="header">Definir la cabecera: elemento <b>&lt;header&gt;</b></h4>
+
+        <p>El elemento <b>&lt;header&gt;</b> permite definir la cabecera del documento HTML o página web. En él se colocarán los elementos visibles en la parte superior, como sería el caso del menú de navegación, un logotipo, un formulario de búsqueda, datos de contacto (teléfono o correo electrónico), etc. También se trata de un elemento con dos etiquetas: <b>&lt;header&gt;</b> para marcar el inicio de la cabecera, y <b>&lt;/header&gt;</b> para marcar su cierre. Este elemento no debe contener ninguna otra cabecera ni ningún pie de página (<b>&lt;footer&gt;</b>). Si se declara dentro de <b>&lt;article&gt;</b> representará la cabecera del artículo en cuestión.
+        </p>
+
+        <h4 id="footer">Definir el pie de página: elemento <b>&lt;footer&gt;</b></h4>
+
+        <p>El elemento <b>&lt;footer&gt;</b> es el que permite definir el pie de página de un documento o sitio web. Este elemento es utilizado normalmente para añadir información general sobre el sitio web, enlaces de temas legales-política de privacidad, política de cookies, términos de uso, derechos de autor-, o datos de contacto. También tiene dos etiquetas: <b>&lt;footer&gt;</b> (de apertura) y <b>&lt;/footer&gt;</b> (de cierre). Este elemento puede contener todo tipo de contenido dinámico, excepto otro elemento <b>&lt;footer&gt;</b> o un elemento <b>&lt;header&gt;</b>. Si se declara dentro de <b>&lt;article&gt;</b> ó <b>&lt;section&gt;</b> representará un pie de página de esta región en concreto.
+        </p>
+
+        <h4 id="main">Definir el cuerpo principal: elemento <b>&lt;main&gt;</b></h4>
+
+        <p>El elemento <b>&lt;main&gt;</b> es utilizado para definir el contenido principal del documento HTML. En él se incluirán los temas centrales de la página, es decir, todo lo que no sean anuncios, secciones, menús... Sólo puede haber un elemento <b>&lt;main&gt;</b> en el documento. Su contenido será único y no se encuentra en otras páginas. Este elemento tiene dos etiquetas para indicar el inicio (<b>&lt;main&gt;</b>) y final <b>(&lt;/main&gt;)</b> del contenido principal de la página. No debe ser descendiente de los elementos siguientes: <b>&lt;article&gt;, <b>&lt;aside&gt;</b>,</b> <b>&lt;header&gt;</b> <b>&lt;footer&gt;</b> y <b>&lt;nav&gt;</b>. Puede contener todo tipo de contenido dinámico.
+        </p>
+
+        <h4 id="article">Definir el artículo: elemento <b>&lt;article&gt;</b></h4>
+
+        <p>El elemento <b>&lt;article&gt;</b> define una sección de contenido independiente y autocontenido. Debe tener sentido por sí solo y debe ser posible leerlo independientemente del resto del sitio web. Ejemplos de dónde usar <b>&lt;article&gt;</b>: Una entrada de un foro, una publicación de un blog, una noticia, etc. También se puede anidar, representando contenido relacionado. Por ejemplo, los comentarios de un artículo.
+        </p>
+
+        <p>Este elemento también tiene dos etiquetas: <b>&lt;article&gt;</b> (de apertura) y <b>&lt;/article&gt;</b> (de cierre). Puede contener todo tipo de contenido dinámico y no puede ser descendiente de <b>&lt;address&gt;</b>. Cuando un <b>&lt;article&gt;</b> se encuentra dentro de otro representa contenido relacionado con el artículo ascendiente.
+        </p>
+
+        <h4 id="aside">Definir una barra lateral: elemento <b>&lt;aside&gt;</b></h4>
+
+        <p>El elemento <b>&lt;aside&gt;</b> tiene la finalidad de definir una barra lateral. Las barras laterales son secciones de un documento que contienen información relacionada con el contenido principal del documento. Para crear una barra lateral debe usarse sus dos etiquetas de apertura y cierre, <b>&lt;aside&gt;</b> y <b>&lt;/aside&gt;</b>, respectivamente. Puede contener contenido dinámico y no puede ser descendiente de <b>&lt;address&gt;</b>. Es importante que su contenido guarde relación con el contenido principal del documento ó página web.
+        </p>
+
+        <h4 id="figure">Representar contenido gráfico: elemento <b>&lt;figure&gt;</b></h4>
+
+        <p>El elemento <b>&lt;figure&gt;</b> representa contenido independiente que puede contener imágenes, diagramas, ilustraciones, tablas o fragmentos de código. Su contenido está relacionado con el contenido principal de la página, pero podría independizarse a otra página sin que afecte al flujo del contenido principal. Este elemento tiene dos etiquetas: para indicar el comienzo de la figura (<b>&lt;figure&gt;</b>) y su cierre (<b>&lt;/figure&gt;</b>). Puede contener todo tipo de contenido dinámico - imágenes (<b>&lt;img&gt;</b>), párrafos (<b>&lt;p&gt;</b>), código (<b>&lt;code&gt;</b>), citas (<b>&lt;cite&gt;</b>)- y una descripción mediante el elemento <b>&lt;figcaption&gt;</b>.
+        </p>
+
+        <h4 id="figcaption">Describir contenido gráfico: elemento <b>&lt;figcaption&gt;</b></h4>
+
+        <p>Con el elemento <b>&lt;figcaption&gt;</b> se añade una descripción, subtítulo o leyenda asociado al contenido del elemento <b>&lt;figure&gt;</b>. Se trata de un elemento opcional, por lo tanto, no todas las figuras deben tener una descripción. Sólo puede haber una descripción dentro del elemento <b>&lt;figure&gt;</b>.
+        </p>
+
+        <p>Este elemento también tiene dos etiquetas obligatorias para indicar la apertura y el cierre de la descripción: <b>&lt;figcaption&gt;</b> y <b>&lt;/figcaption&gt</b>;, respectivamente. Puede contener todo tipo de contenido dinámico, y es importante que esté situado dentro del elemento <b>&lt;figure&gt;</b> al que está asociado.
+        </p>
+
+        <h4 id="hgroup">Agrupar encabezados consecutivos: elemento <b>&lt;hgroup&gt;</b></h4>
+
+        <p>El elemento <b>&lt;hgroup&gt;</b> se utiliza para agrupar encabezados o titulares que se encuentren anidados de forma consecutiva, es decir, sin otro contenido que los separe. Por ejemplo, se puede agrupar un encabezado &<b>lt;h1&gt;</b> con un encabezado <b>&lt;h2&gt;</b>. En resumen, este elemento permite asociar títulos. Las etiquetas de inicio y fin del elemento son obligatorias: <b>&lt;hgroup&gt;</b> y <b>&lt;/hgroup&gt;</b>. El contenido de este elemento deben ser elementos de encabezado, que van desde el <b>&lt;h1&gt;</b> hasta el <b>&lt;h6&gt;</b> Los encabezados deberán tener un orden numérico consecutivo, tal y como se detalla en el artículo que los describe.</p>
+
+        <pre>
+            <code>
+                &lt;hgroup&gt;
+                    &lt;h1&gt;Desarrollo web&lt;/h1&gt;
+                    &lt;h2&gt;HTML&lt;/h2&gt;
+                &lt;/hgroup&gt;
+            </code>
+        </pre>
+
+    </article>
+
+    <a href="#inicio">Ir al inicio</a>
+
+    <hr>
+    <h3 id="estructura">II.9.2 HTML.Estructura</h3>
+
+    <article>
+        <p>Un documento HTML puede organizarse en varias partes con significado, como encabezado, menú, contenido principal, barra lateral y pie de página.
+        </p>
+        
+        <h4>Evolución de la estructura</h4>
+        <p>Antes, los documentos HTML tenían una estructura mínima, pero con los marcos y las tablas, se crearon estructuras más complejas. Ahora, con HTML5, se utilizan elementos semánticos para definir la estructura de un documento de forma más clara y comprensible. Estos elementos semánticos permiten a los navegadores y a las herramientas de accesibilidad entender mejor el contenido y la organización del documento.
+        </p>
+        
+        <div>
+            <img src="./RECURSO/estructura-HTML5.png" alt="Estructura básica de un documento HTML5" style="max-width:100%; height:auto;">
+        </div>
+        
+        <h4>Estructura Básica</h4>
+        <p>La estructura básica de un documento HTML incluye la cabecera, el menú de navegación, el contenido principal, la barra lateral y el pie de página. 
+        </p>
+
+        <h4>Cabecera (header)</h4>
+        <p>El elemento <b>&lt;header&gt</b>; se utiliza para la cabecera, que normalmente contiene el logotipo, el menú de navegación y, a veces, un lema. 
+        </p>
+
+        <h4>Menú de navegación (nav)</h4>
+        <p>El elemento <b>&lt;nav&gt;</b> se utiliza para el menú de navegación, que contiene enlaces a las secciones principales del sitio web.
+        </p>
+
+        <h4>Contenido principal (main)</h4>
+        <p>El elemento <b>&lt;main&gt;</b> se utiliza para el contenido principal de la página, como artículos, comentarios y barras laterales.
+        </p>
+
+        <h4>Artículo (article)</h4>
+        <p>El elemento <b>&lt;article&gt;</b> contiene el contenido específico de la página, que puede ser reutilizado o distribuido.
+        </p>
+
+        <h4>Secciones (section)</h4>
+        <p>El elemento <b>&lt;section&gt;</b> se utiliza para crear secciones genéricas de contenido, como comentarios o anuncios. 
+        </p>
+
+        <h4>Barras laterales (aside)</h4>
+        <p>El elemento <b>&lt;aside&gt;</b> se utiliza para contenido relacionado indirectamente con el contenido principal, como enlaces o listas. 
+        </p>
+
+        <h4>Pie de página (footer)</h4>
+        <p>El elemento <b>&lt;footer&gt;</b> se utiliza para el pie de página, que contiene información sobre el sitio web, el autor, derechos de autor y enlaces legales. 
+        </p>
+
+        <h4>Elemento de división (div)</h4>
+        <p>El elemento <b>&lt;div&gt;</b> se utiliza para crear secciones o agrupaciones genéricas.
+        </p>
+    </article>
+
+    <a href="#inicio">Ir al inicio</a>
+   
+    <hr>
+    <hr>    
+</body>
+</html>

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Ejemplo de Estructura Semántica HTML5</title>
+</head>
+<body>
+    <header>
+        <h1>Mi Sitio Web de Ejemplo</h1>
+        <nav>
+            <ul>
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#articulo">Artículo</a></li>
+                <li><a href="#galeria">Galería</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main id="inicio">
+        <section>
+            <h2>Bienvenido a mi sitio web</h2>
+            <p>Este es un ejemplo de cómo estructurar una página HTML5 usando elementos semánticos.</p>
+        </section>
+
+        <section id="articulo">
+            <article>
+                <header>
+                    <h2>Artículo Destacado</h2>
+                    <p>Publicado el <time datetime="2025-05-30">30 de mayo de 2025</time></p>
+                </header>
+                <p>Este artículo muestra el uso de las etiquetas <code>&lt;article&gt;</code>, <code>&lt;header&gt;</code> y <code>&lt;footer&gt;</code> dentro de un artículo.</p>
+                <aside>
+                    <h4>Nota</h4>
+                    <p>Este es un contenido relacionado, como una barra lateral o información adicional.</p>
+                </aside>
+                <footer>
+                    <p>Autor: Juan Pérez</p>
+                </footer>
+            </article>
+        </section>
+
+        <section id="galeria">
+            <h2>Galería de Imágenes</h2>
+            <figure>
+                <img src="https://picsum.photos/200/300" alt="Imagen de ejemplo">
+                <figcaption>Ejemplo de imagen usando &lt;figure&gt; y &lt;figcaption&gt;.</figcaption>
+            </figure>
+        </section>
+
+        <section>
+            <hgroup>
+                <h2>Encabezado Principal</h2>
+                <h3>Subtítulo del Encabezado</h3>
+            </hgroup>
+            <p>El elemento <code>&lt;hgroup&gt;</code> agrupa varios encabezados relacionados.</p>
+        </section>
+    </main>
+
+    <aside>
+        <h3>Barra Lateral</h3>
+        <p>Este es un <b>aside</b> general de la página. Aquí se puede colocar enlaces, anuncios, información adicional o recursos útiles para el usuario.</p>
+        <ul>
+            <li><a href="#inicio">Ir a Inicio</a></li>
+            <li><a href="#articulo">Ir a Artículo</a></li>
+            <li><a href="#galeria">Ir a Galería</a></li>
+            <li><a href="#contacto">Ir a Contacto</a></li>
+        </ul>
+    </aside>
+
+    <footer id="contacto">
+        <p>&copy; 2025 Mi Sitio Web de Ejemplo. Todos los derechos reservados.</p>
+        <address>
+            Contacto: <a href="mailto:info@ejemplo.com">info@ejemplo.com</a>
+        </address>
+    </footer>
+</body>
+</html>

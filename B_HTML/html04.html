@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DWFSP1_152. HTML</title>
+</head>
+<body>
+    <h1 id="inicio">DESARROLLO WEB FULL STACK BASICO - DWFSP1_152</h1>
+    <hr>
+    <hr>
+    <h2><u>II.3 HTML.Líneas horizontales, enlaces, espacios en blanco, preformateado</u></h2>
+    <hr>
+
+    <h3 id="lineasHorizontales">II.3.1 HTML.Líneas horizontales</h3>
+
+    <p>Las lineas horizontales son elementos que se utilizan para definir cambios tematicos en el contenido de un documento HTML. Este elemento también es conocido como separador horizontal. Se utiliza la etiqueta &lt;hr&gt; y no tiene etiqueta de cierre, tal y como sucede con los elementos clasificados como elementos vacios.</p>
+
+    <h4>Codigo de ejemplo de una línea horizontal:</h4>
+    
+    <pre><code>
+        &lt;p&gt;Párrafo de un tema A.&lt;/p&gt;
+        &lt;hr style="border-style: dashed; color: red;"&gt;
+        &lt;p&gt;Párrafo de otro tema B.&lt;/p&gt;
+    </code></pre>
+
+    <p>El código de arriba se verá así:</p>
+    
+    <p>Párrafo de un tema A.</p>
+    <hr style="border-style: dashed; color: red;">
+    <p>Párrafo de otro tema B.</p>
+    
+    <p>Tal y como se puede ver, aparece una linea entre los dos párrafos. En este caso se tiene con estilo con línea discontinua y de color rojo. Esto es posible gracias al potencial que ofrece la combinación del HTML y el CSS. Existen muchas maneras de decorar las líneas horizontales con CSS de forma elegante.</p>
+    
+    <p>Las lineas horizontales <strong>(&lt;hr&gt;)</strong> son elementos de bloque. Esto significa que empiezan en una línea nueva ocupando todo el ancho posible. La anchura de este elemento queda delimitada hasta encontrar el límite del elemento superior que lo contiene, en la estructura del documento HTML.</p>
+    
+    <h4><p>Normas de uso</p></h4>
+    
+    <p>Las lineas horizontales tienen una única etiqueta de apertura, por lo que no debe usarse etiqueta de cierre. El uso de <strong>&lt;/hr&gt;</strong> es incorrecto. Lo que sí puede hacerse es cerrarla usando <strong>&lt;hr/&gt;</strong>, sobre todo en documentos XHTML o XML.</p>
+    
+    <h4><p>Atributos del salto de linea</p></h4>
+    
+    <p>En versiones anteriores de HTML existian varios atributos especificos para este elemento, pero ya estan desaconsejados. Estos atributos eran: <strong>width</strong>  para definir el ancho de la linea horizontal, <strong>align</strong> para alinearla, <strong>size</strong> para indicar el tamaño y <strong>noshade</strong> para indicar si es una linea plana o con estilo 3D.</p>
+
+    <hr>
+    <h3 id="enlaces">II.3.2 HTML.Enlaces</h3>
+
+    <article>
+               
+        <p>Los enlaces HTML permiten la navegación entre páginas de Internet mediante un simple clic. Además, también permiten acceder a archivos, descargar documentos o desplazarse a otras ubicaciones dentro de la misma página web. Los enlaces constituyen un elemento esencial de la web tal desde que se creó.</p>
+        
+        <p>El enlace HTML también es conocido como hiperenlace, hipervínculo o link.</p>
+        
+        <h4>Creación de enlaces</h4>
+        
+        <p>Para crear enlaces se utiliza el elemento <strong>&lt;a&gt;</strong>. Se trata de un elemento de línea que puede ser introducido dentro de cualquier elemento que acepte contenido de párrafos. Este elemento tiene dos etiquetas: la etiqueta <strong>&lt;a&gt;</strong> de apertura y la etiqueta <strong>&lt;/a&gt;</strong> de cierre. Todo contenido que esté entre estas dos etiquetas será un enlace. Además, es importante señalar que los enlaces no se pueden anidar.</p>
+        
+        <h4>Ejemplo de código HTML con un enlace:</h4>
+        <pre><code>&lt;a href='#'&gt;Párrafo con un enlace a la misma página&lt;/a&gt;</code></pre>
+        <pre><code><p>Párrafo con un <a href='#'>enlace a la misma página</a>.</p></code></pre>
+        <pre><code>&lt;a href='#'&gt;Párrafo con un enlace &lt;/a&gt; a google</code></pre>
+        <pre><code><p>Párrafo con un <a href='https://www.google.com'>enlace a google</a>.</p></code></pre>
+        
+        <h4>El atributo 'href'</h4>
+        
+        <p>El atributo <strong>href</strong> es el más importante de los enlaces, ya que se utiliza para definir el destino al que apunta el enlace.</p>
+        
+        <h4>El atributo 'target'</h4>
+        
+        <p>El atributo <strong>target</strong> permite especificar la forma de acceder a un enlace.</p>
+        
+        <h4>Valores posibles de target:</h4>
+        <ul>
+            <li>_self - Abre el enlace en el contexto de navegación actual</li>
+            <pre><code><p>Párrafo con un <a href='https://www.google.com' target = "_self">enlace a google</a>.</p></code></pre>
+            <li>_blank - Abre el enlace en un nuevo contexto de navegación</li>
+            <pre><code><p>Párrafo con un <a href='https://www.google.com' target = "_blank">enlace a google</a>.</p></code></pre>
+            <li>_parent - Abre el enlace en el contexto de navegación padre, se usará más adelante con los iframes</li>
+            <pre><code><p>Párrafo con un <a href='https://www.google.com' target = "_parent">enlace a google</a>.</p></code></pre>
+            <li>_top - Abre el enlace en el contexto más alto de navegación, se usará más adelante con los iframes</li>
+            <pre><code><p>Párrafo con un <a href='https://www.google.com' target = "_top">enlace a google</a>.</p></code></pre>
+        </ul>
+        
+        <h4>Otros atributos importantes</h4>
+        
+        <h4>title</h4>
+        <p>Permite indicar un nombre o título sobre el destino al que apunta el enlace.</p>
+        
+        <h4>rel</h4>
+        <p>Permite especificar la relación del sitio web actual con el destino al que apunta el enlace.</p>
+        
+        <h4>download</h4>
+        <p>Indica si el recurso enlazado debe ser descargado.</p>
+        
+        <h4>Tipos de enlaces</h4>
+        
+        <h4>Enlaces absolutos y relativos</h4>
+        
+        <ul>
+            <li>Enlace absoluto:
+                <pre><code>
+                    &lt;a href='https://www.google.com' target = "_blank"&gt;Absoluto&lt;/a&gt;
+                </code></pre>
+                <pre><code><a href='https://www.google.com ' target="_blank">Absoluto</a></code></pre>
+            </li>
+            <li>Enlace relativo:
+                <pre><code>
+                    &lt;a href='#' target = "_blank"&gt;Relativo&lt;/a&gt;
+                </code></pre>
+                <pre><code><a href='#' target="_blank">Relativo</a></code></pre>
+            </li>
+        </ul>
+        
+        <h4>Enlazar imágenes</h4>
+        
+        <p>Se puede usar imágenes como enlace:</p>
+        <pre><code>
+            &lt;a href='https://www.google.com' target="_blank"&gt;
+                &lt;img src="https://picsum.photos/300/200" alt="Imagen aleatoria de Picsum"&gt;
+            &lt;/a&gt;
+        </code></pre>
+        <a href='https://www.google.com' target="_blank">
+            <img src="https://picsum.photos/300/200" alt="Imagen aleatoria de Picsum">
+        </a>
+        
+    </article>
+    
+    <div>
+        <p><a href="#lineasHorizontales">← Artículo anterior: HTML: Líneas horizontales</a></p>
+        <p><a href="#espaciosEnBlanco">Artículo siguiente: HTML: Espacios en blanco →</a></p>
+    </div>
+
+    <hr>
+    <h3 id="espaciosEnBlanco">II.3.3 HTML.Espacios en blanco</h3>
+
+    <article>
+    
+        <p>HTML es un lenguaje que hace un tratamiento un tanto especial de los espacios en blanco. Si dentro de un párrafo se introduce varios espacios en blanco consecutivos (Spacebar), tabulaciones (Tab) y nuevas líneas (retorno de carro: Enter), los considerará como un único espacio en blanco, ignorando el resto.</p>
+        
+        <p>En el siguiente ejemplo se ha añadido de forma deliberada los tres casos mencionados: varios espacios consecutivos, tabulaciones y nuevas lineas:</p>
+        
+        <pre><code>
+            &lt;p&gt;Esto es
+             un párrafo.
+            &lt;/p&gt;
+        </code></pre>
+        
+        <p>HTML ignora estos espaciados, transformando los múltiples espacios consecutivos en uno solo, además de convertir tabulaciones y nuevas líneas en un espacio. El resultado del código anterior se verá así:</p>
+        
+        <p>Esto es 
+            un párrafo.
+        </p>
+        
+        <p>Si por alguna razón se quiere introducir espacios adicionales consecutivos se puede hacer con la entidad &amp;nbsp;. De esta manera se puede incrementar el espaciado fácilmente. Tal y como se puede ver, este método es muy diferente al utilizado para introducir líneas nuevas (&lt;br&gt;), ya que se hace con una entidad semántica sacada del ISO 8859-1 (Latin).</p>
+        
+        <p>Las entidades semánticas tienen una estructura muy peculiar, y se reconocen en seguida porque empiezan con el símbolo &amp; y terminan con un punto y coma. Gracias a ellas se pueden introducir caracteres especiales.</p>
+        
+        <h4>Ejemplo con cuatro espacios consecutivos:</h4>
+       
+        &lt;p&gt;Aquí hay cuatro &amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; espacios.&lt;/p&gt;
+        
+        <pre><code><p>Aquí hay ocho &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; espacios.</p></code></pre>
+        
+        <h4>Significado de <strong>nbsp</strong></h4>
+        
+        <p>Las siglas NBSP corresponden a "Non-Breaking SPace", es decir, que se trata de un espacio irrompible. También se le conoce como espacio duro o espacio fijo. Recordar la definición en inglés ayuda a recordar el orden de sus siglas. Otra forma de escribirlo es usando referencias numéricas del HTML: &#160; y &#xa0;, que darán como resultado el mismo espacio irrompible.</p>
+        
+        <h4>Casos de uso</h4>
+        
+        <p>El espacio duro se puede usar si se requiere que dos palabras no se separen cuando se ajuste el texto al tamaño de la ventana. Puede ser el caso de palabras que formen una marca. Por ejemplo, si se escribe <strong>Hola,&amp;nbsp;mundo!</strong>, el navegador las mantendrá unidas, sin separarlas, incluso cambiando el tamaño de la ventana.</p>
+        
+        <p>También se puede usar si se quiere o se necesita evitar que el navegador web agrupe todos los espacios en uno solo. A veces es útil para alinear o para incrementar el espaciado en algún caso concreto. </p>
+        
+        <div>
+            <p><a href="#enlaces">← Artículo anterior: HTML: Enlaces</a></p>
+            <p><a href="#preformateado">Artículo siguiente: HTML: Preformateado →</a></p>
+        </div>
+    </article>
+
+    <hr>
+    <h3 id="preformateado">II.3.4 HTML.Preformateado</h3>
+
+    <article>
+        
+        <p>Los elementos de preformateado se utilizan para representar bloques de texto plano en los que el texto aparece sin formato y cuya fuente tiene un ancho constante, como si se tratara del bloc de notas o un editor de código. Además, preservan los espacios múltiples, los saltos de línea y las tabulaciones. El texto debe ir entre las etiquetas <strong>&lt;pre&gt;</strong> (de apertura) y <strong>&lt;/pre&gt;</strong> (de cierre). Por ejemplo:</p>
+        
+        <pre><code>
+            &lt;pre&gt;
+                    a
+
+                    b
+
+                    c
+
+                    d
+            &lt;/pre&gt;
+        </code></pre>
+        
+        <p>El código anterior se verá de la siguiente manera:</p>
+        
+        <pre>
+            a
+
+            b
+
+            c
+
+            d
+        </pre>
+        
+        <p>Como se puede ver en el ejemplo anterior, los navegadores no aplican saltos de línea automáticos en el texto que hay dentro de las etiquetas <strong>&lt;pre&gt;</strong> y <strong>&lt;/pre&gt;</strong> como sí sucede en el caso de los párrafos. También preservan los múltiples espacios consecutivos, sin tener que usar la entidad <strong>&amp;nbsp;</strong> reiteradamente.</p>
+        
+        <p>La fuente por defecto de los elementos preformateados tiene un ancho constante, y esto es muy útil a la hora de mostrar código de lenguajes de programación, arte ASCII o texto plano. Este elemento se usa muchas veces en combinación con otros elementos, como es el caso de <strong>&lt;code&gt;</strong>.</p>
+        
+        <h4>Ejemplo de código con preformateado</h4>
+        
+        <p>En el ejemplo siguiente, se usa una combinación de <strong>&lt;pre&gt;</strong> y <strong>&lt;code&gt;</strong> para mostrar una función recursiva en JavaScript que calcula el valor de una determinada posición de la sucesión de Fibonacci. Así se indica en HTML:</p>
+        
+        <pre>
+            <code>
+                &lt;pre&gt;
+                    &lt;code&gt;
+                        var n=15;
+                        function fibonacci(n){
+                            if(n&lt;2){
+                                return n;
+                            } else {
+                                return fibonacci(n-1) + fibonacci(n-2);
+                            }
+                        }
+                    &lt;/code&gt;
+                &lt;/pre&gt;
+            </code>
+        </pre>
+        
+        <p>Y este es el resultado:</p>
+        
+        <pre>
+            <code>
+                var n=15;
+                function fibonacci(n){
+                    if(n<2){
+                        return n;
+                    } else {
+                        return fibonacci(n-1) + fibonacci(n-2);
+                    }
+                }
+            </code>
+        </pre>
+        
+        
+        <p>En este código se observa la preservación de los espacios en blanco, el sangrado del texto — que es siempre muy importante en programación — y los saltos de línea.</p>
+        
+        <p>Si en su lugar se hubiera usado un párrafo, el resultado habría sido muy distinto, ya que se ignorarían los espacios consecutivos, las tabulaciones y los saltos de línea. Se vería todo junto, dificultando mucho su lectura.</p>
+        
+        <p>El elemento <strong>&lt;pre&gt;</strong> para el preformateado del texto permite utilizar los atributos globales, de los que forman parte los atributos esenciales (id, class, title), los de idioma (lang y xml:lang), los de estilos (style) y los de eventos.</p>
+        
+        <p>usando un párrafo en vez de pre:</p>
+        <p>
+            <code>
+                var n=15;
+                function fibonacci(n){
+                    if(n<2){
+                        return n;
+                    } else {
+                        return fibonacci(n-1) + fibonacci(n-2);
+                    }
+                }
+            </code>
+        </p>
+    </article>
+    
+    <div>
+        <p><a href="#espaciosEnBlanco">← Artículo anterior: HTML: Espacios en blanco</a></p>
+        <p><a href="#">Artículo siguiente: HTML: Formato de texto →</a></p>
+    </div>
+    
+    <hr>
+    <hr>    
+</body>
+</html>

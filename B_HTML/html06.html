@@ -1,0 +1,693 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DWFSP1_152. HTML</title>
+</head>
+<body>
+    <h1 id="inicio">DESARROLLO WEB FULL STACK BASICO - DWFSP1_152</h1>
+    <hr>
+    <hr>
+    <h2><u>II.5 HTML.Fechas, listas, tablas</u></h2>
+    <hr>
+
+    <h3 id="fechas">II.5.1 HTML.Fechas</h3>
+    <article>
+        
+        <p>
+            El elemento <b>&lt;time&gt;</b> se utiliza para representar un periodo específico de tiempo. De forma opcional, se puede usar el atributo <b>datetime</b> para aportar una versión informativa más sencilla de manejar para ciertos programas, sin tener que procesar la información con el fin de normalizarla.
+        </p>
+
+        <p>
+            Este elemento tambi&eacute;n hace uso de dos etiquetas: <b>&lt;time&gt;</b> (de apertura) y <b>&lt;/time&gt;</b> (de cierre).
+            Puede representar el contenido en estos formatos:
+        </p>
+
+        <ul>
+            <li>La hora en formato de 24 horas.</li>
+            <li>Una fecha exacta del calendario gregoriano.</li>
+            <li>Una duración de periodo válido.</li>
+        </ul>
+
+        <h4>Representar meses</h4>
+        <p>
+            Los meses se representan empezando con el año en cuestión en números, seguido de un guion (-) y finalmente el número del mes.
+        </p>
+        
+        <pre><code>
+            &lt;time&gt;2022-01&lt;/time&gt;
+            &lt;time&gt;2022-02&lt;/time&gt;
+            &lt;time&gt;2022-03&lt;/time&gt;
+        </code></pre>
+
+        <pre>
+            <time>2022-01</time>
+            <time>2022-02</time>
+            <time>2022-03</time>
+        </pre>
+        
+        <h4>Representar fechas</h4>
+        <p>
+            Las fechas se representan empezando también con el año en números, seguido de un guion (-), el número del mes, otro guion (-) y finalmente el número del día. Se trata de la fecha en formato ISO (ISO 8601).
+        </p>
+
+        <pre><code>
+            &lt;time&gt;2022-01-30&lt;/time&gt;
+            &lt;time&gt;2022-02-18&lt;/time&gt;
+            &lt;time&gt;2022-03-14&lt;/time&gt;
+        </code></pre>
+
+        <pre>
+            <time>2022-01-30</time>
+            <time>2022-02-18</time>
+            <time>2022-03-14</time>
+        </pre>
+        
+
+        <h4>Representar horas</h4>
+        <p>
+            Para las horas, se usan dos dígitos para la hora (entre 00 y 23), dos dígitos para los minutos (entre 00 y 59) y dos dígitos para los segundos (entre 00 y 59), todos ellos separados por el signo de los dos puntos (:).
+        </p>
+
+        <p>
+            Como mínimo debe introducirse la hora y los minutos; los segundos son opcionales. Si se desea, se puede incluso introducir la parte decimal de los segundos hasta un total de tres dígitos, usando el punto como separador decimal (.).
+        </p>
+        
+        <pre><code>
+            &lt;time&gt;21:35&lt;/time&gt;
+            &lt;time&gt;21:35:48&lt;/time&gt;
+            &lt;time&gt;21:35:48.178&lt;/time&gt;
+        </code></pre>
+        
+        <pre>
+            <time>21:35</time>
+            <time>21:35:48</time>
+            <time>21:35:48.178</time>
+        </pre>
+        
+        <h4>Representar fecha y hora</h4>
+        <p>
+            Es posible representar la fecha y la hora a la vez. Es tan fácil como introducir primero la fecha en formato ISO (ISO 8601) y luego la hora, separados por un espacio o por la letra "T" mayúscula.
+        </p>
+
+        <pre><code>
+            &lt;time&gt;2022-01-30 21:35&lt;/time&gt;
+            &lt;time&gt;2022-02-18 21:35:48&lt;/time&gt;
+            &lt;time&gt;2022-03-14 21:35:48.178&lt;/time&gt;
+        </code></pre>
+
+        <pre>
+            <time>2022-01-30 21:35</time>
+            <time>2022-02-18 21:35:48</time>
+            <time>2022-03-14 21:35:48.178</time>
+        </pre>
+
+        <h4>Representar zonas horarias</h4>
+        <p>
+            Las zonas horarias se representan de la siguiente manera: si es un desplazamiento negativo se empieza con el signo menos (-) y si es un desplazamiento positivo se usa el signo más (+). Se completa con dos dígitos de las horas, los dos puntos (:) y los dos dígitos de los minutos.
+        </p>
+
+        <pre><code>
+            &lt;time&gt;+07:25&lt;/time&gt;
+            &lt;time&gt;-03:40&lt;/time&gt;
+        </code></pre>
+
+        <pre>
+            <time>+07:25</time>
+            <time>-03:40</time>
+        </pre>
+
+        <h4>Representar fecha y hora global</h4>
+        <p>
+            Existen dos maneras para representar una fecha y hora global. El método que quizás será más cómodo es usando una combinación de la fecha en formato ISO (ISO8601), un espacio o la letra "T" mayúscula, la hora local y la zona horaria.
+        </p>
+        
+        <pre><code>
+            &lt;time&gt;2022-02-18 21:35:48+07:25&lt;/time&gt;
+            &lt;time&gt;2022-03-14 21:35:48-03:40&lt;/time&gt;
+        </code></pre>
+
+        <pre>
+            <time>2022-02-18 21:35:48+07:25</time>
+            <time>2022-03-14 21:35:48-03:40</time>
+        </pre>
+
+        <p>
+            El otro método es introduciendo la hora global normalizada a UTC. En este caso, usaremos la fecha (año, mes y día) convertida a la zona horaria UTC, la letra "T" mayúscula, la hora convertida a la zona horaria UTC y finalmente introduciremos la letra "Z" mayúscula.
+        </p>
+        
+        <pre><code>
+            &lt;time&gt;2022-02-18T21:35:48Z&lt;/time&gt;
+            &lt;time&gt;2022-03-14T21:35:48Z&lt;/time&gt;
+        </code></pre>
+
+        <pre>
+            <time>2022-02-18T21:35:48Z</time>
+            <time>2022-03-14T21:35:48Z</time>
+        </pre>
+
+        <h4>Representar semanas</h4>
+        <p>
+            Alternativamente a los ejemplos ya comentados, si se desea se puede representar las semanas. La sintaxis de este caso es tan fácil como introducir primero los dígitos del año, seguido de un guion, la letra "W" mayúscula y finalmente los dos dígitos de la semana (entre 1 y 52).
+        </p>
+
+        <pre><code>
+            &lt;time&gt;2022-W15&lt;/time&gt;
+            &lt;time&gt;2022-W43&lt;/time&gt;
+        </code></pre>
+
+        <pre>
+            <time>2022-W15</time>
+            <time>2022-W43</time>
+        </pre>
+
+        <p>
+            Tal y como se puede ver, el elemento <time> ofrece muchas posibilidades en el tratamiento de la fecha y la hora. Es habitual encontrar que contiene una fecha o una hora simplificadas con el valor completo dentro del atributo <b>datetime</b>. La forma de usarlo dependerá de las necesidades de cada autor.
+        </p>
+    </article>
+
+    <hr>
+    <h3 id="listas">II.5.2 HTML.Listas</h3>
+
+    <article>
+        <p>HTML ofrece tres elementos para definir listas de información: listas ordenadas <b>(elemento &lt;ol&gt;)</b>, listas no ordenadas <b>(elemento &lt;ul&gt;)</b> y listas de definición <b>(elemento &lt;dl&gt;)</b>. Estos tres elementos tienen etiqueta de apertura y de cierre. Son elementos de bloque y deben contener como mínimo un elemento de lista, que en el caso de las ordenadas y no ordenadas será el elemento <b>&lt;li&gt;</b>, y en el caso de las de definición serán los elementos <b>&lt;dt&gt;</b> y           <b>&lt;dd&gt;</b>.</p>
+
+        <p>El elemento <b>&lt;li&gt;</b> permite definir cada uno de los elementos que forman la lista. Este elemento también tiene dos etiquetas: <b></b> (de apertura) y <b>&lt;/li&gt;</b> (de cierre). Se trata de un elemento de bloque, de tal manera que el siguiente elemento aparecerá situado visualmente debajo del anterior, quedando alineados en vertical.</p>
+
+        <p>Las listas se utilizan para agrupar determinadas palabras o frases que tengan alguna relación entre sí. Se pueden utilizar, por ejemplo, para crear un menú de navegación, para definir una lista de ingredientes de una receta o para especificar una tabla de contenidos al principio de un artículo. Además, las listas se pueden anidar tantas veces como sea necesario.</p>
+
+        <h4>Ejemplo de código HTML de una lista:</h4>
+        <pre><code>
+            &lt;ul&gt;
+                &lt;li&gt;HTML&lt;/li&gt;
+                &lt;li&gt;CSS&lt;/li&gt;
+            &lt;/ul&gt;
+        </code></pre>   
+
+        <p>Dando como resultado:</p>
+        <ul>
+            <li>HTML</li>
+            <li>CSS</li>
+        </ul>
+
+        <h4>Listas ordenadas: elemento &lt;ol&gt;</h4>
+        <p>El elemento <b>&lt;ol&gt;</b> (Ordered List) puede crear listas o viñetas ordenadas, y se pueden ordenar de forma numérica o alfabéticamente. Los elementos de la lista deben ir dentro de las etiquetas <b>&lt;ol&gt;</b> (de apertura) y <b>&lt;/ol&gt;</b> (de cierre). Por cada nuevo elemento, el número o la letra incrementarán sucesivamente.</p>
+
+        <h4>Ejemplo de código HTML de lista ordenada:</h4>
+        <pre><code>
+            &lt;ol type='a'&gt;
+                &lt;li&gt;Objeto uno&lt;/li&gt;
+                &lt;li&gt;Objeto dos&lt;/li&gt;
+                &lt;li&gt;Objeto tres&lt;/li&gt;
+            &lt;/ol&gt;
+        </code></pre>
+
+        <p>Resultado:</p>
+        <ol type="a">
+            <li>Objeto uno</li>
+            <li>Objeto dos</li>
+            <li>Objeto tres</li>
+        </ol>
+
+        <h4>El atributo <b>type</b> en listas ordenadas</h4>
+        <p>Para especificar el tipo de ordenación que debe seguir la lista se utiliza el atributo <b>type</b>. El valor por defecto de este atributo es el número 1. Se puede cambiar la nomenclatura modificando el valor según la lista siguiente:</p>
+        <ul>
+            <li><strong>1</strong>: Valor por defecto. Usa números decimales: 1, 2, 3, 4.</li>
+            <li><strong>a</strong>: Usa letras minúsculas ordenadas alfabéticamente: a, b, c, d.</li>
+            <li><strong>A</strong>: Usa letras mayúsculas ordenadas alfabéticamente: A, B, C, D.</li>
+            <li><strong>i</strong>: Usa números romanos en minúsculas: i, ii, iii, iv, v, vi.</li>
+            <li><strong>I</strong>: Usa números romanos en mayúsculas: I, II, III, IV, V, VI.</li>
+        </ul>
+
+        <h4>El atributo <b>start</b></h4>
+        <p>Si se necesita especificar que la lista ordenada empiece por otro valor que no sea el primero, se puede hacer mediante el atributo <b>start</b>. El valor de este atributo será la posición numérica con el que se quiere que comience la lista.</p>
+
+        <h4>Ejemplo de código HTML de lista empezando con el número romano 3:</h4>
+        <pre><code>
+            &lt;ol type='I' start='3'&gt;
+                &lt;li&gt;Empieza con el número romano III.&lt;/li&gt;
+                &lt;li&gt;Sigue con el número romano IV.&lt;/li&gt;
+            &lt;/ol&gt;
+        </code></pre>
+
+        <p>Se visualiza así:</p>
+        <ol type="I" start="3">
+            <li>Empieza con el número romano III.</li>
+            <li>Sigue con el número romano IV.</li>
+        </ol>
+
+        <h4>El atributo <b>reversed</b></h4>
+        <p>Con el atributo <b>reversed</b> es posible invertir el orden de una lista ordenada. Se trata de un atributo binario; esto significa que no requiere valor: con su inclusión en el elemento se invierte el orden de la lista.</p>
+
+        <h4>Ejemplo de código HTML de lista ordenada e invertida:</h4>
+        <pre><code>
+            &lt;ol type='a' reversed&gt;
+                &lt;li&gt;Objeto 1&lt;/li&gt;
+                &lt;li&gt;Objeto 2&lt;/li&gt;
+                &lt;li&gt;Objeto 3&lt;/li&gt;
+            &lt;/ol&gt;
+        </code></pre>
+
+        <p>Resultado de una lista invertida:</p>
+        <ol type="a" reversed>
+            <li>Objeto 1</li>
+            <li>Objeto 2</li>
+            <li>Objeto 3</li>
+        </ol>
+
+        <h4>Listas no ordenadas: elemento &lt;ul&gt;</h4>
+        <p>El elemento <b>&lt;ul&gt;</b> (Unordered List) permite definir listas no ordenadas. En lugar de letras y números aparecen discos, círculos y cuadrados, dependiendo de cuantas listas tengamos anidadas; por cada nivel, el símbolo irá cambiando para diferenciarse del nivel superior. El símbolo por defecto es el disco (disc).</p>
+
+        <h4>Ejemplo de código HTML de lista no ordenada:</h4>
+        <pre><code>
+            &lt;ul type='square'&gt;
+                &lt;li&gt;Objeto uno&lt;/li&gt;
+                &lt;li&gt;Objeto dos&lt;/li&gt;
+                &lt;li&gt;Objeto tres&lt;/li&gt;
+            &lt;/ul&gt;
+        </code></pre>
+
+        <p>Resultado:</p>
+        <ul type="square">
+            <li>Objeto uno</li>
+            <li>Objeto dos</li>
+            <li>Objeto tres</li>
+        </ul>
+
+        <h4>Ejemplo de código HTML de tres listas anidadas:</h4>
+        <pre><code>
+            &lt;ul&gt;
+                &lt;li&gt;Elemento 1.1&lt;/li&gt;
+                &lt;li&gt;Elemento 1.2
+                    &lt;ul&gt;
+                        &lt;li&gt;Elemento 2.1&lt;/li&gt;
+                        &lt;li&gt;Elemento 2.2
+                            &lt;ul&gt;
+                                &lt;li&gt;Elemento 3.1&lt;/li&gt;
+                                &lt;li&gt;Elemento 3.2&lt;/li&gt;
+                            &lt;/ul&gt;
+                        &lt;/li&gt;
+                    &lt;/ul&gt;
+                &lt;/li&gt;
+            &lt;/ul&gt;
+        </code></pre>
+
+        <p>Da como resultado:</p>
+        <ul>
+            <li>Elemento 1.1</li>
+            <li>Elemento 1.2
+            <ul>
+                <li>Elemento 2.1</li>
+                <li>Elemento 2.2
+                <ul>
+                    <li>Elemento 3.1</li>
+                    <li>Elemento 3.2</li>
+                </ul>
+                </li>
+            </ul>
+            </li>
+        </ul>
+
+        <h4>El atributo <b>type</b> en listas no ordenadas</h4>
+        <p>En este caso, el atributo <b>type</b> permite especificar la apariencia del listado. De esta manera se puede cambiar el símbolo con el que comienza cada elemento. Los valores pueden ser <b>disc</b>, <b>circle</b> y <b>square</b>, dando como resultado una lista que empieza con un disco, un círculo y un cuadrado respectivamente.</p>
+
+        <h4>Listas de definición: elemento &lt;dl&gt;</h4>
+        <p>El elemento <b>&lt;dl&gt;</b> (Definition List) permite definir listas de definición o descriptivas. En este tipo de listas, se agrupan los elementos como si se tratara de entradas de un diccionario o una enciclopedia. En esas listas se especifica un término y una descripción mediante otros dos elementos HTML: <b>&lt;dt&gt;</b> y <b>&lt;dd&gt;</b>, usados para especificar el término y la descripción, respectivamente.</p>
+
+        <p>Estos tres elementos tienen etiqueta de apertura y cierre. Los elementos <b>&lt;dt&gt;</b>, de término, y <b>&lt;dd&gt;</b>, de definición, deben ir dentro de las etiquetas <b>&lt;dl&gt;</b> (de apertura) y <b>&lt;/dl&gt;</b> (de cierre) de la lista. Por su parte, el término debe ir entre las etiquetas <b>&lt;dt&gt;</b> (de apertura) y <b>&lt;/dt&gt;</b> (de cierre); mientras que la definición debe ir entre las etiquetas <b>&lt;dd&gt;</b> (de apertura) y <b>&lt;/dd&gt;</b> (de cierre).</p>
+
+        <p>En resumen:</p>
+        <pre><code>
+            &lt;dl&gt;
+                &lt;dt&gt;HTML&lt;/dt&gt;
+                &lt;dd&gt;Lenguaje de marcas&lt;/dd&gt;
+                &lt;dt&gt;CSS&lt;/dt&gt;
+                &lt;dd&gt;Hojas de estilo en cascada&lt;/dd&gt;
+            &lt;/dl&gt;
+        </code></pre>
+
+        <h4>Ejemplo de código HTML de lista de definición:</h4>
+        <pre><code>
+            &lt;dl&gt;
+                &lt;dt&gt;HTML&lt;/dt&gt;
+                &lt;dd&gt;Lenguaje de marcas&lt;/dd&gt;
+                &lt;dt&gt;CSS&lt;/dt&gt;
+                &lt;dd&gt;Hojas de estilo en cascada&lt;/dd&gt;
+            &lt;/dl&gt;
+        </code></pre>
+
+        <p>Este es el resultado:</p>
+        <dl>
+            <dt>HTML</dt>
+            <dd>Lenguaje de marcas</dd>
+            <dt>CSS</dt>
+            <dd>Hojas de estilo en cascada</dd>
+        </dl>
+    </article>
+
+    <hr>
+    <h3 id="tablas">II.5.3 HTML.Tablas</h3>
+    
+    <article>
+    <p>Las tablas permiten organizar datos en filas y columnas, y constituyen un elemento muy útil para presentar la información. Con HTML se puede crear tablas de forma muy completa y sin demasiadas complicaciones. Para ello se utiliza varias etiquetas: <b>&lt;table&gt;</b>, <b>&lt;tr&gt;</b> (filas) y <b>&lt;td&gt;</b> (celdas). Existen más etiquetas que permiten crear títulos, cabeceras y pies de página.</p>
+
+    <p>Las tablas deben usarse para mostrar información organizada.</p>
+
+    <table border="1">
+        <tr>
+            <th>Elemento</th>
+            <th>Descripción</th>
+        </tr>
+        <tr>
+            <td><code>&lt;table&gt;</code></td>
+            <td>Tabla.</td>
+        </tr>
+        <tr>
+            <td><code>&lt;tr&gt;</code></td>
+            <td>Fila de celdas.</td>
+        </tr>
+        <tr>
+            <td><code>&lt;td&gt;</code></td>
+            <td>Celda de una tabla.</td>
+        </tr>
+        <tr>
+            <td><code>&lt;thead&gt;</code></td>
+            <td>Cabecera de una tabla.</td>
+        </tr>
+        <tr>
+            <td><code>&lt;tbody&gt;</code></td>
+            <td>Cuerpo de una tabla.</td>
+        </tr>
+        <tr>
+            <td><code>&lt;tfoot&gt;</code></td>
+            <td>Pie de una tabla.</td>
+        </tr>
+        <tr>
+            <td><code>&lt;th&gt;</code></td>
+            <td>Celda de encabezado.</td>
+        </tr>
+        <tr>
+            <td><code>&lt;caption&gt;</code></td>
+            <td>Título de una tabla.</td>
+        </tr>
+        <tr>
+            <td><code>&lt;colgroup&gt;</code></td>
+            <td>Grupo de columnas.</td>
+        </tr>
+        <tr>
+            <td><code>&lt;col&gt;</code></td>
+            <td>Propiedades de columnas.</td>
+        </tr>
+    </table>
+
+    <h4>Crear una tabla en HTML: elementos &lt;table&gt;, &lt;tr&gt; y &lt;td&gt;</h4>
+    <p>Para crear una tabla en HTML se necesita tres elementos principales: <b>&lt;table&gt;, &lt;tr&gt; y &lt;td&gt;</b>. Primero se debe crear las etiquetas <b>&lt;table&gt;</b> (de apertura) y <b>&lt;/table&gt;</b> (de cierre); así se indica el principio y el fin de la tabla.</p>
+
+    <p>Dentro del elemento <b>&lt;table&gt;</b> se introducen las filas con el elemento <b>&lt;tr&gt;</b>. Este elemento también tiene dos etiquetas: <b>&lt;tr&gt;</b> (de apertura) y <b>&lt;/tr&gt;</b> (de cierre).</p>
+
+    <p>Dentro de cada fila <b>(&lt;tr&gt;)</b> se introducen las celdas (columnas) con el elemento <b> &lt;td&gt;</b>. Al igual que en el caso de los otros elementos mencionados, también tiene dos etiquetas: <b>&lt;td&gt;</b> (de apertura) y <b>&lt;/td&gt;</b> (de cierre).</p>
+
+    <p>Los elementos <b>&lt;table&gt;</b> y <b>&lt;tr&gt;</b> son elementos de bloque, mientras que el elemento <b>&lt;td&gt;</b> es un elemento de línea.</p>
+
+    <h4>Ejemplo de código HTML de una tabla:</h4>
+    <pre><code>
+        &lt;table&gt;
+        &lt;tr&gt;
+            &lt;td&gt;Fila 1- Celda 1&lt;/td&gt;
+            &lt;td&gt;Fila 1- Celda 2&lt;/td&gt;
+            &lt;td&gt;Fila 1- Celda 3&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td&gt;Fila 2- Celda 1&lt;/td&gt;
+            &lt;td&gt;Fila 2- Celda 2&lt;/td&gt;
+            &lt;td&gt;Fila 2- Celda 3&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;/table&gt;
+    </code></pre>
+
+    <p>Se visualiza así:</p>
+    <table border="1">
+        <tr>
+            <td>Fila 1- Celda 1</td>
+            <td>Fila 1- Celda 2</td>
+            <td>Fila 1- Celda 3</td>
+        </tr>
+        <tr>
+            <td>Fila 2- Celda 1</td>
+            <td>Fila 2- Celda 2</td>
+            <td>Fila 2- Celda 3</td>
+        </tr>
+    </table>
+
+    <p><b>En resumen:</b> con el elemento <b>&lt;table&gt;</b> se indica el inicio y el final de la tabla, y contiene todas las filas y columnas. A su vez, el elemento <b>&lt;tr&gt;</b> (Table Row) permite definir las filas y contiene todas las columnas, que se introducen con el elemento <b>&lt;td&gt;</b>. Las columnas son en realidad celdas de datos (Table Data).</p>
+
+    <h4>Atributos del elemento &lt;td&gt;</h4>
+    <p>El elemento <b>&lt;td&gt;</b> para crear filas o columnas tiene varios atributos propios, y conviene conocerlos bien para poder ajustar mejor las tablas de datos.</p>
+
+    <h4>El atributo <b>colspan</b></h4>
+    <p>El atributo <b>colspan</b> permite fusionar la celda actual con la celda de la siguiente columna. El valor de este atributo debe ser el número de columnas que ocupará.</p>
+
+    <p>Por tanto, si se quiere que la celda ocupe más de una columna, el valor deberá ser mayor que 1. No tiene sentido usar el valor 1 por defecto. Si se usa el valor de 0, la celda se extenderá hasta el final de la fila.</p>
+
+    <h4>Ejemplo de código HTML de tabla usando colspan:</h4>
+    <pre><code>
+        &lt;table&gt;
+        &lt;tr&gt;
+            &lt;td colspan='2'&gt;Celda 1:F1C1&C2&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td&gt;Celda 2:F2C1&lt;/td&gt;
+            &lt;td&gt;Celda 3:F2C2&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;/table&gt;
+    </code></pre>
+    <p>Se visualiza así:</p>
+    <pre>
+    <table border="1">
+    <tr>
+        <td colspan='2'>Celda 1:F1C1&C2</td>
+    </tr>
+    <tr>
+        <td>Celda 2:F2C1</td>
+        <td>Celda 3:F2C2</td>
+    </tr>
+    </table>
+    </pre>
+
+    <h4>El atributo rowspan</h4>
+    <p>El atributo <b>rowspan</b> permite fusionar la celda actual con la celda de la fila inferior. De la misma manera que sucede con <b>colspan</b>, el valor de <b>rowspan</b> también debe ser un número entero; y en este caso debe indicar el número de filas que ocupará.</p>
+
+    <p>Si se quiere que la celda ocupe más de una fila, el valor deberá ser mayor que 1. Si se usa el valor 0, la fila se extenderá hasta la última fila de la tabla.</p>
+
+    <h4>Ejemplo de código HTML de tabla usando <b>rowspan</b>:</h4>
+    <pre><code>
+        &lt;table&gt;
+        &lt;tr&gt;
+            &lt;td rowspan='2'&gt;Celda 1:F1F2C1&lt;/td&gt;
+            &lt;td&gt;Celda 2:F1C2&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td&gt;Celda 3:F2C2&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;/table&gt;
+    </code></pre>
+    <p>Se visualiza así:</p>
+    <pre>
+    <table border="1">
+    <tr>
+        <td rowspan='2'>Celda 1:F1F2C1</td>
+        <td>Celda 2:F1C2</td>
+    </tr>
+    <tr>
+        <td>Celda 3:F2C2</td>
+    </tr>
+    </table>
+    </pre>
+
+    <h4>Celdas de cabecera: elemento &lt;th&gt;</h4>
+    <p>Si se quiere que una celda sea cabecera de una fila o una columna, se utiliza el elemento <b>&lt;th&gt;</b> (Table Header Cell) como sustituto del elemento <b>&lt;td&gt;</b>. Se trata de un elemento similar al <b>&lt;td&gt;</b>, ya que también es un elemento de línea y comparten los mismos atributos.</p>
+
+    <p>Este elemento se puede usar en cualquier celda de una tabla. Normalmente se usa en la primera fila para indicar los títulos de cada columna. Pero también se puede usar para tratar la primera columna como cabecera; e incluso se puede usar en la última fila de la tabla, por ejemplo para remarcar los totales de una suma.</p>
+
+    <h4>Ejemplo de código HTML de una tabla con cabecera:</h4>
+    <pre>
+        &lt;table&gt;
+            &lt;tr&gt;
+                &lt;th&gt;Cabecera 1&lt;/th&gt;
+                &lt;th&gt;Cabecera 2&lt;/th&gt;
+            &lt;/tr&gt;
+            &lt;tr&gt;
+                &lt;td&gt;Fila 2- Celda 1&lt;/td&gt;
+                &lt;td&gt;Fila 2- Celda 2&lt;/td&gt;
+            &lt;/tr&gt;
+        &lt;/table&gt;
+    </pre>
+    <p>Se visualiza así:</p>
+    <pre>
+    <table border="1">
+    <tr>
+        <th>Cabecera 1</th>
+        <th>Cabecera 2</th>
+    </tr>
+    <tr>
+        <td>Fila 2- Celda 1</td>
+        <td>Fila 2- Celda 2</td>
+    </tr>
+    </table>
+    </pre>
+
+    <h4>Estructura de una tabla: elementos &lt;thead&gt;, &lt;tbody&gt; y &lt;tfoot&gt;</h4>
+    <p>Las tablas se pueden dividir en tres porciones correspondientes a una cabecera <b>(&lt;thead&gt;)</b>, un cuerpo <b>(&lt;tbody&gt;)</b> y un pie de tabla <b>(&lt;tfoot&gt;)</b>. La cabecera y el pie de tabla son parecidos a los que se usan en un documento de un procesador de textos (como Writer o MS Word), que se mantienen en cada página mientras que el cuerpo es el contenedor principal del contenido de la tabla.</p>
+
+    <p>Descripción de los tres elementos de la estructura de una tabla:</p>
+    <table border="1">
+        <tr>
+            <th>Elemento</th>
+            <th>Descripción</th>
+        </tr>
+        <tr>
+            <td><code>&lt;thead&gt;</code></td>
+            <td>Para crear una cabecera separada de la tabla.</td>
+        </tr>
+        <tr>
+            <td><code>&lt;tbody&gt;</code></td>
+            <td>Para indicar el cuerpo principal de la tabla.</td>
+        </tr>
+        <tr>
+            <td><code>&lt;tfoot&gt;</code></td>
+            <td>Para crear un pie de tabla separado de la tabla.</td>
+        </tr>
+    </table>
+    
+    <h4>Ejemplo de código HTML de una tabla completa:</h4>
+
+    <pre><code>
+        &lt;table&gt;
+            &lt;thead&gt;
+                &lt;tr&gt;
+                &lt;th&gt;Producto&lt;/th&gt;
+                &lt;th&gt;Cantidad&lt;/th&gt;
+                &lt;th&gt;Precio&lt;/th&gt;
+                &lt;/tr&gt;
+            &lt;/thead&gt;
+            &lt;tfoot&gt;
+                &lt;tr&gt;
+                &lt;td colspan='2'&gt;Total&lt;/td&gt;
+                &lt;td&gt;410&lt;/td&gt;
+                &lt;/tr&gt;
+            &lt;/tfoot&gt;
+            &lt;tbody&gt;
+                &lt;tr&gt;
+                &lt;td&gt;Teclado&lt;/td&gt;
+                &lt;td&gt;1&lt;/td&gt;
+                &lt;td&gt;20&lt;/td&gt;
+                &lt;/tr&gt;
+                &lt;tr&gt;
+                &lt;td&gt;Ratón&lt;/td&gt;
+                &lt;td&gt;2&lt;/td&gt;
+                &lt;td&gt;15&lt;/td&gt;
+                &lt;/tr&gt;
+                &lt;tr&gt;
+                &lt;td&gt;Monitor&lt;/td&gt;
+                &lt;td&gt;3&lt;/td&gt;
+                &lt;td&gt;120&lt;/td&gt;
+                &lt;/tr&gt;
+            &lt;/tbody&gt;
+        &lt;/table&gt;
+    </code></pre>
+            
+    <p>Se visualiza así:</p>
+    
+    <table border="1">
+    <thead>
+        <tr>
+        <th><b>Producto</b></th>
+        <th><b>Cantidad</b></th>
+        <th><b>Precio</b></th>
+        </tr>
+    </thead>
+    <tfoot>
+        <tr>
+        <td colspan='2'><b>Total</b></td>
+        <td>410</td>
+        </tr>
+    </tfoot>
+    <tbody>
+        <tr>
+        <td>Teclado</td>
+        <td>1</td>
+        <td>20</td>
+        </tr>
+        <tr>
+        <td>Ratón</td>
+        <td>2</td>
+        <td>15</td>
+        </tr>
+        <tr>
+        <td>Monitor</td>
+        <td>3</td>
+        <td>120</td>
+    </tr>
+    </tbody>
+    </table>
+    
+
+    <h4>Título descriptivo: elemento &lt;caption&gt;</h4>
+    <p>El elemento <b>&lt;caption&gt;</b> es el encargado de dar un título descriptivo a una tabla. Este elemento tiene dos etiquetas obligatorias: <b>&lt;caption&gt;</b> (de apertura) y <b>&lt;/caption&gt;</b> (de cierre). Puede contener texto y otros elementos de línea. El título descriptivo siempre aparecerá en la parte superior de la tabla.</p>
+
+    <h4>Grupos de columnas: elementos &lt;colgroup&gt; y &lt;col&gt;</h4>
+    <p>Mediante los elementos <b>&lt;colgroup&gt;</b> y <b>&lt;col&gt;</b> es posible aplicar estilos CSS a columnas enteras. El elemento <b>&lt;colgroup&gt;</b> se usa como contenedor para las especificaciones de los grupos de columna; y cada elemento <b>&lt;col&gt;</b> permite especificar un grupo de columnas. Todos los elementos <b>&lt;col&gt;</b> deben ir entre las etiquetas <b>&lt;colgroup&gt;</b> (apertura) y <b>&lt;/colgroup&gt;</b> (cierre).</p>
+
+    <h4>Ejemplo de tabla HTML con las dos columnas centrales pintadas:</h4>
+    <pre><code>
+        &lt;table&gt;
+        &lt;colgroup&gt;
+            &lt;col span="1"&gt;
+            &lt;col span="2" style="background: rgba(180,20,20,0.20)"&gt;
+        &lt;/colgroup&gt;
+        &lt;tr&gt;
+            &lt;th&gt;A1&lt;/th&gt;
+            &lt;th&gt;B1&lt;/th&gt;
+            &lt;th&gt;C1&lt;/th&gt;
+            &lt;th&gt;D1&lt;/th&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td&gt;A2&lt;/td&gt;
+            &lt;td&gt;B2&lt;/td&gt;
+            &lt;td&gt;C2&lt;/td&gt;
+            &lt;td&gt;D2&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;/table&gt;
+    </code></pre>
+    <p>Se visualiza así:</p>
+    <pre>
+    <table border="1">
+    <colgroup>
+        <col span="1" style="background: green">
+        <col span="2" style="background: red">
+        <col span="1" style="background: yellow">
+    </colgroup>
+    <tr>
+        <th>A1</th>
+        <th>B1</th>
+        <th>C1</th>
+        <th>D1</th>
+    </tr>
+    <tr>
+        <td>A2</td>
+        <td>B2</td>
+        <td>C2</td>
+        <td>D2</td>
+    </tr>
+    </table>
+    </pre>
+
+    <h4>Anidación de tablas</h4>
+    <p>Una de las particularidades interesantes de las tablas es que se pueden anidar, es decir, que se puede crear o insertar tablas dentro de otras tablas. Para hacerlo es tan sencillo como introducir el código HTML de una tabla dentro de una celda. No obstante, la necesidad de anidar tablas no es muy común, y en muchos casos se pueden encontrar soluciones más fáciles de implementar.</p>
+    </article>
+
+    <hr>
+    <hr>    
+</body>
+</html>

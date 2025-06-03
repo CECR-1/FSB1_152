@@ -1,0 +1,908 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DWFSP1_152. HTML</title>
+</head>
+<body>
+    <h1 id="inicio">DESARROLLO WEB FULL STACK BASICO - DWFSP1_152</h1>
+    <hr>
+    <hr>
+    <h2><u>II.8 HTML.Controles de formulario</u></h2>
+    <hr>
+    
+    <h2><u>II.8 HTML.Indice</u></h2>
+    <div>
+        <ul>
+            <li><a href="#campoDeTexto">Campo de texto simple (&lt;input type="text"&gt;)</a></li>
+            <li><a href="#contrasenna">Campo de contraseña (&lt;input type="password"&gt;)</a></li>
+            <li><a href="#areaDeTexto">Área de texto (&lt;textarea&gt;)</a></li>
+            <li><a href="#listaDesplegable">Lista desplegable (&lt;select&gt;)</a></li>
+            <li><a href="#casillaVerificacion">Casilla de verificación (&lt;input type="checkbox"&gt;)</a></li>
+            <li><a href="#botonRadio">Botón de radio (&lt;input type="radio"&gt;)</a></li>
+            <li><a href="#botonEnvio">Botón de envío (&lt;input type="submit"&gt;)</a></li>
+            <li><a href="#botonReinicio">Botón de reinicio (&lt;input type="reset"&gt;)</a></li>
+            <li><a href="#controlRango">Control de rango (&lt;input type="range"&gt;)</a></li>
+            <li><a href="#controlArchivo">Control de archivo (&lt;input type="file"&gt;)</a></li>
+            <li><a href="#campoOculto">Campo oculto (&lt;input type="hidden"&gt;)</a></li>
+            <li><a href="#sugerenciasEntrada">Sugerencias de entrada (&lt;datalist&gt;)</a></li>
+            <li><a href="#resultado">Salida de resultados (&lt;output&gt;)</a></li>
+            <li><a href="#labelFieldLegend">Elementos de Formulario: Label, Fieldset, Legend</a></li>
+            <li><a href="#etiqueta">Etiqueta (&lt;label&gt;)</a></li>
+            <li><a href="#grupoCampos">Grupo de campos (&lt;fieldset&gt;)</a></li>
+            <li><a href="#leyenda">Leyenda (&lt;legend&gt;)</a></li>
+            <li><a href="html09a.html">Ir a la página ejemplo de controles de formulario</a></li>
+        </ul>
+    </div>
+    
+    
+    <h3 id="campoDeTexto">II.8.1.1 HTML.Campo de texto simple (&lt;input type="text"&gt;)</h3>
+    <article>
+        <p>Permite al usuario ingresar una línea de texto.</p>
+        <h4>Atributos:</h4>
+        <table>
+            <thead>
+                <tr>
+                    <th>Nombre</th>
+                    <th>Explicación</th>
+                    <th>Opciones</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><code>type</code></td>
+                    <td>Define el tipo del elemento input.</td>
+                    <td><code>text</code> (por defecto), <code>password</code>, <code>email</code>, <code>number</code>, <code>url</code>, <code>tel</code>, etc.</td>
+                </tr>
+                <tr>
+                    <td><code>name</code></td>
+                    <td>Nombre del control, usado para enviar los datos del formulario.</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td><code>id</code></td>
+                    <td>Identificador único del elemento.</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td><code>value</code></td>
+                    <td>Valor inicial del campo.</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td><code>placeholder</code></td>
+                    <td>Texto de sugerencia que aparece cuando el campo está vacío.</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td><code>required</code></td>
+                    <td>Especifica que el campo debe ser llenado antes de enviar el formulario.</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td><code>maxlength</code></td>
+                    <td>Especifica la longitud máxima de caracteres permitidos.</td>
+                    <td></td>
+                </tr>
+            </tbody>
+        </table>
+        <h4>Código Ejemplo:</h4>
+        <pre><code>
+            &lt;label for="nombre"&gt;Nombre:&lt;/label&gt;
+            &lt;input type="text" id="nombre" name="nombre" placeholder="Tu nombre aquí" required&gt;
+        </code></pre>
+        <h4>Resultado:</h4>
+        <div>
+            <label for="nombre-render">Nombre:</label>
+            <input type="text" id="nombre-render" name="nombre-render" placeholder="Tu nombre aquí" required>
+        </div>
+    </article>
+
+    <hr>
+    <h3 id="contrasenna">II.8.1.2 HTML.Campo de contraseña (&lt;input type="password"&gt;)</h3>
+    <article>
+        <p>Permite al usuario ingresar una contraseña (el texto se muestra oculto).</p>
+        <h4>Atributos:</h4>
+        <table>
+            <thead>
+                <tr>
+                    <th>Nombre</th>
+                    <th>Explicación</th>
+                    <th>Opciones</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><code>type</code></td>
+                    <td>Define el tipo del elemento input.</td>
+                    <td><code>password</code></td>
+                </tr>
+                <tr>
+                    <td><code>name</code></td>
+                    <td>Nombre del control.</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td><code>id</code></td>
+                    <td>Identificador único.</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td><code>placeholder</code></td>
+                    <td>Texto de sugerencia.</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td><code>required</code></td>
+                    <td>Indica que el campo es obligatorio.</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td><code>maxlength</code></td>
+                    <td>Longitud máxima de caracteres.</td>
+                    <td></td>
+                </tr>
+            </tbody>
+        </table>
+        <h4>Código Ejemplo:</h4>
+        <pre><code>
+            &lt;label for="password"&gt;Contraseña:&lt;/label&gt;
+            &lt;input type="password" id="password" name="password" placeholder="Tu contraseña" required&gt;
+        </code></pre>
+        <h5>Resultado:</h5>
+        <div>
+            <label for="password-render">Contraseña:</label>
+            <input type="password" id="password-render" name="password-render" placeholder="Tu contraseña" required>
+        </div>
+    </article>
+    
+    <hr>
+    <h3 id="areaDeTexto">II.8.2 HTML.Área de texto (&lt;textarea&gt;)</h3>
+    <article>
+        <h4></h4>
+        <p>Permite al usuario ingresar múltiples líneas de texto.</p>
+        <h4>Atributos:</h4>
+        <table>
+            <thead>
+                <tr>
+                    <th>Nombre</th>
+                    <th>Explicación</th>
+                    <th>Opciones</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><code>name</code></td>
+                    <td>Nombre del control, usado para enviar los datos del formulario.</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td><code>id</code></td>
+                    <td>Identificador único del elemento.</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td><code>rows</code></td>
+                    <td>Especifica el número visible de líneas en un área de texto.</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td><code>cols</code></td>
+                    <td>Especifica el ancho visible de un área de texto.</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td><code>placeholder</code></td>
+                    <td>Texto de sugerencia que aparece cuando el área de texto está vacía.</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td><code>required</code></td>
+                    <td>Especifica que el campo debe ser llenado antes de enviar el formulario.</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td><code>maxlength</code></td>
+                    <td>Especifica la longitud máxima de caracteres permitidos.</td>
+                    <td></td>
+                </tr>
+            </tbody>
+        </table>
+        <h4>Código Ejemplo:</h4>
+        <pre><code>
+            &lt;label for="mensaje"&gt;Mensaje:&lt;/label&gt;
+            &lt;textarea id="mensaje" name="mensaje" rows="4" cols="50" placeholder="Escribe tu mensaje aquí"&gt;&lt;/textarea&gt;
+        </code></pre>
+        <h5>Resultado:</h5>
+        <div>
+            <label for="mensaje-render">Mensaje:</label>
+            <textarea id="mensaje-render" name="mensaje-render" rows="4" cols="50" placeholder="Escribe tu mensaje aquí"></textarea>
+        </div>
+    </article>
+    
+    <hr>
+    <h3 id="listaDesplegable">II.8.3 HTML.Lista desplegable (&lt;select&gt;)</h3>
+    <article>
+        <p>Permite al usuario seleccionar una opción de una lista.</p>
+        <h5>Atributos del elemento &lt;select&gt;:</h5>
+        <table>
+            <thead>
+                <tr>
+                    <th>Nombre</th>
+                    <th>Explicación</th>
+                    <th>Opciones</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><code>name</code></td>
+                    <td>Nombre del control.</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td><code>id</code></td>
+                    <td>Identificador único.</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td><code>multiple</code></td>
+                    <td>Permite seleccionar múltiples opciones.</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td><code>required</code></td>
+                    <td>Indica que se debe seleccionar una opción.</td>
+                    <td></td>
+                </tr>
+            </tbody>
+        </table>
+        <h4>Atributos del elemento &lt;option&gt;:</h4>
+        <table>
+            <thead>
+                <tr>
+                    <th>Nombre</th>
+                    <th>Explicación</th>
+                    <th>Opciones</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><code>value</code></td>
+                    <td>Valor que se envía al servidor cuando se selecciona la opción.</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td><code>selected</code></td>
+                    <td>Especifica que la opción debe estar preseleccionada al cargar la página.</td>
+                    <td></td>
+                </tr>
+            </tbody>
+        </table>
+        <h5>Código Ejemplo:</h5>
+        <pre><code>
+            &lt;label for="pais"&gt;País:&lt;/label&gt;
+            &lt;select id="pais" name="pais"&gt;
+            &lt;option value="co"&gt;Colombia&lt;/option&gt;
+            &lt;option value="mx"&gt;México&lt;/option&gt;
+            &lt;option value="es" selected&gt;España&lt;/option&gt;
+            &lt;option value="ar"&gt;Argentina&lt;/option&gt;
+            &lt;/select&gt;
+        </code></pre>
+        <h4>Resultado:</h4>
+        <div>
+            <label for="pais-render">País:</label>
+            <select id="pais-render" name="pais-render">
+                <option value="co">Colombia</option>
+                <option value="mx">México</option>
+                <option value="es" selected>España</option>
+                <option value="ar">Argentina</option>
+            </select>
+        </div>
+    </article>
+
+    <hr>
+    <h3 id="casillaVerificacion">II.8.4 HTML.Casilla de verificación (&lt;input type="checkbox"&gt;)</h3>
+    <article>
+        <p>Permite al usuario seleccionar una o varias opciones de un conjunto.</p>
+        <h4>Atributos:</h4>
+        <table>
+            <thead>
+                <tr>
+                    <th>Nombre</th>
+                    <th>Explicación</th>
+                    <th>Opciones</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><code>type</code></td>
+                    <td>Define el tipo del elemento input.</td>
+                    <td><code>checkbox</code></td>
+                </tr>
+                <tr>
+                    <td><code>name</code></td>
+                    <td>Nombre del grupo de casillas de verificación (para enviar múltiples valores).</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td><code>id</code></td>
+                    <td>Identificador único.</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td><code>value</code></td>
+                    <td>Valor que se envía al servidor si la casilla está marcada.</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td><code>checked</code></td>
+                    <td>Especifica que la casilla debe estar marcada al cargar la página.</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td><code>required</code></td>
+                    <td>Hace que al menos una casilla del grupo sea obligatoria (dependiendo del navegador).</td>
+                    <td></td>
+                </tr>
+            </tbody>
+        </table>
+        <h5>Código Ejemplo:</h5>
+        <pre><code>
+            &lt;label&gt;&lt;input type="checkbox" name="intereses" value="musica"&gt; Música&lt;/label&gt;&lt;br&gt;
+            &lt;label&gt;&lt;input type="checkbox" name="intereses" value="deporte" checked&gt; Deporte&lt;/label&gt;&lt;br&gt;
+            &lt;label&gt;&lt;input type="checkbox" name="intereses" value="lectura"&gt; Lectura&lt;/label&gt;
+        </code></pre>
+        <h4>Resultado:</h4>
+        <div>
+            <label><input type="checkbox" name="intereses-render" value="musica"> Música</label><br>
+            <label><input type="checkbox" name="intereses-render" value="deporte" checked> Deporte</label><br>
+            <label><input type="checkbox" name="intereses-render" value="lectura"> Lectura</label>
+        </div>
+    </article>
+
+    <hr>
+    <h3 id="botonRadio">II.8.5 HTML.Botón de radio (&lt;input type="radio"&gt;)</h3>
+    <article>
+        <p>Permite al usuario seleccionar una única opción de un conjunto.</p>
+        <h4>Atributos:</h4>
+        <table>
+            <thead>
+                <tr>
+                    <th>Nombre</th>
+                    <th>Explicación</th>
+                    <th>Opciones</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><code>type</code></td>
+                    <td>Define el tipo del elemento input.</td>
+                    <td><code>radio</code></td>
+                </tr>
+                <tr>
+                    <td><code>name</code></td>
+                    <td>Nombre del grupo de botones de radio (para asegurar que solo uno esté seleccionado).</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td><code>id</code></td>
+                    <td>Identificador único.</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td><code>value</code></td>
+                    <td>Valor que se envía al servidor cuando el botón está seleccionado.</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td><code>checked</code></td>
+                    <td>Especifica que el botón debe estar seleccionado al cargar la página.</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td><code>required</code></td>
+                    <td>Hace que al menos un botón del grupo sea obligatorio (dependiendo del navegador).</td>
+                    <td></td>
+                </tr>
+            </tbody>
+        </table>
+        <h4>Código Ejemplo:</h4>
+        <pre><code>
+            &lt;label&gt;&lt;input type="radio" name="genero" value="masculino"&gt; Masculino&lt;/label&gt;&lt;br&gt;
+            &lt;label&gt;&lt;input type="radio" name="genero" value="femenino" checked&gt; Femenino&lt;/label&gt;&lt;br&gt;
+            &lt;label&gt;&lt;input type="radio" name="genero" value="otro"&gt; Otro&lt;/label&gt;
+        </code></pre>
+        <h4>Resultado:</h4>
+        <div>
+            <label><input type="radio" name="genero-render" value="masculino"> Masculino</label><br>
+            <label><input type="radio" name="genero-render" value="femenino" checked> Femenino</label><br>
+            <label><input type="radio" name="genero-render" value="otro"> Otro</label>
+        </div>
+    </article>
+
+    <hr>
+    <h3 id="botonEnvio">II.8.6 HTML.Botón de envío (&lt;input type="submit"&gt;)</h3>
+    <article>
+        <p>Crea un botón que envía los datos del formulario al servidor.</p>
+        <h4>Atributos:</h4>
+        <table>
+            <thead>
+                <tr>
+                    <th>Nombre</th>
+                    <th>Explicación</th>
+                    <th>Opciones</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><code>type</code></td>
+                    <td>Define el tipo del elemento input.</td>
+                    <td><code>submit</code></td>
+                </tr>
+                <tr>
+                    <td><code>value</code></td>
+                    <td>Texto que se muestra en el botón.</td>
+                    <td></td>
+                </tr>
+            </tbody>
+        </table>
+        <h4>Código Ejemplo:</h4>
+        <pre><code>
+            &lt;input type="submit" value="Enviar Formulario"&gt;
+        </code></pre>
+        <h5>Resultado:</h5>
+        <div>
+            <input type="submit" value="Enviar Formulario">
+        </div>
+    </article>
+
+    <hr>
+    <h3 id="botonReinicio">II.8.7 HTML.Botón de reinicio (&lt;input type="reset"&gt;)</h3>
+    <article>
+        <p>Define un botón Clickable. Puede contener HTML.</p>
+        <h4>Atributos:</h4>
+        <table>
+            <thead>
+                <tr>
+                    <th>Nombre</th>
+                    <th>Explicación</th>
+                    <th>Opciones</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><code>type</code></td>
+                    <td>Define el tipo del botón.</td>
+                    <td><code>submit</code> (por defecto), <code>reset</code>, <code>button</code></td>
+                </tr>
+                <tr>
+                    <td><code>name</code></td>
+                    <td>Nombre del botón.</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td><code>value</code></td>
+                    <td>Valor asociado al botón cuando se envía el formulario.</td>
+                    <td></td>
+                </tr>
+            </tbody>
+        </table>
+        <h4>Código Ejemplo:</h4>
+        <pre><code>
+            &lt;button type="button"&gt;Haz clic aquí&lt;/button&gt;
+        </code></pre>
+        <h5>Resultado:</h5>
+        <div>
+            <button type="button">Haz clic aquí</button>
+        </div>
+    </article>
+
+    <hr>
+    <h3 id="controlRango">II.8.8 HTML.Control de rango (&lt;input type="range"&gt;)</h3>
+    <article>
+        <p>Permite al usuario seleccionar un valor dentro de un rango.</p>
+        <h4>Atributos:</h4>
+        <table>
+            <thead>
+                <tr>
+                    <th>Nombre</th>
+                    <th>Explicación</th>
+                    <th>Opciones</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><code>type</code></td>
+                    <td>Define el tipo del elemento input.</td>
+                    <td><code>range</code></td>
+                </tr>
+                <tr>
+                    <td><code>name</code></td>
+                    <td>Nombre del control.</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td><code>id</code></td>
+                    <td>Identificador único.</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td><code>min</code></td>
+                    <td>Especifica el valor mínimo permitido.</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td><code>max</code></td>
+                    <td>Especifica el valor máximo permitido.</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td><code>step</code></td>
+                    <td>Especifica los intervalos válidos.</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td><code>value</code></td>
+                    <td>Valor inicial del control.</td>
+                    <td></td>
+                </tr>
+            </tbody>
+        </table>
+        <h5>Código Ejemplo:</h5>
+        <pre><code>
+            &lt;label for="volumen"&gt;Volumen:&lt;/label&gt;
+            &lt;input type="range" id="volumen" name="volumen" min="0" max="100" value="50"&gt;
+        </code></pre>
+        <h4>Resultado:</h4>
+        <div>
+            <label for="volumen-render">Volumen:</label>
+            <input type="range" id="volumen-render" name="volumen-render" min="0" max="100" value="50">
+        </div>
+    </article>
+
+    <hr>
+    <h3 id="controlArchivo">II.8.9 HTML.Control de archivo (&lt;input type="file"&gt;)</h3>
+    <article>
+        <p>Permite al usuario seleccionar uno o varios archivos.</p>
+        <h4>Atributos:</h4>
+        <table>
+            <thead>
+                <tr>
+                    <th>Nombre</th>
+                    <th>Explicación</th>
+                    <th>Opciones</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><code>type</code></td>
+                    <td>Define el tipo del elemento input.</td>
+                    <td><code>file</code></td>
+                </tr>
+                <tr>
+                    <td><code>name</code></td>
+                    <td>
+                        Nombre del control (para la carga de archivos en el servidor).</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td><code>id</code></td>
+                    <td>Identificador único.</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td><code>multiple</code></td>
+                    <td>Permite seleccionar múltiples archivos.</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td><code>accept</code></td>
+                    <td>Especifica los tipos de archivo aceptados (ej., ".jpg,.png").</td>
+                    <td>Lista de extensiones o tipos MIME.</td>
+                </tr>
+                <tr>
+                    <td><code>required</code></td>
+                    <td>Especifica que se debe seleccionar un archivo.</td>
+                    <td></td>
+                </tr>
+            </tbody>
+        </table>
+        <h4>Código Ejemplo:</h4>
+        <pre><code>
+            &lt;label for="archivo"&gt;Seleccionar archivo:&lt;/label&gt;
+            &lt;input type="file" id="archivo" name="archivo"&gt;
+        </code></pre>
+        <h4>Resultado:</h4>
+        <div>
+            <label for="archivo-render">Seleccionar archivo:</label>
+            <input type="file" id="archivo-render" name="archivo-render">
+        </div>
+    </article>
+
+    <hr>
+    <h3 id="campoOculto">II.8.10 HTML.Campo oculto (&lt;input type="hidden"&gt;)</h3>
+    <article>
+        <p>No se muestra al usuario, pero puede contener datos que se envían con el formulario.</p>
+        <h4>Atributos:</h4>
+        <table>
+            <thead>
+                <tr>
+                    <th>Nombre</th>
+                    <th>Explicación</th>
+                    <th>Opciones</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><code>type</code></td>
+                    <td>Define el tipo del elemento input.</td>
+                    <td><code>hidden</code></td>
+                </tr>
+                <tr>
+                    <td><code>name</code></td>
+                    <td>Nombre del control.</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td><code>value</code></td>
+                    <td>Valor del campo oculto.</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td><code>id</code></td>
+                    <td>Identificador único.</td>
+                    <td></td>
+                </tr>
+            </tbody>
+        </table>
+        <h4>Código Ejemplo:</h4>
+        <pre><code
+            >&lt;input type="hidden" id="usuario_id" name="usuario_id" value="123"&gt;
+        </code></pre>
+        <h4>Resultado:</h4>
+        <div>
+            &lt;Este control no se visualiza&gt;
+        </div>
+    </article>
+
+    <hr>
+    <h3 id="sugerenciasEntrada">II.8.11 HTML.Sugerencias de entrada (&lt;datalist&gt;)</h3>
+    <article>
+        <p>Proporciona una lista de opciones predefinidas para un elemento &lt;input&gt;.</p>
+        <h4>Atributos del elemento &lt;datalist&gt;:</h4>
+        <table>
+            <thead>
+                <tr>
+                    <th>Nombre</th>
+                    <th>Explicación</th>
+                    <th>Opciones</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><code>id</code></td>
+                    <td>Identificador único del datalist, referenciado por el atributo <code>list</code> del input.</td>
+                    <td></td>
+                </tr>
+            </tbody>
+        </table>
+        <h4>Atributos del elemento &lt;option&gt; dentro de &lt;datalist&gt;:</h4>
+        <table>
+            <thead>
+                <tr>
+                    <th>Nombre</th>
+                    <th>Explicación</th>
+                    <th>Opciones</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><code>value</code></td>
+                    <td>Valor de la opción.</td>
+                    <td></td>
+                </tr>
+            </tbody>
+        </table>
+        <h5>Código Ejemplo:</h5>
+        <pre><code>
+            &lt;label for="navegador"&gt;Elige un navegador:&lt;/label&gt;
+            &lt;input list="browsers" id="navegador" name="navegador"&gt;
+            &lt;datalist id="browsers"&gt;
+            &lt;option value="Internet Explorer"&gt;
+            &lt;option value="Firefox"&gt;
+            &lt;option value="Chrome"&gt;
+            &lt;option value="Opera"&gt;
+            &lt;option value="Safari"&gt;
+            &lt;/datalist&gt;
+        </code></pre>
+        <h4>Resultado:</h4>
+        <div>
+            <label for="navegador-render">Elige un navegador:</label>
+            <input list="browsers-render" id="navegador-render" name="navegador-render">
+            <datalist id="browsers-render">
+              <option value="Internet Explorer">
+              <option value="Firefox">
+              <option value="Chrome">
+              <option value="Opera">
+              <option value="Safari">
+            </datalist>
+        </div>
+    </article>
+
+    <hr>
+    <h3 id="resultado">II.8.12 HTML.Salida de resultados (&lt;output&gt;)</h3>
+    <article>
+        <p>Muestra el resultado de un cálculo u otra salida relacionada con el formulario.</p>
+        <h4>Atributos:</h4>
+        <table>
+            <thead>
+                <tr>
+                    <th>Nombre</th>
+                    <th>Explicación</th>
+                    <th>Opciones</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><code>name</code></td>
+                    <td>Nombre del control.</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td><code>for</code></td>
+                    <td>Lista de IDs de otros elementos a los que está relacionado el resultado.</td>
+                    <td></td>
+                </tr>
+            </tbody>
+        </table>
+        <h4>Código Ejemplo:</h4>
+        <pre><code>
+            &lt;form oninput="resultado.value=parseInt(a.value)+parseInt(b.value)"&gt;
+            &lt;input type="number" id="a" name="a" value="0"&gt; +
+            &lt;input type="number" id="b" name="b" value="0"&gt; =
+            &lt;output name="resultado" for="a b"&gt;0&lt;/output&gt;
+            &lt;/form&gt;
+        </code></pre>
+        <h4>Resultado:</h4>
+        <div>
+            <form oninput="resultado_render.value=parseInt(a_render.value)+parseInt(b_render.value)">
+              <input type="number" id="a_render" name="a_render" value="0"> +
+              <input type="number" id="b_render" name="b_render" value="0"> =
+              <output name="resultado_render" for="a_render b_render">0</output>
+            </form>
+        </div>
+    </article>
+
+    <hr>
+    <h3 id="labelFieldLegend">II.8.13. HTML.Elementos de Formulario: Label, Fieldset, Legend</h3>
+    <h3 id="etiqueta">II.8.13.1. HTML.Etiqueta (&lt;label&gt;)</h3>
+    <article>
+        <p>Define una etiqueta para un elemento de formulario, mejorando la accesibilidad y usabilidad.</p>
+        <h4>Atributos:</h4>
+        <table>
+            <thead>
+                <tr>
+                    <th>Nombre</th>
+                    <th>Explicación</th>
+                    <th>Opciones</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><code>for</code></td>
+                    <td>Especifica el <code>id</code> del elemento de formulario al que está asociada la etiqueta.</td>
+                    <td>Un valor de <code>id</code> existente en el documento.</td>
+                </tr>
+            </tbody>
+        </table>
+        <h4>Código Ejemplo:</h45>
+        <pre><code>
+            &lt;label for="nombre"&gt;Nombre:&lt;/label&gt;
+            &lt;input type="text" id="nombre" name="nombre"&gt;
+        </code></pre>
+        <h5>Resultado:</h5>
+        <div>
+            <label for="nombre-render">Nombre:</label>
+            <input type="text" id="nombre-render" name="nombre-render">
+        </div>
+    </article>
+
+    <hr>
+    <h3 id="grupoCampos">II.8.13.2 HTML.Grupo de campos (&lt;fieldset&gt;)</h3>
+    <article>
+        <p>Agrupa elementos relacionados dentro de un formulario.</p>
+        <h4>Atributos:</h4>
+        <table>
+            <thead>
+                <tr>
+                    <th>Nombre</th>
+                    <th>Explicación</th>
+                    <th>Opciones</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><code>disabled</code></td>
+                    <td>Especifica que el grupo de campos debe estar deshabilitado.</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td><code>form</code></td>
+                    <td>Especifica a qué formulario pertenece el grupo de campos (si no está anidado directamente dentro de un formulario).</td>
+                    <td>El <code>id</code> de un elemento <code>&lt;form&gt;</code>.</td>
+                </tr>
+                <tr>
+                    <td><code>name</code></td>
+                    <td>Nombre del grupo de campos.</td>
+                    <td></td>
+                </tr>
+            </tbody>
+        </table>
+        <h5>Código Ejemplo:</h5>
+        <pre><code>
+            &lt;fieldset&gt;
+            &lt;legend&gt;Información Personal&lt;/legend&gt;
+            &lt;label for="nombre_fs"&gt;Nombre:&lt;/label&gt;&lt;br&gt;
+            &lt;input type="text" id="nombre_fs" name="nombre_fs"&gt;&lt;br&gt;&lt;br&gt;
+            &lt;label for="email_fs"&gt;Email:&lt;/label&gt;&lt;br&gt;
+            &lt;input type="email" id="email_fs" name="email_fs"&gt;&lt;br&gt;&lt;br&gt;
+            &lt;/fieldset&gt;
+        </code></pre>
+        <h4>Resultado:</h4>
+        <div>
+            <fieldset>
+                <legend>Información Personal</legend>
+                <label for="nombre_fs_render">Nombre:</label><br>
+                <input type="text" id="nombre_fs_render" name="nombre_fs_render"><br><br>
+                <label for="email_fs_render">Email:</label><br>
+                <input type="email" id="email_fs_render" name="email_fs_render"><br><br>
+            </fieldset>
+        </div>
+    </article>
+
+    <hr>
+    <h3 id="leyendaGrupoCampos">II.8.13.3 HTML.Leyenda de grupo de campos (&lt;legend&gt;)</h3>
+    <article>
+        <p>Define un título para el contenido del elemento &lt;fieldset&gt;.</p>
+        <h4>Atributos:</h4>
+        <table>
+            <thead>
+                <tr>
+                    <th>Nombre</th>
+                    <th>Explicación</th>
+                    <th>Opciones</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>No tiene atributos específicos relevantes para su función principal.</td>
+                    <td></td>
+                    <td></td>
+                </tr>
+            </tbody>
+        </table>
+        <h5>Código Ejemplo (usado dentro de &lt;fieldset&gt;):</h5>
+        <pre><code>
+            &lt;fieldset&gt;
+            &lt;legend&gt;Información de Contacto&lt;/legend&gt;
+            &lt;label for="telefono"&gt;Teléfono:&lt;/label&gt;&lt;br&gt;
+            &lt;input type="tel" id="telefono" name="telefono"&gt;&lt;br&gt;
+            &lt;/fieldset&gt;
+        </code></pre>
+        <h4>Resultado:</h4>
+        <div>
+            <fieldset>
+                <legend>Información de Contacto</legend>
+                <label for="telefono-render">Teléfono:</label><br>
+                <input type="tel" id="telefono-render" name="telefono-render"><br>
+            </fieldset>
+        </div>
+    </article>
+
+    <a href="#">Saltar a Inicio</a>
+
+    <hr>
+    <hr>    
+</body>
+</html>

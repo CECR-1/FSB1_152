@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DWFSP1_152. HTML</title>
+</head>
+<body>
+    <h1 id="inicio">DESARROLLO WEB FULL STACK BASICO - DWFSP1_152</h1>
+    <hr>
+    <hr>
+    <h2><u>II.12 HTML.Referencias: </u></h2>
+    <hr>
+
+
+    <hr>
+    <h3 id="globales">II.12.7 HTML.Atributos globales</h3>
+
+    <article id="atributos-globales">
+        <p>Los atributos globales se utilizan para introducir parámetros adicionales a todos los elementos HTML. Por lo tanto, son atributos que permiten modificar características específicas, como de diseño o funcionalidad, de cualquier elemento HTML, ya sea un párrafo, un encabezado, un enlace o una imagen.
+        </p>
+        
+        <p>Los atributos globales tienen una sintaxis idéntica al resto de atributos. Tienen dos partes: el nombre y el valor separados por el símbolo «igual» (=). No obstante, algunos atributos son binarios, por lo que no requieren valor: su inclusión los activa y su omisión deja la configuración por defecto.
+        </p>
+
+        <p>El grupo de los atributos globales fue introducido en HTML5. Esto significa que los elementos introducidos en HTML5 también soportan el uso de atributos globales. No obstante, hay algunas excepciones. Por ejemplo, el atributo lang no tendrá efecto en un elemento sin contenido, y el atributo spellcheck no tendrá afectación en el comportamiento de un párrafo.
+        </p>
+
+        <h4>Lista de atributos globales</h4>
+
+        <table border="1">
+            <thead>
+                <tr>
+                    <th>Nombre del atributo</th>
+                    <th>Definición</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr><td>accesskey</td><td>Define una tecla que ejecutará una acción asociada al elemento cuando el usuario la pulse.</td></tr>
+                <tr><td>autocapitalize</td><td>Convierte a mayúsculas de forma automática un texto que ha sido entrado por el usuario.</td></tr>
+                <tr><td>autofocus</td><td>Coloca el foco sobre el elemento justo cuando se termina de cargar el documento HTML.</td></tr>
+                <tr><td>autocomplete</td><td>Provee información sobre cómo los navegadores web deben hacer sugerencias de autocompletado.</td></tr>
+                <tr><td>class</td><td>Define el nombre de una clase o una lista de clases para aplicar estilos en cascada (CSS).</td></tr>
+                <tr><td>contenteditable</td><td>Indica si el elemento en cuestión debería ser editable o no para el usuario.</td></tr>
+                <tr><td>data-*</td><td>Introduce datos personalizados para el intercambio de información entre el HTML y la representación del DOM.</td></tr>
+                <tr><td>dir</td><td>Especifica la dirección en la que el texto está escrito. Útil para ciertos idiomas.</td></tr>
+                <tr><td>draggable</td><td>Indica si el elemento puede ser arrastrado.</td></tr>
+                <tr><td>enterkeyhint</td><td>Muestra un icono de la tecla Enter en teclados virtuales.</td></tr>
+                <tr><td>hidden</td><td>Indica que el elemento vinculado a este atributo no debe ser mostrado por el navegador web.</td></tr>
+                <tr><td>id</td><td>Define el nombre de un identificador único que puede ser usado tanto en CSS como en JS.</td></tr>
+                <tr><td>inputmode</td><td>Provee qué tipo de mecanismo de entrada debe usarse para entrar datos en elementos editables.</td></tr>
+                <tr><td>is</td><td>Especifica un nombre para un elemento personalizado que extiende a otro elemento.</td></tr>
+                <tr><td>itemid</td><td>Indica un identificador único y global para ser usado en un ítem con microdatos.</td></tr>
+                <tr><td>itemprop</td><td>Añade propiedades a un ítem, pensado para ser usado con microdatos.</td></tr>
+                <tr><td>itemref</td><td>Proporciona una lista de identificadores de ítems con propiedades adicionales, para microdatos.</td></tr>
+                <tr><td>itemscope</td><td>Sirve para especificar que el HTML contenido en un bloque se refiere a un término de microdatos.</td></tr>
+                <tr><td>itemtype</td><td>Especifica la URL que se empleará para definir las propiedades de los microdatos.</td></tr>
+                <tr><td>lang</td><td>Define el lenguaje utilizado en el contenido del elemento en cuestión.</td></tr>
+                <tr><td>nonce</td><td>Indica un número criptográfico único ("nonce") para determinar si un recurso externo será cargado.</td></tr>
+                <tr><td>slot</td><td>Permite especificar el nombre del <slot> en el cual se emplaza el elemento vinculado.</td></tr>
+                <tr><td>spellcheck</td><td>Indica si el elemento debe estar sujeto a revisiones ortográficas o gramaticales.</td></tr>
+                <tr><td>style</td><td>Permite introducir declaraciones CSS que se aplicarán directamente sobre el elemento.</td></tr>
+                <tr><td>tabindex</td><td>Establece el orden de navegación mediante la tecla tabuladora (Tab).</td></tr>
+                <tr><td>title</td><td>Permite establecer un título a un elemento para mejorar la accesibilidad.</td></tr>
+                <tr><td>translate</td><td>Controla si el navegador debe traducir o no el contenido del elemento y el de sus hijos.</td></tr>
+            </tbody>
+        </table>
+    </article>
+
+    <hr>
+    <h3 id="eventos">II.12.8 HTML.Eventos</h3>
+
+    <article id="eventos-html">
+        <p>Los atributos de eventos son mecanismos que crean una interacción entre los elementos del documento HTML y ciertos sucesos que pueden estar relacionados con el sistema o con las acciones del usuario.
+        </p>
+        <p>Estos eventos están asociados a fragmentos de código JavaScript, por lo que se ejecutan en el lado del cliente. Se utilizan para que el código ejecute funciones que se iniciarán según las condiciones propias del evento; por ejemplo, cuando el usuario haga clic sobre un elemento determinado.
+        </p>
+        <p>Existen algunos atributos de eventos que están disponibles para todos los elementos que existen, mientras que hay otros que sólo tendrán efecto en elementos específicos. Este sería el caso de eventos relacionados con la reproducción de contenido multimedia como audio y vídeo.
+        </p>
+
+        <h4 id="ventana">Atributos de eventos de ventana</h4>
+        <p>Estos atributos de eventos sólo se aplican al elemento <body>.</p>
+        <table border="1">
+            <thead>
+                <tr>
+                    <th>Atributo</th>
+                    <th>Descripción</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>onafterprint</strong></td>
+                    <td>Se ejecuta cuando el documento es imprimido.</td>
+                </tr>
+                <tr>
+                    <td><strong>onbeforeprint</strong></td>
+                    <td>Se ejecuta antes de que el documento sea imprimido.</td>
+                </tr>
+                <tr>
+                    <td><strong>onbeforeunload</strong></td>
+                    <td>Se ejecuta antes de abandonar la página, justo antes de que se ejecute onunload.</td>
+                </tr>
+                <tr>
+                    <td><strong>onblur</strong></td>
+                    <td>Se ejecuta cuando la ventana pierde el foco.</td>
+                </tr>
+                <tr>
+                    <td><strong>onerror</strong></td>
+                    <td>Se ejecuta cuando ocurre un error durante la descarga de un documento.</td>
+                </tr>
+                <tr>
+                    <td><strong>onhashchange</strong></td>
+                    <td>Se ejecuta cuando cambia el texto ancla de una URL (lo que viene después de #).</td>
+                </tr>
+                <tr>
+                    <td><strong>onload</strong></td>
+                    <td>Se ejecuta cuando se ha cargado completamente el contenido de una página web.</td>
+                </tr>
+                <tr>
+                    <td><strong>onmessage</strong></td>
+                    <td>Se ejecuta cuando se activa un mensaje.</td>
+                </tr>
+                <tr>
+                    <td><strong>onoffline</strong></td>
+                    <td>Se ejecuta cuando el navegador web trabaja sin conexión a Internet.</td>
+                </tr>
+                <tr>
+                    <td><strong>ononline</strong></td>
+                    <td>Se ejecuta cuando el navegador web trabaja con conexión a Internet.</td>
+                </tr>
+                <tr>
+                    <td><strong>onpagehide</strong></td>
+                    <td>Se ejecuta cuando el usuario sale de la página web.</td>
+                </tr>
+                <tr>
+                    <td><strong>onpageshow</strong></td>
+                    <td>Se ejecuta cuando el usuario navega hacia la página web.</td>
+                </tr>
+                <tr>
+                    <td><strong>onpopstate</strong></td>
+                    <td>Se ejecuta cuando el historial de la ventana cambia.</td>
+                </tr>
+                <tr>
+                    <td><strong>onredo</strong></td>
+                    <td>Se ejecuta cuando se usa la opción Rehacer (Redo).</td>
+                </tr>
+                <tr>
+                    <td><strong>onresize</strong></td>
+                    <td>Se ejecuta cuando la ventana cambia de tamaño.</td>
+                </tr>
+                <tr>
+                    <td><strong>onstorage</strong></td>
+                    <td>Se ejecuta cuando se actualiza el almacenamiento web.</td>
+                </tr>
+                <tr>
+                    <td><strong>onundo</strong></td>
+                    <td>Se ejecuta cuando se usa la opción Deshacer (Undo).</td>
+                </tr>
+                <tr>
+                    <td><strong>onunload</strong></td>
+                    <td>Se ejecuta cuando el usuario ha abandonado la página web.</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h4 id="formulario">Atributos de eventos de formulario</h4>
+        <p>Algunos eventos pueden ocurrir en un formulario y por tanto son conocidos como eventos de formulario. Estos eventos ocurren cuando un usuario abre o cierra un formulario, cuando se mueve entre formularios, etc.</p>
+        <p>Los atributos de eventos de formulario pueden ser aplicados a todos los elementos HTML, pero se usan generalmente a los elementos de formulario.
+        </p>
+        <table border="1">
+            <thead>
+                <tr>
+                    <th>Atributo</th>
+                    <th>Descripción</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>onblur</strong></td>
+                    <td>Se ejecuta cuando el elemento de formulario pierde el foco.</td>
+                </tr>
+                <tr>
+                    <td><strong>onchange</strong></td>
+                    <td>Se ejecuta cuando el valor de un elemento ha cambiado.</td>
+                </tr>
+                <tr>
+                    <td><strong>oncontextmenu</strong></td>
+                    <td>Se ejecuta cuando el menú contextual se muestra.</td>
+                </tr>
+                <tr>
+                    <td><strong>onfocus</strong></td>
+                    <td>Se ejecuta cuando un elemento obtiene el foco.</td>
+                </tr>
+                <tr>
+                    <td><strong>oninput</strong></td>
+                    <td>Se ejecuta cuando un elemento obtiene la entrada de datos.</td>
+                </tr>
+                <tr>
+                    <td><strong>oninvalid</strong></td>
+                    <td>Se ejecuta cuando un elemento de entrada tiene un valor inválido.</td>
+                </tr>
+                <tr>
+                    <td><strong>onreset</strong></td>
+                    <td>Se ejecuta cuando se reinicia un formulario.</td>
+                </tr>
+                <tr>
+                    <td><strong>onsearch</strong></td>
+                    <td>Se ejecuta cuando el usuario escribe algo en un campo de búsqueda (&lt;input type='search'&gt;).</td>
+                </tr>
+                <tr>
+                    <td><strong>onselect</strong></td>
+                    <td>Se ejecuta cuando se selecciona texto en un elemento.</td>
+                </tr>
+                <tr>
+                    <td><strong>onsubmit</strong></td>
+                    <td>Se ejecuta cuando se envía el formulario.</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h4 id="teclado">Atributos de eventos de teclado</h4>
+        <p>Los atributos de eventos de teclado tienen relación con el uso del teclado y pueden ser aplicados a todos los elementos HTML.
+        </p>
+        <table border="1">
+            <thead>
+                <tr>
+                    <th>Atributo</th>
+                    <th>Descripción</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>onkeydown</strong></td>
+                    <td>Se ejecuta cuando el usuario está pulsando una tecla del teclado.</td>
+                </tr>
+                <tr>
+                    <td><strong>onkeypress</strong></td>
+                    <td>Se ejecuta cuando el usuario ha pulsado una tecla del teclado (no funciona para las teclas Alt, Ctrl, Shift, Esc y PrScr).</td>
+                </tr>
+                <tr>
+                    <td><strong>onkeyup</strong></td>
+                    <td>Se ejecuta cuando el usuario ha dejado de pulsar una tecla.</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h4 id="raton">Atributos de eventos de ratón</h4>
+        <p>Los atributos de eventos de ratón ocurren cuando el ratón interactúa con el documento y pueden ser aplicados a todos los elementos HTML.
+        </p>
+        <table border="1">
+            <thead>
+                <tr>
+                    <th>Atributo</th>
+                    <th>Descripción</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>onclick</strong></td>
+                    <td>Se ejecuta cuando se hace clic sobre el elemento con un botón del ratón.</td>
+                </tr>
+                <tr>
+                    <td><strong>ondblclick</strong></td>
+                    <td>Se ejecuta cuando se hace doble clic sobre el elemento con un botón del ratón.</td>
+                </tr>
+                <tr>
+                    <td><strong>ondrag</strong></td>
+                    <td>Se ejecuta cuando un elemento está siendo arrastrado.</td>
+                </tr>
+                <tr>
+                    <td><strong>ondragend</strong></td>
+                    <td>Se ejecuta cuando el usuario ha terminado de arrastrar un elemento.</td>
+                </tr>
+                <tr>
+                    <td><strong>ondragenter</strong></td>
+                    <td>Se ejecuta cuando un elemento arrastrado se mueve dentro de un destino de colocación válido.</td>
+                </tr>
+                <tr>
+                    <td><strong>ondragleave</strong></td>
+                    <td>Se ejecuta cuando un elemento arrastrado se mueve fuera de un destino de colocación válido.</td>
+                </tr>
+                <tr>
+                    <td><strong>ondragover</strong></td>
+                    <td>Se ejecuta cuando un elemento está siendo arrastrado sobre un destino de colocación válido.</td>
+                </tr>
+                <tr>
+                    <td><strong>ondragstart</strong></td>
+                    <td>Se ejecuta cuando el usuario empieza a arrastrar un elemento.</td>
+                </tr>
+                <tr>
+                    <td><strong>ondrop</strong></td>
+                    <td>Se ejecuta cuando el usuario suelta el elemento que estaba arrastrando.</td>
+                </tr>
+                <tr>
+                    <td><strong>onmousedown</strong></td>
+                    <td>Se ejecuta cuando el botón del ratón está pulsado.</td>
+                </tr>
+                <tr>
+                    <td><strong>onmousemove</strong></td>
+                    <td>Se ejecuta cuando el puntero del ratón se mueve sobre el elemento.</td>
+                </tr>
+                <tr>
+                    <td><strong>onmouseout</strong></td>
+                    <td>Se ejecuta cuando el puntero del ratón se mueve fuera de un elemento.</td>
+                </tr>
+                <tr>
+                    <td><strong>onmouseover</strong></td>
+                    <td>Se ejecuta cuando el puntero del ratón se mueve sobre un elemento.</td>
+                </tr>
+                <tr>
+                    <td><strong>onmouseup</strong></td>
+                    <td>Se ejecuta cuando el botón del ratón deja de estar pulsado.</td>
+                </tr>
+                <tr>
+                    <td><strong>onscroll</strong></td>
+                    <td>Se ejecuta cuando se mueve la barra de desplazamiento de un elemento.</td>
+                </tr>
+                <tr>
+                    <td><strong>onwheel</strong></td>
+                    <td>Se ejecuta cuando el usuario hace girar la rueda del ratón.</td>
+                </tr>
+            </tbody>
+        </table>  
+          
+        <h4 id="portapapeles">Atributos de eventos del portapapeles</h4>
+        <p>Los atributos de eventos del portapapeles tienen que ver con el uso que hace el usuario del portapapeles del sistema operativo.
+        </p>
+        <table border="1">
+            <thead>
+                <tr>
+                    <th>Atributo</th>
+                    <th>Descripción</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>oncopy</strong></td>
+                    <td>Se ejecuta cuando el contenido de un elemento ha sido copiado.</td>
+                </tr>
+                <tr>
+                    <td><strong>oncut</strong></td>
+                    <td>Se ejecuta cuando el contenido de un elemento ha sido cortado.</td>
+                </tr>
+                <tr>
+                    <td><strong>onpaste</strong></td>
+                    <td>Se ejecuta cuando el contenido de un elemento ha sido pegado.</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h4 id="multimedia">Atributos de eventos para archivos multimedia</h4>
+        <p>Los atributos de eventos para archivos multimedia se pueden usar en cualquier elemento HTML, pero en general se usan en elementos de contenido multimedia, como <b>&lt;video&gt;, &lt;audio&gt;, &lt;img&gt;, &lt;embed&gt; y &lt;object&gt;</b>.</p>
+        <table border="1">
+            <thead>
+                <tr>
+                    <th>Atributo</th>
+                    <th>Descripción</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>onabort</strong></td>
+                    <td>Se ejecuta cuando se detiene la carga de audio o vídeo.</td>
+                </tr>
+                <tr>
+                    <td><strong>oncanplay</strong></td>
+                    <td>Se ejecuta cuando el archivo está preparado para empezar la reproducción.</td>
+                </tr>
+                <tr>
+                    <td><strong>oncanplaythrough</strong></td>
+                    <td>Se ejecuta cuando el archivo está preparado para reproducirse de principio a fin sin interrupciones.</td>
+                </tr>
+                <tr>
+                    <td><strong>oncuechange</strong></td>
+                    <td>Se ejecuta cuando cambia la duración del contenido multimedia.</td>
+                </tr>
+                <tr>
+                    <td><strong>onemptied</strong></td>
+                    <td>Se ejecuta cuando ocurre algo y el archivo pasa a no estar disponible (normalmente un corte de conexión de Internet).</td>
+                </tr>
+                <tr>
+                    <td><strong>onended</strong></td>
+                    <td>Se ejecuta cuando un archivo multimedia ha alcanzado el final.</td>
+                </tr>
+                <tr>
+                    <td><strong>onerror</strong></td>
+                    <td>Se ejecuta cuando ocurre un error mientras el archivo está siendo reproducido.</td>
+                </tr>
+                <tr>
+                    <td><strong>onloadeddata</strong></td>
+                    <td>Se ejecuta cuando los datos del contenido multimedia se han cargado.</td>
+                </tr>
+                <tr>
+                    <td><strong>onloadedmetadata</strong></td>
+                    <td>Se ejecuta cuando los metadatos del contenido multimedia se han cargado.</td>
+                </tr>
+                <tr>
+                    <td><strong>onloadstart</strong></td>
+                    <td>Se ejecuta cuando el navegador web empieza la descarga de los datos del archivo.</td>
+                </tr>
+                <tr>
+                    <td><strong>onpause</strong></td>
+                    <td>Se ejecuta cuando la reproducción del contenido multimedia ha sido pausada.</td>
+                </tr>
+                <tr>
+                    <td><strong>onplay</strong></td>
+                    <td>Se ejecuta cuando el archivo ha iniciado la reproducción.</td>
+                </tr>
+                <tr>
+                    <td><strong>onplaying</strong></td>
+                    <td>Se ejecuta cuando el archivo está preparado para iniciar la reproducción.</td>
+                </tr>
+                <tr>
+                    <td><strong>onprogress</strong></td>
+                    <td>Se ejecuta cuando el navegador web está en proceso de obtener los datos del contenido multimedia.</td>
+                </tr>
+                <tr>
+                    <td><strong>onratechange</strong></td>
+                    <td>Se ejecuta cada vez que cambia el modo de reproducción (avance rápido, reproducción lenta, etc).</td>
+                </tr>
+                <tr>
+                    <td><strong>onseeked</strong></td>
+                    <td>Se ejecuta cuando el usuario ha terminado de saltar a una nueva posición en el contenido multimedia.</td>
+                </tr>
+                <tr>
+                    <td><strong>onseeking</strong></td>
+                    <td>Se ejecuta cuando el usuario empieza a saltar a una nueva posición en el contenido multimedia.</td>
+                </tr>
+                <tr>
+                    <td><strong>onstalled</strong></td>
+                    <td>Se ejecuta cuando el navegador web no puede obtener los datos del contenido multimedia por alguna razón.</td>
+                </tr>
+                <tr>
+                    <td><strong>onsuspend</strong></td>
+                    <td>Se ejecuta cuando el navegador web ya ha empezado a extraer datos del contenido multimedia, pero el proceso fue suspendido antes de que todos los datos fueran completamente cargados.</td>
+                </tr>
+                <tr>
+                    <td><strong>ontimeupdate</strong></td>
+                    <td>Se ejecuta cuando la posición de reproducción ha cambiado.</td>
+                </tr>
+                <tr>
+                    <td><strong>onvolumechange</strong></td>
+                    <td>Se ejecuta cada vez que se cambia el volumen del fichero de audio o vídeo.</td>
+                </tr>
+                <tr>
+                    <td><strong>onwaiting</strong></td>
+                    <td>Se ejecuta cuando el fichero multimedia se detiene temporalmente debido a que necesita cargar el siguiente fotograma.</td>
+                </tr>
+            </tbody>
+        </table>
+    </article>
+
+    
+
+
+    <hr>
+    <hr>    
+</body>
+</html>

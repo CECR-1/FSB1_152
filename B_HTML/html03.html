@@ -9,7 +9,151 @@
     <h1 id="inicio">DESARROLLO WEB FULL STACK BASICO - DWFSP1_152</h1>
     <hr>
     <hr>
-    <h2><u>II. HTML Encabezados, Párrafos, Saltos de Línea</u></h2>
+    <h2><u>II.2 HTML Encabezados, Párrafos, Saltos de Línea</u></h2>
+    <hr>
+
+    <h3>II.2.1 HTML.Encabezados</h3>
+
+    <p>Los encabezados son elementos HTML que se utilizan para definir titulares o cabeceras de un documento o página web. Existen seis niveles de encabezados y van desde el <strong>&lt;h1&gt;</strong> hasta el <strong>&lt;h6&gt;</strong>, ordenados de mayor a menor importancia.</p>
+
+    <h1>Esto es un título de &lt;h1&gt;</h1>
+    &lt;h1&gt;Esto es un título&lt;/h1&gt;
+
+    <p>El elemento <strong>&lt;h1&gt;</strong> es el más importante del documento, ya que establece el título principal. Los encabezados secundarios (subtítulos) se introducen con los elementos <strong>&lt;h2&gt;, &lt;h3&gt;, &lt;h4&gt;, &lt;h5&gt; y &lt;h6&gt;</strong>.</p>
+
+    <p>En el siguiente ejemplo se muestran todos los niveles de encabezados:</p>
+        <h1>Encabezado de primer nivel.</h1>
+        <h2>Encabezado de segundo nivel.</h2>
+        <h3>Encabezado de tercer nivel.</h3>
+        <h4>Encabezado de cuarto nivel.</h4>
+        <h5>Encabezado de quinto nivel.</h5>
+        <h6>Encabezado de sexto nivel.</h6>
+    
+    <h4>Estructura correcta de encabezados</h4>
+    <p>Debe existir un único elemento <strong>&lt;h1&gt;</strong> en la página ó documento. Más de uno puede crear confusión sobre el tema principal de la página. El resto de niveles pueden usarse múltiples veces.</p>
+
+    <h4>Ejemplo correcto de estructura:</h4>
+
+     <pre><code>
+        &lt;h1&gt;Artículo sobre mascotas&lt;/h1&gt;
+        &nbsp;&lt;h2&gt;Los gatos&lt;/h2&gt;
+        &nbsp;&nbsp;&lt;h3&gt;El gato persa&lt;/h3&gt;
+        &nbsp;&nbsp;&lt;h3&gt;El gato siamés&lt;/h3&gt;
+        &lt;br&gt;
+        &nbsp;&lt;h2&gt;Los perros&lt;/h2&gt;
+        &nbsp;&nbsp;&lt;h3&gt;El pastor alemán&lt;/h3&gt;
+        &nbsp;&nbsp;&lt;h3&gt;El caniche&lt;/h3&gt;
+        &lt;br&gt;
+        &nbsp;&lt;h2&gt;Artículos relacionados&lt;/h2&gt;
+    </code></pre>
+
+    <h1>Artículo sobre mascotas</h1>
+        <h2>Los gatos</h2>
+            <h3>El gato persa</h3>
+            <h3>El gato siamés</h3>
+    <br>
+        <h2>Los perros</h2>
+            <h3>El pastor alemán</h3>
+            <h3>El caniche</h3>
+    <br>
+        <h2>Artículos relacionados</h2>
+
+    <h4>Errores comunes</h4>
+    <p>No es correcto usar un <strong>&lt;h4&gt;</strong> por encima de un <strong>&lt;h3&gt;</strong>, ni un <strong>&lt;h2&gt;</strong> como nivel superior de un <strong>&lt;h1&gt;</strong>.</p>
+
+    <h4>Ejemplo incorrecto</h4>
+
+    <pre><code>
+        &lt;h3&gt;Título del artículo&lt;/h3&gt;
+        &lt;h1&gt;Texto más grande&lt;/h1&gt;
+    </code></pre>
+
+        <h3>Título del artículo</h3>
+        <h1>Texto más grande</h1>
+
+    <h4>Uso correcto de estilos</h4>
+    <p>Dado que el tamaño del texto cambia según el nivel de encabezado (<strong>&lt;h1&gt;</strong> es el más grande y <strong>&lt;h6&gt;</strong> el más pequeño), algunos diseñadores los usan solo por estética. Esto no debe hacerse. Para modificar el tamaño de fuente debe usarse CSS.</p>
+
+    <hr>
+    <h3>II.2.2 HTML.Párrafos</h3>
+
+    <p>Los párrafos son elementos que ofrecen una manera de estructurar el texto en diferentes bloques de texto. En la literatura, los párrafos se inventaron con la finalidad de separar ideas visualmente. Por tanto, este elemento HTML imita la misma finalidad. El texto debe ir entre las etiquetas &lt;p&gt; (de apertura) y &lt;/p&gt; (de cierre).</p>
+
+    <pre><code>
+        &lt;p&gt;Esto es un párrafo de siete palabras.&lt;/p&gt;
+    </code></pre>
+
+    <h4>Ejemplo de un párrafo en HTML:</h4>
+    <p>Esto es un párrafo de siete palabras.</p>
+
+    <h4>Ejemplo de un párrafo situado en la estructura básica de un documento HTML:</h4>
+    <pre><code>
+        &lt;html&gt;<br>
+        &nbsp;&nbsp;&lt;head&gt;<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&lt;title&gt;Título del documento&lt;/title&gt;<br>
+        &nbsp;&nbsp;&lt;/head&gt;<br>
+        &nbsp;&nbsp;&lt;body&gt;<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&lt;h1&gt;Este texto es el encabezado&lt;/h1&gt;<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&lt;p&gt;Esto es un párrafo de siete palabras.&lt;/p&gt;<br>
+        &nbsp;&nbsp;&lt;/body&gt;<br>
+        &lt;/html&gt;
+    </code></pre>
+
+    <h4>Características de los párrafos</h4>
+    <p>Al igual que en el caso de los encabezados, los párrafos también son elementos de bloque. Esto significa que empiezan en una línea nueva y además ocupan todo el ancho posible, impidiendo que quepa otro elemento a su lado.</p>
+
+    <h4>Normas de uso</h4>
+    <ul>
+        <li>Los elementos de bloque no pueden contener otros elementos de bloque. Esto significa que los párrafos no pueden contener otros párrafos, ni encabezados, ni listas, ni divisiones (&lt;div&gt;), ni formularios (&lt;form&gt;), ni tablas (&lt;table&gt;).</li>
+        <li>No se aconseja el uso de párrafos vacíos, es decir, con las etiquetas de apertura y de cierre sin contenido dentro de ellas. Si se quiere borrar el contenido de un párrafo, es preferible borrar también las etiquetas contenedoras en vez de dejar este fragmento de código: &lt;p&gt;&lt;/p&gt; en el documento HTML o página web.</li>
+    </ul>
+
+    <h4>Estilo por defecto de los párrafos</h4>
+    <p>El estilo CSS por defecto de los párrafos añade un margen de 1em por encima y 1em por debajo. Gracias a este margen y al hecho de que las líneas de cada párrafo tienen menos margen, se consiguen separar visualmente unos de otros.</p>
+
+    <h4>Atributos de párrafo</h4>
+    <p>Los párrafos tienen los atributos esenciales que tienen la mayoría de elementos HTML, como id, class, title y style, además de los atributos de idioma (lang, xml:lang) y de los atributos de eventos para JavaScript. No tienen atributos especiales que ofrezcan características únicas para este tipo de elemento.</p>
+    
+    <hr>
+    <h3>II.2.3 HTML.Saltos de línea</h3>
+
+    <p>Los saltos de línea son elementos que permiten insertar una línea nueva (retorno de carro & nueva línea), por ejemplo, dentro de un mismo párrafo. Es un elemento muy útil cuando se necesita organizar la información en varias líneas, como sería el caso de un poema o una dirección postal. Se utiliza la etiqueta &lt;br&gt; y no tiene etiqueta de cierre, por lo que es un elemento clasificado como elemento vacío (void element).</p>
+
+    <h4>Ejemplo de un salto de línea en HTML:</h4>
+
+    <pre>
+        &lt;p&gt;Recursivos: &lt;br&gt; Ciencia computacional&lt;/p&gt;
+    </pre>
+
+    <p>El código de arriba se verá así:</p>
+
+    <p>Recursivos: Ciencia computacional</p>
+
+    <h4>Normas de uso</h4>
+
+    <p>A menudo se utiliza el salto de línea para incrementar el espacio entre líneas de texto, y en general es una mala práctica. La forma correcta de incrementar el espacio entre objetos es usando las hojas de estilo CSS, concretamente la propiedad <strong>margin</strong>, ya que permite modificar el margen visual entre elementos.</p>
+
+    <h4>Oportunidad de salto de línea: Elemento <wbr></h4>
+
+    <p>Con el elemento &lt;wbr&gt; se puede crear una oportunidad de salto de línea. Este elemento es de utilidad para crear un salto de línea de forma opcional, de modo que el navegador web hará el salto de línea solo en caso de que la palabra no quepa en el contenedor; la palabra se verá dividida.</p>
+
+    <p>En el siguiente ejemplo se escribe una URL ficticia con varios saltos de línea opcionales en sus distintos niveles de página.</p>
+
+    <pre><code>
+        &lt;p&gt;https://example.com/&lt;wbr&gt;categoria/&lt;wbr&gt;pagina/&lt;wbr&gt;categoria/&lt;wbr&gt;pagina/&lt;wbr&gt;categoria/&lt;wbr&gt;pagina/&lt;wbr&gt;categoria/&lt;wbr&gt;pagina/&lt;wbr&gt;categoria/&lt;wbr&gt;pagina/&lt;/p&gt;
+    </code></pre>
+
+    <p>Dando como resultado:</p>
+
+    <pre><code>
+        <p style="color:red">https://example.com/<wbr>categoria/<wbr>pagina/<wbr>categoria/<wbr>pagina/<wbr>categoria/<wbr>pagina/<wbr>categoria/<wbr>pagina/<wbr>categoria/<wbr>pagina/</p>
+    </code></pre>
+
+    <p style="color: blue">https://example.com/categoria/pagina/categoria/pagina/categoria/pagina/categoria/pagina/categoria/pagina/</p>
+
+    <p>Tal y como se puede ver en el ejemplo anterior, el navegador ha hecho el salto de línea de forma opcional en uno de los puntos que se le ha indicado.</p>
+
+    <hr>
     <hr>
     
 </body>

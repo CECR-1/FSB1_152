@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DWFSP1_152. HTML</title>
+</head>
+<body>
+    <h1 id="inicio">DESARROLLO WEB FULL STACK BASICO - DWFSP1_152</h1>
+    <hr>
+    <hr>
+    <h2><u>II.7 HTML.Iframes, formularios</u></h2>
+    <hr>
+
+    <h3 id="iframes">II.7.1 HTML.Iframes</h3>
+    
+    <article>
+        <p>Los iframes son elementos HTML que ofrecen la posibilidad de incrustar un documento HTML en el documento      actual. Este elemento utiliza las etiquetas <b><b>&lt;iframe&gt;</b></b> (de apertura) y <b><b>&lt;/iframe&gt;</b> </b> (de cierre). Mediante sus atributos se especifica la página web que se desea incrustar y las medidas (ancho y alto) que permiten definir la zona rectangular que mostrará la página incrustada.
+        </p>
+        <p>Ejemplo de código HTML del elemento <b>&lt;iframe&gt;</b>:</p>
+        <pre><code>&lt;iframe width="425" height="250"
+            src="https://www.openstreetmap.org/export/embed.html?bbox=-76.5557%2C3.4216%2C-76.4957%2C3.4616&amp;layer=mapnik"&gt;
+            Mapa de Cali, Colombia.
+        &lt;/iframe&gt;
+        </code></pre>
+        <iframe width="425" height="250" importance="low"
+            src="https://www.openstreetmap.org/export/embed.html?bbox=-76.5557%2C3.4216%2C-76.4957%2C3.4616&amp;layer=mapnik">
+            Mapa de Cali, Colombia.
+        </iframe>
+
+        <p>El elemento <b>&lt;iframe&gt;</b> permite incrustar un documento HTML dentro de otro, creando una especie de ventana que muestra el contenido del documento externo.
+        <p>En el ejemplo anterior se incrusta un mapa de OpenStreetMap en una región rectangular de 425x250 píxeles.
+        El valor del atributo <b>src</b> es la URL del mapa: en este caso, la ubicación del Barcelona Supercomputing Center. Los atributos <b>width</b> y <b>height</b> definen las dimensiones de la región.
+        </p>
+        <p>Generalmente, se puede omitir el contenido que va entre las etiquetas de principio y fin (<b>&lt;iframe&gt;</b> y <b>&lt;/iframe&gt;</b> ). Pero si se desea, se puede incluir un texto alternativo que aparecerá en los navegadores que desconozcan este elemento. Este texto debería ser una descripción para que el usuario esté al corriente de la página incrustada. También puede ser útil repetir la URL de la página incrustada, así aparecerá un enlace directo para que puedan acceder explícitamente a este contenido</p>
+        <h4>Navegación y rendimiento</h4>
+        <p>Es importante señalar que cada elemento <b>&lt;iframe&gt;</b> tiene su propio historial de sesión y su propio objeto Documento, y por tanto tiene de forma implícita su propio contexto de navegación, llamado 'contexto de navegación principal'. Por su parte, el contexto de navegación del documento actual (el más superior) normalmente es la ventana del navegador, representado por el objeto Window. Por tanto, por cada <b>&lt;iframe&gt;</b> que se introduce en un documento HTML, se está incrustando también un contexto de navegación, es decir, un entorno completo de documento. Esto provoca que por cada <b>&lt;iframe&gt;</b> se requiera más memoria y otros recursos informáticos. Esto significa que si se introducen demasiados elementos <b>&lt;iframe&gt;</b> pueden aparecer problemas de rendimiento.
+        </p>
+        <h4>Atributos</h4>
+        <p>El atributo <b>src</b> es el más importante, ya que en él se especifica la URL que se quiere incrustar en el documento HTML actual. Debe ser una URL válida.</p>
+        <p>Los atributos <b>width</b> y <b>height</b> permiten definir las medidas de la región rectangular que deberá ocupar la página incrustada en el documento actual.
+        Los valores de estos dos atributos deben ser en píxeles, como valores enteros sin la unidad. Con el atributo <b>importance</b> se puede definir la prioridad de descarga del documento HTML incrustado. Sus valores pueden ser: <b>auto</b> (por defecto), <b></b> (se descarga antes que otros recursos de la página) y <b>low </b> (se descarga después de otros recursos). Este atributo puede aportar una mejora en la velocidad de carga.
+        </p>
+        <h4>Estilos</h4>
+        <p>En HTML 4.01 existieron algunos atributos que permitían modificar la apariencia de los elementos <b>&lt;iframe&gt;</b>, pero muchos de estos atributos quedaron obsoletos en HTML5. Algunos de ellos eran: frameborder, scrolling, marginwidth, marginheight y align. Actualmente se usa el CSS.
+        <pre><code>
+            &lt;iframe 
+            width="425" 
+            height="250" 
+            style="border: 2px solid red;" 
+            src="https://www.openstreetmap.org/export/embed.html?bbox=-76.5557%2C3.4216%2C-76.4957%2C3.4616&amp;layer=mapnik"&gt;
+            Mapa de Cali, Colombia.
+            &lt;/iframe&gt;>
+        </code></pre>
+        
+        <br>
+        <iframe 
+            width="425" 
+            height="250" 
+            style="border: 2px solid red;" 
+            src="https://www.openstreetmap.org/export/embed.html?bbox=-76.5557%2C3.4216%2C-76.4957%2C3.4616&amp;layer=mapnik">
+            Mapa de Cali, Colombia.
+        </iframe>
+        <br>
+        </p>
+        <h4>Para evitar confusiones</h4>
+        <p>En ocasiones, el elemento <b>&lt;iframe&gt;</b> se confunde con los elementos <b>&lt;frame&gt;</b> y <b>&lt;frameset&gt;</b> -obsoletos en HTML5-, pero su funcionamiento era algo distinto: lo que hacían era dividir la ventana del navegador en múltiples secciones, y en cada sección se cargaba un documento HTML por separado.
+        se espera, o puede que los marcos no quepan en pantallas pequeñas como móviles, ni es responsive.
+        Por eso quedaron obsoletos en favor de &lt;iframes&gt;.</p>
+    </article>
+    
+    <hr>
+    <h3 id="formularios">II.7.2 HTML.Formularios</h3>
+    
+    <article>
+        <p>Los formularios son secciones de un documento HTML o página web que permiten la interacción entre el usuario y la aplicación. A través de ciertos elementos HTML de controles interactivos, los usuarios pueden introducir datos, que normalmente se envían a un servidor web para que los procese y devuelva un resultado; pero también se pueden procesar en el lado del cliente.
+        </p>
+            
+        <p>La utilidad de los formularios puede ser muy variada. Por ejemplo, un formulario se puede usar para seleccionar el idioma preferido, para registrar usuarios en una base de datos, para solicitar información de entrega de una compra, para crear una sección de comentarios de un blog o para crear una calculadora específica.
+        Los controles interactivos pueden ser campos de texto de una o varias líneas, cajas desplegables para seleccionar una opción de la lista, botones, casillas de verificación, grupos de opciones, controles para subir archivos, selectores de color, selectores de fecha, cajas de texto largo, etc. También existen elementos para crear etiquetas que se asocian a los controles y para agrupar controles.
+        </p>
+
+        <h4>Creación de formularios: elemento <b>&lt;form&gt;</b></h4>
+        <p>El elemento <b>&lt;form&gt;</b> permite definir una sección del documento que contiene un formulario con uno o más controles interactivos. Se trata de un elemento de bloque con dos etiquetas: <b>&lt;form&gt;</b> (de apertura) y <b>&lt;/form&gt;</b> (de cierre). Por tanto, el resto de elementos del formulario quedarán dentro de estas dos etiquetas.
+        Ejemplo mínimo de formulario:</p>
+            <pre>
+                <b>&lt;form&gt;</b>
+                &lt;!--Controles interactivos--&gt;
+                <b>&lt;/form&gt;</b>
+            </pre>
+
+        <h4>Atributos de formulario</h4>
+        <p>Este elemento tiene varios atributos de gran utilidad, pero hay dos que son de vital importancia para el funcionamiento del formulario. Los dos atributos más importantes son <b>action</b> y <b>method</b>, ya que con ellos se indicará donde enviar los datos y el método que se utilizará para enviarlos. El atributo <b>action</b> se utiliza para indicar la ubicación del programa que procesará los datos introducidos por el usuario y enviados por el navegador. El programa que recibirá y procesará estos datos puede estar escrito en cualquier lenguaje del lado del servidor. El valor de este atributo será una URL relativa o absoluta. También es posible utilizar JavaScript -lenguaje del lado del cliente- mediante el atributo <b>onsubmit</b>. En este caso, el valor de <b>action</b> será javascript, y el valor de <b>onsubmit</b> será una llamada a la función JavaScript. Por ejemplo, se puede usar la función alert() para mostrar un mensaje emergente.
+        Ejemplo de código HTML de un formulario con JavaScript
+        </p>
+            <pre>
+                &lt;form action="javascript:" onsubmit="alert('¡Prueba de Botón');"&gt;
+                    &lt;button type="submit"&gt;Saluda&lt;/button&gt;
+                &lt;/form&gt;
+            </pre>
+        <p>Como resultado, aparecerá un botón con el texto «Saluda» que, al presionarlo, aparecerá un mensaje de alerta del navegador con una salutación:</p>
+
+        <form action="javascript:" onsubmit="alert('¡Prueba de Botón!');">
+            <button type="submit">Saluda</button>
+        </form>
+
+        <p>El atributo <b>method</b> permite especificar el método que se debe usar para enviar los datos del formulario.
+        Este atributo hace referencia al método HTTP, que no es propio del HTML. Los dos valores posibles de este atributo son <b>GET</b> y <b>POST</b>. En caso de no indicar ningún valor, el valor por defecto es <b>GET</b>   La principal diferencia entre los métodos <b>GET</b> y <b>POST</b> es que usando <b>GET</b>, la información se envía añadiendo variables a la URL-a partir del signo de interrogación <b>(?)</b>, y separando las variables con el signo <b>&</b> en caso de existir más de una; mientras que usando <b>POST</b>, la información se empaqueta dentro del cuerpo de la petición HTTP que se envía al servidor.
+        En este sentido, el método <b>GET</b> tiene una limitación referente a los caracteres admitidos a la hora de enviar los datos de los campos del formulario. Esta limitación viene dada según el número de caracteres permitidos en la barra de direcciones. Generalmente, este límite está entre 2.000 y 3.000 caracteres.
+        </p>
+        <p>Otra limitación de <b>GET</b> es que no permite  el envío de archivos adjuntos con el formulario. Además, los datos enviados por este método son visibles en la barra de direcciones del navegador, ya que se añaden al final de la URL. Por sus parte, el método <b>POST</b> permite enviar archivos adjuntos. No siempre es fácil elegir el método que hay que elegir para enviar los datos. En general, lo más habitual es usar el método <b>GET</b> cuando se deba usar en formularios que no modifican los datos, mientras que el método <b>POST</b> es para cuando el formulario modifica la información actual. Por ejemplo, la mayoría de buscadores de Internet usan el método <b>GET</b>. Es tan sencillo como usar un buscador y revisar la URL para ver los términos buscados. Como ejemplo de formularios que usan el método <b>POST</b> están las páginas de registro o secciones de comentarios en blogs y foros. 
+        </p>
+        <p>El atributo <b>enctype</b> permite especificar el tipo de medio (MIME type) de la información por parte del navegador antes de enviarla al servidor. Sus valores pueden ser los que se detallan a continuación:</p>
+        <ul>
+            <li><b>application/x-www-form-urlencoded:</b> este valor es el que se aplica por defecto. Se codifican los caracteres antes de ser enviados: los espacios se convierten en +, y los caracteres especiales se convierten en valores HEX.
+            </li>
+            <li><b>multipart/form-data:</b> este valor permite subir archivos binarios (como imágenes) al servidor. Los datos no se codifican.
+            </li>
+            <li><b>text/plain:</b> con este valor, los datos se envían sin codificar y en texto plano. Los espacios también se convierten en +.
+            </li>
+        </ul>
+        <p>El atributo <b>target</b> especifica la forma de acceder a una URL y, en este caso, el contexto de navegación en el que debe mostrarse la respuesta que se recibe después de enviar el formulario.
+        Sus valores pueden ser:
+        </p>
+        <ul>
+            <li><b>_blank</b>: en una nueva pestaña del navegador.</li>
+            <li><b>_parent</b>: en el contexto de navegación padre.</li>
+            <li><b>_self</b>: en el mismo contexto de navegación.</li>
+            <li><b>_top</b>: en el contexto de navegación más alto.</li>
+        </ul>
+
+        <p>Con el atributo <b>accept-charset</b> se puede especificar la codificación de caracteres. El valor de este atributo será una lista, separada por espacios (en HTML5), de los tipos de codificación que el servidor acepta. Se recomienda el uso de UTF-8 como primer valor. Si no se declara el atributo, el valor por defecto es <b>UNKNOWN</b>.
+        </p>
+
+        <p>El atributo <b>autocomplete</b> se utiliza para indicar si los controles interactivos que contiene el formulario deben sugerir valores, que serán completados automáticamente. Es habitual usarlo en controles de datos de nombre, apellidos y correo electrónico. Sus valores pueden ser <b>on</b> (activado) y <b>off</b> (desactivado).
+        </p>
+
+        <p>Gracias al atributo <b>novalidate</b> se puede indicar al formulario si los datos que contiene no se deben validar durante su envío. Se trata de un atributo binario y sin valor, por lo que su inclusión en el elemento del formulario es suficiente para que tenga el efecto de no validar los datos.
+        </p>
+
+        <p>En versiones antiguas de HTML se usó el atributo <b>name</b> para dar un nombre al formulario. Pero en versiones actuales se usa un atributo global: <b>id</b>, que debe ser único en el documento. También el atributo accept quedó desaprobado para el elemento <b>&lt;form&gt;</b>;
+        desde la versión HTML5 debe usarse en el elemento <b>&lt;input&gt;</b> específico.
+        </p>
+    </article>
+
+    <hr>
+    <h3 id="controles">II.7.3 HTML.Controles</h3>
+
+    <article>
+        <p>Los controles interactivos son elementos HTML que se insertan dentro de los formularios, y tienen como función permitir al usuario la introducción de datos que serán enviados y procesados. Estos elementos también se denominan campos de formulario o controles de formulario.
+
+        Los controles interactivos deben ir dentro de las etiquetas del formulario, es decir, entre <b>&lt;form&gt;</b> y <b>&lt;/form&gt;</b>. En el elemento del formulario se especificará, mediante los atributos específicos <b>action</b> y <b>method</b> la ubicación del programa que procesará los datos y el método que se usará para enviarlos. Como es obvio, de poco serviría recolectar datos sin enviarlos ni procesarlos.
+
+        Existe muchos tipos de controles interactivos: para introducir datos de texto y en diferente formato, como sería el caso de un correo electrónico y la contraseña; existen botones para enviar y reiniciar los datos del formulario; también hay casillas de verificación, grupos de opciones, menús desplegables, etc.
+        </p>
+        <p>HTML proporciona alguna elementos para crear controles interactivos: el elemento <b>&lt;button&gt;</b>, utilizado para crear botones; el elemento <b>&lt;input&gt;</b>, que permite crear campos variados para recoger datos del usuario; el elemento <b>&lt;textarea&gt;</b> para editar texto en múltiples líneas; y el elemento <b>&lt;select&gt;</b>, que con ayuda de <var>&lt;option&gt;</var> crean menús desplegables. Por si fuera poco, HTML también proporciona elementos para organizar y etiquetar los controles.
+    </article>
+
+    
+    <hr>
+    <hr>    
+</body>
+</html>
