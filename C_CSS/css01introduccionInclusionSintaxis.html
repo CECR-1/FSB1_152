@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        .pintar {
+        color: red;
+        }
+    </style>
+    <title>DWFSP1_152. CSS</title>
+</head>
+<body>
+    <h1 id="inicio">DESARROLLO WEB FULL STACK BASICO - DWFSP1_152</h1>
+    <hr>
+    <hr>
+    <h2><u>III. CSS.Introducción, Inclusión y Sintaxis </u></h2>
+
+    <hr>
+    <ol>
+        <li><a href="#introduccion">Introducción</a></li>
+        <li><a href="#inclusion">Inclusión</a></li>
+        <li><a href="#sintaxis">Sintaxis</a></li>
+    </ol>
+
+    <!-- Artículos -->
+    <article id="introduccion">
+        <h3>Introducción</h3>
+
+        <p>CSS es un lenguaje de hojas de estilos para diseño gráfico que fue creado para definir las características visuales de los documentos estructurados (HTML, XML), permitiendo separar el contenido del diseño. Las siglas CSS son el acrónimo de Cascading Style Sheets (hojas de estilo en cascada).</p>
+
+        <p>Junto con HTML y JavaScript, CSS es una tecnología esencial para crear y editar sitios web. Haciendo una analogía con la construcción: si el HTML es la estructura de un edificio, el CSS son los acabados, como sería la pintura o el pavimento. Se trata de un lenguaje imprescindible para estilizar páginas web.</p>
+
+        <p>La separación del contenido y el diseño tiene muchas ventajas. Por ejemplo, esto facilita que se aplique el mismo estilo en varios documentos HTML sin tener que repetir el código. También hace posible aplicar diferentes estilos a un documento, dependiendo del tamaño de pantalla, o del dispositivo, etc.</p>
+
+        <p>Aprender CSS ofrece muchas ventajas en ciertos entornos y es imprescindible en el mundo del desarrollo web, junto con HTML y JavaScript. Es obvio que saber CSS será beneficioso en cualquier trabajo relacionado con el diseño web.</p>
+
+        <p>Capacidades del CSS:</p>
+
+        <ul>
+            <li><strong>Modificar la apariencia de un sitio web.</strong> CSS permite controlar todos los aspectos visuales de una página web: forma, color, posición... Por tanto, aprender CSS es indispensable si se quiere mejorar la apariencia de una web.</li>
+            <li><strong>Ser un diseñador web.</strong> El diseño web se realiza mezclando como mínimo dos tecnologías: el HTML y el CSS. Por tanto, el lenguaje CSS es un pilar más que imprescindible para ser diseñador web.</li>
+            <li><strong>Optimización de la web.</strong> Aprender CSS puede ser de utilidad cuando se quiere optimizar una página web, ya sea para mejorar su velocidad de carga o para presentar el contenido en mejores condiciones.</li>
+            <li><strong>Aprender otros lenguajes.</strong> En el mundo del desarrollo web coexisten varias tecnologías. JavaScript se utiliza como complemento de HTML y CSS. Por lo tanto, conocer CSS es un requisito para aprender JavaScript.</li>
+        </ul>
+
+        <h4>Ejemplos de estilos CSS</h4>
+        
+        <p>Para entender mejor el funcionamiento del CSS puede ser interesante visualizar la forma de aplicar estilos. En este ejemplo se va a cambiar el color de un párrafo mediante CSS. Se publican ambos códigos.</p>
+        
+        <p><strong>Este es el código HTML del párrafo:</strong></p>
+        &lt;p style="color:red;"&gt;Esto es un párrafo rojo.&lt;/p&gt;
+        <p><strong>Resultado:</strong></p>
+        <p style="color:red;">Esto es un párrafo rojo.</p>
+        <p>---</p>
+
+        <p><strong>Y este es el código CSS para cambiarle el color:</strong></p>
+        <pre>.pintar {<br>  color: red;<br>}</pre>
+        <p><strong>Resultado:</strong></p>
+        <pre><p class="pintar">Esto es un párrafo rojo.</p></pre>
+        <p>---</p>
+
+        <p>El párrafo apareció de color rojo. ¿Cómo sabe el navegador que este párrafo tiene que salir de color rojo? Mediante el selector <b>&lt;code&gt;.pintar&lt;/code&gt;</b> que el párrafo (<b>&lt;code&gt;&lt;p&gt;&lt;/code&gt;</b>) tiene configurado a través del atributo <b>&lt;code&gt;class&lt;/code&gt;</b>.</p>
+
+        <h4>Aplicaciones del CSS</h4>
+
+        <p>CSS es un lenguaje muy versátil y flexible a la hora de estilizar páginas web. Usarlo tiene algunas ventajas que lo convierten en una bendición para los desarrolladores web. Veamos algunas de sus aplicaciones.</p>
+
+        <p>Las hojas de estilos en cascada (CSS) se llaman así porque precisamente permiten aplicar estilos en cascada. Es posible modificar varios elementos HTML a la vez y en múltiples documentos. Por ejemplo, se puede modificar el estilo de 100.000 artículos de golpe modificando una sola línea CSS. Esto implica que el mantenimiento de sitios web es muy simple, por muchas páginas que tengan.</p>
+
+        <p>Gracias a esto se ahorra mucho tiempo.</p>
+
+        <p>Las páginas web se cargan mucho más rápido gracias al uso del CSS. Ya no es necesario estilizar los elementos HTML uno por uno mediante sus atributos, lo que implicaría tener que descargar muchos más bytes cada vez que se accede a una página web desde el navegador. Con una sola norma CSS que aplique a una selección determinada es una buena optimización web.</p>
+
+        <p>El hecho de que todos los estilos puedan estar en un único documento CSS facilita mucho el mantenimiento. Es habitual que el diseño de todo un sitio web esté en un único archivo; incluyendo adaptaciones para todo tipo de dispositivos. Esta es una de las grandes ventajas de usar CSS.</p>
+
+        <p>La compatibilidad para múltiples dispositivos y formatos es otro de los puntos fuertes del CSS. Esto permite que el diseño del documento HTML se adapte a las características del dispositivo (diseño web responsive); y se puede cambiar el diseño entero dependiendo de si es para pantallas o para impresión.</p>
+
+    </article>
+
+    <hr>
+    <article id="inclusion">
+        <h3>CSS: Inclusión</h3>
+
+        <p>Para empezar a trabajar con CSS, es importante que se conozcan los métodos disponibles para incluir estilos CSS en un documento HTML. El hecho de que existan varios caminos ya es un indicativo de la flexibilidad de este lenguaje; pero también conviene conocer las ventajas y desventajas de cada método.</p>
+
+        <p>Estas son las formas principales para añadir código CSS en un documento HTML: enlazando un archivo CSS externo mediante el elemento &lt;code&gt;&lt;link&gt;&lt;/code&gt; (recomendado); importando el archivo CSS externo con la regla arroba &lt;code&gt;@import&lt;/code&gt;; añadiendo el código dentro del elemento &lt;code&gt;&lt;style&gt;&lt;/code&gt;; y usando el atributo &lt;code&gt;style&lt;/code&gt; para incrustar el código sobre un elemento HTML específico.</p>
+
+        <h4>CSS externo: Enlace externo - elemento <link></h4>
+
+        <p>Se considera que enlazar un archivo CSS externo es la forma más recomendada de incluir estilos en cascada en un documento HTML. Este método tiene la ventaja de unificar todos los estilos de un sitio web en un documento específico, simplificando así su mantenimiento y mejorando el desarrollo web.</p>
+
+        <p>En este caso, los estilos se vinculan mediante el elemento &lt;code&gt;&lt;link&gt;&lt;/code&gt;, el cual solo tiene etiqueta de apertura y se configura mediante atributos. Este elemento debe ser descendiente del elemento &lt;code&gt;&lt;head&gt;&lt;/code&gt;, usado para definir la sección de cabecera de un documento HTML.</p>
+
+        <pre>
+            &lt;head&gt;
+                &lt;link rel='stylesheet' href='estilos.css'&gt;
+            &lt;/head&gt;
+        </pre>
+
+        <p>A continuación se presenta una tabla con los atributos más utilizados para enlazar un archivo CSS:</p>
+
+        <ul>
+            <li><strong>rel</strong>: Indica el tipo de recurso enlazado, que para hojas de estilo en cascada (CSS) debe ser <code>stylesheet</code>.</li>
+            <li><strong>href</strong>: Indica una dirección URL válida del recurso enlazado; puede ser relativa o absoluta.</li>
+            <li><strong>media</strong>: Indica una lista de los tipos de medio (media types) para los cuales el recurso ha sido diseñado. Por defecto: <code>all</code> (todos). Otros valores pueden ser: <code>print</code> (impresora) o <code>screen</code> (pantallas).</li>
+            <li><strong>type</strong>: El tipo de medio (Mime Type) que se enlaza. En este caso su valor será <code>text/css</code>. En HTML5 ya no es obligatorio.</li>
+        </ul>
+
+        <h4>Importación: la regla arroba @import</h4>
+
+        <p>Con la regla arroba (<code>@import</code>) también se puede enlazar un archivo CSS externo. Sin embargo, en este caso no se enlaza desde dentro del documento HTML, sino que se importa desde dentro de otro archivo CSS.</p>
+
+        <p>Su uso es sencillo: se indica como parámetro la dirección URL válida del archivo CSS deseado.</p>
+
+        <pre><code>@import "archivo.css";</code></pre>
+
+        <p>Es importante mencionar que las declaraciones <code>@import</code> deben figurar al inicio del documento CSS, justo después de <code>@charset</code>, en caso de existir. Además, esta regla arroba no se puede anidar dentro de otras.</p>
+
+        <p>También permite indicar uno de los tipos de medios (media types), lo que posibilita aplicar estilos CSS a un tipo de dispositivo específico, como una pantalla (<code>screen</code>), una impresora (<code>print</code>) o ambos (<code>all</code>).</p>
+
+        <p>Ejemplos:</p>
+
+        <pre><code>@import "imprimir.css" print;</code></pre>
+
+        <p>Los estilos del archivo <code>imprimir.css</code> solo se importarán cuando se imprima el documento.</p>
+
+        <pre><code>@import "estilos.css" screen and (max-width: 768px);</code></pre>
+
+        <p>Los estilos del archivo <code>estilos.css</code> solo se importarán cuando el ancho del viewport sea inferior a los 768 píxeles.</p>
+
+        <h4>Dentro del archivo HTML: elemento &lt;style>&gt;</h4>
+
+        <p>Otra forma de incluir código CSS en un documento HTML es mediante el elemento &lt;code&gt;&lt;style&gt;&lt;/code&gt;. Aunque no es obligatorio, generalmente se encuentra como descendiente del elemento &lt;code&gt;&lt;head&gt;&lt;/code&gt;. Puede ubicarse en cualquier lugar del documento tantas veces como sea necesario.</p>
+
+        <p>Como ventaja respecto al enlazado de un archivo CSS externo, el uso del elemento &lt;code&gt;&lt;style&gt;&lt;/code&gt; evita una petición HTTP, lo que mejora la velocidad de carga de la página. Su desventaja principal es que dificulta el mantenimiento del código.</p>
+
+        <p>El código CSS debe encontrarse entre las dos etiquetas de este elemento: &lt;code&gt;&lt;style&gt;&lt;/code&gt; (de apertura) y &lt;code&gt;&lt;/style&gt;&lt;/code&gt; (de cierre).</p>
+
+        <p>Ejemplo de código HTML de uso del elemento &lt;code&gt;&lt;style&gt;&lt;/code&gt;:</p>
+
+        <pre><code>
+            &lt;style&gt;
+                .selector {
+                    color: red;
+                }
+            &lt;/style&gt;
+        </code></pre>       
+
+        <h4>Sobre un elemento HTML: atributo style</h4>
+
+        <p>Mediante el atributo <code>style</code> es posible insertar código CSS sobre un elemento HTML. Este atributo forma parte de los atributos globales del HTML, por lo que puede usarse sobre cualquier elemento. Sin embargo, su uso pierde la capacidad de aplicarse en cascada y dificulta mucho el mantenimiento del código.</p>
+
+    </article>
+
+    <hr>
+    <article id="sintaxis">
+
+        <h3>CSS: Sintaxis</h3>
+
+        <h4>Definición de una regla CSS</h4>
+        <p>Definir estilos mediante el lenguaje CSS es relativamente sencillo. Su sintaxis contiene una serie de reglas que son interpretadas por el navegador y luego se aplican a los elementos del documento HTML. Las reglas están formadas por las siguientes partes: selectores, propiedades y valores.</p>
+        <p>Se puede definir una regla CSS como un conjunto de parámetros que permiten apuntar a uno o varios elementos HTML para indicar cambios de estilos mediante declaraciones, que son parejas de propiedades con sus valores. La sintaxis básica de una regla es la siguiente:</p>
+        <pre><code>selector {
+            propiedad: valor;
+        }</code></pre>
+        <p>Una regla está compuesta de una parte de selectores, un símbolo de llave de apertura ({), otra parte conocida como declaración y, finalmente, se cierra con el símbolo de llave de cierre (}). Entre las llaves de apertura y cierre puede introducirse tantas declaraciones como sea necesario.</p>
+
+        <h4>Los selectores</h4>
+        <p>Los selectores permiten indicar los elementos a los que se aplica la regla CSS. Puede indicarse un único elemento o varios, separados por coma. Hay muchos tipos de selectores, pero los más importantes son los genéricos, correspondientes al nombre de la etiqueta HTML, los de identificador, que usan el nombre del atributo id, y los de clase, que usan el valor del atributo class.</p>
+        <p>Ejemplo de regla CSS con los tres tipos de selectores:</p>
+        <pre><code>div, #id, .clase {
+            color: red;
+        }</code></pre>
+        <p>En este caso, se aplicará el color rojo a todos los elementos &lt;div&gt; de un documento HTML, a todos los elementos que tengan el atributo id='id' y a todos los elementos que tengan el atributo class='clase'.</p>
+
+        <h4>Las declaraciones</h4>
+        <p>Las declaraciones son parejas «propiedad-valor» que permiten especificar los estilos de un conjunto de elementos; y se encuentran dentro de las llaves { y }. Una declaración consiste en un nombre de propiedad, seguido de dos puntos (:) y un valor de la propiedad. Se pueden hacer múltiples declaraciones, y se deben separar con el símbolo punto y coma (;).</p>
+        <p>Las declaraciones propiedad: valor; se finalizan con el símbolo ;. Cuando hay una única declaración no es obligatorio y puede omitirse, pero si hay más de una y se omite, el código no será válido.</p>
+
+        <h4>Propiedades</h4>
+        <p>Las propiedades son las características que se modifican en el elemento apuntado a través del selector. Por ejemplo, con la propiedad color puede modificarse el color del texto, con la propiedad font-size puede cambiarse el tamaño del texto, y con la propiedad background puede indicarse el color de fondo.</p>
+        <p>Ejemplo de uso de varias propiedades CSS:</p>
+        <pre><code>.selector {
+            color: red;
+            font-size: 1.2em;
+            font-weight: bold;
+            margin: 10px;
+            padding: 5px;
+        }</code></pre>
+        <p>Es una buena práctica ordenar las declaraciones alfabéticamente por el nombre de la propiedad, tal y como se observa en el ejemplo.</p>
+
+        <h4>Valores</h4>
+        <p>Cada propiedad CSS admite una serie de valores concretos, con los que se especificará un cambio de estilo. Por ejemplo, las propiedades de color sólo admiten valores que definen colores, como es de esperar; en el caso del color rojo se puede usar el nombre predefinido red, el código hexadecimal #FF0000 o los valores del modelo RGB, como sería rgb(255, 0, 0).</p>
+        <p>Ejemplo de valores CSS:</p>
+        <pre><code>.selector {
+            color: red;
+            color: #ff0000;
+            color: rgb(255, 0, 0);
+            color: hsl(0deg, 100%, 50%);
+        }</code></pre>
+        <p>En este ejemplo, todas las declaraciones de color indican el color rojo. Sin embargo, cuando una propiedad se repite, sólo se toma en cuenta la última.</p>
+
+        <h4>Sangrado del código CSS</h4>
+        <p>Es habitual que las declaraciones se muestren cada una en una línea y con un sangrado diferente al resto de las reglas CSS, quedando todo el bloque de dentro de las llaves ({}) desplazado hacia la derecha, ya sea mediante espacios o con tabuladores. Esta estructura visual facilita la lectura.</p>
+        <p>Es una buena práctica sangrar las declaraciones con el fin de mejorar la legibilidad del código CSS. Esto también facilita la lectura de código ajeno.</p>
+
+        <h4>La sintaxis de CSS en el atributo ‘style’</h4>
+        <p>Cuando se hace uso del atributo style, la sintaxis es más simple. Ya no hace falta el uso de selectores, pues el atributo ya está ubicado en el elemento que se quiere modificar. El valor de este atributo es una lista de declaraciones (parejas «propiedad-valor») separadas por punto y coma.</p>
+        <p>Ejemplo de código HTML usando el atributo style:</p>
+        <pre><code>&lt;p style="color: red; font-size: 1.2em"&gt;Texto.&lt;/p&gt;</code></pre>
+        <p>Tal y como se puede ver en este ejemplo, el valor del atributo style es una cadena de texto formada por una lista de declaraciones CSS. El estilo CSS sólo se aplicará sobre este elemento p en concreto, y en ningún otro párrafo.</p>
+
+        <h4>Las reglas arroba</h4>
+        <p>Más allá de las reglas CSS para indicar cambios de estilos usando declaraciones, existe otro tipo de reglas llamadas reglas arroba o «at-rules» (en inglés) que permiten indicar comportamientos específicos para ciertos contextos. Las más conocidas son @charset, @media o @import.</p>
+        <p>La sintaxis de este tipo de reglas es diferente. Tal y como se puede ver, empiezan con el símbolo @ (arroba) que actúa como un prefijo. A este prefijo le sigue una palabra clave que es el identificador de este tipo de reglas.</p>
+        <pre><code>@identificador(reglas);</code></pre>
+        <p>Después del identificador se introducirá el valor deseado, que también puede ser una condición o una serie de palabras clave. Cada identificador tiene su propia estructura. Se termina con un punto y coma (;) obligatorio.</p>
+
+        <h4>Distinción entre mayúsculas y minúsculas</h4>
+        <p>Cuando se trabaja con documentos HTML, los selectores de elementos como sería un párrafo (&lt;p&gt;) o una imagen (&lt;img&gt;) no distinguen entre mayúsculas y minúsculas. Por ejemplo, usando el selector DIV se apunta a elementos &lt;div&gt;.</p>
+        <p>En cambio, en los documentos XHTML sí que se distingue.</p>
+        <p>Por otra parte, tanto en documentos HTML como XHTML, los selectores de clase (atributo class) y los selectores de identificador (atributo id) distinguen entre mayúsculas y minúsculas. Por ejemplo, el selector .box no apunta a los elementos HTML que tengan el atributo class=BOX.</p>
+        <p>En el caso de las propiedades CSS y sus valores, no se distingue entre mayúsculas y minúsculas. En este sentido, la declaración COLOR: BLUE es equivalente a color: blue. Pero se recomienda utilizar siempre las minúsculas, ya que esto añade cierta coherencia y facilita la legibilidad.</p>
+        <p>No obstante, hay algunas excepciones en los valores CSS. Los valores de la propiedad font-family y los parámetros de las funciones url() y attr() sí que distinguen entre mayúsculas y minúsculas.</p>
+    </article>
+    
+    <hr>
+    <hr>
+</body>
+</html>
