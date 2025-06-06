@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DWFSP1_152. CSS</title>
+</head>
+<body>
+    <h1 id="inicio">DESARROLLO WEB FULL STACK BASICO - DWFSP1_152</h1>
+    <hr>
+    <hr>
+    <h2><u>III. CSS </u></h2>
+
+    <hr>
+    <article id="herencia">
+        <h4>Herencia en CSS</h4>
+        <p>En CSS, la herencia es un mecanismo a través del cual ciertas propiedades de un elemento se transmiten a sus elementos anidados (descendientes). Este concepto es muy similar a la herencia genética, donde los rasgos pasan de los progenitores a los hijos. Por ejemplo, si un elemento tiene definido un color de texto y una familia de fuente, cada elemento dentro de él mostrará el texto con las mismas características, a menos que se le asignen reglas específicas.</p>
+
+        <h4>Funcionamiento de la Herencia</h4>
+        <p>El funcionamiento de la herencia es sencillo: todos los elementos HTML heredan las propiedades heredables de su elemento contenedor. El único elemento que no tiene progenitor es el elemento raíz del documento HTML (&lt;html&gt;).</p>
+
+        <h4>Propiedades Heredables</h4>
+        <p>No todas las propiedades de CSS se heredan. Las propiedades relacionadas con la apariencia del texto generalmente sí lo hacen, mientras que aquellas ligadas a la estructura y dimensiones de los elementos no suelen ser heredadas. Esto permite mayor flexibilidad al diseñar interfaces web sin tener que redefinir constantemente ciertos valores.</p>
+
+        <h4>Forzar la Herencia</h4>
+        <p>Es posible modificar el comportamiento de la herencia utilizando valores especiales:</p>
+        <ul>
+            <li><strong>inherit:</strong> Hace que una propiedad tome el valor del mismo atributo definido en su elemento padre.</li>
+            <li><strong>initial:</strong> Establece la propiedad al valor predeterminado definido por el navegador.</li>
+            <li><strong>unset:</strong> Si el elemento puede heredar la propiedad, usará el valor del padre; en caso contrario, tomará su valor inicial.</li>
+        </ul>
+        <p>Estos valores pueden ser útiles para resolver conflictos o evitar repetir declaraciones innecesarias.</p>
+
+        <h4>Importancia de la Herencia</h4>
+        <p>La herencia simplifica considerablemente el diseño web. Permite aplicar estilos generales a elementos contenedores y asegura que los elementos internos los adopten automáticamente. Por ejemplo, basta con definir el estilo del texto en el elemento &lt;body&gt; para que todo el contenido del documento lo herede, salvo que se indique lo contrario.</p>
+
+        <h4>Excepciones y Cascada</h4>
+        <p>Aunque las propiedades heredadas afectan a los elementos descendientes, estas pueden ser anuladas mediante reglas más específicas. Este comportamiento está relacionado con otro concepto fundamental de CSS: la cascada, que define cómo se resuelven los conflictos entre diferentes reglas de estilo.</p>
+    </article>
+
+    <hr>
+    <article id="cascada">
+        <h4>CSS: Cascada</h4>
+        <p>En CSS, la cascada es el mecanismo que controla el resultado final cuando se aplican varias declaraciones CSS contradictorias sobre el mismo elemento HTML. Se trata de un concepto esencial en el lenguaje CSS, y forma parte de sus iniciales: Cascading Style Sheets (hojas de estilo en cascada).</p>
+
+        <h4>El proceso de aplicación de estilos</h4>
+        <p>Cuando se carga una página web, el navegador web no aplica los estilos CSS de arriba a abajo, de manera estricta. En su lugar, lo que hace es seguir un proceso más complejo. Para controlar el orden en el que se aplican las declaraciones CSS, se usan los tres conceptos siguientes, en el orden indicado:</p>
+        <ol>
+            <li>Importancia</li>
+            <li>Especificidad</li>
+            <li>Orden</li>
+        </ol>
+        <p>Primero se tiene en cuenta el concepto de la importancia, relativo a la ubicación del código. Cuando dos declaraciones CSS tienen la misma importancia, entonces la especificidad de las reglas decidirá la que se aplica. Y si tienen la misma especificidad, el orden de las fuentes controla el resultado.</p>
+
+        <h4>Más allá de estos tres conceptos fundamentales sobre la cascada</h4>
+        <p>Existe la posibilidad de crear «capas de cascada», usadas para crear grupos independientes de especificidad. Las reglas CSS de una capa no afectan directamente a las de otra capa. Se crean mediante la regla arroba <code>@layer</code>.</p>
+
+        <h4>La importancia</h4>
+        <p>La importancia de las declaraciones CSS depende de dónde se han especificado. Las declaraciones contrapuestas se aplican en el siguiente orden: las nuevas anulan a las más antiguas.</p>
+        <ol>
+            <li>Hoja de estilos del agente de usuario.</li>
+            <li>Declaraciones normales en hojas de estilo de usuario.</li>
+            <li>Declaraciones normales en hojas de estilo de autor.</li>
+            <li>Declaraciones importantes en hojas de estilo de autor.</li>
+            <li>Declaraciones importantes en hojas de estilo de usuario.</li>
+        </ol>
+        <p>La hoja de estilos del agente de usuario es la que está integrada en el navegador web, por defecto, y tiene el nivel de prioridad más bajo. Cada navegador tiene sus propias reglas sobre cómo mostrar los elementos HTML. Por ejemplo, los enlaces no visitados suelen estar subrayados y de color azul.</p>
+        <p>La hoja de estilos de usuario es la que ha especificado el usuario con el objetivo de personalizar los estilos. Algunos navegadores web pueden ser incompatibles con las hojas de estilo de usuario, aunque pueden ser muy prácticas para determinados tipos de minusvalía, como la dislexia, facilitando la lectura.</p>
+        <p>La hoja de estilos de autor es la que ha creado el desarrollador web, por lo que se encuentra vinculada de alguna manera al documento HTML, o forma parte del mismo. Se trata de la hoja de estilos de mayor importancia.</p>
+        <p>Hay dos tipos de hojas de usuario y de autor: las que contienen declaraciones CSS normales y las que contienen declaraciones CSS importantes. ¿Cuál es la diferencia entre las unas y las otras? ¿Cómo se definen las importantes?</p>
+        <p>Las declaraciones normales no tienen tanta prioridad como las declaraciones importantes. Estas últimas tienen la particularidad de que el valor termina con la expresión <code>!important</code>. De este modo se incrementa la importancia —valga la redundancia— de las declaraciones. Dicho de otro modo, las declaraciones importantes anulan las declaraciones de menor importancia.</p>
+        <p>Por lo tanto, las declaraciones importantes en hojas de estilo de usuario son las que tienen la prioridad más alta. Esto significa que se sobrepondrán a lo que haya especificado el diseñador web, y por supuesto, estarán también por encima de lo que tenga establecido el navegador web.</p>
+
+        <h4>La especificidad</h4>
+        <p>La especificidad tiene que ver con lo específico que sea un selector de una regla CSS. Un selector de especificidad baja puede dar como resultado muchos elementos; por ejemplo, el asterisco (<code>*</code>) selecciona a todos los elementos del documento. En cambio, un selector con una especificidad alta será más preciso; por ejemplo, un identificador (<code>#id</code>) solo tendrá un resultado.</p>
+        <p>Si la importancia no elimina la ambigüedad, se pasa a determinar la especificidad de los selectores CSS. Se trata de un criterio muy importante a la hora de trabajar en CSS, ya que comprender bien la cascada es crucial. No obstante, el concepto de la especificidad es bastante desconocido.</p>
+        <p>El concepto de cascada puede resultar demasiado avanzado para usuarios que no conozcan bien el tema de los selectores. Si es el caso, se recomienda la lectura sobre los selectores como requisito previo.</p>
+        <p>Si dos o más declaraciones entran en contradicción por un elemento determinado y todas las declaraciones tienen la misma importancia, ganará la declaración que tenga la regla con el selector más específico.</p>
+
+        <h4>Calcular la especificidad de un selector</h4>
+        <p>Es posible calcular la especificidad de un selector de forma fácil. Se determina partiendo de un cálculo matemático basado en cuatro componentes: “A”, “B”, “C” y “D”. El componente “A” es el más distintivo y el “D”, el que menos. En la tabla siguiente se describen los cuatro componentes:</p>
+
+        <table border="1">
+        <thead>
+            <tr>
+            <th>Componente</th>
+            <th>Descripción</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+            <td>A</td>
+            <td>Estilos insertados usando el atributo style. Si la declaración existe mediante este atributo, el valor es 1, si no, es 0.</td>
+            </tr>
+            <tr>
+            <td>B</td>
+            <td>Equivale al número de veces que aparece un identificador (empiezan con #) en el selector.</td>
+            </tr>
+            <tr>
+            <td>C</td>
+            <td>Equivale al número de veces que aparece una clase (empiezan con .), una pseudoclase (como :hover) o un atributo (como [type="radio"]) en el selector.</td>
+            </tr>
+            <tr>
+            <td>D</td>
+            <td>Equivale al número de veces que aparece un elemento o un pseudoelemento (como ::before o ::after) en el selector.</td>
+            </tr>
+        </tbody>
+        </table>
+
+        <p>Ahora, para conseguir la especificidad de cualquier regla CSS se trata de unir estos cuatro componentes. Vamos a ver una tabla con algunos ejemplos:</p>
+
+        <table border="1">
+        <thead>
+            <tr style="text-align: right;">
+            <th>Selector</th>
+            <th>A</th>
+            <th>B</th>
+            <th>C</th>
+            <th>D</th>
+            <th>Especificidad</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+            <td>Atributo style (sin selector)</td>
+            <td>1</td>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+            <td>1, 0, 0, 0</td>
+            </tr>
+            <tr>
+            <td>#ejemplo</td>
+            <td>0</td>
+            <td>1</td>
+            <td>0</td>
+            <td>0</td>
+            <td>0, 1, 0, 0</td>
+            </tr>
+            <tr>
+            <td>.clase</td>
+            <td>0</td>
+            <td>0</td>
+            <td>1</td>
+            <td>0</td>
+            <td>0, 0, 1, 0</td>
+            </tr>
+            <tr>
+            <td>h1</td>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+            <td>1</td>
+            <td>0, 0, 0, 1</td>
+            </tr>
+            <tr>
+            <td>#menu div ul li.ab.cd</td>
+            <td>0</td>
+            <td>1</td>
+            <td>2</td>
+            <td>3</td>
+            <td>0, 1, 2, 3</td>
+            </tr>
+        </tbody>
+        </table>
+
+        <p>Los valores de los cuatro componentes tienen la misma notación posicional que se usa en matemáticas. Esto significa que el componente A equivale a millares, el componente B equivale a las centenas, el componente C equivale a las decenas y el componente D equivale a las unidades.</p>
+        <p>En este sentido, y comparando los ejemplos, podemos ver que 1000 es mayor que 100, que 10, que 1 y que 123, por lo tanto tiene la mayor especificidad. También podemos ver que 123 es mayor que 100, que 10 y que 1.</p>
+        <p>Las declaraciones insertadas mediante el atributo style, al no tener selector, su especificidad siempre será 1, 0, 0, 0, es decir, 1000.</p>
+        <p>Vamos a comentar el último ejemplo con más detalle. Se trata del siguiente selector: <code>#menu div ul li.ab.cd</code>, en el que podemos ver que tiene un identificador, tres elementos y dos clases. Su especificidad es 0, 1, 2, 3 (123).</p>
+        <p>Calculemos A, B, C y D. Primero, A=0 porque es un selector, no se trata de una declaración con el atributo style. Hay un selector de identificador (<code>#menu</code>), por tanto B=1. Hay dos selectores de clase (<code>.ab</code> y <code>.cd</code>), por tanto C=2. Finalmente, hay tres selectores de elemento (<code>div</code>, <code>ul</code> y <code>li</code>), por lo que D=3. Unificando los valores obtenidos de A(0), B(1), C(2) y D(3) obtenemos 123.</p>
+        <p>Hay que mencionar que algunos elementos de selectores que permiten realizar todo tipo de combinaciones, como <code>+</code>, <code>></code>, <code>~</code>, el espacio en blanco y la pseudoclase de negación <code>:not()</code> no afectan a la especificidad de un selector. Tampoco afecta el selector universal (<code>*</code>). Sin embargo, sí que afectan los selectores que se encuentren declarados dentro de <code>:not()</code>.</p>
+
+        <h4>El orden</h4>
+        <p>Cuando dos declaraciones CSS están aplicadas al mismo elemento, tienen la misma importancia y la misma especificidad, la prioridad final se decide a partir del orden en el que se encuentre la regla CSS.</p>
+        <p>Si se trata de una hoja de estilos externa, las declaraciones que se encuentren al final del archivo CSS anularán a las que se encuentren en declaradas en líneas anteriores. Si se encuentran en diferentes hojas de estilo externas, tendrá preferencia la última que se ha declarado.</p>
+    </article>
+
+    <hr>
+    <article id="capas">
+
+        <h4>CSS: Capas</h4>
+        <p>Cuando se trabaja con hojas de estilos muy extensas puede ser necesario agrupar el código en diferentes capas con el fin de tener un mayor control de la especificidad. CSS provee la regla arroba @layer, que permite crear capas de cascada que, como su nombre indica, tienen su propia cascada y su propia lógica.
+        </p>
+        <p>La agrupación de reglas CSS en capas específicas ayuda a resolver los conflictos de especificidad que suelen aparecer en proyectos grandes. Esto es posible gracias a que se puede crear tantas capas como sea necesario y se pueden ordenar de forma personalizada. Así se puede sobreescribir estilos con facilidad.
+        </p>
+
+        <h4>Ventajas de usar capas:</h4>
+        <ul>
+            <li>Organizar código en módulos</li>
+            <li>Sobreescribir estilos CSS</li>
+            <li>Evitar conflictos de especificidad</li>
+        </ul>
+        <p>Por tanto, en una hoja de estilos CSS puede haber múltiples capas que estructuren de forma diferente la especificidad de las reglas CSS, añadiendo un nuevo orden de precedencia de los selectores. Las capas funcionan de forma similar a la que podemos encontrar en cualquier herramienta de diseño gráfico.
+        </p>
+
+        <h4>Sintaxis de @layer</h4>
+        <p>La sintaxis de esta regla arroba es muy sencilla: se usa el símbolo @ (arroba) y la palabra clave que la define; por tanto: @layer. Le sigue un nombre o una lista de nombres de capas, exceptuando las que sean anónimas.
+        </p>
+
+        <h4>Ejemplo de uso de capas</h4>
+        <p>Vamos a ver un pequeño ejemplo en el que creamos dos capas para añadir código CSS. En una se aplica un reinicio de estilos y en la otra se especifica algunos colores de base que definen el aspecto básico de una página web.
+        </p>
+            <pre><code>@layer reinicio {
+            html, body, div {
+                direction: ltr;
+                margin: 0;
+                padding: 0;
+            }
+            }
+
+            @layer base {
+            html {
+                background:#eee;
+                color: black;
+            }
+            }</code></pre>
+        <p>Tal y como se puede ver en este ejemplo, las dos capas tienen los nombres reinicio y base, cada una con sus reglas CSS.
+        </p>
+        <p>Si hubiese reglas CSS con la misma especificidad en las dos capas, los valores de la última capa anulan los valores de la anterior. La razón de esto es que no se ha indicado ningún orden determinado para las capas creadas.
+        </p>
+
+        <h4>Ordenar capas</h4>
+        <p>Cuando las capas ya están creadas, el paso lógico que sigue es ordenarlas. Si no se ordenan, el orden de aparición determina la relevancia de las reglas CSS que contienen. La última capa tiene mayor relevancia, por lo tanto sobreescribirá la capa anterior en caso de que haya declaraciones iguales.</p>
+        <p>Para ordenar capas de cascada debe utilizarse nuevamente la regla @layer. Pero en este caso, en vez de usarla para introducir reglas CSS dentro de ella, se usa para indicar un nombre o una lista de nombres de capas. Para que funcione, hay que declarar el orden de las capas antes de crearlas.</p>
+        
+        <pre><code>
+            /* Ejemplo 1 */
+                @layer reinicio, base;
+
+            /* Ejemplo 2 */
+                @layer base, reinicio;
+
+            /* Ejemplo 3 */
+                @layer base, plantilla, botones;
+        </code></pre>
+        
+        <p>Así, alterando el orden de las capas podremos cambiar de una sola vez la especificidad de todas las reglas CSS que contienen. Dentro de cada capa, la especificidad funciona de forma normal, según el valor del selector.
+        </p>
+
+        <h4>Capas anónimas</h4>
+        <p>Con @layer es posible crear capas que no tengan nombre, llamadas capas anónimas. Su orden de precedencia depende de su ubicación respecto al resto de las capas que hayamos creado, con y sin nombre. Los estilos declarados fuera de capa también pueden sobreescribir las capas anónimas.
+        </p>
+        <pre><code>
+            @layer {
+                color: darkblue;
+            }
+        </code></pre>
+        <p>Hay que tener en cuenta que no se puede asignar reglas CSS a una capa anónima concreta, y de hecho, las reglas de todas las capas anónimas se fusionarán en una única capa. Por tanto, no será posible hacer referencia a ninguna capa anónima cuando se necesite modificar su orden de precedencia.
+        </p>
+
+        <h4>Fusión de capas</h4>
+        <p>En el caso de crear varias capas con el mismo nombre, las reglas CSS contenidas serán tratadas como si estuvieran en la misma capa. Lo que determinará el resultado será la especificidad y el orden en el que se encuentren.</p>
+        <p>De hecho, la creación de capas con un nombre que ya existe es la forma de añadir nuevas reglas CSS a las capas existentes.</p>
+        <p>De igual manera, en relación con todas las reglas CSS que estén dentro de capas anónimas o fuera de las capas, el resultado se determinará a partir de la especificidad de sus selectores y de su ubicación en el código.</p>
+
+        <h4>Anidamiento de capas</h4>
+        <p>Otra característica de las capas CSS es que se pueden anidar, por lo que constituyen una herramienta con una gran flexibilidad a la hora de controlar la especificidad. La anidación de capas es un proceso muy sencillo: tan solo hay que crear una nueva capa mientras estamos dentro de otra capa.</p>
+        <pre><code>
+            @layer primera {
+                @layer segunda {
+                    @layer tercera {
+                       color: red;
+                    }
+                }
+            }
+        </code></pre>
+        <p>Existe otra forma todavía más sencilla de anidar capas y que puede ser útil en algunos casos concretos. Se trata de separar los nombres de las capas con un punto (.) al momento de crearlas. De esta manera:</p>
+        <pre><code>
+            @layer primera.segunda.tercera {
+                color: red;
+            }
+        </code></pre>
+        <p>De esta manera se está indicando que la capa «tercera» está dentro de la «segunda», y que esta última está dentro de la «primera».</p>
+
+        <h4>Importar código en una capa</h4>
+        <p>Todavía puede irse un paso más allá con el uso de capas. Utilizando la regla arroba @import para enlazar un archivo CSS e incluir su código en nuestra hoja de estilos, es posible indicar que se añade en una capa CSS específica.</p>
+        <p>Vamos a ver un ejemplo de código CSS en el que importamos un archivo llamado capa.css y lo vinculamos con una capa que se llamará «nueva-capa».</p>
+        <pre><code>
+            @import "capa.css" layer(nueva-capa);
+        </code></pre>
+        <p>Esta combinación de dos reglas arroba constituye un buen sistema para separar las capas en diferentes archivos CSS, haciendo que, en algunos casos, el código sea mucho más fácil de mantener.</p>
+
+        <h4>Fuera de las capas</h4>
+        <p>Todas las reglas CSS que no estén dentro de una capa, de forma automática se colocarán en un espacio único exterior. Estas reglas se leerán después de todas las capas que hayamos definido con la regla arroba @layer, por lo que las reglas CSS del exterior anulan los estilos declarados en las capas.</p>
+        <p>Esto es así porque las capas tienen una menor relevancia que los estilos declarados fuera de ellas. No importa el orden, por lo que esto sucederá aunque los estilos de fuera de las capas estén declarados antes que las capas. Los estilos de fuera de las capas son interpretados como si fueran parte de una última capa final.</p>
+
+        <h4>Las declaraciones importantes</h4>
+        <p>¿Qué ocurre cuando en una capa en concreto se usa la expresión !important?</p>
+        <p>Esta expresión sirve para dar mayor importancia a las declaraciones, anulando o sobreescribiendo a las demás, y también tiene efecto cuando se trabaja con capas de cascada. Por tanto, hay que tenerla en cuenta.</p>
+        <p>Si se usa la expresión !important en una propiedad CSS de una capa que tenga menor relevancia, prevalecerá por encima de las capas de mayor relevancia o declaradas más adelante. Es decir, que !important anulará el comportamiento de la especificidad agrupada en capas descrito en este artículo.</p>
+        <p>Por ejemplo, si en una primera capa que es la menos relevante añadimos la expresión !important, la regla CSS que la contenga anulará el valor de reglas contenidas en capas posteriores.</p>
+    </article>
+    <hr>
+    <hr>
+
