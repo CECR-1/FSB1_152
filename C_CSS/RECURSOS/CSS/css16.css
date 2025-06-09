@@ -1,0 +1,51 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Raleway', sans-serif;
+}
+
+.card {
+    width: 80%;
+    max-width: 600px;
+    background-color: slateblue;
+    color: white;
+    margin: 0 auto;
+    margin-top: 80px;
+    padding: 40px 20px;
+}
+
+img{
+    width: 200px;
+    display: block;
+    margin: 10px auto;
+}
+
+.titulo {
+    letter-spacing: 10px;
+    word-spacing: 10px;
+    border: 2px solid black;
+
+    /* overflow-wrap: break-word; */
+
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.parrafo{
+    text-transform: uppercase;
+    text-align: justify;
+}
+
+.parrafoUno {
+    text-transform: lowercase;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    border: 1px solid crimson;
+    font-weight: 400;
+    font-style: italic;
+    line-height: 2;
+}

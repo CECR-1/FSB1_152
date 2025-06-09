@@ -1,0 +1,12 @@
+/* 
+.abuelo .titulo {
+  color: red;
+}   
+
+.padre .titulo {
+  color: blue;
+}
+
+.abuelo>.titulo {
+  color: green;
+} */

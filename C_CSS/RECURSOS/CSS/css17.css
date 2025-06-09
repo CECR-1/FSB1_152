@@ -1,0 +1,49 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 300vh;
+}
+
+.ejemplo {
+    background: #f0f0f0;
+    margin: 10px 0 30px 0;
+    padding: 10px;
+    border-left: 6px solid slateblue;
+}
+
+.tabla-medidas {
+    width: 100%;
+    max-width: 700px;
+    margin: 30px auto;
+    border-collapse: collapse;
+    font-family: Arial, sans-serif;
+    font-size: 1em;
+    background: #fff;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.tabla-medidas th {
+    background: #5a4fcf;
+    color: #fff;
+    padding: 10px 8px;
+    text-align: left;
+}
+
+.tabla-medidas td {
+    padding: 8px 8px;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.tabla-medidas tr:last-child td {
+    border-bottom: none;
+}
+
+.tabla-medidas tr:nth-child(even) td {
+    background: #f5f5f5;
+}

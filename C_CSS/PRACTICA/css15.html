@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../RECURSOS/CSS/css15.css" />
+    <link
+      rel="shortcut icon"
+      href="../RECURSOS/FOTOS/galeria.png"
+      type="image/x-icon"
+    />
+    <title>CSS15</title>
+  </head>
+  <body>
+    <div class="backgroundFox"></div>
+    <div class="backgroundGradienteA"></div>
+    <div class="backgroundGradienteB">
+        <p>Este texto está sobre un fondo de gradiente.</p>
+    </div>
+    <hr>
+
+    <div>
+      <h2 style="text-align: center; margin: 10px auto; font-size: 50px;">Opciones de background</h2>
+      <table class="tabla-background">
+        <thead>
+          <tr>
+            <th>Propiedad</th>
+            <th>Descripción</th>
+            <th>Valores principales y explicación</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><code>background-color</code></td>
+            <td>Color de fondo</td>
+            <td>
+              <code>#000</code>, <code>red</code>,
+              <code>rgba(0,0,0,0.5)</code> – Define el color de fondo.
+            </td>
+          </tr>
+          <tr>
+            <td><code>background-image</code></td>
+            <td>Imagen o gradiente de fondo</td>
+            <td>
+              <code>url('imagen.jpg')</code> – Establece una imagen como
+              fondo.<br />
+              <code>linear-gradient(dirección, color1, color2, ...)</code>:
+              Gradiente lineal.<br />
+              <code>radial-gradient(forma, color1, color2, ...)</code>:
+              Gradiente radial.<br />
+              Puede combinar imágenes y gradientes separando por comas.
+            </td>
+          </tr>
+          <tr>
+            <td><code>background-repeat</code></td>
+            <td>Repetición de la imagen</td>
+            <td>
+              <code>repeat</code>: Repite en ambos ejes.<br />
+              <code>no-repeat</code>: No repite.<br />
+              <code>repeat-x</code>: Solo horizontal.<br />
+              <code>repeat-y</code>: Solo vertical.<br />
+              <code>space</code>: Espacia.<br />
+              <code>round</code>: Ajusta para cubrir.
+            </td>
+          </tr>
+          <tr>
+            <td><code>background-position</code></td>
+            <td>Posición de la imagen</td>
+            <td>
+              <code>left</code>, <code>center</code>, <code>right</code>,
+              <code>top</code>, <code>bottom</code>, <code>x% y%</code>,
+              <code>xpx ypx</code> – Ubica la imagen en el fondo.
+            </td>
+          </tr>
+          <tr>
+            <td><code>background-size</code></td>
+            <td>Tamaño de la imagen</td>
+            <td>
+              <code>auto</code>: Tamaño original.<br />
+              <code>cover</code>: Cubre todo el área.<br />
+              <code>contain</code>: Ajusta para que quepa.<br />
+              <code>ancho alto</code>: Especifica tamaño.
+            </td>
+          </tr>
+          <tr>
+            <td><code>background-attachment</code></td>
+            <td>Comportamiento al hacer scroll</td>
+            <td>
+              <code>scroll</code>: Se mueve con el contenido.<br />
+              <code>fixed</code>: Fijo en pantalla.<br />
+              <code>local</code>: Se mueve con el elemento.
+            </td>
+          </tr>
+          <tr>
+            <td><code>background-origin</code></td>
+            <td>Punto de origen del fondo</td>
+            <td>
+              <code>padding-box</code>: Desde el padding.<br />
+              <code>border-box</code>: Desde el borde.<br />
+              <code>content-box</code>: Desde el contenido.
+            </td>
+          </tr>
+          <tr>
+            <td><code>background-clip</code></td>
+            <td>Hasta dónde se pinta el fondo</td>
+            <td>
+              <code>border-box</code>: Hasta el borde.<br />
+              <code>padding-box</code>: Hasta el padding.<br />
+              <code>content-box</code>: Solo el contenido.<br />
+              <code>text</code>: Solo el texto.
+            </td>
+          </tr>
+          <tr>
+            <td><code>background-blend-mode</code></td>
+            <td>Modo de mezcla de fondo</td>
+            <td>
+              <code>normal</code>: Sin mezcla.<br />
+              <code>multiply</code>, <code>screen</code>, <code>overlay</code>,
+              <code>darken</code>, <code>lighten</code>, etc.: Diferentes
+              efectos de mezcla.
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <hr />
+    <hr />
+
+    <div>
+      <h2 style="text-align: center; margin: 10px auto; font-size: 50px;">Sentido de los gradientes</h2>
+      <table class="tabla-background">
+        <thead>
+          <tr>
+            <th>Dirección</th>
+            <th>Descripción</th>
+            <th>Ejemplo</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><code>to right</code></td>
+            <td>De izquierda a derecha</td>
+            <td><code>linear-gradient(to right, red, yellow)</code></td>
+          </tr>
+          <tr>
+            <td><code>to left</code></td>
+            <td>De derecha a izquierda</td>
+            <td><code>linear-gradient(to left, red, yellow)</code></td>
+          </tr>
+          <tr>
+            <td><code>to bottom</code></td>
+            <td>De arriba hacia abajo (por defecto)</td>
+            <td><code>linear-gradient(to bottom, red, yellow)</code></td>
+          </tr>
+          <tr>
+            <td><code>to top</code></td>
+            <td>De abajo hacia arriba</td>
+            <td><code>linear-gradient(to top, red, yellow)</code></td>
+          </tr>
+          <tr>
+            <td><code>to top right</code></td>
+            <td>De abajo izquierda a arriba derecha</td>
+            <td><code>linear-gradient(to top right, red, yellow)</code></td>
+          </tr>
+          <tr>
+            <td><code>to top left</code></td>
+            <td>De abajo derecha a arriba izquierda</td>
+            <td><code>linear-gradient(to top left, red, yellow)</code></td>
+          </tr>
+          <tr>
+            <td><code>to bottom right</code></td>
+            <td>De arriba izquierda a abajo derecha</td>
+            <td><code>linear-gradient(to bottom right, red, yellow)</code></td>
+          </tr>
+          <tr>
+            <td><code>to bottom left</code></td>
+            <td>De arriba derecha a abajo izquierda</td>
+            <td><code>linear-gradient(to bottom left, red, yellow)</code></td>
+          </tr>
+          <tr>
+            <td><code>ángulo (deg)</code></td>
+            <td>Ángulo en grados (0deg es arriba, 90deg es derecha)</td>
+            <td><code>linear-gradient(45deg, red, yellow)</code></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <hr />
+    <hr />
+
+  </body>
+</html>

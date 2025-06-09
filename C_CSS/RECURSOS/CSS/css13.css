@@ -1,0 +1,48 @@
+*{
+    margin: 0;  
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-size: 25px;
+}
+
+.block{
+    background-color: teal;
+    margin-bottom: 30px;
+    color: white;
+    display: block; /* Por defecto, los elementos de bloque ocupan todo el ancho disponible y comienzan en una nueva línea. */
+    width: 50%;
+    margin: 20px auto;
+}
+
+.inline{
+    background-color: crimson;
+    color: white;
+}
+
+.blocki{
+    display: block; /* Este elemento se comporta como un bloque, ocupando todo el ancho disponible. */
+    margin: 10px auto;
+    width: 80%;
+}
+
+.inlineb{
+    display: inline-block; /* Este elemento se comporta como un bloque, pero puede tener un ancho y alto específicos. */
+    background-color: darkblue;
+    color: white;
+    margin: 10px;
+    padding: 10px;
+}
+
+.inlineBoton{
+    display: inline-block;
+    background-color: darkgreen;
+    color: white;
+    text-decoration: none;
+    font-family: 'Arial';
+    padding: 15px 40px;
+    border-radius: 25px;
+    margin: 50px;
+}

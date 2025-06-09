@@ -1,0 +1,81 @@
+*{
+    margin: 0;  
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.backgroundFox{
+    border: 1px solid;
+    width: 500px;
+    height: 400px;
+    margin: 30px auto;
+    background-image: url(../FOTOS/fox.svg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-color: #f0f0f0; /* Color de fondo de respaldo */
+    background-position: center;
+}
+.backgroundGradienteA{
+    border: 1px solid;
+    height: 600px;
+    margin: 30px auto;
+    background-color: #f0f0f0; 
+    background-image: url(../FOTOS/lion.svg),linear-gradient(to right, #ff7e5f, #feb47b);
+    background-size: contain, cover; /* Asegura que ambas imágenes cubran el área */
+    background-repeat: no-repeat, no-repeat; /* Evita que las imágenes se repitan */
+    background-position: center, center; /* Centra ambas imágenes */
+}
+.backgroundGradienteB{
+    border: 1px solid;
+    height: 600px;
+    margin: 30px auto;
+    background-color: #f0f0f0; 
+    background-image: url(../FOTOS/noPets.svg),linear-gradient(to right,greenYellow, limeGreen);
+    background-size: contain, cover; /* Asegura que ambas imágenes cubran el área */
+    background-repeat: no-repeat, no-repeat; /* Evita que las imágenes se repitan */
+    background-position: center, center; /* Centra ambas imágenes */
+}
+
+p {
+    font-size: 80px;
+    color: black;
+    font-family: Arial, sans-serif;
+    margin: 20px auto;
+    font-weight: bolder;
+    text-align: center;  
+}
+
+.tabla-background {
+    width: 100%;
+    max-width: 900px;
+    margin: 40px auto;
+    border-collapse: collapse;
+    font-family: Arial, sans-serif;
+    font-size: 1em;
+    background: #fff;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.tabla-background th {
+    background: #1976d2;
+    color: #fff;
+    padding: 12px 8px;
+    text-align: left;
+    font-size: 1.1em;
+}
+
+.tabla-background td {
+    padding: 10px 8px;
+    border-bottom: 1px solid #e0e0e0;
+    vertical-align: top;
+}
+
+.tabla-background tr:last-child td {
+    border-bottom: none;
+}
+
+.tabla-background tr:nth-child(even) td {
+    background: #f5f5f5;
+}

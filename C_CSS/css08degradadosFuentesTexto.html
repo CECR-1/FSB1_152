@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DWFSP1_152. CSS</title>
+</head>
+<body>
+    <h1 id="inicio">DESARROLLO WEB FULL STACK BASICO - DWFSP1_152</h1>
+    <hr>
+    <hr>
+    <h2><u>III. CSS: degradados, fuentes y texto</u></h2>
+        
+    <hr>
+    <article id="degradados">
+        <h4>CSS: Degradados</h4>
+        <p>Los degradados son rangos de colores en los que se observa una transición visual ordenada entre dos o más colores. Por ejemplo, el color turquesa se vuelve naranja gradualmente. En CSS existen tres funciones de background-image para diseñar degradados lineales, radiales y cónicos.</p>
+
+        <h4>Tabla de funciones para diseñar degradados</h4>
+        <ul>
+            <li><strong>linear-gradient()</strong>: Degradado lineal.</li>
+            <li><strong>radial-gradient()</strong>: Degradado radial.</li>
+            <li><strong>conic-gradient()</strong>: Degradado cónico.</li>
+            <li><strong>repeating-linear-gradient()</strong>: Patrón de degradado lineal.</li>
+            <li><strong>repeating-radial-gradient()</strong>: Patrón de degradado radial.</li>
+            <li><strong>repeating-conic-gradient()</strong>: Patrón de degradado cónico.</li>
+        </ul>
+
+        <h4>Degradado lineal</h4>
+        <p>El degradado lineal es el tipo de degradado más común y utilizado en diseño web. Se crea mediante la función linear-gradient(), que puede tener dos o más parámetros. Como mínimo se deben especificar dos colores. También puede indicarse la dirección, el ángulo y la posición de cada color. Los colores se separan con una coma.</p>
+
+        <p>Por defecto, dos colores se orientan de arriba a abajo:</p>
+        <pre>.def {
+        background-image: linear-gradient(#008080,#ff7f2a);
+        }</pre>
+
+        <p>Para cambiar la dirección se introduce una expresión formada por palabras clave en el primer parámetro (antes de los colores). Por ejemplo, la expresión <code>to right</code> indica que el degradado va hacia la derecha de cada color.</p>
+
+        <pre>.lineal {
+        background-image: linear-gradient(to right, teal, #ff7f2a);
+        }</pre>
+
+        <p>La dirección del gradiente radial también se puede indicar mediante un valor numérico y unidades de ángulo, como deg (grados), grad (gradianes), rad (radianes) y turn (giros).</p>
+
+        <h4>El tamaño del color en degradados lineales</h4>
+        <p>La distancia entre colores se distribuye uniformemente de forma automática, pero también se puede modificar. Para indicar distancias se puede usar cualquier unidad, como los porcentajes. Las distancias se indican a la derecha, formando una pareja de parámetros antes de cada coma o del final.</p>
+
+        <pre>.lineal-70-80 {
+        background-image: linear-gradient(to right, teal 70%, #ff7f2a 80%);
+        }</pre>
+
+        <p>Se puede ver que hay un 70% de color turquesa, un 10% de color degradado y un 20% de color naranja. Si al naranja no le hubiésemos indicado ninguna distancia, no alcanzaría su color máximo (sin degradar) hasta el final.</p>
+
+        <h4>La función ‘repeating-linear-gradient()’</h4>
+        <p>Con la función <code>repeating-linear-gradient()</code> es posible crear degradados que se repetirán hasta cubrir el 100% de la superficie de relleno. Esto significa que si indicamos colores hasta el 50%, se repetirán en la otra mitad.</p>
+
+        <pre>.lineal-25-50 {
+        background-image: repeating-linear-gradient(to right, teal 0% 25%, #ff7f2a 25% 50%);
+        }</pre>
+
+        <p>Esto tiene un gran potencial para crear incluso fondos rayados. Imaginemos un rayado de líneas con una inclinación de 45 grados alternando los dos colores, y con un grosor de 10 píxeles cada una.</p>
+
+        <pre>.rayado {
+        background-image: repeating-linear-gradient(45deg, teal 0 10px, #ff7f2a 10px 20px);
+        }</pre>
+
+        <h4>Degradado radial</h4>
+        <p>Los degradados radiales pueden tener forma circular o elíptica, lo que aporta muchas posibilidades a nivel de diseño web. Este tipo de degradados se crean con la función radial-gradient(), que puede tener varios parámetros, como la forma, el tamaño, la posición y los colores.</p>
+
+        <pre>.radial {
+        background-image: radial-gradient(#ff7f2a, teal);
+        }</pre>
+
+        <p>Por defecto, se usa la forma elíptica adaptada a la forma rectangular de la caja; el degradado empieza en el centro (el primer color) y crece hacia fuera (el segundo color). Es posible añadir tantos colores como sea necesario.</p>
+
+        <h4>La forma de los degradados radiales</h4>
+        <p>Para indicar la forma de un degradado radial se debe introducir la palabra clave de las dos formas posibles: <code>circle</code> para definir un círculo y <code>ellipse</code> para darle forma elíptica (valor por defecto).</p>
+
+        <pre>.radial-circle {
+        background-image: radial-gradient(circle, #ff7f2a, teal);
+        }</pre>
+
+        <h4>El tamaño de los degradados radiales</h4>
+        <p>Además de indicar la forma es posible indicar el tamaño. Si se trata de un círculo, el valor será su radio; si se trata de una elipse, el primer valor será el radio horizontal y el segundo será el radio vertical.</p>
+
+        <p>También puede usarse las siguientes palabras clave:</p>
+        <ul>
+            <li><strong>farthest-corner</strong>: Intenta cubrir hasta la esquina más lejana.</li>
+            <li><strong>closest-corner</strong>: Intenta cubrir hasta la esquina más cercana.</li>
+            <li><strong>farthest-side</strong>: Intenta cubrir hasta el lado más lejano.</li>
+            <li><strong>closest-side</strong>: Intenta cubrir hasta el lado más cercano.</li>
+        </ul>
+
+        <pre>.radial-side {
+        background-image: radial-gradient(circle closest-side, #ff7f2a, teal);
+        }</pre>
+
+        <h4>La posición de los degradados radiales</h4>
+        <p>También se puede indicar la posición del centro del degradado radial. En el primer parámetro, justo después de la forma o el tamaño, se introduce el prefijo <code>at</code> seguido de la posición, que puede ser una o dos unidades de longitud relativas o absolutas, o las siguientes palabras clave:</p>
+
+        <ul>
+            <li><strong>center</strong>: Centro.</li>
+            <li><strong>top</strong>: Arriba.</li>
+            <li><strong>left</strong>: Izquierda.</li>
+            <li><strong>right</strong>: Derecha.</li>
+            <li><strong>bottom</strong>: Abajo.</li>
+            <li><strong>top left</strong>: Arriba izquierda.</li>
+            <li><strong>top right</strong>: Arriba derecha.</li>
+            <li><strong>bottom left</strong>: Abajo izquierda.</li>
+            <li><strong>bottom right</strong>: Abajo derecha.</li>
+        </ul>
+
+        <pre>.radial-top-left {
+        background-image: radial-gradient(circle 80px at top right, #ff7f2a, teal);
+        }</pre>
+
+        <h4>La función ‘repeating-radial-gradient()’</h4>
+        <p>Con la función <code>repeating-radial-gradient()</code> se puede diseñar un patrón de colores degradados que se repetirá hasta llenar la totalidad de la zona de relleno.</p>
+
+        <pre>.rayado-radial {
+        background-image: repeating-radial-gradient(circle at top right, #ff7f2a, teal 20px, #ff7f2a 40px);
+        }</pre>
+
+        <h4>Degradado cónico</h4>
+        <p>El degradado cónico es similar al radial: es como si estuviéramos viendo una figura cónica desde arriba. Se crea mediante la función conic-gradient(), cuyos parámetros mínimos son dos colores. También puede indicarse el ángulo, la dirección, el tamaño y la posición de cada color.</p>
+
+        <pre>.conico {
+        background-image: conic-gradient(teal, #ff7f2a);
+        }</pre>
+
+        <h4>El ángulo de los degradados cónicos</h4>
+        <p>Es posible definir el ángulo de los degradados cónicos mediante la palabra clave <code>from</code> y un ángulo, que puede ser en grados, gradianes, radianes y giros. El ángulo se introduce como primer parámetro.</p>
+
+        <pre>.conico-45deg {
+        background-image: conic-gradient(from 45deg, teal, #ff7f2a);
+        }</pre>
+
+        <h4>La posición de los degradados cónicos</h4>
+        <p>Al igual que ocurre con los degradados radiales, también se puede especificar la posición del centro del degradado cónico. En el primer parámetro, después de indicar el ángulo, se introduce el prefijo <code>at</code> seguido de la posición.</p>
+
+        <pre>.conico-45deg-pos {
+        background-image: conic-gradient(from 45deg at 20px 80px, teal, #ff7f2a);
+        }</pre>
+
+        <h4>La función ‘repeating-conic-gradient()’</h4>
+        <p>Con la función <code>repeating-conic-gradient()</code> se puede crear patrones de colores repetitivos para los degradados cónicos. Es importante indicar el tamaño de los colores para que el navegador web sepa cuándo debe empezar la repetición.</p>
+
+        <pre>.rayado-conico {
+        background-image: repeating-conic-gradient(from 45deg at 20px 80px, teal 10%, #ff7f2a 15%, teal 20%);
+        }</pre>
+    </article>
+
+    <hr>
+    <article id="fuentes">
+        <h4>CSS: Fuentes</h4>
+        <p>En CSS existen muchas propiedades que permiten modificar las fuentes de un documento HTML, como el tipo de letra (tipografía), el estilo de la fuente, la variante, el grosor o su tamaño. Mediante la propiedad abreviada font se pueden definir todos estos parámetros en una única propiedad.</p>
+        <p>En diseño web es importante elegir una buena tipografía: aquella que sea fácil de leer. También es importante que tenga un tamaño lo suficientemente grande como para que el lector no se deje la vista. En definitiva, es importante que el texto se pueda leer de forma cómoda y sin esfuerzo visual.</p>
+
+        <h4>Tabla de propiedades para configurar fuentes en CSS:</h4>
+        <ul>
+            <li><strong>font-family:</strong> Define la familia de la fuente.</li>
+            <li><strong>font-size:</strong> Define el tamaño de la fuente.</li>
+            <li><strong>font-style:</strong> Define el estilo de la fuente.</li>
+            <li><strong>font-variant:</strong> Define la variante de la fuente.</li>
+            <li><strong>font-weight:</strong> Define el grosor de la fuente.</li>
+            <li><strong>font-stretch:</strong> Define la anchura de la fuente.</li>
+            <li><strong>line-height:</strong> Define el alto de la línea del texto.</li>
+            <li><strong>font:</strong> Abreviatura para definir la fuente.</li>
+        </ul>
+
+        <h4>La propiedad ‘font-family’</h4>
+        <p>La propiedad font-family permite definir el tipo de letra (tipografía). Existen muchos tipos de letra que conviene conocer antes de continuar. Las fuentes con serifa, las de paloseco y las monoespaciadas. A continuación detallamos sus diferencias y sus contextos de aplicación.</p>
+
+        <h4>Fuentes con serifa</h4>
+        <p>Las fuentes que usan serifa (o gracia) son aquellas que incorporan unos adornos ubicados en los extremos de las líneas de cada letra. Las tipografías más conocidas que usan estos remates o patines son Times New Roman, Georgia y Garamond.</p>
+        <p>Son muy usadas en periódicos y documentos certificados.</p>
+        <pre>.times { font-family: Times New Roman; }</pre>
+        <pre>.georgia { font-family: Georgia; }</pre>
+
+        <h4>Fuentes de paloseco</h4>
+        <p>Las fuentes de paloseco son aquellas que no usan adornos o remates en las terminaciones de cada letra. Por esta razón también son conocidas con el nombre de sin serifa o sans serif (del francés sans: “sin”). Las más populares son Arial y Verdana, usadas por ejemplo en la web y textos educativos.</p>
+        <pre>.arial { font-family: Arial; }</pre>
+        <pre>.verdana { font-family: Verdana; }</pre>
+
+        <h4>Fuentes monoespaciadas</h4>
+        <p>Las fuentes monoespaciadas son aquellas en las que cada letra mide la misma anchura. Tienen su origen en las máquinas de escribir analógicas. Son muy usadas en programación y en documentos notariales, como las escrituras de una propiedad.</p>
+        <pre>.courier { font-family: Courier; }</pre>
+        <pre>.monospace { font-family: Monospace; }</pre>
+
+        <h4>El uso de ‘font-family’</h4>
+        <p>Los navegadores web muestran el texto utilizando los tipos de letra instalados en el dispositivo electrónico, ya sea un ordenador, un móvil o una tableta digital. Si el diseñador web especifica una fuente de texto que no existe en ningún dispositivo, ningún usuario podrá visualizar dicha fuente.</p>
+        <p>Por lo tanto, es importante asegurarse de usar fuentes que estén disponibles en todos los equipos. Incluso es posible indicar una lista de fuentes para que, si una no existe, se aplicará la siguiente de la lista. En este sentido, es habitual indicar listas de fuentes muy similares en cada caso.</p>
+        <p>Para no tener que indicar decenas de fuentes, es habitual hacer uso de las familias de fuentes genéricas. Son un mecanismo gracias al cual el navegador web utilizará la fuente más parecida a la palabra clave indicada, y se utilizan al final de la lista.</p>
+        <p>Por ejemplo, mediante la palabra clave <code>serif</code> se mostrará la fuente que
+    </article>
+
+    <hr>
+    <article id="texto">
+        <h4>CSS: Texto</h4>
+        <p>El texto tiene muchas características que se pueden modificar con el lenguaje CSS, más allá de las propiedades relativas a las fuentes. Por ejemplo, se puede modificar la alineación del texto, el color, el espacio que queda entre líneas, entre letras o entre palabras, el sangrado, etc. En definitiva, se trata de propiedades enfocadas a la disposición y comportamiento del texto.</p>
+
+        <h4>Propiedad Descripción</h4>
+        <ul>
+            <li><strong>color:</strong> Define el color del texto.</li>
+            <li><strong>word-spacing:</strong> Define el espaciado entre palabras.</li>
+            <li><strong>letter-spacing:</strong> Define el espaciado entre letras.</li>
+            <li><strong>text-align:</strong> Alinea el texto horizontalmente.</li>
+            <li><strong>vertical-align:</strong> Alinea el texto verticalmente.</li>
+            <li><strong>text-decoration:</strong> Define la decoración del texto.</li>
+            <li><strong>text-transform:</strong> Transforma entre mayúsculas y minúsculas.</li>
+            <li><strong>text-indent:</strong> Indica el sangrado del texto.</li>
+            <li><strong>white-space:</strong> Indica el tratamiento del espacio en blanco.</li>
+            <li><strong>tab-size:</strong> Indica la longitud del tabulador en código.</li>
+        </ul>
+
+        <h4>El color del texto: la propiedad ‘color’</h4>
+        <p>El color del texto se modifica con la propiedad <code>color</code>. Como valor se debe indicar un color válido, es decir, una de las 140 palabras clave (nombre de color), las palabras clave <code>inherit</code> y <code>currentcolor</code>, un código hexadecimal o valores numéricos mediante los modelos de color RGB y HSL.</p>
+        <p>Ejemplo para texto rojo con código hexadecimal:</p>
+        <pre><code>.rojo { color: #f00; }</code></pre>
+        <p>Párrafo con texto de color rojo.</p>
+        <p>Por defecto, la mayoría de navegadores web establecen el color negro para el texto. Si se quiere cambiar el color del texto en todos los elementos del documento, debido a que esta propiedad CSS se hereda de forma predeterminada, se puede asignar un color al elemento <code><body></code> directamente.</p>
+        <p>Sobre la herencia: hay que tener en cuenta que el color no se hereda a los elementos de enlace (<code><a></code>). Por lo tanto, es necesario indicar el color de los enlaces de forma explícita.</p>
+
+        <h4>Separación de palabras: la propiedad ‘word-spacing’</h4>
+        <p>La propiedad <code>word-spacing</code> permite modificar el espacio que queda entre palabras. Por defecto, la separación viene definida por la propia fuente y/o el navegador web. Los valores admitidos son unidades de longitud (relativas o absolutas) y admite valores negativos.</p>
+        <pre><code>.palabras { word-spacing: 12px; }</code></pre>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+        <p>Hay que tener cuidado de no usar un espaciado entre palabras demasiado grande, ya que con tanta separación se podría dificultar su lectura.</p>
+
+        <h4>Separación de letras: la propiedad ‘letter-spacing’</h4>
+        <p>Mediante la propiedad <code>letter-spacing</code> se pueden separar las letras de un texto. Se trata de un espaciado horizontal entre caracteres, también conocido como interletraje. Esta propiedad admite valores de longitud (absolutos y relativos) y valores negativos. Su valor por defecto es 0.</p>
+        <pre><code>.letras { letter-spacing: 4px; }</code></pre>
+        <p>Lo r e m i p s u m d o l o r s i t a m e t, c o n s e c t e t u r a d i p i s c i n g e l i t, s e d d o e i u s m o d t e m p o r i n c i d i d u n t u t l a b o r e e t d o l o r e m a g n a a l i q u a.</p>
+        <p>Una separación de letras demasiado grande dificulta enormemente la lectura, ya que impide conocer el principio y el final de las palabras.</p>
+
+        <h4>Alineación horizontal: la propiedad ‘text-align’</h4>
+        <p>El texto se puede alinear horizontalmente con la propiedad <code>text-align</code>. Los valores definidos por CSS ofrecen la posibilidad de alinear texto a la izquierda (<code>left</code>, valor por defecto), a la derecha (<code>right</code>), al centro (<code>center</code>), justificado (<code>justify</code>) y herencia del elemento padre (<code>inherit</code>).</p>
+        <p>Hay que tener en cuenta que la propiedad <code>text-align</code> alinea todo el contenido que se encuentre dentro de un elemento. Esto significa que no sólo alinea horizontalmente el texto del elemento, sino que también alinea las imágenes, elementos de formulario, objetos, mapas o vídeos.</p>
+        <p>Ejemplos:</p>
+        <pre><code>.izquierda { text-align: left; }<br>.centro { text-align: center; }<br>.derecha { text-align: right; }</code></pre>
+        <p>Texto alineado a la izquierda.<br>Texto alineado al centro.<br>Texto alineado a la derecha.</p>
+
+        <h4>Alineación vertical: la propiedad ‘vertical-align’</h4>
+        <p>Para alinear verticalmente un texto se usa la propiedad <code>vertical-align</code>. Esta propiedad se puede usar para alinear la caja de un elemento de línea dentro de la caja de su elemento contenedor superior (como una imagen en un texto) y para alinear el contenido de una celda en una tabla.</p>
+        <p>Valores comunes:</p>
+        <ul>
+            <li><code>baseline</code>: Alinea la línea de base del elemento con la línea de base de su elemento contenedor superior. Valor por defecto.</li>
+            <li><code>sub</code>: Alinea el elemento como si fuera un subíndice.</li>
+            <li><code>super</code>: Alinea el elemento como si fuera un superíndice.</li>
+            <li><code>text-top</code>: Alinea la parte superior del elemento con la parte superior de la fuente de su elemento contenedor superior.</li>
+            <li><code>text-bottom</code>: Alinea la parte inferior del elemento con la parte inferior de la fuente de su elemento contenedor superior.</li>
+            <li><code>middle</code>: Alinea el centro vertical del elemento con la línea de base del elemento contenedor superior.</li>
+            <li><code>top</code>: Alinea la parte superior del elemento con la parte superior de la línea entera.</li>
+            <li><code>bottom</code>: Alinea la parte inferior del elemento con la parte inferior de la línea entera.</li>
+        </ul>
+        <p>Los valores también pueden ser unidades de longitud (negativas o positivas) o porcentajes. Con el valor <code>inherit</code> se hereda el valor del elemento contenedor superior.</p>
+        <p>Cuando se trata de tablas, las alineaciones verticales tienen como referencia los límites de la celda contenedora en vez de un elemento contenedor superior (padre). El elemento del interior de la celda que se quiere alinear, se alinea teniendo en cuenta los límites de su zona de relleno (<code>padding</code>).</p>
+
+        <h4>Decoración del texto: la propiedad ‘text-decoration’</h4>
+        <p>Con la propiedad <code>text-decoration</code> se puede decorar el texto: subrayado por debajo, por arriba e incluso por el medio (tachado). Sus valores son:</p>
+        <ul>
+            <li><code>none</code>: Valor por defecto. Elimina la decoración.</li>
+            <li><code>underline</code>: Texto subrayado por debajo.</li>
+            <li><code>overline</code>: Texto subrayado por arriba.</li>
+            <li><code>line-through</code>: Texto tachado.</li>
+            <li><code>inherit</code>: Hereda del elemento padre.</li>
+        </ul>
+        <p>Ejemplos:</p>
+        <pre><code>.under { text-decoration: underline; }<br>.over { text-decoration: overline; }<br>.strike { text-decoration: line-through; }</code></pre>
+        <p>Texto subrayado por debajo.<br>Texto subrayado por arriba.<br>Texto tachado.</p>
+
+        <h4>Transformación del texto: la propiedad ‘text-transform’</h4>
+        <p>La transformación del texto se realiza con la propiedad <code>text-transform</code>, y tiene que ver con la conversión de minúsculas a mayúsculas, y viceversa. Valores disponibles:</p>
+        <ul>
+            <li><code>none</code>: Valor por defecto. Elimina la transformación.</li>
+            <li><code>uppercase</code>: Transforma todas las letras en mayúsculas.</li>
+            <li><code>lowercase</code>: Transforma todas las letras en minúsculas.</li>
+            <li><code>capitalize</code>: Pone en mayúscula la primera letra de cada palabra.</li>
+            <li><code>inherit</code>: Hereda del elemento padre.</li>
+        </ul>
+        <p>Ejemplos:</p>
+        <pre><code>.upper { text-transform: uppercase; }<br>.lower { text-transform: lowercase; }<br>.capitalize { text-transform: capitalize; }</code></pre>
+        <p>TEXTO TRANSFORMADO A MAYÚSCULAS.<br>texto transformado a minúsculas.<br>Texto Capitalizado En Cada Palabra.</p>
+
+        <h4>Sangrado del texto: la propiedad ‘text-indent’</h4>
+        <p>El sangrado del texto se establece con la propiedad <code>text-indent</code>. Lo que hace esta propiedad es tabular la primera línea del párrafo en una longitud determinada, por lo que sus valores pueden ser unidades de longitud, porcentajes o la palabra clave <code>inherit</code> para heredar del elemento padre.</p>
+        <p>Ejemplo de sangrado de 20 píxeles:</p>
+        <pre><code>.sangrado { text-indent: 20px; }</code></pre>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip...</p>
+
+        <h4>Espacio en blanco: la propiedad ‘white-space’</h4>
+        <p>La propiedad <code>white-space</code> permite controlar el tratamiento de los espacios en blanco en un texto. Su valor por defecto (<code>normal</code>) transforma todos los espacios múltiples consecutivos en uno solo. Sin embargo, este comportamiento se puede modificar para conseguir otras opciones.</p>
+        <p>Valores disponibles:</p>
+        <ul>
+            <li><code>normal</code>: No preserva espacios consecutivos ni saltos de línea, y el texto se ajusta al elemento contenedor. Valor por defecto.</li>
+            <li><code>nowrap</code>: No preserva espacios consecutivos ni saltos de línea, y el texto no se ajusta al elemento contenedor.</li>
+            <li><code>pre</code>: Preserva espacios consecutivos y saltos de línea, pero el texto no se ajusta al elemento contenedor.</li>
+            <li><code>pre-wrap</code>: Preserva espacios consecutivos y saltos de línea, y se ajusta al elemento contenedor.</li>
+            <li><code>pre-line</code>: No preserva espacios consecutivos, preserva saltos de línea, y se ajusta al elemento contenedor.</li>
+            <li><code>break-spaces</code>: Igual que <code>pre-wrap</code>, excepto que hay una oportunidad de salto de línea después de cada espacio en blanco.</li>
+            <li><code>inherit</code>: Hereda del elemento padre.</li>
+        </ul>
+        <p>Ejemplos:</p>
+        <pre><code>.normal { white-space: normal; }<br>.nowrap { white-space: nowrap; }<br>.pre { white-space: pre; }<br>.pre-wrap { white-space: pre-wrap; }<br>.pre-line { white-space: pre-line; }<br>.break-spaces { white-space: break-spaces; }</code></pre>
+
+        <h4>Tamaño de tabulador: la propiedad ‘tab-size’</h4>
+        <p>La propiedad <code>tab-size</code> permite modificar la longitud del tabulador. Es útil cuando se tabula código dentro de la etiqueta <code><pre></code> (elementos preformateados). Su valor por defecto es 8, equivalente a ocho espacios.</p>
+        <p>Como valor admite un número entero (referente al total de espacios equivalentes), o un número indicando las unidades de longitud. Si se indica un 0, se elimina el tabulado de código. No admite números negativos.</p>
+        <p>Ejemplo:</p>
+        <pre><code>.ej1 { tab-size: 5; }<br>.ej2 { tab-size: 20px; }<br>.ej3 { tab-size: 0; }</code></pre>
+        <p>Se separa 5 caracteres.<br>Se separa 20 píxeles.<br>No se separa.</p>
+    </article>
+
+    <hr>
+    <hr>
+    
+</body>
+</html>

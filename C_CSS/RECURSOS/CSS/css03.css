@@ -1,0 +1,63 @@
+/* 
+selector {
+    propiedad: valor;
+}
+    selector: a qué elemento ó elementos se va a aplicar el estilo
+    propiedad: propiedad del elemento que se va a modificar
+    valor: valor que se le va a asignar a la propiedad	
+*/
+
+/* 
+body {
+    background-color: yellow; 
+    color: white; 
+    font-family: Arial, sans-serif; 
+}
+
+h2 {
+    color: black;
+    font-size: 24px; 
+} 
+*/
+
+/* selector universal */
+
+/* 
+    El selector universal (*) se utiliza para aplicar estilos a todos los elementos del documento.
+    En este caso, se establece un margen y un padding de 0, y se aplica el modelo de caja border-box a todos los elementos.
+*/
+
+/* 
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+h1 {
+    color: crimson;
+    font-size: 64px;
+    text-align: center; 
+}
+
+h2,p {
+    color: darkblue;
+    font-size: 32px;
+    text-align: center; 
+}
+
+.titulo {
+    color: darkgreen;
+    font-size: 24px;
+    text-align: center; 
+}
+
+#titulo {
+    color: darkred;
+    font-size: 50px;
+    text-align: center; 
+}
+
+.negrita{
+    font-weight: bold;
+} */

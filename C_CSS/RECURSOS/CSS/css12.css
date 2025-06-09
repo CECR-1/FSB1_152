@@ -1,0 +1,26 @@
+/* *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+ */
+.elementos{
+    box-sizing: border-box;
+    box-sizing: content-box;
+    width: 250px;
+    height: 250px;
+    background-color: purple;
+    border: 30px solid steelblue;
+    padding: 30px;
+    margin: 50px auto;
+}
+
+/* 
+box-sizing: border-box;
+    - Este modelo de caja incluye el padding y el border dentro del ancho y alto especificados del elemento.
+    - Es útil para evitar cálculos complicados al establecer dimensiones, ya que el tamaño total del elemento será el especificado sin sumar el padding y el border.
+box-sizing: content-box;
+    - Este es el modelo de caja por defecto en CSS.
+    - El ancho y alto especificados solo aplican al contenido del elemento, y el padding y el border se suman al tamaño total del elemento.
+    - Esto puede llevar a que el tamaño total del elemento sea mayor al especificado si se añaden padding o border.    
+*/

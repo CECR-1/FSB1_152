@@ -1,0 +1,34 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    background-color: blue;
+    color: white;
+    font-family: Arial;
+    font-size: 20px;;
+    width: 80%; 
+    height: 80%;
+    padding: 30px;
+    border: 2px solid black;
+    margin: 10px;
+}
+
+/* 
+margin: shorthand de margin-top, margin-right, margin-bottom, margin-left;
+margin: 10px auto; 10px arriba y abajo, auto a los lados (centrado) 
+el margin para centrar en forma automática es solo para el eje horizontal, y debe tener un ancho definido. De igual manera, solo funciona con elementos de bloque (block elements) como divs, sections, etc.
+*/
+
+.centroHorizontal {
+    margin: 10px auto; /* 10px arriba y abajo, auto a los lados */
+}
+
+.left{
+    margin-left: auto;
+}
+
+.right{
+    margin-right: auto;
+}

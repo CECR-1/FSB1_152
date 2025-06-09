@@ -1,0 +1,24 @@
+.main{
+    background-color: steelblue;
+    color: white;
+    margin-bottom: 30px;
+    /* padding: 1px; */
+}
+
+.footer{
+    background-color: darkslategray;
+    color: white;
+    margin-top: 50px;
+}
+
+/* 
+margenes: se coloca un margen de 30px en la parte inferior del elemento con clase "main" y un margen de 50px en la parte superior del elemento con clase "footer", pero la margen que prevalece dado que es la más grande es la de 50px en la parte superior del footer.
+Esto significa que el espacio entre el final del contenido de la clase "main" y el inicio del contenido de la clase "footer" será de 50px, ya que el margen superior del footer es mayor que el margen inferior del main.
+*/
+.mainh2{
+    margin-top: 40px;
+    /* margin-bottom: 20px; */
+}
+/* 
+margenes entre elementos padre e hijo: no deben juntarse, ya que el margen del elemento padre prevalece sobre el margen del elemento hijo. Debe haber un elementos entre ellos para que se vean los margenes de ambos.
+*/

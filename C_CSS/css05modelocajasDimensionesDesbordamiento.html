@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DWFSP1_152. CSS</title>
+</head>
+<body>
+    <h1 id="inicio">DESARROLLO WEB FULL STACK BASICO - DWFSP1_152</h1>
+    <hr>
+    <hr>
+    <h2><u>III. CSS: modelos, dimensiones y desbordamiento</u></h2>
+
+    <hr>
+    <article id="modelo_cajas">
+        <h4>CSS: Modelo de cajas</h4>
+        <p>El modelo de cajas es un concepto muy importante en el lenguaje CSS y en el diseño web. En esencia, todos los elementos HTML tienen una «caja» que los envuelve. Gracias al modelo de cajas se define la posición y las características dimensionales de los elementos en un documento HTML.</p>
+
+        <p>Las cajas de los elementos HTML son creadas de forma automática por los navegadores web. Esto significa que por cada elemento de un documento se crea una nueva caja rectangular que encierra su contenido.</p>
+
+        <p>Alrededor del contenido puede definirse un espacio de relleno, que puede ser variable en cada uno de los cuatro lados del contenido. A continuación se puede definir los bordes, con grosor, color y estilo variable. A partir del borde hacia fuera se definen los cuatro márgenes exteriores.</p>
+
+        <p>Por defecto, las cajas de los elementos no son visibles: no tienen color, ni borde ni márgenes. Mediante las propiedades padding, border y margin es posible modificar el relleno, los bordes y los márgenes, respectivamente.</p>
+
+        <p>Cuando se cambia el color de fondo de un elemento HTML, se modificará el color de fondo del contenido y del relleno, pero el margen seguirá transparente. Por su parte, el borde tiene su propio parámetro para definir el color.</p>
+
+        <h4>Anchura y altura de una caja</h4>
+        <p>El navegador web calcula de forma automática el ancho y alto de los elementos HTML teniendo en cuenta su contenido. Además, si se trata de elementos de bloque, estos ocuparán el ancho completo hasta alcanzar los límites (a izquierda y derecha) del elemento contenedor superior (padre).</p>
+
+        <p>De hecho, se puede cambiar el tipo de elemento (de bloque o de línea) con la propiedad display. En este caso, los valores que nos interesan pueden ser block para que el elemento sea de bloque e inline para que sea de línea.</p>
+
+        <p>El tamaño de las cajas se puede modificar especificando los valores de anchura y altura. Esto se consigue con dos propiedades CSS: width y height, para el ancho y alto respectivamente. Si no se indican, el valor por defecto de estas dos propiedades será auto (automático).</p>
+
+        <p>El ancho y alto se aplican sobre el contenido del elemento. Por tanto, las medidas totales de la caja se calculan con las propiedades siguientes:</p>
+
+        <ul>
+            <li>Ancho total: width + padding-left + padding-right + border-left + border-right + margin-left + margin-right</li>
+            <li>Alto total: height + padding-top + padding-bottom + border-top + border-bottom + margin-top + margin-bottom</li>
+        </ul>
+
+        <p>La suma de los valores de cada una de las columnas da como resultado las dimensiones reales de la caja. Esto no significa que un diseñador web deba realizar manualmente este cálculo, ya que en general se permite que el contenido fluya de forma natural, con medidas automáticas.</p>
+
+        <p>Con la propiedad box-sizing se puede cambiar el comportamiento de width y height. Usando el valor border-box, las dimensiones indicadas se aplican teniendo en cuenta el tamaño del relleno y de los bordes.</p>
+
+        <h4>Mínimos y máximos</h4>
+        <p>Hay que tener cuidado de no especificar un tamaño de caja más pequeño que el contenido. Si esto sucede, el contenido quedará parcialmente fuera de la caja. Para evitar que el contenido sobresalga se puede establecer un valor mínimo y un valor máximo, tanto de la anchura como de la altura.</p>
+
+        <p>Esto se consigue mediante las propiedades CSS max-width, min-width, max-height y min-height, que se describen de forma más detallada en el artículo sobre las dimensiones de los elementos HTML.</p>
+
+        <h4>Desbordamiento de contenido</h4>
+        <p>Hay ocasiones en las que es inevitable que el contenido se desborde, por lo que no queda más remedio que encontrar otra solución. Con la propiedad CSS overflow se modifica el desbordamiento del contenido.</p>
+
+        <p>Existen otras propiedades específicas para modificar el desbordamiento únicamente en un eje (horizontal o vertical). Estas propiedades son overflow-x (horizontal) y overflow-y (vertical). Con la propiedad CSS overflow-wrap también es posible romper palabras si desbordan fuera de la caja.</p>
+
+        <h4>Las zonas de un elemento</h4>
+        <p>Antes de terminar es oportuno hacer mención de las zonas que rodean un elemento HTML. Conocer sus palabras clave será de gran ayuda en el aprendizaje de CSS.</p>
+
+        <p>Se trata de conceptos sencillos pero no menos importantes.</p>
+
+        <p>La parte superior de un elemento es conocida con la palabra top, la parte inferior es bottom, la parte izquierda es left y la parte derecha es right.</p>
+
+        <p>Lógicamente, son los nombres de las cuatro zonas en inglés. Estas cuatro palabras clave se utilizan en muchas propiedades CSS.</p>
+    </article>
+
+    <hr>
+    <article id="dimensiones">
+        <h4>CSS: Dimensiones</h4>
+        <p>Los navegadores web determinan las dimensiones de los elementos HTML para representarlos al usuario. Por defecto, si un elemento HTML no tiene configurados un ancho y un alto de forma específica, los navegadores determinan el tamaño de forma automática a partir del contenido.</p>
+
+        <p>En este sentido, si el elemento en cuestión es un elemento de bloque, ocupará el 100% del ancho de la línea, hasta los límites de la caja del elemento contenedor superior (padre). En cambio, si se trata de un elemento de línea, ocupará el ancho del contenido, ya sea un enlace, una imagen o una cita.</p>
+
+        <p>La tipología del elemento se puede cambiar con la propiedad <code>display</code>.</p>
+
+        <h4>Anchura y altura</h4>
+        <p>Para cambiar las dimensiones de los elementos HTML se usan básicamente dos propiedades CSS: <code>width</code> para la anchura y <code>height</code> para la altura.</p>
+
+        <p>Estas dos propiedades se aplican sobre la región que ocupa el contenido, por lo que no se tiene en cuenta el grosor extra derivado del relleno, bordes y márgenes.</p>
+
+        <p>El tamaño real (definitivo) de la caja será la suma de todos ellos.</p>
+
+        <p>Hay que indicar que con la propiedad <code>box-sizing</code> y el valor <code>border-box</code> se puede cambiar el cálculo de <code>width</code> y <code>height</code>. En este caso, las dimensiones especificadas no se aplican sobre el contenido sino que se aplican hasta la cara exterior del borde, facilitando mucho el diseño predecible.</p>
+
+        <p>Por defecto, los valores de <code>width</code> y <code>height</code> son <code>auto</code> (automático). Cuando es así, el navegador calcula las medidas de la caja tomando como referencia la región del contenido del elemento y su tipología.</p>
+
+        <p><strong>Ejemplo de código CSS indicando ancho y alto:</strong></p>
+        <pre>
+        .cuadrado {
+        background: teal;
+        height: 50px;
+        width: 50px;
+        }
+        .rectangulo {
+        background: salmon;
+        height: 50px;
+        width: 100px;
+        }
+        </pre>
+
+        <p><strong>Código HTML:</strong></p>
+        <pre>
+        <div class="cuadrado"></div>
+        <div class="rectangulo"></div>
+        </pre>
+
+        <h4>Dimensiones mínimas y máximas</h4>
+        <p>En el diseño web responsive, el uso de dimensiones fijas puede ser un inconveniente. Hoy en día existe una gran variedad de dispositivos, por lo que hay distintos tamaños de pantalla. Esto hace muy conveniente que el contenido pueda adaptarse a la anchura y altura del navegador web.</p>
+
+        <p>Pero todavía es más conveniente que cuando el contenido se adapte a la anchura y altura lo haga respetando ciertos límites. Es decir, que la anchura del elemento en cuestión no sea tan estrecha como para que no quepa un contenido determinado, ni tan ancha como para que se visualice de forma parcial.</p>
+
+        <p>Por ejemplo, si se especifica un tamaño de elemento más pequeño que el contenido, este quedará parcialmente fuera de la caja. En el siguiente ejemplo creamos una caja más pequeña que el contenido:</p>
+        <pre>
+        .cjout {
+        border: 1px dotted #ff7f2a;
+        padding: 5px;
+        height: 50px;
+        width: 50px;
+        }
+        </pre>
+
+        <p>Con ayuda de estas propiedades CSS es posible establecer un rango de anchuras y alturas. Especificar unos mínimos y unos máximos puede ser muy útil en varios escenarios de diseño responsive.</p>
+
+        <p>Las siguientes propiedades permiten definir anchos y altos mínimos y máximos:</p>
+        <ul>
+            <li><code>min-width</code>: Indica la anchura mínima de un elemento.</li>
+            <li><code>max-width</code>: Indica la anchura máxima de un elemento.</li>
+            <li><code>min-height</code>: Indica la altura mínima de un elemento.</li>
+            <li><code>max-height</code>: Indica la altura máxima de un elemento.</li>
+        </ul>
+
+        <p>Los valores de estas cuatro propiedades pueden ser:</p>
+        <ul>
+            <li><strong>Longitud</strong>: Valor de longitud (cm, px, em, etc).</li>
+            <li><strong>Porcentaje</strong>: Valor en porcentaje (%).</li>
+            <li><strong>none</strong>: Sin límites en el tamaño de la caja.</li>
+            <li><strong>inherit</strong>: Hereda el valor del elemento padre.</li>
+        </ul>
+
+        <p>Un elemento HTML no puede ser más ancho que el valor indicado en la propiedad <code>max-width</code>, incluso cuando el valor de <code>width</code> sea mayor. Si una caja tiene un ancho de 300 píxeles, pero su ancho máximo está establecido en 200 píxeles, medirá un ancho de 200 píxeles.</p>
+
+        <p>Si la propiedad <code>min-width</code> tuviera un valor mayor que <code>max-width</code>, entonces el ancho mínimo tiene prioridad. Por ejemplo, si una caja tiene un ancho máximo de 200 píxeles y un ancho mínimo de 300 píxeles, entonces la caja medirá 300 píxeles.</p>
+
+        <p>Lo mismo aplica para las alturas mínimas y máximas con <code>min-height</code> y <code>max-height</code>.</p>
+
+        <h4>Controlar el cálculo del tamaño</h4>
+        <p>Con la propiedad CSS <code>box-sizing</code> es posible controlar cómo se calcula el tamaño de un elemento. Para ello se tienen en cuenta el contenido, el relleno y los bordes. Los márgenes quedan excluidos de esta propiedad.</p>
+
+        <p>Hay dos valores posibles para la propiedad <code>box-sizing</code>:</p>
+        <ul>
+            <li><code>content-box</code>: Solo se considera el tamaño del contenido. Valor por defecto.</li>
+            <li><code>border-box</code>: Se considera el tamaño del contenido, el relleno y el borde.</li>
+        </ul>
+
+        <p>Con el valor <code>content-box</code>, el tamaño total de un elemento se calcula a partir de su contenido, sin tener en cuenta el relleno y los bordes. Esto significa que el tamaño de cualquier relleno o borde se sumará después del cálculo, y la caja será más ancha. Por defecto, así es como CSS calcula el tamaño de los elementos.</p>
+
+        <p>En cambio, usando el valor <code>border-box</code>, el tamaño de un elemento se calcula incluyendo el ancho y alto del relleno y los bordes; es decir, que la caja absorbe ese tamaño extra. Esto facilita mucho el dimensionado de elementos, ya que el tamaño de un elemento no se amplía a pesar de agregarle bordes a la caja.</p>
+
+        <p><strong>Ejemplo:</strong> Tenemos una caja ocupando un ancho del 100% del espacio disponible, y le añadimos un borde de 5 píxeles a ambos lados. Por defecto, esta caja tendrá ahora un ancho del 100% + 10 píxeles, desbordando por la derecha de su elemento contenedor. Pero si hacemos uso del valor <code>border-box</code>, el grosor del borde pasará a formar parte del 100%, sin sobresalir.</p>
+    </article>
+    
+    <hr>
+    <article id="desbordamiento">
+        <h4>CSS: Desbordamiento</h4>
+        <p>En diseño web puede suceder que el contenido de un elemento HTML sea mayor que las dimensiones de la caja. Esto se produce cuando se ha definido un tamaño que no permite suficiente espacio para acomodar el contenido; en caso contrario, el navegador web habría calculado el tamaño de forma automática.</p>
+
+        <p>Vamos a ver un ejemplo de desbordamiento de texto, en el que forzamos la altura de la caja para que el texto tenga que sobresalir:</p>
+
+        <pre><code>.desborda {
+        border: 1px dotted #ff7f2a;
+        padding: 5px;
+        height: 42px;
+        }</code></pre>
+
+        <p><strong>Resultado:</strong></p>
+        <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Fusce ut leo eu ipsum faucibus pretium. Donec iaculis lorem eleifend mi tempor porttitor. Integer porttitor dui vel dui. Donec ornare adipiscing pede. Proin elementum augue ut magna.</p>
+
+        <p>Si no hubiéramos definido esta altura fija de 42 píxeles, el navegador web habría calculado el alto del elemento de forma automática.</p>
+
+        <p>Sin embargo, si queremos que la caja del elemento HTML en cuestión tenga una altura fija y al mismo tiempo queremos evitar que el contenido desborde, podremos hacerlo con las siguientes propiedades CSS:</p>
+
+        <table>
+            <tr><th>Propiedad</th><th>Descripción</th></tr>
+            <tr><td>overflow</td><td>Define el desbordamiento del contenido.</td></tr>
+            <tr><td>overflow-x</td><td>Define el desbordamiento en el eje horizontal.</td></tr>
+            <tr><td>overflow-y</td><td>Define el desbordamiento en el eje vertical.</td></tr>
+        </table>
+
+        <p>Si queremos controlar mejor el desbordamiento de texto, como indicar al usuario que hay texto escondido, o queremos romper las palabras demasiado largas que desbordan de la caja, podremos hacerlo con las siguientes propiedades:</p>
+
+        <table>
+            <tr><th>Propiedad</th><th>Descripción</th></tr>
+            <tr><td>overflow-wrap</td><td>Evita que el texto desborde de la caja.</td></tr>
+            <tr><td>word-break</td><td>Rompe las palabras que desbordan.</td></tr>
+            <tr><td>hyphens</td><td>Indica el tipo de separación silábica.</td></tr>
+            <tr><td>text-overflow</td><td>Indica que hay texto invisible que se desborda.</td></tr>
+        </table>
+
+        <h4>Desbordamiento del contenido</h4>
+        <p>Para tratar el desbordamiento, CSS publicó en el nivel 2 la propiedad <code>overflow</code>.</p>
+        <p>Gracias a esta propiedad se puede indicar si se desea recortar el contenido que sobresalga o si se quiere mostrar barras de desplazamiento para mostrar el contenido deslizándose en el eje horizontal o vertical.</p>
+        <p>Además, se puede modificar el desbordamiento de forma independiente en el eje horizontal con la propiedad <code>overflow-x</code> (la «x» indica el eje de las abscisas).</p>
+        <p>Para modificar el desbordamiento en el eje vertical se usa la propiedad <code>overflow-y</code> (la «y» indica el eje de las ordenadas).</p>
+
+        <table>
+            <tr><th>Valor</th><th>Descripción</th></tr>
+            <tr><td>visible</td><td>Valor por defecto. El contenido que sobresale será visible. Se permite el desbordamiento.</td></tr>
+            <tr><td>hidden</td><td>Se oculta el contenido que sobresale, por lo que no hay desbordamiento (se esconde).</td></tr>
+            <tr><td>scroll</td><td>Aparecen las dos barras de desplazamiento (horizontal y vertical) para poder ver el contenido que sobresale.</td></tr>
+            <tr><td>auto</td><td>Aparecen las barras de desplazamiento si es necesario: solo la horizontal, solo la vertical, las dos o ninguna.</td></tr>
+            <tr><td>clip</td><td>Solo para la propiedad overflow. El contenido que sobresale queda invisible, pero no se reduce el tamaño de la caja. Además, no permite el desplazamiento.</td></tr>
+        </table>
+
+        <p>Si el valor es <code>visible</code>, siempre se desbordará. En cambio, si el valor es <code>hidden</code>, el contenido que sobresale quedará escondido, como si se tratara de una ventana y mirásemos a través de ella: una parte del exterior queda escondida.</p>
+
+        <pre><code>.esconde {
+        border: 1px dotted #ff7f2a;
+        padding: 5px;
+        height: 42px;
+        overflow: hidden;
+        }</code></pre>
+
+        <p>Tal y como se puede ver en este ejemplo, parte del contenido que habría desbordado queda oculto a partir de los 42 píxeles de altura:</p>
+        <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Fusce ut leo eu ipsum faucibus pretium. Donec iaculis lorem eleifend mi tempor porttitor.</p>
+
+        <p>Por tanto, vamos a colocar una barra de desplazamiento vertical:</p>
+
+        <pre><code>.vertical {
+        border: 1px dotted #ff7f2a;
+        padding: 5px;
+        overflow-y: scroll;
+        height: 42px;
+        }</code></pre>
+
+        <p><strong>Resultado:</strong></p>
+        <p>| |<br>
+        | ---|<br>
+        |  <br>
+        Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Fusce ut leo eu ipsum faucibus pretium. Donec iaculis lorem eleifend mi tempor porttitor.</p>
+
+        <p>Con la propiedad <code>overflow-y</code> y el valor <code>scroll</code> forzamos la barra de desplazamiento vertical. Con <code>overflow: auto</code> obtendríamos el mismo resultado: el navegador vería que el contenido es mayor que el tamaño indicado, por lo que insertaría la misma barra de desplazamiento.</p>
+
+        <p>Ahora vamos a colocar la barra de desplazamiento horizontal:</p>
+
+        <pre><code>.horizontal {
+        border: 1px dotted #ff7f2a;
+        padding: 5px;
+        overflow-x: scroll;
+        height: 42px;
+        width: 100%;
+        white-space: pre;
+        }</code></pre>
+
+        <p><strong>Resultado:</strong></p>
+        <p>| ||<br>
+        | ---|---|<br>
+        |  <br>
+        Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Fusce ut leo eu ipsum fa<br>
+        ||<br>
+        |  <br>
+        Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Fusce ut leo eu ipsum fa<br>
+        | |</p>
+
+        <p>Para poder visualizar el resultado se especifica un ancho del 100%, ajustando el texto a la totalidad del elemento padre, que en este caso es <code><blockquote></code>.</p>
+        <p>También se añade la propiedad <code>white-space: pre</code> para que el texto no fluya hacia abajo sino hacia la derecha.</p>
+
+        <h4>Desbordamiento de texto</h4>
+        <p>El desbordamiento de texto puede llegar a ser algo más complejo. Por ejemplo, puede darse el caso en el que tengamos palabras muy largas que sobresalen hacia el exterior de la caja del elemento. Existen algunas propiedades para solucionar este problema: ya sea indicando al usuario que hay texto invisible que desborda o rompiendo palabras largas, incluso con partición silábica.</p>
+
+        <h4>Evitar el desborde: la propiedad ‘overflow-wrap’</h4>
+        <p>La propiedad <code>overflow-wrap</code> permite ajustar el texto cuando desborde de la caja del elemento. Es una propiedad que se aplica al contenido textual, y con ella se establece si el navegador web debe insertar saltos de línea en medio de algunas palabras demasiado largas, para evitar que desborden.</p>
+        <p>Esta propiedad fue creada por Microsoft con el nombre <code>word-wrap</code>. A pesar de que este nombre sigue teniendo soporte en los navegadores web, lo más recomendable es usar <code>overflow-wrap</code> en su lugar.</p>
+        <p>Hay que tener presente que la propiedad <code>overflow-wrap</code> solo funcionará si se usa <code>overflow: hidden</code> y <code>white-space: nowrap</code>.</p>
+
+        <table>
+            <tr><th>Valor</th><th>Descripción</th></tr>
+            <tr><td>normal</td><td>Las palabras largas no se rompen.</td></tr>
+            <tr><td>break-word</td><td>Rompe las palabras que desbordan.</td></tr>
+            <tr><td>anywhere</td><td>Rompe la línea en cualquier lugar.</td></tr>
+        </table>
+
+        <p>Veamos un ejemplo. Creamos una caja con una anchura máxima de 100 píxeles e introducimos el valor del número Pi con 16 decimales. Al no tener espacios, por defecto el navegador los mantendrá unidos. No especificamos una altura para provocar que el navegador la ajuste automáticamente.</p>
+
+        <pre><code>.con-desborde {
+        border: 1px dotted #ff7f2a;
+        display: inline-block;
+        padding: 5px;
+        overflow-wrap: normal;
+        max-width: 100px;
+        }</code></pre>
+
+        <p>El valor de Pi 3e,s1415926535897932.</p>
+
+        <p>Se puede ver como el valor de Pi sobresale por la derecha.</p>
+
+        <p>Ahora vamos a forzar la rotura del valor de Pi:</p>
+
+        <pre><code>.sin-desborde {
+        overflow-wrap: break-word;
+        }</code></pre>
+
+        <p>| ||<br>
+        | ---|---|<br>
+        | |El valor de Pi 3e,s141592653 5897932.<br>
+        |</p>
+
+        <p>Usando los valores <code>break-word</code> y <code>anywhere</code>, en el resultado veremos los decimales de Pi partidos, continuando en la línea siguiente.</p>
+
+        <h4>Romper palabras: la propiedad ‘word-break’</h4>
+        <p>La propiedad <code>word-break</code> permite romper palabras demasiado largas que desbordan de la caja. A diferencia de la propiedad anterior, <code>word-break</code> controla cómo se rompen las palabras al final de una línea. Los resultados de esta propiedad pueden ser muy similares a los de la propiedad <code>overflow-wrap</code>.</p>
+
+        <table>
+            <tr><th>Valor</th><th>Descripción</th></tr>
+            <tr><td>normal</td><td>Las palabras largas no se rompen. Por defecto.</td></tr>
+            <tr><td>break-all</td><td>Rompe la palabra justo donde se desbordaría.</td></tr>
+            <tr><td>keep-all</td><td>Evita la ruptura de palabras. Este valor es usado principalmente para textos en japonés, chino y coreano. Para el resto de idiomas, equivale a usar normal.</td></tr>
+        </table>
+
+        <p>En el siguiente ejemplo, vamos a romper el valor del número Pi:</p>
+
+        <pre><code>.romper {
+        word-break: break-all;
+        }</code></pre>
+
+        <p>| |<br>
+        | ---|<br>
+        | El valor de Pi es 3,1415926 535897932.<br>
+        |</p>
+
+        <p>Tal y como se puede ver, la ruptura se produce antes del salto de línea. En cambio, usando la propiedad <code>overflow-wrap</code>, el salto de línea se produce al principio de la palabra y después de la ruptura.</p>
+
+        <p>En el siguiente ejemplo se muestra la diferencia de ruptura de palabras entre las propiedades <code>overflow-wrap</code> (arriba) y <code>word-break</code> (abajo). Se usa un texto con palabras bastante largas y un ancho de 120 píxeles.</p>
+
+        <p>| |<br>
+        | ---|<br>
+        | eUlnectroencefalog rafista es una persona especializada en electroencefalog rafía.<br>
+        |</p>
+
+        <p>| |<br>
+        | ---|<br>
+        | Un electroencef alografista es un a persona especializada en elect roencefalografí a.<br>
+        |</p>
+
+        <p>En los dos ejemplos anteriores se puede observar que ambos casos evitan el desbordamiento del texto, pero lo hacen de forma diferente.</p>
+
+        <h4>Separación silábica: la propiedad ‘hyphens’</h4>
+        <p>La propiedad <code>hyphens</code> permite especificar el tipo de separación silábica que se debe utilizar en el contenido textual. Separar las sílabas de las palabras que se encuentran al final de línea es un recurso literario muy utilizado, ya que permite que los textos se ajusten mejor a la anchura de la línea.</p>
+        <p>Cada idioma tiene sus propias reglas de separación silábica. Por esta razón, el navegador web tendrá en cuenta el atributo HTML <code>lang</code> para realizar una separación de sílabas correcta. Si este atributo no está declarado o falta el diccionario de separación, esta propiedad no funcionará.</p>
+
+        <p>Esta propiedad puede tener tres valores: el valor <code>none</code> evita la separación silábica, el valor <code>manual</code> separa las sílabas si se ha indicado manualmente, y con el valor <code>auto</code> el navegador separa sílabas de forma automática.</p>
+
+        <p>Hay dos caracteres Unicode para introducir la separación silábica manual: el carácter «fuerte» (guión -, carácter Unicode U+2010) que se mostrará incluso cuando no se requiere la separación de sílabas; y el carácter «suave» (carácter Unicode U+00AD o entidad HTML &shy;) que no se muestra (es invisible) hasta que sea posible realizar la separación silábica.</p>
+
+        <p>En el ejemplo siguiente se ha creado una caja que se puede redimensionar a partir de la esquina inferior derecha. Ajusta la anchura y observa los cambios de la separación silábica. Está establecido con el automático.</p>
+
+        <pre><code>.silabas {
+        hyphens: auto;
+        }</code></pre>
+
+        <p>Un electroence-falografista es una persona es-pecializada en electroencefalo-grafía.</p>
+
+        <p>En el caso de romper las palabras con la propiedad <code>word-break</code> y el valor <code>break-all</code>, la separación silábica de <code>hyphens</code> no funcionará.</p>
+
+        <h4>Indicar el desborde: la propiedad ‘text-overflow’</h4>
+        <p>La propiedad <code>text-overflow</code> permite indicar al usuario que hay contenido desbordado que no se está mostrando. Es importante recordar que esta propiedad no sirve para forzar que el texto desborde de la caja. Para forzar el desbordamiento del texto hay que usar las propiedades <code>overflow</code> y <code>white-space</code>:</p>
+
+        <pre><code>.desborde {
+        overflow: hidden;
+        white-space: nowrap;
+        }</code></pre>
+
+        <p>La indicación de que hay contenido desbordado se puede realizar mediante algún tipo de carácter que indique que el texto continúa, como suele ser el caso de los tres puntos suspensivos. Por ejemplo: «Había una vez...».</p>
+
+        <table>
+            <tr><th>Valor</th><th>Descripción</th></tr>
+            <tr><td>clip</td><td>El texto es cortado en seco, sin indicativo de ello.</td></tr>
+            <tr><td>ellipsis</td><td>El corte del texto se produce de forma automática.</td></tr>
+        </table>
+
+        <p>Con el valor <code>clip</code>, el texto se quedará cortado en el límite de la zona de contenido del elemento. No se hace ningún indicativo del corte, más allá de que se verá un texto inacabado. Es el valor predeterminado de esta propiedad.</p>
+
+        <p>El valor <code>ellipsis</code> produce un corte de forma automática y añade los famosos tres puntos suspensivos (... , carácter Unicode U+2026) al final. Estos puntos suspensivos se muestran dentro de la zona de contenido.</p>
+
+        <pre><code>.ellipsis {
+        text-overflow: ellipsis;
+        }</code></pre>
+
+        <p><strong>Resultado:</strong></p>
+        <p>Este texto es muy largo y no se verá entero, pero se verán los tres puntos suspensivos...</p>
+
+        <p>Si queremos cambiar el símbolo que el valor <code>ellipsis</code> usa por defecto, se puede indicar a continuación como una cadena de texto, entre comillas:</p>
+
+        <pre><code>.corte-personalizado {
+        text-overflow: ellipsis "[...]";
+        }</code></pre>
+
+        <p><strong>Resultado:</strong></p>
+        <p>Este texto es muy largo y no se verá entero, pero se verá los tres puntos suspensivos personalizados [...].</p>
+    </article>
+
+    <hr>
+    <hr>
+    
+</body>
+</html>

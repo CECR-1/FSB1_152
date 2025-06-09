@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DWFSP1_152. CSS</title>
+</head>
+<body>
+    <h1 id="inicio">DESARROLLO WEB FULL STACK BASICO - DWFSP1_152</h1>
+    <hr>
+    <hr>
+    <h2><u>III. CSS: esquinas, contornos y rellenos</u></h2>
+
+    <hr>
+    <article id="esquinas">
+        <h4>CSS: Esquinas</h4>
+        <p>Los elementos HTML ocupan regiones rectangulares, por lo que tienen cuatro esquinas con ángulo recto (90 grados). En CSS es posible modificar las esquinas: se pueden curvar con forma de círculo y con forma de elipse, dependiendo de los parámetros. Para ello se usa la propiedad <code>border-radius</code>.</p>
+
+        <p>El efecto de redondear esquinas era muy difícil en versiones anteriores de CSS. Era necesario recurrir al uso de imágenes insertadas como fondo. Esta propiedad fue introducida en la versión CSS3 y fue muy aplaudida por los diseñadores web.</p>
+
+        <p>Sin ninguna duda, los bordes curvos mejoran el diseño.</p>
+
+        <p>Las esquinas redondeadas se aplican a partir del borde del «modelo de cajas». No tendría sentido que se aplicara al relleno, ya que este está delimitado por el borde; y aún tendría menos sentido que se aplicara a los márgenes, ya que en ellos no se aplica el color de fondo del elemento. El efecto no se vería.</p>
+
+        <p>El valor por defecto de <code>border-radius</code> es 0: los bordes de cualquier elemento HTML aparecen rectos. Esta propiedad es una abreviatura (shorthand) que admite cuatro parámetros para redondear las esquinas y otros cuatro para crear curvas en forma de elipse, lo que sería dos radios por esquina.</p>
+
+        <p>La sintaxis para crear esquinas redondeadas es la siguiente: debe usarse de 1 a 4 valores de longitud para indicar el radio de redondeo, y separados por una barra (/) se introducen los otros cuatro valores opcionales de longitud para indicar el segundo radio en caso de querer crear una forma elíptica.</p>
+
+        <p>Tanto los cuatro primeros valores como los cuatro segundos siguen el mismo orden. Si sólo hay uno se aplica a las cuatro esquinas. Si hay dos, el primero se aplica a la esquina superior izquierda y a la esquina inferior derecha, mientras que el segundo a los lados opuestos. Si hay tres, el tercer parámetro modificará la esquina inferior derecha. Si hay cuatro se sigue el orden de las agujas del reloj.</p>
+
+        <h4>Ejemplos de uso de border-radius</h4>
+        <ul>
+            <li><strong>border-radius: 1px</strong> — A los cuatro lados.</li>
+            <li><strong>border-radius: 1px 2px</strong> — Arriba izquierda y abajo derecha; arriba derecha y abajo izquierda.</li>
+            <li><strong>border-radius: 1px 2px 3px</strong> — Arriba izquierda; arriba derecha y abajo izquierda; abajo derecha.</li>
+            <li><strong>border-radius: 1px 2px 3px 4px</strong> — Arriba izquierda; arriba derecha; abajo derecha; abajo izquierda.</li>
+            <li><strong>border-radius: 5px / 6px</strong> — Primer radio a los cuatro lados; segundo radio a los cuatro lados.</li>
+        </ul>
+
+        <h4>Ejemplo práctico</h4>
+        <p>En el primer ejemplo creamos un contenedor con un borde turquesa que tendrá las esquinas redondeadas con un radio de 8 píxeles:</p>
+        <pre>.ejemplo1 {
+        border-radius: 8px;
+        }</pre>
+
+        <p>Resultado:
+            <br>A continuación, se muestra un ejemplo con dos esquinas cuyo radio es mucho mayor al de las otras dos, creando así una curiosa forma:</p>
+        <pre>.ejemplo2 {
+        border-radius: 4px 20px;
+        }</pre>
+
+        <p>Resultado:
+            <br>En este tercer ejemplo se hace uso de los cuatro parámetros para especificar cuatro esquinas redondeadas con valores diferentes:</p>
+        <pre>.ejemplo3 {
+        border-radius: 4px 17px 17px 30px;
+        }</pre>
+
+        <p>Resultado:
+            <br>En el cuarto ejemplo usamos los dos radios para visualizar la curva con forma de elipse. El primer radio es tres veces mayor que el segundo:</p>
+        <pre>.ejemplo4 {
+        border-radius: 50% 40% / 15% 40%;
+        }</pre>
+
+        <h4>Propiedades específicas de esquinas</h4>
+        <p>Se puede modificar el redondeo de las esquinas por separado mediante cuatro propiedades específicas de CSS. Por tanto, sin usar las propiedades abreviadas es posible redondear las esquinas de forma independiente: arriba izquierda, arriba derecha, abajo izquierda y abajo derecha.</p>
+
+        <ul>
+            <li><strong>border-top-left-radius</strong> — Redondea la esquina superior izquierda.</li>
+            <li><strong>border-top-right-radius</strong> — Redondea la esquina superior derecha.</li>
+            <li><strong>border-bottom-left-radius</strong> — Redondea la esquina inferior izquierda.</li>
+            <li><strong>border-bottom-right-radius</strong> — Redondea la esquina inferior derecha.</li>
+        </ul>
+
+        <h4>Ejemplos individuales de propiedades específicas</h4>
+        <p>Con la propiedad <code>border-top-left-radius</code> podemos curvar la esquina superior izquierda de cualquier elemento HTML:</p>
+        <pre>.btlr {
+        border-top-left-radius: 20px;
+        }</pre>
+
+        <p>Resultado: Esquina superior izquierda.</p>
+
+        <p>Usando la propiedad <code>border-top-right-radius</code> redondearemos la esquina superior derecha, también con 20 píxeles:</p>
+        <pre>.btrr {
+        border-top-right-radius: 20px;
+        }</pre>
+
+        <p>Resultado: Esquina superior derecha.</p>
+
+        <p>Con la propiedad <code>border-bottom-left-radius</code> damos forma a la esquina inferior izquierda de un elemento:</p>
+        <pre>.bblr {
+        border-bottom-left-radius: 20px;
+        }</pre>
+
+        <p>Resultado: Esquina inferior izquierda.</p>
+
+        <p>Mediante la propiedad <code>border-bottom-right-radius</code> modificamos la esquina inferior derecha de los elementos:</p>
+        <pre>.bbrr {
+        border-bottom-right-radius: 20px;
+        }</pre>
+
+        <p>Resultado: Esquina inferior derecha.</p>
+    </article>
+
+    <hr>
+    < >
+    <article id="contornos">
+        <h4>CSS: Contornos</h4>
+        <p>Los contornos son una línea de perímetro alrededor de los elementos HTML. Son muy similares a los bordes pero no ocupan espacio, por lo que su aparición no modifica las dimensiones de la caja. Por tanto, los contornos no causan el desplazamiento de los demás elementos HTML.</p>
+        <p>Otra característica de los contornos es que se dibujan por encima del elemento, como si estuvieran en una capa superior, y se representan a partir de los bordes hacia el exterior. La propiedad para representarlos es outline y es abreviada, por lo que existen otras propiedades específicas.</p>
+
+        <h4>Lista de propiedades para definir contornos:</h4>
+        <ul>
+            <li><strong>outline-width:</strong> Indica el grosor del contorno.</li>
+            <li><strong>outline-style:</strong> Indica el estilo del contorno.</li>
+            <li><strong>outline-color:</strong> Indica el color del contorno.</li>
+            <li><strong>outline:</strong> Abreviatura para definir contornos.</li>
+            <li><strong>outline-offset:</strong> Desplaza los contornos.</li>
+        </ul>
+
+        <p>Vamos a ver un ejemplo comparativo entre el borde y el contorno. Creamos un elemento con un borde naranja de 5 píxeles y un contorno turquesa de 10 píxeles.</p>
+        <pre>.comparativa {
+        border: 5px solid #ff7f2a;
+        outline: 10px solid teal;
+        height: 50px;
+        width: 200px;
+        }</pre>
+
+        <h4>La propiedad ‘outline-width’</h4>
+        <p>Con la propiedad outline-width se modifica el grosor de los contornos. Su valor debe ser una medida de longitud, que puede ser absoluta o relativa. Tal y como ocurre con border-width, también se puede definir el grosor de la línea con las palabras clave: thin, medium y thick.</p>
+        <p>A continuación se muestran algunos ejemplos de contorno variando el grosor cada 2 píxeles, con el fin de visualizar la diferencia.</p>
+        <pre>.width1 { outline-width: 1px; }
+        .width3 { outline-width: 3px; }
+        .width5 { outline-width: 5px; }</pre>
+
+        <p>Resultado:</p>
+        <ul>
+            <li>Párrafo con un contorno de 1 píxel.</li>
+            <li>Párrafo con un contorno de 3 píxeles.</li>
+            <li>Párrafo con un contorno de 5 píxeles.</li>
+        </ul>
+
+        <p>Tal y como se puede ver en los ejemplos, el contorno se pone por encima de los márgenes. Este efecto provoca que las cajas se vean como si fueran más grandes, cuando en realidad tienen el mismo tamaño.</p>
+        <p>La propiedad outline-width sólo admite un parámetro.</p>
+
+        <h4>La propiedad ‘outline-style’</h4>
+        <p>La propiedad outline-style es la que permite modificar el estilo de los contornos.</p>
+        <p>Al igual que ocurre con los bordes, existen varios tipos de estilo, como las líneas punteadas, discontinuas, líneas dobles o efectos 3D. Los estilos se especifican a través de 8 palabras clave.</p>
+        <table>
+            <tr><th>Valor</th><th>Descripción</th></tr>
+            <tr><td>none</td><td>Valor por defecto. No muestra ningún contorno visible.</td></tr>
+            <tr><td>hidden</td><td>Contorno oculto. No se muestra pero está ahí.</td></tr>
+            <tr><td>solid</td><td>Contorno de un solo color (línea continua).</td></tr>
+            <tr><td>double</td><td>Contorno de doble línea continua.</td></tr>
+            <tr><td>dotted</td><td>Contorno de línea punteada (discontinua).</td></tr>
+            <tr><td>dashed</td><td>Contorno de línea rayada (discontinua).</td></tr>
+            <tr><td>groove</td><td>Contorno biselado con luz desde arriba.</td></tr>
+            <tr><td>ridge</td><td>Contorno biselado con luz desde abajo.</td></tr>
+            <tr><td>inset</td><td>Contorno 3D con profundidad hacia dentro.</td></tr>
+            <tr><td>outset</td><td>Contorno 3D con profundidad hacia fuera.</td></tr>
+        </table>
+
+        <p>Veamos algunos ejemplos:</p>
+        <pre>.solid { outline-style: solid; }
+        .double { outline-style: double; }
+        .dotted { outline-style: dotted; }
+        .dashed { outline-style: dashed; }
+        .groove { outline-style: groove; }
+        .ridge { outline-style: ridge; }
+        .inset { outline-style: inset; }
+        .outset { outline-style: outset; }</pre>
+
+        <p>Resultado:</p>
+        <ul>
+            <li>Párrafo con contorno de estilo solid.</li>
+            <li>Párrafo con contorno de estilo double.</li>
+            <li>Párrafo con contorno de estilo dotted.</li>
+            <li>Párrafo con contorno de estilo dashed.</li>
+            <li>Párrafo con contorno de estilo groove.</li>
+            <li>Párrafo con contorno de estilo ridge.</li>
+            <li>Párrafo con contorno de estilo inset.</li>
+            <li>Párrafo con contorno de estilo outset.</li>
+        </ul>
+
+        <p>La propiedad outline-style sólo admite un parámetro.</p>
+
+        <h4>La propiedad ‘outline-color’</h4>
+        <p>La propiedad outline-color es la que permite modificar el color de los contornos.</p>
+        <p>Los colores se indican con los sistemas de color que admite CSS, es decir, con palabras clave o con los modelos de color RGB y HSL.</p>
+        <p>Veamos algunos ejemplos:</p>
+        <pre>.naranja { outline-color: #ff7f2a; }
+        .salmon { outline-color: salmon; }
+        .rojo { outline-color: rgb(220, 40, 40); }</pre>
+
+        <p>Resultado:</p>
+        <ul>
+            <li>Párrafo con contorno de color naranja.</li>
+            <li>Párrafo con contorno de color salmón.</li>
+            <li>Párrafo con contorno de color rojo.</li>
+        </ul>
+
+        <p>La propiedad outline-color sólo admite un parámetro.</p>
+
+        <h4>La propiedad ‘outline’</h4>
+        <p>La propiedad CSS outline es una abreviatura (shorthand) que permite especificar mediante tres parámetros el grosor, el estilo y el color, unificando las tres propiedades anteriores. Esta abreviatura es útil para sintetizar en una única declaración los tres atributos para definir contornos.</p>
+        <p>Por ejemplo:</p>
+        <pre>.contorno {
+        outline: 4px double teal;
+        }</pre>
+
+        <p>Resultado:</p>
+        <ul>
+            <li>Párrafo usando la propiedad outline.</li>
+        </ul>
+
+        <p>Conviene señalar que la abreviatura outline no permite indicar el desplazamiento de outline-offset, ya que se introdujo más tarde.</p>
+
+        <h4>La propiedad ‘outline-offset’</h4>
+        <p>Mediante la propiedad outline-offset se puede establecer un espacio de separación entre el límite exterior del borde y el límite exterior del contorno. Su valor debe ser una unidad de longitud para indicar el espacio de separación, y sólo admite un parámetro para definir los cuatro lados.</p>
+        <p>Veamos un ejemplo de uso de outline-offset:</p>
+        <pre>.separacion {
+        border: 5px solid #ff7f2a;
+        outline: 10px solid teal;
+        outline-offset: 5px;
+        height: 50px;
+        width: 200px;
+        }</pre>
+
+        <p>Resultado:</p>
+        <ul>
+            <li>Párrafo mostrando el uso de outline-offset con un desplazamiento de 5 píxeles.</li>
+        </ul>
+
+        <p>En este ejemplo se puede ver que el contorno se ha desplazado 5 píxeles hacia fuera, quedando por tanto un espacio de separación intermedio de 5 píxeles. Esta propiedad fue introducida en CSS de nivel 3.</p>
+    </article>
+
+    <hr>
+    <article id="fondos">
+        <h4>CSS: Fondos</h4>
+        <p>Las cajas de los elementos HTML tienen una región de fondo que se puede rellenar, ya sea con un color, una imagen o un degradado. El fondo está formado por dos partes de la caja: la zona que ocupa el contenido y la zona del relleno. Por tanto, el fondo llega hasta la cara interior de los bordes. Por defecto, los navegadores web no muestran los fondos (son transparentes).</p>
+
+        <p>Los fondos se pueden establecer a cualquier elemento HTML. Esto significa que si se quiere indicar un color de fondo a todo un documento HTML, es tan sencillo como aplicar las propiedades adecuadas al elemento <body>. Los demás elementos se verán con el mismo fondo a menos que se indique lo contrario.</p>
+
+        <p>Para modificar el fondo de los elementos HTML existen 5 propiedades CSS específicas y una propiedad abreviada:</p>
+        <ul>
+            <li><strong>background-color</strong>: Define el color de fondo.</li>
+            <li><strong>background-image</strong>: Define la imagen de fondo.</li>
+            <li><strong>background-repeat</strong>: Repetición de la imagen de fondo.</li>
+            <li><strong>background-attachment</strong>: Desplazamiento de la imagen de fondo.</li>
+            <li><strong>background-position</strong>: Posicionamiento de la imagen de fondo.</li>
+            <li><strong>background</strong>: Abreviatura de la imagen de fondo.</li>
+        </ul>
+
+        <h4>La propiedad ‘background-color’</h4>
+        <p>La propiedad background-color permite especificar un color sólido de fondo en la caja de un elemento HTML. Con esta propiedad no crean los colores degradados (rangos de colores ordenados). Los colores se introducen a través de 140 palabras clave o con los modelos de color RGB y HSL.</p>
+
+        <p><strong>Lista de valores de background-color:</strong></p>
+        <ul>
+            <li><strong>color</strong>: Un color válido.</li>
+            <li><strong>transparent</strong>: Indica un color transparente.</li>
+            <li><strong>inherit</strong>: Hereda el color del elemento padre.</li>
+        </ul>
+
+        <p><strong>Ejemplos de colores válidos:</strong></p>
+        <ul>
+            <li><strong>red</strong>: Nombre propio.</li>
+            <li><strong>#ff0000</strong>: Código hexadecimal.</li>
+            <li><strong>rgb(255, 0, 0)</strong>: Modelo RGB.</li>
+            <li><strong>hsl(0, 100%, 50%)</strong>: Modelo HSL.</li>
+        </ul>
+
+        <p><strong>Ejemplo de código CSS:</strong></p>
+        <pre>
+        .turquesa {
+        background-color: teal;
+        }
+        .marron {
+        background-color: brown;
+        }
+        .olivo {
+        background-color: olive;
+        }
+        </pre>
+
+        <p>Resultado:</p>
+        <p>Párrafo con fondo turquesa.</p>
+        <p>Párrafo con fondo marrón.</p>
+        <p>Párrafo con fondo verde olivo.</p>
+        <p>En estos tres ejemplos se ha añadido un relleno (padding) de 5 píxeles para hacer más visible la zona de aplicación de los fondos (contenido + relleno).</p>
+
+        <h4>La propiedad ‘background-image’</h4>
+        <p>El lenguaje CSS también permite indicar una imagen de fondo. Esto se hace con la propiedad background-image, que puede estar especificada de forma simultánea con un color sólido. Por tanto, los espacios que queden sin rellenar por la imagen indicada se verán del color indicado o transparente.</p>
+
+        <p>La imagen se especifica mediante una URL válida, que puede ser relativa o absoluta. Para especificar la URL se usa la función url(). Respecto a la ubicación de las imágenes, se recomienda crear una carpeta en el mismo directorio que los archivos CSS e indicar una URL relativa. Así, las imágenes del diseño se mantienen separadas del contenido, facilitando el mantenimiento.</p>
+
+        <p><strong>Lista de valores de background-image:</strong></p>
+        <ul>
+            <li><strong>url()</strong>: Una URL válida.</li>
+            <li><strong>none</strong>: Indica que no debe tener imagen.</li>
+            <li><strong>inherit</strong>: Hereda la imagen del elemento padre.</li>
+        </ul>
+
+        <p><strong>Ejemplo de código CSS:</strong></p>
+        <pre>
+        .imagen {
+        background-image: url("/images/css/pattern-dark.png");
+        background-color: #282828;
+        }
+        </pre>
+
+        <p>Resultado:</p>
+        <p>Párrafo con imagen de fondo.</p>
+        <p>Tal y como se puede ver, además de una imagen se ha especificado un color sólido de fondo. Suele ser habitual indicarlo cuando se muestra una imagen de fondo; así, en caso de que la imagen no se pueda cargar, el navegador mostrará el color indicado, que debería ser lo más similar a la imagen. En este caso también se añade un borde exterior naranja para indicar el límite del fondo.</p>
+
+        <h4>La propiedad ‘background-repeat’</h4>
+        <p>Para controlar la repetición de las imágenes de fondo se usa la propiedad background-repeat. Una imagen se puede repetir en el eje horizontal, en el eje vertical, en ambos ejes, puede no repetirse, etc.</p>
+
+        <p><strong>Lista de valores de background-repeat:</strong></p>
+        <ul>
+            <li><strong>repeat</strong>: La imagen se repite en ambos ejes.</li>
+            <li><strong>repeat-x</strong>: La imagen se repite en el eje horizontal.</li>
+            <li><strong>repeat-y</strong>: La imagen se repite en el eje vertical.</li>
+            <li><strong>space</strong>: La imagen se repite sin recortarse; se deja un espacio en blanco entre cada imagen, distribuidas de forma uniforme.</li>
+            <li><strong>round</strong>: La imagen se repite sin recortarse; las repeticiones se adaptan hasta ocupar el espacio completo.</li>
+            <li><strong>no-repeat</strong>: La imagen no se repite.</li>
+        </ul>
+
+        <p>La propiedad background-repeat admite dos parámetros, que hacen referencia al eje horizontal y al eje vertical. Si se especifica un único parámetro sirve de abreviatura para ambos ejes.</p>
+
+        <h4>La propiedad ‘background-attachment’</h4>
+        <p>La propiedad background-attachment permite controlar la forma en la que se visualiza la imagen de fondo, es decir, permite decidir si la imagen debe permanecer fija cuando el usuario se desplaza en la ventana del navegador, o si la imagen se debe desplazar junto con la ventana.</p>
+
+        <p><strong>Lista de valores de background-attachment:</strong></p>
+        <ul>
+            <li><strong>scroll</strong>: La imagen de fondo se desplaza.</li>
+            <li><strong>fixed</strong>: La imagen de fondo permanece fija.</li>
+            <li><strong>inherit</strong>: Hereda el desplazamiento del elemento padre.</li>
+        </ul>
+
+        <h4>La propiedad ‘background-position’</h4>
+        <p>Con CSS también se puede controlar la posición de las imágenes de fondo. Esto se consigue mediante la propiedad background-position. La posición se determina partiendo de la posición original de la imagen, situada en la esquina superior izquierda, y puede situarse en cualquier ubicación.</p>
+
+        <p>La propiedad background-position puede tener uno o dos parámetros. Si se introduce un parámetro se está indicando el desplazamiento horizontal; para el eje vertical se establece el 50% (centrado). Si se indica dos parámetros, el primero ajusta el eje horizontal y el segundo ajusta el eje vertical.</p>
+
+        <p><strong>Valores permitidos:</strong> un porcentaje, una unidad de longitud o las palabras clave left, center y right para el primer parámetro (eje horizontal), y top, center y bottom para el segundo parámetro (eje vertical). El valor por defecto de background-position es 0% 0%. Se admiten valores negativos y combinaciones de palabras clave con valores numéricos.</p>
+
+        <h4>La propiedad ‘background’</h4>
+        <p>La propiedad background es una abreviatura (shorthand) que permite indicar en una sola declaración los atributos de las propiedades específicas sobre fondos vistas hasta ahora. El orden en el que se introducen no es obligatorio, pero es una buena norma seguir el siguiente:</p>
+        <ul>
+            <li>Color (<strong>background-color</strong>)</li>
+            <li>URL (<strong>background-image</strong>)</li>
+            <li>Repetición (<strong>background-repeat</strong>)</li>
+            <li>Desplazamiento (<strong>background-attachment</strong>)</li>
+            <li>Posición (<strong>background-position</strong>)</li>
+        </ul>
+
+        <p><strong>Ejemplo:</strong></p>
+        <pre>
+        .abreviatura {
+        background: #282828
+                    url("/images/css/pattern-dark.png")
+                    repeat scroll 0 0;
+        }
+        </pre>
+
+        <p>Resultado:</p>
+        <p>Párrafo con imagen de fondo insertada con background.</p>
+    </article>
+
+    <hr>
+    <hr>
+    
+</body>
+</html>

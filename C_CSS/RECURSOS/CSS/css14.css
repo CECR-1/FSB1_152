@@ -1,0 +1,49 @@
+*{
+    margin: 0;  
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.nombre{
+    margin: 70px;
+    color: white;
+    background-color: chocolate;
+}
+
+.rgb{
+    margin: 70px;
+    color: white;
+    background-color: rgb(199, 0, 57 );
+}
+
+.rgba{
+    margin: 70px;
+    color: white;
+    background-color: rgb(199, 0, 57,0.5 );
+}
+
+.hex{
+    margin: 70px;
+    color: white;
+    background-color: #00bcd4;
+}
+
+.hsl{
+    margin: 70px;
+    color: white;
+    background-color: hsl(120, 100%, 50%);
+}
+
+/* 
+RGB es un modelo de color que combina los colores Rojo (Red), Verde (Green) y Azul (Blue) en diferentes intensidades para crear otros colores en pantallas y diseño digital
+*/
+/* 
+HSL es un modelo de color que representa los colores usando tres valores: Hue (tono), Saturation (saturación) y Lightness (luminosidad), permitiendo definir colores de forma más intuitiva para humanos.
+*/
+
+.circulo{
+    width: 500px;
+    height: 500px;
+    border-radius: 50%;
+    margin: 70px;
+}

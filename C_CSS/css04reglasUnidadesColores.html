@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DWFSP1_152. CSS</title>
+</head>
+<body>
+    <h1 id="inicio">DESARROLLO WEB FULL STACK BASICO - DWFSP1_152</h1>
+    <hr>
+    <hr>
+    <h2><u>III. CSS: reglas arroba, unidades y colores</u></h2>
+
+    <hr>
+    <article id="reglas_arroba">
+        <h4>CSS: Reglas arroba</h4>
+        <p>Las reglas arroba son unas declaraciones del lenguaje CSS que permiten indicar comportamientos especiales en varios contextos. Con estas reglas se puede cambiar el diseño web en función de determinadas condiciones.</p>
+        <p>Este tipo de reglas se llaman así porque empiezan con el símbolo @ (arroba), al que le sigue una palabra clave o identificador; por ejemplo: @charset, @media o @import. En inglés, la arroba se pronuncia como «at», y es por esta razón que también se conocen como «at-rules» o «reglas-at».</p>
+
+        <h4>Sintaxis</h4>
+        <p>Su sintaxis es la siguiente:</p>
+        <pre><code>@identificador(reglas);</code></pre>
+        <p>Después del identificador se introduce un valor, una condición o una serie de palabras clave, dependiendo del identificador. Al final, se termina con un punto y coma (;). Además, algunas reglas arroba se pueden anidar.</p>
+
+        <h4>Ubicación</h4>
+        <p>La mayoría de las reglas arroba pueden estar ubicadas en cualquier lugar del archivo CSS, pero existen algunas excepciones. Por ejemplo, la regla @charset debe aparecer antes que cualquier otra declaración en la hoja de estilos, mientras que @import debe ir al principio, pero detrás de @charset.</p>
+
+        <h4>Tipos de reglas arroba</h4>
+        <p>Hay dos tipos de reglas arroba: las reglas regulares, que se ubican directamente en la hoja de estilos (sin estar anidadas), y las reglas anidadas, que se colocan como declaraciones de otra regla de estilos CSS.</p>
+
+        <h4>Reglas regulares</h4>
+        <ul>
+            <li><strong>@charset</strong>: Especifica la codificación de caracteres.</li>
+            <li><strong>@import</strong>: Incluye una hoja de estilos externa.</li>
+            <li><strong>@namespace</strong>: Define un espacio de nombres XML.</li>
+        </ul>
+
+        <h4>Reglas anidadas</h4>
+        <ul>
+            <li><strong>@media</strong>: Aplica estilos dependiendo de la pantalla.</li>
+            <li><strong>@supports</strong>: Aplica estilos si es compatible con el navegador.</li>
+            <li><strong>@page</strong>: Define el diseño de las páginas impresas.</li>
+            <li><strong>@font-face</strong>: Configura una fuente tipográfica externa.</li>
+            <li><strong>@keyframes</strong>: Define los pasos de una secuencia de animación.</li>
+            <li><strong>@counter-style</strong>: Define estilos específicos para contadores.</li>
+            <li><strong>@property</strong>: Crea propiedades CSS personalizadas.</li>
+            <li><strong>@layer</strong>: Declara una capa en cascada y el orden.</li>
+            <li><strong>@font-feature-values</strong>: Define nombres para la propiedad CSS font-variant-alternates.</li>
+            <li><strong>@container</strong>: Define estilos condicionales para contenedores.</li>
+        </ul>
+
+        <h4>La regla ‘@charset’</h4>
+        <p>La regla @charset permite definir la codificación de caracteres que debe usar el navegador web. Puede ser útil cuando la hoja de estilos contiene caracteres que no son ASCII, por ejemplo como valor de la propiedad content.</p>
+        <p>Esta regla debe ser la primera que aparece en la hoja de estilos CSS, de modo que no tenga ni un espacio precedido. El valor debe ser una cadena de texto, con comillas dobles o simples, y debe corresponder con una de las codificaciones de caracteres compatibles establecidas en el registro IANA.</p>
+        <p>Ejemplos:</p>
+        <pre><code>@charset "UTF-8";<br>@charset "ISO-8859-16";</code></pre>
+
+        <h4>La regla ‘@import’</h4>
+        <p>La regla @import permite incluir una hoja de estilos externa, indicando una URL válida, que puede ser relativa o absoluta. Esta regla debe ir situada en la parte superior del archivo, pero siempre después de @charset.</p>
+        <p>Ejemplo:</p>
+        <pre><code>@import "personalizado.css";</code></pre>
+        <p>También admite parámetros para tipos de medios:</p>
+        <pre><code>@import "personalizado.css" screen, print;</code></pre>
+
+        <h4>La regla ‘@namespace’</h4>
+        <p>La regla @namespace permite definir espacios de nombres XML. Es útil para aplicar estilos a archivos XHTML o documentos XML con múltiples espacios de nombres.</p>
+        <p>Ejemplo:</p>
+        <pre><code>@namespace url('http://www.w3.org/1999/xhtml');<br>@namespace svg url('http://www.w3.org/2000/svg');</code></pre>
+
+        <h4>La regla ‘@media’</h4>
+        <p>La regla @media permite aplicar estilos según características del dispositivo, como su tamaño de pantalla o resolución. Esto es clave para diseños responsivos.</p>
+        <p>Ejemplo:</p>
+        <pre><code>@media only screen and (max-width: 480px) { }</code></pre>
+
+        <h4>La regla ‘@supports’</h4>
+        <p>La regla @supports permite aplicar estilos si el navegador soporta ciertas características CSS.</p>
+        <p>Ejemplo:</p>
+        <pre><code>@supports (display: grid) {<br>  .container {<br>    display: grid;<br>  }<br>}</code></pre>
+
+        <h4>La regla ‘@page’</h4>
+        <p>La regla @page define estilos para páginas impresas, modificando dimensiones, orientación y márgenes.</p>
+        <p>Ejemplo:</p>
+        <pre><code>@page :first {<br>  margin: 3cm;<br>}</code></pre>
+
+        <h4>La regla ‘@font-face’</h4>
+        <p>Permite cargar fuentes tipográficas externas para usarlas en una página web.</p>
+        <p>Ejemplo:</p>
+        <pre><code>@font-face {<br>  font-display: swap;<br>  font-family: 'Oswald';<br>  font-style: normal;<br>  font-weight: 400;<br>  src: url('/oswald.eot');<br>  src: url('/oswald.woff2') format('woff2'),<br>        url('/oswald.woff') format('woff'),<br>        url('/oswald.ttf') format('truetype'),<br>        url('/oswald.svg#Oswald') format('svg');<br>}</code></pre>
+
+        <h4>La regla ‘@keyframes’</h4>
+        <p>Define fotogramas clave para animaciones CSS.</p>
+        <p>Ejemplo:</p>
+        <pre><code>@keyframes identificador {<br>  0%   { background-color: teal; }<br>  50%  { background-color: blue; }<br>  100% { background-color: salmon; }<br>}</code></pre>
+
+        <h4>La regla ‘@counter-style’</h4>
+        <p>Personaliza los símbolos usados en listas numeradas.</p>
+        <p>Ejemplo:</p>
+        <pre><code>@counter-style alternar {<br>  system: cyclic;<br>  symbols: '#' '&amp;';<br>  suffix: "-";<br>}<br>.contador {<br>  list-style: alternar;<br>}</code></pre>
+
+        <h4>La regla ‘@property’</h4>
+        <p>Declara propiedades CSS personalizadas con tipos de datos definidos.</p>
+        <p>Ejemplo:</p>
+        <pre><code>@property --main-color {<br>  syntax: "<color>";<br>  inherits: false;<br>  initial-value: #ff7f2a;<br>}</code></pre>
+
+        <h4>La regla ‘@layer’</h4>
+        <p>Permite crear capas de estilo para controlar mejor la especificidad.</p>
+        <p>Ejemplo:</p>
+        <pre><code>@layer reset {<br>  html, body, div {<br>    direction: ltr;<br>    margin: 0;<br>    padding: 0;<br>  }<br>}</code></pre>
+
+        <h4>La regla ‘@font-feature-values’</h4>
+        <p>Asigna nombres a glifos alternativos para usarlos en la propiedad font-variant-alternates.</p>
+        <p>Ejemplo:</p>
+        <pre><code>@font-feature-values Barko Script {<br>  @swash {<br>    swishy: 1;<br>    flowing: 2;<br>  }<br>}</code></pre>
+
+        <h4>La regla ‘@container’</h4>
+        <p>Aplica estilos condicionales basados en el tamaño del contenedor padre.</p>
+        <p>Ejemplo:</p>
+        <pre><code>.contenedor {<br>  container-name: ejemplo;<br>  container-type: inline-size;<br>}<br>@container ejemplo (min-width: 500px) {<br>  .card {<br>    color: blue;<br>    font-size: 1.25em;<br>    text-transform: uppercase;<br>  }<br>}</code></pre>
+    </article>
+
+    <hr>
+    <article id="unidades">
+        <h4>CSS: Unidades</h4>
+        <p>Las unidades de medida son usadas en CSS por muchas propiedades; por ejemplo, permiten especificar el tamaño del texto, el ancho y alto de una sección, la separación en los márgenes o el tiempo que dura una transición. Hay unidades de medida de longitud, de ángulo y de tiempo.</p>
+
+        <p>Las medidas se indican con un valor numérico, que puede ser entero o decimal, al que le sigue la unidad de medida. Entre el valor numérico y la unidad de medida no existe ninguna separación (espacio en blanco): se escriben unidos. Por ejemplo, una longitud de 10 píxeles se escribe como 10px.</p>
+
+        <p>Cuando el valor equivale a 0, no es obligatorio poner la unidad de medida; con un "0" es suficiente. Si el valor es diferente de 0 (positivo o negativo) pero no se indica la unidad, la propiedad CSS será ignorada. Por tanto, es importante especificar las unidades de medida tal y como se debe.</p>
+
+        <p>Cuando se usan valores decimales, si el valor decimal de una unidad de medida se encuentra entre 0 y 1, se puede omitir el 0 de la izquierda. Por ejemplo, 0.5em puede escribirse como .5em.</p>
+
+        <h4>Unidades de medida de longitud</h4>
+        <p>Se puede clasificar las unidades de longitud en dos categorías: absolutas y relativas. Las unidades absolutas establecen de forma completa el valor de una medida, siendo su valor exactamente el que se indica. En cambio, las unidades relativas definen su valor respecto a otra medida de la que dependen.</p>
+
+        <h4>Unidades de longitud absolutas</h4>
+        <p>Las unidades de longitud absolutas permiten indicar un valor exacto y fijo de una medida. Se trata de un valor que no depende de otro valor de referencia. Pueden usarse en multitud de situaciones, aunque su uso es cada vez menos frecuente debido a que no se adaptan a diferentes resoluciones o pantallas.</p>
+
+        <p>La ventaja de usar valores absolutos es que el valor indicado es el valor que se usará, sin que sea necesario realizar cálculos intermedios. Por su contra, los valores absolutos tienen la desventaja de que no son nada flexibles, por lo que son poco apropiados en el diseño web responsive.</p>
+
+        <p><strong>Tabla de unidades de longitud absolutas:</strong></p>
+        <ul>
+            <li><strong>cm:</strong> Centímetros (1cm = 10mm)</li>
+            <li><strong>mm:</strong> Milímetros (1mm = 1mm)</li>
+            <li><strong>Q:</strong> Cuarto de mm (1Q = 0.248mm)</li>
+            <li><strong>in:</strong> Pulgadas (1in = 25.4mm)</li>
+            <li><strong>px:</strong> Píxeles (1px = 0.26mm)</li>
+            <li><strong>pt:</strong> Puntos (1pt = 0.35mm)</li>
+            <li><strong>pc:</strong> Picas (1pc = 4.23mm)</li>
+        </ul>
+
+        <p>Las unidades de longitud que se describen en la tabla anterior son más útiles cuando se usan en formato impreso que representadas en una pantalla, especialmente pt para el tamaño del texto. Por ejemplo, usar centímetros o pulgadas en pantalla no tiene mucho sentido.</p>
+
+        <p>De todas las unidades de longitud absolutas, la más extendida en el mundo del desarrollo web es px. Seguramente esto se deba a que es una unidad de medida fácil de aprender, ya que las pantallas están compuestas de píxeles, por lo que es fácil de comprender a nivel conceptual.</p>
+
+        <p>Hay que tener en cuenta que el píxel no tiene el mismo tamaño en todos los dispositivos. Por tanto, a pesar de que ofrece cierta consistencia en el diseño web, más que una unidad absoluta se considera híbrida.</p>
+
+        <h4>Unidades de longitud relativas</h4>
+        <p>Las unidades de longitud relativas definen su valor a partir de otro valor, por lo que no están completamente definidas. A pesar de que esta dependencia hace que parezcan más difíciles de implementar, lo cierto es que son muy flexibles, se adaptan a cualquier pantalla y eso hace que sean muy utilizadas.</p>
+
+        <p><strong>Tabla de unidades de longitud relativas:</strong></p>
+        <ul>
+            <li><strong>em:</strong> Relativa al tamaño de la fuente del elemento padre.</li>
+            <li><strong>ex:</strong> Relativa a la altura de la letra "x" de la fuente del elemento.</li>
+            <li><strong>ch:</strong> Relativa al ancho del número "0" de la fuente del elemento.</li>
+            <li><strong>rem:</strong> Relativa al tamaño de la fuente del elemento raíz.</li>
+            <li><strong>%:</strong> Relativa a la herencia del elemento padre.</li>
+        </ul>
+
+        <p>La unidad em equivale al tamaño de la fuente del elemento. Se usa para hacer referencia al tamaño que se utiliza. El valor por defecto del navegador web es de 16px, equivalente a 12pt, excepto si se indica otro valor.</p>
+
+        <p>Haciendo una comparación que sirve de ejemplo: si 1em equivale a 16px, el valor de 2em equivaldrá al doble, es decir, 32px. Y al revés: un valor de 0.5em equivaldrá a la mitad, 8px. Tal y como se puede ver, el em calcula un valor porcentual dependiendo del tamaño de la fuente.</p>
+
+        <p>Vamos a ver un ejemplo. Si un párrafo tiene el tamaño de la fuente por defecto del navegador, es decir, 16px, cuando se le aplique un margen inferior de 1.5em equivaldrá a 24px. Pero si se cambia el tamaño de la fuente al valor de 20px, entonces el margen inferior será también mayor, de 30px.</p>
+
+        <pre><code>p {
+        font-size: 20px;
+        margin-bottom: 1.5em;
+        }</code></pre>
+
+        <p>Para tener una idea de las equivalencias partiendo de los 16 píxeles que tienen las fuentes por defecto en los navegadores web:</p>
+        <ul>
+            <li><strong>2em = 32px</strong></li>
+            <li><strong>1.5em = 24px</strong></li>
+            <li><strong>1em = 16px</strong></li>
+            <li><strong>0.5em = 8px</strong></li>
+            <li><strong>0.25em = 4px</strong></li>
+        </ul>
+
+        <p>Las unidades relativas tienen la ventaja de mantener la proporcionalidad del diseño de la página web. Por ejemplo, establecer el margen inferior de un párrafo con el valor de 1em equivale a decir que el margen debe ser el mismo que el tamaño de su letra, y que por tanto cambiará proporcionalmente.</p>
+
+        <p>La unidad ex equivale a la altura de la letra "x" (equis minúscula) del tipo y tamaño de la fuente del elemento. Esto significa que su valor es aproximadamente la mitad de 1em, es decir, 0.5em; se trata de una aproximación porque, como es de esperar, depende de la tipografía utilizada.</p>
+
+        <p>La unidad rem es muy interesante para el uso de las tipografías. Su uso es parecido al de la unidad em, pero permite establecer un tamaño base personalizado, ya sea a través del elemento <code><html></code> o mediante la pseudoclase <code>:root</code>. Así se trabaja con múltiplos del tamaño base.</p>
+
+        <p>En el caso base se usa la unidad px, y en el resto de selectores se usa la unidad rem para aplicar un cálculo de escalado. Así:</p>
+
+        <pre><code>:root {
+        font-size: 20px;
+        }
+
+        h1 {
+        font-size: 2rem;
+        }
+
+        h2 {
+        font-size: 1.5rem;
+        }</code></pre>
+
+        <p>En el ejemplo anterior se está aplicando un factor de escala para los elementos de encabezado. En este sentido, los elementos <code><h1></code> tendrán un tamaño de fuente de 40 píxeles, mientras que los elementos <code><h2></code> medirán 30 píxeles.</p>
+
+        <p>La gran ventaja de usar la unidad rem es que permite modificar el tamaño de las fuentes de todo el documento, de forma proporcional, solo cambiando el valor del caso base de la pseudoclase <code>:root</code>. Para el resto de elementos se aplicará un cálculo de escalado en consecuencia con el factor indicado.</p>
+
+        <p>Resumiendo la diferencia entre las unidades de medida em y rem, es que em es relativo al tamaño de la fuente del elemento padre, mientras que rem es relativo al tamaño de la fuente del elemento raíz.</p>
+
+        <h4>Unidades del ‘viewport’</h4>
+        <p>Dentro de las unidades de longitud relativas existen las unidades relacionadas con el viewport. El viewport es la parte del documento HTML que el usuario está viendo en el navegador web; es una región rectangular. El contenido que no es visible queda fuera del viewport hasta que sea desplazado dentro de él.</p>
+
+        <p>Disponer de unidades que dependan del viewport resulta de gran utilidad. Gracias a este tipo de unidades es posible hacer referencia a un porcentaje concreto del tamaño que aparece en la ventana del navegador.</p>
+
+        <p><strong>Tabla de unidades del viewport:</strong></p>
+        <ul>
+            <li><strong>vw:</strong> Relativo al 1% del ancho del viewport.</li>
+            <li><strong>vh:</strong> Relativo al 1% del alto del viewport.</li>
+            <li><strong>vmin:</strong> Relativo al 1% de la dimensión más pequeña del viewport.</li>
+            <li><strong>vmax:</strong> Relativo al 1% de la dimensión más grande del viewport.</li>
+        </ul>
+
+        <p>Las unidades vw y vh hacen referencia al ancho y alto del viewport. El valor de estas dos unidades es un porcentaje, por lo que 100vw equivale al 100% del ancho de la ventana del navegador web, mientras que 40vw equivale al 40%.</p>
+
+        <p>Por su parte, las unidades vmin y vmax permiten hacer referencia al porcentaje más pequeño o más grande, respectivamente, de entre el ancho y el alto del viewport. Puede ser útil cuando se quiere cierto tipo de flexibilidad.</p>
+
+        <h4>Unidad relativa de fracciones</h4>
+        <p>Dentro del sistema de diseño de cuadrículas o rejillas, conocido como grid, es posible usar un tipo de unidad de longitud relativa que permite distribuir el espacio disponible de forma fraccional entre las filas o las columnas.</p>
+
+        <p><strong>fr:</strong> Fracción del espacio disponible en un sistema de cuadrícula.</p>
+
+        <p>La unidad fr permite asignar fracciones al espacio disponible. Por ejemplo, si una cuadrícula tiene tres columnas, cada columna ocupará su parte proporcional. En este caso, el valor 1fr equivaldrá a un tercio del espacio disponible.</p>
+
+        <p>En este sentido, la unidad fraccional fr es dinámica y se adapta al espacio disponible del elemento contenedor (padre). Si el tamaño de la cuadrícula cambia, las columnas y las filas definidas se ajustarán de forma automática con el fin de mantener la proporción especificada.</p>
+
+        <h4>Unidades relativas de contenedor</h4>
+        <p>Trabajando con contenedores (container queries), dentro de la regla @container se puede usar unidades relativas a la longitud del contenedor. Así es posible dar estilos referentes a la longitud de un elemento que dependa exclusivamente del tamaño cambiante de su elemento contenedor (padre).</p>
+
+        <p><strong>Tabla de unidades relativas de contenedor:</strong></p>
+        <ul>
+            <li><strong>cqw:</strong> Porcentaje relativo al ancho del contenedor.</li>
+            <li><strong>cqh:</strong> Porcentaje relativo al alto del contenedor.</li>
+            <li><strong>cqi:</strong> Porcentaje relativo al tamaño en línea.</li>
+            <li><strong>cqb:</strong> Porcentaje relativo al tamaño de bloque.</li>
+            <li><strong>cqmin:</strong> El valor más pequeño entre cqi y cqb.</li>
+            <li><strong>cqmax:</strong> El valor más alto entre cqi y cqb.</li>
+        </ul>
+
+        <h4>Unidades de medida de ángulo</h4>
+        <p>En CSS también es posible hacer uso de unidades de ángulo. Estas unidades pueden ser expresadas en grados (deg), grados centesimales (grad), radianes (rad) y vueltas (turn). Los valores positivos representan ángulos en el sentido de las agujas del reloj, y los valores positivos en el sentido opuesto.</p>
+
+        <p>La sintaxis de este tipo de unidades es un valor numérico seguido por un sufijo que corresponde con el tipo de unidad. Al igual que ocurre con los otros tipos de unidades, en CSS no se deja ninguna separación entre el número (izquierda) y la unidad (derecha). Diez grados se indica como 10deg.</p>
+
+        <p><strong>Tabla de unidades de ángulo:</strong></p>
+        <ul>
+            <li><strong>deg:</strong> Grados (un círculo tiene 360 grados)</li>
+            <li><strong>grad:</strong> Grados centesimales (un círculo tiene 400 grados centesimales)</li>
+            <li><strong>rad:</strong> Radianes (un círculo tiene 2π radianes)</li>
+            <li><strong>turn:</strong> Vueltas (un círculo tiene una vuelta completa)</li>
+        </ul>
+
+        <p>Las unidades de medida de ángulo se usan en propiedades CSS que se explican en artículos posteriores, como transform y gradient. Cuando su valor sea 0, deberá indicarse igualmente el tipo de unidad.</p>
+
+        <h4>Unidades de medida de tiempo</h4>
+        <p>Las unidades de medida de tiempo también existen en CSS, y pueden ser usadas en las propiedades animation, transition y propiedades relacionadas. Los valores se expresan en segundos (s) o en milisegundos (ms). El tipo de unidad no debe omitirse aunque el valor sea equivalente a cero (0).</p>
+    </article>
+
+    <hr>
+    <article id="colores">
+        <h4>CSS: Colores</h4>
+        <p>El color es un componente muy importante en el diseño web. De hecho, es de las primeras cosas que se modifican cuando se empieza un nuevo proyecto. CSS ofrece propiedades para modificar el color del texto, el color de fondo y de los bordes, e incluso permite crear sombreados con cualquier color.</p>
+
+        <p>En CSS, los colores se pueden indicar mediante un nombre predefinido (existen 140), con notación hexadecimal o introduciendo valores numéricos a través de los modelos RGB, HSL y HWB. El código hexadecimal es el más usado.</p>
+
+        <p>También se puede indicar colores a través del espacio de color CIE L*a*b. La ventaja de este espacio de color es que representa los colores de una manera que se asemeja mucho más a la percepción humana, y permite definir muchos más colores. En CSS puede usarse los modelos Lab, Oklab, Lch y Oklch.</p>
+
+        <h4>Lista completa de formas para introducir colores:</h4>
+        <ul>
+            <li><strong>Nombres:</strong> Nombres predefinidos de colores (hay 140).</li>
+            <li><strong>#rrggbb:</strong> Indica colores con notación hexadecimal.</li>
+            <li><strong>rgb():</strong> Combinación de rojo, verde y azul.</li>
+            <li><strong>hsl():</strong> Combinación de matiz, saturación y brillo.</li>
+            <li><strong>hwb():</strong> Combinación de matiz, blancura y negrura.</li>
+        </ul>
+
+        <p>Por ejemplo, el nombre predefinido del color rojo es red. Si se quiere indicar con un código hexadecimal se usará los valores #ff0000 o #f00 (abreviado). Con el modelo de color RGB el valor será rgb(255 0 0), y en cambio con el modelo de color HSL su valor será hsl(0% 100% 50%). Todos estos valores constituyen diferentes formas de representar el mismo color.</p>
+
+        <h4>Colores con nombre predefinido</h4>
+        <p>Existe una nomenclatura predefinida de colores que permite aplicar hasta un total de 140 colores solo recordando el nombre. Por ejemplo, el valor salmon aplicará el color salmón y el valor olive aplicará el color verde olivo. Los navegadores web reconocen estos colores y los muestran de la misma manera.</p>
+
+        <p>Algunos nombres son muy populares, aunque sean en inglés, por tanto es fácil recordar el verde (green), el rojo (red), el azul (blue), el gris (gray), el blanco (white), el negro (black), el púrpura (purple), el amarillo (yellow) o el fucsia (fuchsia). Pero hay otros que son más difíciles de recordar.</p>
+
+        <p>Debido al hecho de que existen 140 colores con nombre predefinido, se recomienda trabajar con una tabla de referencia de colores. De todas formas, las alternativas que se explican a continuación también se pueden dominar fácilmente, y tienen la ventaja de que permiten crear hasta 16,7 millones de colores.</p>
+
+        <h4>Notación hexadecimal</h4>
+        <p>Indicar colores mediante código hexadecimal es más difícil que el método anterior, y sin embargo es el más popular y utilizado. Su sintaxis es la siguiente: almohadilla (#) seguida de 6 dígitos hexadecimales divididos en 3 grupos de 2. Cada grupo representa una cantidad de color (de rojo, verde y azul).</p>
+
+        <p>El esquema es el siguiente:
+        <br><code>#rrggbb</code></p>
+
+        <p>Los dos primeros dígitos corresponden al color rojo ("R" de Red), los dos dígitos del medio corresponden al color verde ("G" de Green), y finalmente, los dos últimos dígitos corresponden con el color azul ("B" de Blue). De hecho, este método es una forma de representar los colores según el modelo de color RGB.</p>
+
+        <p>Cada uno de los tres colores mencionados está definido mediante dos dígitos hexadecimales. Cada dígito hexadecimal puede tener 16 valores, esto implica que podemos especificar 256 tonalidades de cada uno de los tres colores (rojo, verde y azul). El 256 nace de la multiplicación 16×16.</p>
+
+        <p>Con la combinación de las 256 tonalidades de cada uno de los tres colores es posible formar 16.777.216 de colores. Esto es así porque es el resultado de multiplicar 256×256×256; o lo que es lo mismo, 256³ (256 al cubo).</p>
+
+        <p>Los dígitos hexadecimales son los siguientes: 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, a, b, c, d, e, f. Debido a que cada color tiene dos dígitos hexadecimales, 00 es el valor más bajo y ff el más alto (mayor cantidad).</p>
+
+        <p>Vamos a crear la máxima saturación del color azul: indicamos los valores 00 en el grupo del rojo, 00 en el grupo del verde y ff en el grupo del azul. El color azul es <code>#0000ff</code>.</p>
+
+        <p>Cuando los dos dígitos hexadecimales de cada uno de los tres colores se repiten es posible comprimirlos, dos a dos. En este caso, el color <code>#0000ff</code> puede abreviarse de la siguiente manera: <code>#00f</code>, que también será válida. En muchos otros casos (<code>#0f2385</code>), esta simplificación o abreviación no será posible.</p>
+
+        <p>A la notación hexadecimal puede añadirse otros dos dígitos al final que indican el canal alfa (transparencia). Puede ir desde el 00 (0 en sistema decimal) hasta el ff (255 en el sistema decimal). Por lo tanto, usando este método es posible indicar 256 niveles de opacidad para el color deseado.</p>
+
+        <p><strong>Sintaxis de la notación hexadecimal con transparencia:</strong>
+        <br><code>#rrggbbaa</code></p>
+
+        <p>El 50% de transparencia correspondería con el valor 128 en sistema decimal, o el 80 en el sistema hexadecimal. Por tanto, para indicar el color azul con una transparencia del 50% indicaremos <code>#0000ff80</code>.</p>
+
+        <p>Por ejemplo:</p>
+        <pre><code>p { color: #0000ff80; }</code></pre>
+
+        <h4>La función ‘rgb()’</h4>
+        <p>La función rgb() permite especificar los colores del modelo RGB mediante una combinación del rojo, el verde y el azul, pero en este caso no se usa el sistema hexadecimal, sino números enteros del sistema decimal, con el que estamos más familiarizados. Por esta razón, es un método más intuitivo.</p>
+
+        <p>Esta función tiene tres parámetros obligatorios y un cuarto opcional. Los tres primeros son números enteros que van desde el 0 hasta el 255, formando 256 tonalidades de rojo, verde y azul. El cuarto valor es el canal alfa, para indicar la opacidad de los píxeles, y se expresa en porcentaje.</p>
+
+        <p>Por tanto, la sintaxis es la que se indica a continuación: <code>rgb(r g b)</code>. Los tres parámetros se pueden separar con un espacio o una coma. Solo hay que sustituir las variables r, g y b por números enteros. Si se añade el canal alfa, se separa con una barra inclinada (/), así: <code>rgb(r g b / a)</code>.</p>
+
+        <p>Para crear el color azul en su máxima saturación de color se deberá usar el valor 255 en el parámetro correspondiente al color azul, y dejaremos en 0 los otros dos parámetros. El resultado será el siguiente:</p>
+        <pre><code>p { color: rgb(0 0 255); }</code></pre>
+
+        <p>Para crear el color azul con una transparencia del 50% añadiremos el cuarto parámetro con el valor 0.5. De la siguiente manera:</p>
+        <pre><code>p { color: rgb(0 0 255 / 0.5); }</code></pre>
+
+        <p>Ya no se recomienda utilizar la función rgba() para indicar el valor del canal alfa, aunque sigue siendo aceptada por razones de compatibilidad.</p>
+
+        <h4>La función ‘hsl()’</h4>
+        <p>La función hsl() utiliza el modelo HSL para representar los colores del espacio de color RGB. Por tanto, se basa en una combinación del matiz (hue), la saturación (saturation) y la luminosidad (lightness). Este modelo también permite formar la mencionada cifra de 16,7 millones de colores.</p>
+
+        <p>El modelo HSL es una deformación no lineal del espacio de color RGB.</p>
+
+        <p>Para especificar colores usando la función hsl() debe indicarse tres parámetros obligatorios y un cuarto opcional. El primero es el matiz, cuyo valor será un ángulo basándose en la rueda del color; por defecto se usa los grados. El segundo es la saturación, el tercero la luminosidad y el cuarto el canal alfa, para añadir opacidad o transparencia; estos tres valores son porcentuales.</p>
+
+        <p>La sintaxis de esta función es <code>hsl(h s l)</code> para los parámetros obligatorios, que deben ir separados con un espacio o una coma. Si se quiere indicar el canal alfa, debe separarse con una barra inclinada (/) del resto de valores. En este caso, la sintaxis pasa a ser la siguiente: <code>hsl(h s l / a)</code>.</p>
+
+        <p>Ejemplo de color sin transparencia:</p>
+        <pre><code>p { color: hsl(240 100% 50%); }</code></pre>
+
+        <p>Ejemplo de color con transparencia:</p>
+        <pre><code>p { color: hsl(240 100% 50% / 0.5); }</code></pre>
+
+        <p>La función hsla() para indicar el canal alfa ya no está recomendada. No obstante, se sigue aceptando con fines de compatibilidad.</p>
+
+        <h4>La función ‘hwb()’</h4>
+        <p>La función hwb() utiliza el modelo HWB para representar los colores del espacio de color RGB, pero en este caso utiliza una combinación de matiz (hue), blancura (whiteness) y negrura (blackness). El mecanismo HWB aporta otro camino para formar los 16,7 millones de colores; al ser más predecible que el modelo HSL, facilita la creación de colores de forma algorítmica.</p>
+
+        <p>El modelo HWB comparte el parámetro del matiz con el modelo HSL.</p>
+
+        <p>Para crear colores mediante la función hwb() se debe indicar tres parámetros obligatorios referentes al matiz, la blancura y la negrura. El matiz se basa en la rueda del color, y su valor será un ángulo que por defecto estará en grados. Al matiz se le asignará un porcentaje de blancura y un porcentaje de negrura. El cuarto parámetro es opcional, referente al porcentaje de la transparencia.</p>
+
+        <p>La sintaxis de esta función es <code>hwb(h w b)</code>. Los tres parámetros obligatorios pueden ir separados con un espacio o una coma. El cuarto parámetro referente al canal alfa se separa con la barra inclinada (/); entonces la sintaxis queda estipulada de la siguiente manera: <code>hwb(h w b / a)</code>.</p>
+
+        <p>Ejemplo de color sin transparencia:</p>
+        <pre><code>p { color: hwb(180 20% 50%); }</code></pre>
+
+        <p>Ejemplo de color con transparencia:</p>
+        <pre><code>p { color: hwb(180 20% 50% / 0.3); }</code></pre>
+
+        <p>Este modelo para definir colores puede ser más intuitivo cuando la intención es crear una paleta de colores partiendo de un mismo matiz. Vamos a ver algunos ejemplos modificando la blancura y la negrura a partir del azul.</p>
+
+        <p><strong>Ejemplos añadiendo blancura al azul, para hacerlo más claro:</strong></p>
+        <pre>
+        <code>.blancura1 { background: hwb(240 0% 0%); }</code>
+        <code>.blancura2 { background: hwb(240 25% 0%); }</code>
+        <code>.blancura3 { background: hwb(240 50% 0%); }</code>
+        <code>.blancura4 { background: hwb(240 75% 0%); }</code>
+        <code>.blancura5 { background: hwb(240 100% 0%); }</code>
+        </pre>
+
+        <p><strong>Ejemplos añadiendo negrura al azul, para hacerlo más oscuro:</strong></p>
+        <pre>
+        <code>.negrura1 { background: hwb(240 0% 0%); }</code>
+        <code>.negrura2 { background: hwb(240 0% 25%); }</code>
+        <code>.negrura3 { background: hwb(240 0% 50%); }</code>
+        <code>.negrura4 { background: hwb(240 0% 75%); }</code>
+        <code>.negrura5 { background: hwb(240 0% 100%); }</code>
+        </pre>
+
+        <h4>Propiedades para definir el color</h4>
+        <p>En CSS existen varias propiedades que permiten modificar los colores en varios contextos, como un borde o un sombreado. A continuación se detallan algunas de las propiedades más relevantes relacionadas con el color:</p>
+
+        <table>
+            <tr>
+            <th>Propiedad</th>
+            <th>Descripción</th>
+            </tr>
+            <tr>
+            <td>color</td>
+            <td>Modifica el color del texto.</td>
+            </tr>
+            <tr>
+            <td>border-color</td>
+            <td>Modifica el color del borde.</td>
+            </tr>
+            <tr>
+            <td>background-color</td>
+            <td>Modifica el color de fondo.</td>
+            </tr>
+            <tr>
+            <td>box-shadow</td>
+            <td>Aplica sombreado de caja indicando el color.</td>
+            </tr>
+            <tr>
+            <td>text-shadow</td>
+            <td>Aplica sombreado de texto indicando el color.</td>
+            </tr>
+        </table>
+
+        <p>Además de las propiedades border-color y background-color, también existen las abreviaturas border y background, respectivamente, que permiten especificar otros parámetros particulares sobre los bordes y el fondo.</p>
+    </article> 
+
+    <hr>
+    <hr>
+</body>
+</html>

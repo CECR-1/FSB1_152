@@ -1,0 +1,51 @@
+/* 
+    Especificidad en CSS:
+    - La especificidad determina qué reglas CSS se aplican a un elemento cuando hay múltiples reglas que podrían coincidir.
+    - Se calcula en base a los selectores utilizados.
+    - Los selectores más específicos tienen mayor prioridad.
+
+    Reglas de especificidad:
+    1. Selectores de ID (100 puntos)
+    2. Selectores de clase, atributos y pseudo-clases (10 puntos)
+    3. Selectores de tipo (elementos) y pseudo-elementos (1 punto)
+*/
+/* 
+#titulo {
+    color: green;
+}
+
+#titulo{
+    color: red;
+}
+
+
+.titulo{
+    color: blue;
+}
+
+h1 {
+    color: purple;
+}
+
+body .titulo {
+    color: orange;
+}
+
+body #titulo {
+    color: yellow;
+}
+
+.titulo{
+    color: pink !important;
+}
+ */
+
+/* 
+    !important es una forma de darle prioridad a una regla CSS.
+    Se usa para anular otras reglas que puedan tener la misma especificidad.
+*/
+
+#titulo {
+    color: magenta !important;
+}
+

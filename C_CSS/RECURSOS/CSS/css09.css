@@ -1,0 +1,29 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    background-color: yellow;
+    max-width: 300px;
+    min-width: 100px;
+    width: 80%; 
+    height: 80%;
+    overflow: visible; /* visible, hidden, scroll, auto */
+    padding: 10px;
+    border: 2px solid black;
+    border-radius: 10px;
+}
+
+/* 
+border: width style color;  
+border: 2px solid black;
+width opciones: thin, medium, thick;
+el width puede ser en px, em, rem, %, etc.
+style opciones: none, hidden, dotted, dashed, solid, double, groove, ridge, inset, outset;
+el style es un shorthand de los estilos de borde; por ejemplo,
+border-top-style: solid;
+border-left-style: double;
+border-bottom-style: dashed;
+border-right-style: dotted;
+*/

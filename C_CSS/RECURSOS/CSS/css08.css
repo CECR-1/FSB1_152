@@ -1,0 +1,21 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    background-color: blue;
+    color: white;
+    font-family: Arial;
+    font-size: 20px;;
+    width: 80%; 
+    height: 80%;
+    padding: 30px;
+}
+/* 
+    padding: top right bottom left;
+    padding: 30px 20px 10px 5px;
+    en orden de las manecillas del reloj:
+    si faltan valores, se toman de los contrarios:
+    padding: 30px 20px;
+*/
