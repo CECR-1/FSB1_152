@@ -1,0 +1,42 @@
+*{
+    /* margin: 0;
+    padding: 0; */
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Arial', sans-serif;
+    background-color: #f0f0f0;
+    color: #333;
+    min-width: 200vw;
+    min-height: 400vh;
+}
+
+.sticky {
+    width: 140px;
+    height: 140px;
+    background-color: slateblue;
+    position: sticky;
+    top: 50px;
+    bottom: 50px;
+}	
+
+.container {
+    width: 400px;
+    height: 600px;
+    margin-left: 220px;
+    padding: 20px;
+    background-color: aquamarine;
+    position: relative;
+}
+
+.otro {
+    width: 100px;
+    height: 100px;
+    background-color: coral;
+    position: sticky;
+    top: 20px;
+    bottom: 20px;
+    left: 20px;
+    right: 20px;
+}

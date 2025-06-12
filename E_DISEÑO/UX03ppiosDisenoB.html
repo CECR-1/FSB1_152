@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Capítulo III - Parte B</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      line-height: 1.6;
+      margin: 40px auto;
+      padding: 0 20px;
+      max-width: 900px;
+      background-color: #f9f9f9;
+      color: #333;
+    }
+
+    h1, h2, h3, h4 {
+      color: #2c3e50;
+    }
+
+    h1 {
+      border-bottom: 3px solid #3498db;
+      padding-bottom: 5px;
+      text-align: center;
+    }
+
+    h2 {
+      border-bottom: 2px solid #3498db;
+      padding-bottom: 5px;
+      margin-top: 40px;
+    }
+
+    h3 {
+      color: #2980b9;
+      margin-top: 30px;
+    }
+
+    h4 {
+      color: #34495e;
+      margin-top: 20px;
+    }
+
+    nav#indice {
+      background-color: #ecf0f1;
+      padding: 20px;
+      border-radius: 8px;
+      margin-bottom: 40px;
+    }
+
+    nav#indice h3 {
+      margin-top: 0;
+    }
+
+    nav#indice ul {
+      list-style-type: none;
+      padding-left: 0;
+    }
+
+    nav#indice li {
+      margin-bottom: 10px;
+    }
+
+    article {
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+      margin-bottom: 30px;
+    }
+
+    ul, ol {
+      padding-left: 20px;
+    }
+
+    li {
+      margin-bottom: 8px;
+    }
+
+    hr {
+      border: 0;
+      height: 1px;
+      background: linear-gradient(to right, transparent, #ccc, transparent);
+      margin: 40px 0;
+    }
+
+    strong {
+      color: #2c3e50;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>III. Principios de Diseño - Parte B</h1>
+
+  <nav id="indice">
+    <h3>Índice</h3>
+    <ul>
+      <li><a href="#jerarquia">Jerarquía visual</a></li>
+      <li><a href="#legibilidad">Legibilidad e inteligibilidad</a></li>
+      <li><a href="#ley-fitts">Ley de Fitts</a></li>
+      <li><a href="#mapeo-natural">Mapeo natural</a></li>
+      <li><a href="#ordenacion">Ordenación</a></li>
+      <li><a href="#relevancia">Relevancia</a></li>
+      <li><a href="#taxonomias">Taxonomías</a></li>
+      <li><a href="#toma-decisiones">Toma de decisiones</a></li>
+      <li><a href="#visibilidad-retroalimentacion">Visibilidad y retroalimentación</a></li>
+    </ul>
+  </nav>
+
+  <section>
+    <h2>III. Principios de Diseño - Parte B</h2>
+
+    <!-- Artículo: Jerarquía visual -->
+    <article id="jerarquia">
+      <h3>Jerarquía visual</h3>
+      <p>La jerarquía visual establece cómo deben destacarse los elementos de una interfaz según su importancia relativa para el usuario en cada momento de la interacción.</p>
+
+      <p>El principio fundamental es que no todos los elementos deben llamar la atención por igual. Si enfatizamos demasiados elementos, ninguno logrará capturar realmente la atención del usuario.</p>
+
+      <h4>Factores clave:</h4>
+      <ul>
+        <li>Tamaño: Elementos más grandes tienden a ser percibidos como más importantes.</li>
+        <li>Color: Colores más intensos o contrastantes destacan visualmente.</li>
+        <li>Espacio: El uso estratégico del espacio en blanco ayuda a separar y resaltar contenido relevante.</li>
+        <li>Fuente tipográfica: Diferentes estilos y grosores pueden usarse para priorizar información.</li>
+      </ul>
+    </article>
+
+    <hr>
+
+    <!-- Artículo: Legibilidad e inteligibilidad -->
+    <article id="legibilidad">
+      <h3>Legibilidad e inteligibilidad</h3>
+      <p>Estas dos cualidades están relacionadas con la comprensión efectiva del contenido escrito en una interfaz.</p>
+
+      <ul>
+        <li><strong>Legibilidad:</strong> Se refiere a qué tan fácil es leer un texto (tamaño, tipo de letra, contraste, interlineado).</li>
+        <li><strong>Inteligibilidad:</strong> Hace referencia a qué tan claro y comprensible es el lenguaje utilizado.</li>
+      </ul>
+
+      <h4>Recomendaciones:</h4>
+      <ul>
+        <li>Usar fuentes simples y sin decoración innecesaria.</li>
+        <li>Evitar mayúsculas completas o cursivas extensas.</li>
+        <li>Mantener un tamaño mínimo recomendado de 16px para texto principal.</li>
+        <li>Utilizar un tono claro, pero preciso, que facilite la comprensión sin sobrecargar al lector.</li>
+      </ul>
+    </article>
+
+    <hr>
+
+    <!-- Artículo: Ley de Fitts -->
+    <article id="ley-fitts">
+      <h3>Ley de Fitts</h3>
+      <p>La ley de Fitts predice el tiempo necesario para alcanzar un objetivo basándose en su tamaño y distancia desde el punto inicial. Es fundamental para diseñar interfaces eficientes y cómodas.</p>
+
+      <p>En términos prácticos:</p>
+      <ul>
+        <li>Cuanto más pequeño sea un elemento, mayor será el esfuerzo requerido para seleccionarlo.</li>
+        <li>Cuanto más lejos esté un elemento del cursor o dedo, más tiempo tomará accionarlo.</li>
+      </ul>
+
+      <h4>Aplicaciones en diseño:</h4>
+      <ul>
+        <li>Diseñar botones y enlaces suficientemente grandes.</li>
+        <li>Colocar acciones frecuentes cerca de zonas naturales del cursor (ej. esquinas en interfaces de escritorio).</li>
+        <li>Evitar elementos pequeños y muy juntos que dificulten la selección precisa.</li>
+      </ul>
+    </article>
+
+    <hr>
+
+    <!-- Artículo: Mapeo natural -->
+    <article id="mapeo-natural">
+      <h3>Mapeo natural</h3>
+      <p>El mapeo natural describe la relación entre las acciones del usuario y los resultados obtenidos. Un buen mapeo permite predecir intuitivamente qué resultado tendrá una acción.</p>
+
+      <p>Ejemplos claros:</p>
+      <ul>
+        <li>Un botón etiquetado como “Guardar” debe guardar, no salir o cerrar.</li>
+        <li>Una flecha hacia arriba debe hacer subir un elemento, no bajarlo.</li>
+      </ul>
+
+      <h4>Cómo lograr un buen mapeo:</h4>
+      <ul>
+        <li>Etiquetas y símbolos descriptivos y consistentes.</li>
+        <li>Uso de metáforas visuales del mundo real.</li>
+        <li>Relación lógica entre posición y función (ej. controles izquierdos afectan elementos izquierdos).</li>
+      </ul>
+    </article>
+
+    <hr>
+
+    <!-- Artículo: Ordenación -->
+    <article id="ordenacion">
+      <h3>Ordenación</h3>
+      <p>Los contenidos y opciones deben organizarse de manera que faciliten al usuario la consecución de sus objetivos o la localización de lo que buscan.</p>
+
+      <h4>Tipos comunes de ordenación:</h4>
+      <ul>
+        <li><strong>Por relevancia:</strong> Prioriza lo que probablemente sea más útil o importante.</li>
+        <li><strong>Alfabética:</strong> Útil cuando se busca algo específico y conocido.</li>
+        <li><strong>Cronológica:</strong> Ideal para contenido con fecha (noticias, registros históricos).</li>
+        <li><strong>Geográfica:</strong> Aplicable cuando la ubicación es clave (mapas, directorios).</li>
+      </ul>
+
+      <p>La forma más efectiva dependerá del contexto y del modelo mental del usuario.</p>
+    </article>
+
+    <hr>
+
+    <!-- Artículo: Relevancia -->
+    <article id="relevancia">
+      <h3>Relevancia</h3>
+      <p>La relevancia determina qué contenido u opción merece mayor atención en función del objetivo actual del usuario.</p>
+
+      <p>Para aplicarla:</p>
+      <ul>
+        <li>Mostrar primero lo que probablemente sea más útil o buscado.</li>
+        <li>Adaptar la presentación según el perfil o historial del usuario.</li>
+        <li>Usar criterios dinámicos como popularidad, recencia o personalización.</li>
+      </ul>
+
+      <p>Un ejemplo claro es Google, que ordena resultados por similitud semántica, autoridad del sitio y comportamiento del usuario.</p>
+    </article>
+
+    <hr>
+
+    <!-- Artículo: Taxonomías -->
+    <article id="taxonomias">
+      <h3>Taxonomías</h3>
+      <p>Las taxonomías son sistemas de clasificación que permiten organizar contenidos y funcionalidades en categorías lógicas y coherentes.</p>
+
+      <h4>Tipos principales:</h4>
+      <ul>
+        <li><strong>Jerárquica:</strong> Categorías y subcategorías anidadas (ej. menús desplegables).</li>
+        <li><strong>Facetada:</strong> Permite filtrar por múltiples dimensiones simultáneas (ej. filtros de búsqueda).</li>
+        <li><strong>Relacional:</strong> Incluye conexiones transversales entre categorías.</li>
+      </ul>
+
+      <p>Es crucial encontrar un equilibrio entre profundidad (número de niveles) y anchura (opciones por nivel) para evitar frustración en la navegación.</p>
+    </article>
+
+    <hr>
+
+    <!-- Artículo: Toma de decisiones -->
+    <article id="toma-decisiones">
+      <h3>Toma de decisiones</h3>
+      <p>El diseño debe facilitar al usuario la toma de decisiones rápidas y acertadas. Demasiadas opciones o información ambigua pueden generar indecisión o errores.</p>
+
+      <h4>Principios clave:</h4>
+      <ul>
+        <li>Reducir el número de opciones disponibles (menos es más).</li>
+        <li>Destacar las opciones más recomendadas o utilizadas.</li>
+        <li>Proporcionar información clara sobre las consecuencias de cada elección.</li>
+      </ul>
+
+      <p>El uso de patrones familiares y convenciones reconocidas también reduce la carga cognitiva asociada a decidir.</p>
+    </article>
+
+    <hr>
+
+    <!-- Artículo: Visibilidad y retroalimentación -->
+    <article id="visibilidad-retroalimentacion">
+      <h3>Visibilidad y retroalimentación</h3>
+      <p>Estos principios ayudan a evitar brechas en la ejecución y evaluación del usuario durante la interacción:</p>
+
+      <ul>
+        <li><strong>Visibilidad:</strong> Las opciones y acciones disponibles deben estar visibles o fácilmente accesibles.</li>
+        <li><strong>Retroalimentación:</strong> El sistema debe mostrar claramente el estado actual y el resultado de las acciones realizadas.</li>
+      </ul>
+
+      <h4>Ejemplos:</h4>
+      <ul>
+        <li>Mensajes de confirmación tras enviar un formulario.</li>
+        <li>Animaciones o cambios visuales al hacer clic en un botón.</li>
+        <li>Vibraciones o sonidos en dispositivos móviles como respuesta táctil/sensorial.</li>
+      </ul>
+
+      <p>La máxima "reconocer mejor que recordar" subraya la importancia de no obligar al usuario a memorizar pasos o opciones.</p>
+    </article>
+
+  </section>
+
+</body>
+</html>

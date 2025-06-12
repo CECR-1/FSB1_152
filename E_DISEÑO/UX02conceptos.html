@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Capítulo II - Conceptos Fundamentales</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      line-height: 1.6;
+      margin: 40px auto;
+      padding: 0 20px;
+      max-width: 900px;
+      background-color: #f9f9f9;
+      color: #333;
+    }
+
+    h1, h2, h3, h4 {
+      color: #2c3e50;
+    }
+
+    h1 {
+      border-bottom: 3px solid #3498db;
+      padding-bottom: 5px;
+      text-align: center;
+    }
+
+    h2 {
+      border-bottom: 2px solid #3498db;
+      padding-bottom: 5px;
+      margin-top: 40px;
+    }
+
+    h3 {
+      color: #2980b9;
+      margin-top: 30px;
+    }
+
+    h4 {
+      color: #34495e;
+      margin-top: 20px;
+    }
+
+    nav#indice {
+      background-color: #ecf0f1;
+      padding: 20px;
+      border-radius: 8px;
+      margin-bottom: 40px;
+    }
+
+    nav#indice h3 {
+      margin-top: 0;
+    }
+
+    nav#indice ul {
+      list-style-type: none;
+      padding-left: 0;
+    }
+
+    nav#indice li {
+      margin-bottom: 10px;
+    }
+
+    article {
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+      margin-bottom: 30px;
+    }
+
+    ul, ol {
+      padding-left: 20px;
+    }
+
+    li {
+      margin-bottom: 8px;
+    }
+
+    hr {
+      border: 0;
+      height: 1px;
+      background: linear-gradient(to right, transparent, #ccc, transparent);
+      margin: 40px 0;
+    }
+
+    strong {
+      color: #2c3e50;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Capítulo II - Conceptos fundamentales</h1>
+
+  <nav id="indice">
+    <h3>Índice</h3>
+    <ul>
+      <li><a href="#usabilidad">Usabilidad</a></li>
+      <li><a href="#accesibilidad">Accesibilidad</a></li>
+      <li><a href="#arquitectura-informacion">Arquitectura de la Información</a></li>
+      <li><a href="#diseno-centrado">Diseño Centrado en el Usuario</a></li>
+      <li><a href="#interaccion">Interacción</a></li>
+      <li><a href="#estilos-interaccion">Estilos de interacción</a></li>
+      <li><a href="#affordance">Affordance</a></li>
+      <li><a href="#modelos-mentales">Modelos mentales</a></li>
+      <li><a href="#busqueda-informacion">Necesidades y estrategias de búsqueda de información</a></li>
+      <li><a href="#relacion-esfuerzo">Relación Esfuerzo-Beneficio</a></li>
+    </ul>
+  </nav>
+
+  <section>
+    <h2>II. Conceptos fundamentales</h2>
+
+    <!-- Artículo: Usabilidad -->
+    <article id="usabilidad">
+      <h3>Usabilidad</h3>
+      <p>La usabilidad es un atributo de calidad de un producto que se refiere sencillamente a su facilidad de uso. No se trata de un atributo universal, ya que un producto será usable si lo es para su audiencia específica y para el propósito específico con el que fue diseñado.</p>
+
+      <h4>Dimensiones de la usabilidad</h4>
+      <p>La usabilidad puede dividirse en dos dimensiones principales:</p>
+
+      <ul>
+        <li><strong>Dimensión objetiva:</strong> Es medible y está compuesta por atributos observables durante la interacción del usuario con el producto:
+          <ul>
+            <li><strong>Facilidad de aprendizaje:</strong> Hace referencia a qué tan fácil resulta para los usuarios realizar tareas básicas la primera vez que interactúan con el diseño.</li>
+            <li><strong>Eficiencia:</strong> Indica cuánto tiempo tarda el usuario en completar una tarea después de haber aprendido su funcionamiento básico.</li>
+            <li><strong>Cualidad de ser recordado:</strong> Mide el tiempo que le toma al usuario recuperar el conocimiento necesario tras un periodo sin usar el producto.</li>
+            <li><strong>Eficacia:</strong> Evalúa cuántos errores comete el usuario durante la realización de una tarea, la gravedad de dichos errores y la capacidad del usuario para revertirlos.</li>
+          </ul>
+        </li>
+        <li><strong>Dimensión subjetiva:</strong> Se basa en la percepción del usuario sobre la experiencia de uso:
+          <ul>
+            <li><strong>Satisfacción:</strong> Muestra cómo de agradable y sencilla percibe el usuario la realización de las tareas.</li>
+          </ul>
+        </li>
+      </ul>
+
+      <p>Un producto puede parecer usable (dimensión subjetiva) pero no serlo realmente, o viceversa. Por ejemplo, diseños visualmente atractivos pueden ser percibidos como más fáciles de usar aunque no sean eficientes u operativos.</p>
+    </article>
+
+    <hr>
+
+    <!-- Artículo: Accesibilidad -->
+    <article id="accesibilidad">
+      <h3>Accesibilidad</h3>
+      <p>La accesibilidad garantiza que todos los usuarios, independientemente de sus capacidades físicas, cognitivas o contextuales, puedan acceder, comprender, navegar y utilizar un producto digital sin barreras significativas.</p>
+
+      <h4>Factores que influyen en la accesibilidad</h4>
+      <p>Las limitaciones que deben considerarse incluyen:</p>
+      <ul>
+        <li>Discapacidades permanentes o temporales (visuales, auditivas, motoras, cognitivas).</li>
+        <li>Nivel de conocimientos, habilidades o experiencia previa con tecnologías digitales.</li>
+        <li>Contexto de uso, como entornos ruidosos, iluminación deficiente o dispositivos de acceso limitados.</li>
+      </ul>
+
+      <h4>Principios clave para lograr accesibilidad</h4>
+      <p>Para lograr una buena accesibilidad, se deben seguir buenas prácticas y estándares técnicos reconocidos, entre ellos:</p>
+      <ul>
+        <li><strong>Perceptible:</strong> La información y los componentes de la interfaz deben ser percibibles por todos los usuarios, por ejemplo, mediante textos alternativos para imágenes.</li>
+        <li><strong>Operable:</strong> Los elementos de la interfaz deben ser manejables por cualquier persona, incluso usando teclado o tecnologías asistivas.</li>
+        <li><strong>Comprensible:</strong> Tanto la información como el manejo de la interfaz deben ser comprensibles y predecibles para los usuarios.</li>
+        <li><strong>Robusto:</strong> El diseño debe ser compatible con tecnologías actuales y futuras, incluyendo lectores de pantalla y otros productos de apoyo.</li>
+      </ul>
+
+      <p>El objetivo final es ofrecer igualdad de oportunidades en el acceso a la información y funcionalidades, favoreciendo una experiencia inclusiva.</p>
+    </article>
+
+    <hr>
+
+    <!-- Artículo: Arquitectura de la Información -->
+    <article id="arquitectura-informacion">
+      <h3>Arquitectura de la Información</h3>
+      <p>La arquitectura de la información se centra en organizar, estructurar y etiquetar contenidos de forma que sean comprensibles, encontrables y útiles para los usuarios. Es fundamental para facilitar la navegación y ayudar a las personas a localizar la información que buscan.</p>
+
+      <h4>Elementos clave de la arquitectura de la información</h4>
+      <ul>
+        <li><strong>Organización:</strong> Determina cómo se agrupan y categorizan los contenidos, generalmente mediante taxonomías temáticas, orientadas al usuario o mixtas.</li>
+        <li><strong>Estructura:</strong> Define cómo están relacionados los distintos contenidos entre sí, pudiendo adoptar formas jerárquicas, secuenciales o redondantes según el tipo de información.</li>
+        <li><strong>Etiquetas:</strong> Son los nombres que identifican los contenidos y opciones. Deben ser claros, consistentes y usar el vocabulario habitual del usuario.</li>
+        <li><strong>Navegación:</strong> Incluye sistemas de menús, búsqueda, filtros y mapas del sitio que permiten al usuario moverse por la información.</li>
+        <li><strong>Búsqueda:</strong> Permite a los usuarios encontrar contenido directamente, especialmente útil cuando hay grandes volúmenes de información.</li>
+      </ul>
+
+      <h4>Consideraciones adicionales</h4>
+      <p>Una buena arquitectura de información también permite la colaboración del usuario, ya sea a través de metadatos generados por ellos mismos (etiquetado social), valoraciones o comentarios.</p>
+
+      <p>Es importante mantener un equilibrio entre el ancho y profundidad de la estructura, ya que una excesiva profundidad dificulta llegar al contenido deseado, mientras que un exceso de anchura sobrecarga visualmente al usuario.</p>
+    </article>
+
+    <hr>
+
+    <!-- Artículo: Diseño Centrado en el Usuario -->
+    <article id="diseno-centrado">
+      <h3>Diseño Centrado en el Usuario</h3>
+      <p>El diseño centrado en el usuario implica involucrar activamente a los usuarios durante todo el proceso de diseño y desarrollo, con el objetivo de crear productos que respondan realmente a sus necesidades, expectativas y contexto de uso.</p>
+
+      <p>Este enfoque requiere investigación inicial, iteraciones de diseño, pruebas con usuarios reales y adaptación continua basada en feedback real. Su principal ventaja es que reduce riesgos, mejora la usabilidad y aumenta la probabilidad de éxito del producto final.</p>
+    </article>
+
+    <hr>
+
+    <!-- Artículo: Interacción -->
+    <article id="interaccion">
+      <h3>Interacción</h3>
+      <p>La interacción se refiere al proceso mediante el cual los usuarios se comunican con un sistema digital. Implica tanto acciones físicas (como hacer clic o deslizar) como cognitivas (como interpretar mensajes o tomar decisiones).</p>
+
+      <p>Una buena interacción se caracteriza por ser intuitiva, consistente, clara y eficiente. Es uno de los pilares fundamentales de una experiencia de usuario positiva.</p>
+    </article>
+
+    <hr>
+
+    <!-- Artículo: Estilos de interacción -->
+    <article id="estilos-interaccion">
+      <h3>Estilos de interacción</h3>
+      <p>Los estilos de interacción son las diferentes formas en las que un usuario puede interactuar con un sistema. Algunos ejemplos incluyen:</p>
+      <ul>
+        <li><strong>Línea de comandos:</strong> Basada en texto, muy poderosa pero con curva de aprendizaje alta.</li>
+        <li><strong>Mensajes:</strong> El sistema y el usuario se comunican como en una conversación.</li>
+        <li><strong>Menús:</strong> Opciones predefinidas que guían al usuario.</li>
+        <li><strong>Formularios:</strong> Recolección de datos mediante campos estructurados.</li>
+        <li><strong>Manipulación directa:</strong> Acciones visuales inmediatas (como arrastrar y soltar).</li>
+      </ul>
+    </article>
+
+    <hr>
+
+    <!-- Artículo: Affordance -->
+    <article id="affordance">
+      <h3>Affordance</h3>
+      <p>El término “affordance” hace referencia a las propiedades perceptibles de un objeto que sugieren cómo puede ser usado. En diseño UX, se utiliza para describir cómo un elemento de una interfaz indica visualmente su funcionalidad.</p>
+
+      <p>Por ejemplo, un botón debe verse como tal, y un campo de texto debe indicar que se puede escribir dentro de él.</p>
+    </article>
+
+    <hr>
+
+    <!-- Artículo: Modelos mentales -->
+    <article id="modelos-mentales">
+      <h3>Modelos mentales</h3>
+      <p>Los modelos mentales son las representaciones internas que tienen los usuarios sobre cómo funciona un sistema. Estas representaciones están influenciadas por experiencias previas y expectativas.</p>
+
+      <p>Un buen diseño UX busca alinear el modelo mental del usuario con el modelo conceptual del sistema, reduciendo la brecha entre lo que el usuario espera y lo que el sistema hace.</p>
+    </article>
+
+    <hr>
+
+    <!-- Artículo: Necesidades y estrategias de búsqueda de información -->
+    <article id="busqueda-informacion">
+      <h3>Necesidades y estrategias de búsqueda de información</h3>
+      <p>Los usuarios suelen buscar información de tres maneras principales:</p>
+      <ul>
+        <li><strong>Exploración:</strong> Cuando no saben exactamente qué buscan.</li>
+        <li><strong>Navegación:</strong> Cuando saben qué buscan, pero no dónde está.</li>
+        <li><strong>Búsqueda:</strong> Cuando saben qué buscan y cómo se llama.</li>
+      </ul>
+
+      <p>Comprender estas estrategias ayuda a diseñar sistemas de navegación y búsqueda más eficaces y orientados al usuario.</p>
+    </article>
+
+    <hr>
+
+    <!-- Artículo: Relación Esfuerzo-Beneficio -->
+    <article id="relacion-esfuerzo">
+      <h3>Relación Esfuerzo-Beneficio</h3>
+      <p>Esta relación evalúa si el esfuerzo que realiza el usuario para alcanzar un objetivo es proporcional al beneficio obtenido. Si el esfuerzo es mayor que el beneficio, el usuario probablemente abandone la tarea.</p>
+
+      <p>Un buen diseño UX minimiza el esfuerzo necesario para obtener resultados útiles y satisfactorios.</p>
+    </article>
+
+  </section>
+
+</body>
+</html>

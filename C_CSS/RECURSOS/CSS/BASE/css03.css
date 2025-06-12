@@ -10,30 +10,30 @@ selector {
 /* 
 body {
     background-color: yellow; 
-    color: white; 
+    color: burlywood; 
     font-family: Arial, sans-serif; 
 }
 
 h2 {
     color: black;
     font-size: 24px; 
-} 
-*/
+}  */
+
 
 /* selector universal */
 
 /* 
     El selector universal (*) se utiliza para aplicar estilos a todos los elementos del documento.
-    En este caso, se establece un margen y un padding de 0, y se aplica el modelo de caja border-box a todos los elementos.
+    En este caso, se establece un margen y un padding de 0.
 */
 
 /* 
 * {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
-}
+} */
 
+/* 
 h1 {
     color: crimson;
     font-size: 64px;

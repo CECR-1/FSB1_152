@@ -1,0 +1,48 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+hr {
+  border: none;
+  border-top: 4px double #4b3f2f;
+  margin: 10px auto;
+  width: 80%;
+}
+
+/* AND */
+.abuelo .titulo {
+  color: red;
+}
+/* OR */
+.abuelo, .titulo {
+  color: blue;
+}
+
+.padre .titulo {
+  color: slateblue;
+}
+
+/* Hijo Adyacente */
+h1.titulo + h2.titulo {
+  color: olive;
+}
+
+/* Hijo Directo */
+/* 
+.abuelo>.titulo {
+  color: tomato; 
+} 
+*/
+
+/* Hermanos generales */
+h1.titulo ~ .titulo {
+  color: orange;
+}
+
+/*   
+(espacio): descendiente
+>: hijo directo
++: hermano adyacente
+~: hermanos generales  
+*/

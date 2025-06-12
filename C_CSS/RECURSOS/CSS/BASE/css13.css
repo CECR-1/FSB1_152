@@ -12,7 +12,8 @@ body{
     background-color: teal;
     margin-bottom: 30px;
     color: white;
-    display: block; /* Por defecto, los elementos de bloque ocupan todo el ancho disponible y comienzan en una nueva línea. */
+    display: block; 
+    /* Por defecto, los elementos de bloque ocupan todo el ancho disponible y comienzan en una nueva línea. */
     width: 50%;
     margin: 20px auto;
 }
@@ -20,16 +21,19 @@ body{
 .inline{
     background-color: crimson;
     color: white;
+    margin-right: 10px;
 }
 
 .blocki{
-    display: block; /* Este elemento se comporta como un bloque, ocupando todo el ancho disponible. */
+    display: block; 
+    /* Este elemento se comporta como un bloque, ocupando todo el ancho disponible. */
     margin: 10px auto;
     width: 80%;
 }
 
 .inlineb{
-    display: inline-block; /* Este elemento se comporta como un bloque, pero puede tener un ancho y alto específicos. */
+    display: inline-block; 
+    /* Este elemento se comporta como un bloque, pero puede tener un ancho y alto específicos. */
     background-color: darkblue;
     color: white;
     margin: 10px;

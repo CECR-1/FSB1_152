@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Capítulo IV - Métodos</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      line-height: 1.6;
+      margin: 40px auto;
+      padding: 0 20px;
+      max-width: 900px;
+      background-color: #f9f9f9;
+      color: #333;
+    }
+
+    h1, h2, h3, h4 {
+      color: #2c3e50;
+    }
+
+    h1 {
+      border-bottom: 3px solid #3498db;
+      padding-bottom: 5px;
+      text-align: center;
+    }
+
+    h2 {
+      border-bottom: 2px solid #3498db;
+      padding-bottom: 5px;
+      margin-top: 40px;
+    }
+
+    h3 {
+      color: #2980b9;
+      margin-top: 30px;
+    }
+
+    h4 {
+      color: #34495e;
+      margin-top: 20px;
+    }
+
+    nav#indice {
+      background-color: #ecf0f1;
+      padding: 20px;
+      border-radius: 8px;
+      margin-bottom: 40px;
+    }
+
+    nav#indice h3 {
+      margin-top: 0;
+    }
+
+    nav#indice ul {
+      list-style-type: none;
+      padding-left: 0;
+    }
+
+    nav#indice li {
+      margin-bottom: 10px;
+    }
+
+    article {
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+      margin-bottom: 30px;
+    }
+
+    ul, ol {
+      padding-left: 20px;
+    }
+
+    li {
+      margin-bottom: 8px;
+    }
+
+    hr {
+      border: 0;
+      height: 1px;
+      background: linear-gradient(to right, transparent, #ccc, transparent);
+      margin: 40px 0;
+    }
+
+    strong {
+      color: #2c3e50;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>IV. Métodos</h1>
+
+  <nav id="indice">
+    <h3>Índice</h3>
+    <ul>
+      <li><a href="#analitica-web">Analítica Web</a></li>
+      <li><a href="#card-sorting">Card Sorting</a></li>
+      <li><a href="#diagramas-interaccion">Diagramas de interacción</a></li>
+      <li><a href="#diseno-modular">Diseño modular</a></li>
+      <li><a href="#encuestas-entrevistas">Encuestas y entrevistas</a></li>
+      <li><a href="#evaluacion-heuristica">Evaluación heurística</a></li>
+      <li><a href="#personajes-escenarios">Personajes y escenarios</a></li>
+      <li><a href="#pruebas-ab">Pruebas A/B</a></li>
+      <li><a href="#pruebas-usuarios">Pruebas con usuarios</a></li>
+      <li><a href="#roi">ROI</a></li>
+      <li><a href="#wireframes">Wireframes</a></li>
+    </ul>
+  </nav>
+
+  <section>
+    <h2>IV. Métodos</h2>
+
+    <!-- Artículo: Analítica Web -->
+    <article id="analitica-web">
+      <h3>Analítica Web</h3>
+      <p>La analítica web consiste en la medición, recopilación, análisis e interpretación de datos sobre cómo los usuarios interactúan con un producto digital. Su objetivo es tomar decisiones basadas en evidencia para mejorar la experiencia del usuario.</p>
+
+      <h4>Qué se puede medir:</h4>
+      <ul>
+        <li>Número de visitas y usuarios únicos.</li>
+        <li>Tiempo promedio de permanencia.</li>
+        <li>Tasas de rebote y conversión.</li>
+        <li>Rutas de navegación seguidas por los usuarios.</li>
+      </ul>
+
+      <p>Herramientas como Google Analytics o Hotjar permiten obtener información clave sobre comportamientos reales de los usuarios, facilitando ajustes orientados a resultados.</p>
+    </article>
+
+    <hr>
+
+    <!-- Artículo: Card Sorting -->
+    <article id="card-sorting">
+      <h3>Card Sorting</h3>
+      <p>El card sorting es una técnica cualitativa en la que los usuarios agrupan conceptos, temas o funcionalidades en categorías que consideran lógicas. Se utiliza frecuentemente durante la fase de diseño de arquitectura de información.</p>
+
+      <h4>Ventajas:</h4>
+      <ul>
+        <li>Ayuda a descubrir cómo piensan los usuarios sobre la organización del contenido.</li>
+        <li>Puede realizarse de forma abierta (sin categorías predefinidas) o cerrada (con categorías dadas).</li>
+        <li>Permite validar taxonomías y estructuras antes de implementarlas.</li>
+      </ul>
+
+      <p>Es especialmente útil en proyectos con grandes volúmenes de información o cuando hay múltiples audiencias objetivo.</p>
+    </article>
+
+    <hr>
+
+    <!-- Artículo: Diagramas de interacción -->
+    <article id="diagramas-interaccion">
+      <h3>Diagramas de interacción</h3>
+      <p>Los diagramas de interacción son representaciones visuales que muestran cómo se relacionan los componentes de un sistema y cómo fluye la información entre ellos durante la interacción del usuario.</p>
+
+      <h4>Tipos comunes:</h4>
+      <ul>
+        <li><strong>Flujos de usuario:</strong> Muestran los pasos que sigue un usuario al realizar una tarea.</li>
+        <li><strong>Diagramas de estado:</strong> Indican cómo cambia la interfaz según las acciones del usuario.</li>
+        <li><strong>Storyboards:</strong> Representan visualmente escenarios de uso típicos.</li>
+      </ul>
+
+      <p>Estos diagramas ayudan a detectar puntos de fricción, optimizar procesos y comunicar mejor el diseño al equipo de desarrollo.</p>
+    </article>
+
+    <hr>
+
+    <!-- Artículo: Diseño modular -->
+    <article id="diseno-modular">
+      <h3>Diseño modular</h3>
+      <p>El diseño modular consiste en crear interfaces dividiendo su estructura en bloques reutilizables (componentes), que pueden combinarse y adaptarse según las necesidades del proyecto.</p>
+
+      <h4>Beneficios:</h4>
+      <ul>
+        <li>Mejora la coherencia visual y funcional del producto.</li>
+        <li>Facilita la escalabilidad y mantenibilidad del diseño.</li>
+        <li>Reduce tiempos de desarrollo y costes asociados.</li>
+        <li>Permite mayor flexibilidad en diseños responsivos y multiplataforma.</li>
+      </ul>
+
+      <p>Esta metodología es clave en sistemas de diseño como Atomic Design o patrones de componentes en frameworks modernos (React, Vue, etc.).</p>
+    </article>
+
+    <hr>
+
+    <!-- Artículo: Encuestas y entrevistas -->
+    <article id="encuestas-entrevistas">
+      <h3>Encuestas y entrevistas</h3>
+      <p>Las encuestas y entrevistas son métodos cualitativos que permiten obtener información directa del usuario sobre sus necesidades, expectativas, problemas y experiencias.</p>
+
+      <h4>Tipos de preguntas:</h4>
+      <ul>
+        <li><strong>Cerradas:</strong> Ofrecen opciones limitadas (ej. Sí/No, escala Likert).</li>
+        <li><strong>Abiertas:</strong> Permiten respuestas libres y más profundidad.</li>
+        <li><strong>De seguimiento:</strong> Para explorar respuestas iniciales con mayor detalle.</li>
+      </ul>
+
+      <p>Las entrevistas permiten además capturar matices emocionales, motivaciones personales y contextos específicos que no siempre se perciben mediante herramientas cuantitativas.</p>
+    </article>
+
+    <hr>
+
+    <!-- Artículo: Evaluación heurística -->
+    <article id="evaluacion-heuristica">
+      <h3>Evaluación heurística</h3>
+      <p>La evaluación heurística es un método de inspección en el que expertos revisan una interfaz comparándola contra principios de diseño reconocidos (heurísticas) para identificar posibles problemas de usabilidad.</p>
+
+      <h4>Heurísticas comunes:</h4>
+      <ul>
+        <li>Estatus del sistema visible.</li>
+        <li>Sistema y mundo real.</li>
+        <li>Control y libertad.</li>
+        <li>Consistencia y estándares.</li>
+        <li>Prevención de errores.</li>
+      </ul>
+
+      <p>Este método permite identificar problemas sin necesidad de involucrar usuarios reales, lo que lo hace rápido y económico. Sin embargo, no sustituye pruebas con usuarios reales.</p>
+    </article>
+
+    <hr>
+
+    <!-- Artículo: Personajes y escenarios -->
+    <article id="personajes-escenarios">
+      <h3>Personajes y escenarios</h3>
+      <p>Los personajes (personas) y escenarios son herramientas para modelar perfiles de usuario y describir situaciones típicas de uso. Ayudan a centrar el diseño en las necesidades reales de los usuarios.</p>
+
+      <h4>Componentes de una persona:</h4>
+      <ul>
+        <li>Nombre y foto ficticia.</li>
+        <li>Edad, ocupación y contexto de uso.</li>
+        <li>Motivaciones, objetivos y frustraciones.</li>
+        <li>Comportamiento frente a la tecnología.</li>
+      </ul>
+
+      <p>Los escenarios describen cómo estos personajes interactuarían con el producto en situaciones específicas, ayudando a diseñar soluciones más empáticas y realistas.</p>
+    </article>
+
+    <hr>
+
+    <!-- Artículo: Pruebas A/B -->
+    <article id="pruebas-ab">
+      <h3>Pruebas A/B</h3>
+      <p>Las pruebas A/B consisten en comparar dos o más versiones de un diseño presentadas aleatoriamente a diferentes grupos de usuarios, midiendo qué versión logra mejores resultados en métricas definidas previamente.</p>
+
+      <h4>Aplicaciones comunes:</h4>
+      <ul>
+        <li>Comparar distintas ubicaciones de botones.</li>
+        <li>Evaluar diferentes titulares o llamadas a la acción.</li>
+        <li>Medir el impacto de cambios estéticos o funcionales.</li>
+      </ul>
+
+      <p>Si bien son muy útiles para optimizar pequeños elementos, no revelan “por qué” una versión funciona mejor, por lo que deben complementarse con otros métodos cualitativos.</p>
+    </article>
+
+    <hr>
+
+    <!-- Artículo: Pruebas con usuarios -->
+    <article id="pruebas-usuarios">
+      <h3>Pruebas con usuarios</h3>
+      <p>Las pruebas con usuarios consisten en observar cómo interactúan personas reales con un producto mientras intentan alcanzar objetivos definidos. Es uno de los métodos más efectivos para detectar problemas de usabilidad.</p>
+
+      <h4>Tipos de pruebas:</h4>
+      <ul>
+        <li><strong>Pruebas presenciales:</strong> Con moderador presente que guía la sesión.</li>
+        <li><strong>Pruebas remotas:</strong> El usuario realiza la prueba desde su entorno habitual.</li>
+        <li><strong>Test de 5 segundos:</strong> Mostrar brevemente la interfaz para medir impresiones iniciales.</li>
+      </ul>
+
+      <p>Las pruebas pueden ser formativas (para mejorar el diseño) o sumativas (para medir su calidad final).</p>
+    </article>
+
+    <hr>
+
+    <!-- Artículo: ROI -->
+    <article id="roi">
+      <h3>ROI (Retorno de Inversión)</h3>
+      <p>El retorno de inversión (ROI) en experiencia de usuario evalúa si los beneficios derivados de una mejora de diseño superan los costos asociados a su implementación.</p>
+
+      <h4>Fórmula básica:</h4>
+      <p><strong>ROI = (Beneficio – Costo) / Costo × 100%</strong></p>
+
+      <p>Algunos beneficios medibles incluyen aumento de conversiones, reducción de tasas de rebote, disminución de costes de soporte y mejora en la percepción de marca.</p>
+    </article>
+
+    <hr>
+
+    <!-- Artículo: Wireframes -->
+    <article id="wireframes">
+      <h3>Wireframes</h3>
+      <p>Los wireframes son representaciones esquemáticas y de bajo detalle de una interfaz digital. Su propósito es mostrar la estructura, distribución de elementos y relaciones funcionales sin enfocarse en aspectos visuales o estéticos.</p>
+
+      <h4>Usos principales:</h4>
+      <ul>
+        <li>Validar ideas tempranas antes de invertir en diseño visual o desarrollo.</li>
+        <li>Facilitar la comunicación entre equipos multidisciplinares.</li>
+        <li>Definir jerarquías visuales y priorización de contenido.</li>
+      </ul>
+
+      <p>Se pueden crear manualmente, con herramientas digitales como Figma o Sketch, o integrarse en documentos técnicos como parte del prototipo del producto.</p>
+    </article>
+
+  </section>
+
+</body>
+</html>

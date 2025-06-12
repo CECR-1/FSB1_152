@@ -6,7 +6,7 @@
  */
 .elementos{
     box-sizing: border-box;
-    box-sizing: content-box;
+    /* box-sizing: content-box; */
     width: 250px;
     height: 250px;
     background-color: purple;

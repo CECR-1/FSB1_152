@@ -1,0 +1,71 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Arial', sans-serif;
+    background-color: #f0f0f0;
+    color: #333;
+    min-height: 200vh;
+}
+
+.container{
+    width: 70%;
+    height: 500px;
+    border: 2px solid blue;
+    margin: 80px auto; /* comentarla */
+    /* position: relative;  */
+    /* para que los hijos con absolute se posicionen respecto a éste */
+}
+
+.position {
+    width: 150px;
+    height: 100px;
+    font-size: 1.3rem;
+    line-height: 100px;
+    text-align: center;
+    color: white;
+}
+
+.static {
+    background-color: midnightblue;
+    /* position: static; */
+    /* valor por defecto */
+}
+.relative {
+    background-color: tomato;
+    /*     
+    position: relative;
+    top: 100px; 
+    */
+    /* 
+    empuja desde la posición inicial. Con
+    valores negativos se mueve hacia arriba.
+    top, left, right, bottom.
+    Siempre se posiciona respecto a su posición original y deja reservado su posición original.
+    */
+}
+.absolute {
+    background-color: purple;
+    /* position: absolute; */
+    /* top: 30px; */
+    /* left: 30px; */
+    /* right: 20px; */
+    /* bottom: 20px; */
+    /* 
+    Se desplaza desde el borde del elemento padre más cercano con position diferente a static.
+    Si no hay, se posiciona respecto al body.
+    */
+}
+.fixed {
+    background-color:royalblue;
+    /* position: fixed; */
+    /* top: 0; */
+    /* left: 0; */
+    /* 
+    Siempre se posiciona respecto al viewport.
+    Se queda fijo en la pantalla al hacer scroll.
+    */
+}

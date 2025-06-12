@@ -31,7 +31,7 @@ main {
   background: #fff;
   padding: 30px 40px;
   border-radius: 10px;
-  box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+  box-shadow: 5px 5px 10px rgba(255,0,0,0.8);
 }
 
 section {
@@ -39,7 +39,6 @@ section {
 }
 
 figure {
-  display: inline-block;
   margin: 0 20px 20px 0;
   vertical-align: top;
   text-align: center;
