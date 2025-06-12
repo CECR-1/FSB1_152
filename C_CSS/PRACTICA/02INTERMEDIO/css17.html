@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="../../RECURSOS/CSS/INTERMEDIO/css17.css">
+    <link
+      rel="shortcut icon"
+      href="../../RECURSOS/FOTOS/letter-i.png"
+      type="image/x-icon"
+    />
+    <title>CSS17</title>
+</head>
+<body>
+    <div class="container">
+        <h1 class="titulo">Medidas Absolutas y Relativas en CSS</h1>
+        <table class="tabla-medidas">
+            <thead>
+                <tr>
+                    <th>Tipo</th>
+                    <th>Unidad</th>
+                    <th>Descripción</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Absoluta</td>
+                    <td>px</td>
+                    <td>Píxeles (valor fijo en pantalla)</td>
+                </tr>
+                <tr>
+                    <td>Absoluta</td>
+                    <td>cm</td>
+                    <td>Centímetros</td>
+                </tr>
+                <tr>
+                    <td>Absoluta</td>
+                    <td>mm</td>
+                    <td>Milímetros</td>
+                </tr>
+                <tr>
+                    <td>Absoluta</td>
+                    <td>in</td>
+                    <td>Pulgadas</td>
+                </tr>
+                <tr>
+                    <td>Absoluta</td>
+                    <td>pt</td>
+                    <td>Puntos (1/72 de pulgada)</td>
+                </tr>
+                <tr>
+                    <td>Absoluta</td>
+                    <td>pc</td>
+                    <td>Picas (1pc = 12pt)</td>
+                </tr>
+                <tr>
+                    <td>Relativa</td>
+                    <td>%</td>
+                    <td>Porcentaje respecto al elemento padre</td>
+                </tr>
+                <tr>
+                    <td>Relativa</td>
+                    <td>em</td>
+                    <td>Relativo al tamaño de fuente del elemento</td>
+                </tr>
+                <tr>
+                    <td>Relativa</td>
+                    <td>rem</td>
+                    <td>Relativo al tamaño de fuente raíz (html)</td>
+                </tr>
+                <tr>
+                    <td>Relativa</td>
+                    <td>vw</td>
+                    <td>Porcentaje del ancho de la ventana (viewport)</td>
+                </tr>
+                <tr>
+                    <td>Relativa</td>
+                    <td>vh</td>
+                    <td>Porcentaje del alto de la ventana (viewport)</td>
+                </tr>
+                <tr>
+                    <td>Relativa</td>
+                    <td>vmin</td>
+                    <td>El menor valor entre vw y vh</td>
+                </tr>
+                <tr>
+                    <td>Relativa</td>
+                    <td>vmax</td>
+                    <td>El mayor valor entre vw y vh</td>
+                </tr>
+                <tr>
+                    <td>Relativa</td>
+                    <td>ex</td>
+                    <td>Altura de la "x" de la fuente actual</td>
+                </tr>
+                <tr>
+                    <td>Relativa</td>
+                    <td>ch</td>
+                    <td>Ancho del "0" de la fuente actual</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h2>Ejemplos de cada medida</h2>
+        <div class="ejemplo" style="width:200px;">
+          Este div tiene <b>width: 200px</b> (absoluta)</div>
+        <div class="ejemplo" style="width:5cm;">
+          Este div tiene <b>width: 5cm</b> (absoluta)</div>
+        <div class="ejemplo" style="width:50%;">
+          Este div tiene <b>width: 50%</b> (relativa al padre)</div>
+        <div class="ejemplo" style="font-size:20px;">
+          <span style="font-size:2em;">
+            Este texto tiene <b>font-size: 2em</b> (relativa al elemento padre que tiene 20px)
+          </span>
+        </div>
+        <div class="ejemplo" style="font-size:2rem;">
+          Este texto tiene <b>font-size: 2rem</b> (relativa al html)</div>
+        <div class="ejemplo" style="width:30vw;">
+          Este div tiene <b>width: 30vw</b> (relativa al viewport)</div>
+        <div class="ejemplo" style="height:10vh;">
+          Este div tiene <b>height: 10vh</b> (relativa al viewport)</div>
+        <div class="ejemplo" style="font-size:2ch;">
+          Este texto tiene <b>font-size: 2ch</b> (relativa al ancho del "0")</div>
+        <div class="ejemplo" style="font-size:2ex;">
+          Este texto tiene <b>font-size: 2ex</b> (relativa a la altura de la "x")</div>
+    </div>
+
+    <div>
+      <div class="ejemplo" style="width:50vw;">
+          Este div tiene <b>width: 50vw</b> (relativa al viewport)</div>
+        <div class="ejemplo" style="height:50vh;">
+          Este div tiene <b>height: 50vh</b> (relativa al viewport)</div>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,46 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+.elemento{
+    margin: 80px auto;
+    width: 50%; 
+    height: 200px;
+    background-color: royalblue;
+}
+
+@media (min-width: 500px) {
+    body {
+        background-color: #ffe0b2;
+    }
+    .elemento {
+        width: 95%;
+        height: 100px;
+        background-color: lightgreen;
+    }
+}
+
+@media (max-width: 500px) {
+    body {
+        background-color:crimson;
+    }
+    .elemento {
+        width: 80%;
+        height: 80px;
+        background-color: lightblue;
+    }
+}
+
+/* 
+min.width: de menor a mayor
+max-width: de mayor a menor
+*/
+

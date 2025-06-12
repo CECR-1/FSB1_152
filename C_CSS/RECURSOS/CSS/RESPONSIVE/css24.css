@@ -1,0 +1,151 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Arial', sans-serif;
+}
+
+/* CONTENEDOR */
+/* El contenedor flex es el elemento padre que contiene los elementos hijos que se van a organizar en un diseño flexible. */
+.flex{
+    width: 90%;
+    max-width: 800px;
+    min-height: 600px;
+    margin: 80px auto;
+    outline: 3px solid black;
+
+    display: flex;
+
+    /* Eje Main */
+    /* El eje principal es el eje en el que los elementos hijos se colocan dentro del contenedor flex. Por defecto, es horizontal (de izquierda a derecha). */
+    /* flex-direction: row; */
+    /* flex-direction:
+        row: Los elementos hijos se colocan en fila (de izquierda a derecha).(Valor por defecto)
+        row-reverse: Los elementos hijos se colocan en fila, pero en orden inverso (de derecha a izquierda).
+        column: Los elementos hijos se colocan en columna (de arriba hacia abajo).
+        column-reverse: Los elementos hijos se colocan en columna, pero en orden inverso (de abajo hacia arriba).
+    */
+
+    flex-wrap: wrap;
+    /* flex-wrap:
+        nowrap: Los elementos hijos no se envuelven y permanecen en una sola línea (valor por defecto).
+        wrap: Los elementos hijos se envuelven a la siguiente línea si no hay suficiente espacio.
+        wrap-reverse: Los elementos hijos se envuelven a la siguiente línea, pero en orden inverso.
+    */
+
+    /* justify-content:
+        La propiedad justify-content en Flexbox se usa para alinear y distribuir los elementos hijos a lo largo del eje principal del contenedor flex (por defecto, el eje horizontal).
+        Se aplica a todos los hijos de un contenedor flex en una sola línea.
+        Ejemplo: alinea los hijos en una fila, distribuye el espacio entre ellos o los centra.
+    */
+
+
+    /* justify-content: flex-start; */
+    /* justify-content:
+        flex-start: Los elementos hijos se alinean al inicio del contenedor (a la izquierda en un diseño de fila).
+        flex-end: Los elementos hijos se alinean al final del contenedor (a la derecha en un diseño de fila).
+        center: Los elementos hijos se centran en el contenedor.
+        space-between: Los elementos hijos se distribuyen uniformemente, con el primer elemento alineado al inicio y el último al final.
+        space-around: Los elementos hijos se distribuyen uniformemente con espacio alrededor de cada uno.
+        space-evenly: Los elementos hijos se distribuyen uniformemente con espacio igual entre ellos y los bordes del contenedor.
+    */
+
+    /* Eje Cross */
+    /* El eje cruzado es el eje perpendicular al eje principal. Por defecto, es vertical (de arriba hacia abajo). */
+
+    /* Align-items: 
+        Los elementos hijos se alinean en el eje cruzado dentro del contenedor flex. Por defecto, los elementos hijos se estiran para llenar el contenedor.
+        align-items: stretch;
+        Alinea los elementos hijos a lo largo del eje cruzado (vertical si flex-direction: row).
+        Se aplica a todos los hijos de un contenedor flex en una sola línea.
+        Ejemplo: centra, estira o alinea arriba/abajo los hijos en la fila.
+    */
+
+    align-items: stretch;
+    /* align-items:
+        stretch: Los elementos hijos se estiran para llenar el contenedor (valor por defecto).
+        flex-start: Los elementos hijos se alinean al inicio del contenedor (arriba en un diseño de columna).
+        flex-end: Los elementos hijos se alinean al final del contenedor (abajo en un diseño de columna).
+        center: Los elementos hijos se centran en el contenedor.
+        baseline: Los elementos hijos se alinean según su línea base de texto.
+    */
+
+    /* align-content
+        Alinea las líneas de elementos (cuando hay múltiples filas por flex-wrap: wrap).
+        Solo tiene efecto si hay más de una línea de elementos flex.
+        Ejemplo: distribuye el espacio entre las filas (no entre los elementos individuales).
+    */
+
+    /* align-content: flex-start; */
+    /* align-content:
+        stretch: Las líneas de elementos hijos se estiran para llenar el contenedor (valor por defecto).
+        flex-start: Las líneas de elementos hijos se alinean al inicio del contenedor.
+        flex-end: Las líneas de elementos hijos se alinean al final del contenedor.
+        center: Las líneas de elementos hijos se centran en el contenedor.
+        space-between: Las líneas de elementos hijos se distribuyen uniformemente, con la primera línea alineada al inicio y la última al final.
+        space-around: Las líneas de elementos hijos se distribuyen uniformemente con espacio alrededor de cada una.
+    */
+    
+}
+
+/* ELEMENTOS HIJOS */
+
+/* .element{
+    flex: 1 1 100px;
+    margin: 10px;
+    border-radius: 10px;
+} */
+
+ /* flex:
+    flex-grow: 1: Los elementos hijos pueden crecer para llenar el espacio disponible.
+    flex-shrink: 1: Los elementos hijos pueden reducir su tamaño si es necesario.
+    flex-basis: 100px: El tamaño base de los elementos hijos es de 100 píxeles.
+*/
+
+.element{
+    color: #fff;
+    font-size: 2rem;
+    text-align: center;
+    line-height: 100px;
+    width: 100px;
+    /* height: 100px; */
+}
+
+/* order:
+    Los elementos hijos se pueden reordenar dentro del contenedor flex. Por defecto, todos los elementos tienen un valor de orden de 0.
+    Un valor de orden más bajo significa que el elemento aparecerá antes en el orden visual.
+    Un valor de orden más alto significa que el elemento aparecerá después en el orden visual.
+*/
+
+.element1{
+    background-color: crimson;
+    /* font-size: 100px; */
+    /* order: 2; */
+    /* flex-grow: 1; */
+    /* flex-shrink: 1; */
+}
+
+.element2{
+    background-color: purple;
+    /* order: 1; */
+    /* flex-grow: 2; */
+}
+.element3{
+    background-color: slateblue;
+    /* order: -1; */
+    /* flex-grow: 1; */
+    /* align-self: flex-end; */
+}
+
+.flexf{
+    display: flex;
+    flex-direction: column;
+}
+.flexffoto{
+    width: 70%;
+    border: 3px solid black;
+    margin: 10px auto;
+}
