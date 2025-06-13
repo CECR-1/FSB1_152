@@ -1,0 +1,36 @@
+*{
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --border-colores: 3px solid black;
+    --color-principal: royalblue;
+}
+body{
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    background-image: linear-gradient(to right, #f83600 0%, #f9d423 100%);
+    width: 90%;
+}
+
+.titulo {
+    color: royalblue;
+    border: var(--border-colores);
+}
+
+.boton{
+    display: inline-block;
+    padding: 15px 30px;
+    background-color: var(--color-principal);
+    color: white;
+    text-decoration: none;
+    border-radius: 10px;
+    border: var(--border-colores);
+}
+
+.parrafo{
+    color: var(--color-principal);
+    border: var(--border-colores);
+}
