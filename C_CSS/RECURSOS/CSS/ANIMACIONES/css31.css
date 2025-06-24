@@ -1,0 +1,16 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.element{
+    width: 200px;
+    height: 200px;
+    margin: 100px;
+    background-color: slateblue;
+    margin: 80px auto;
+    box-shadow: 10px -10px 10px lightblue, 100px 100px 10px salmon;
+    border-radius: 50px 100px 40px 30px;
+    
+}

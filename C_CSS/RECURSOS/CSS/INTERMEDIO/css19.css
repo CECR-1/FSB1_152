@@ -15,7 +15,7 @@ body{
     width: 70%;
     height: 500px;
     border: 2px solid blue;
-    margin: 80px auto; /* comentarla */
+    margin: 100px auto; /*comentarla */
     /* position: relative;  */
     /* para que los hijos con absolute se posicionen respecto a éste */
 }
@@ -36,10 +36,11 @@ body{
 }
 .relative {
     background-color: tomato;
-    /*     
-    position: relative;
-    top: 100px; 
-    */
+         
+    /* position: relative; */
+    /* top: -200px; */
+    /* left:150px;  */
+    
     /* 
     empuja desde la posición inicial. Con
     valores negativos se mueve hacia arriba.

@@ -18,7 +18,8 @@ body{
     background-color: slateblue;
     position: sticky;
     top: 50px;
-    bottom: 50px;
+    left: 50px;
+    bottom: 150px;
 }	
 
 .container {
@@ -27,7 +28,7 @@ body{
     margin-left: 220px;
     padding: 20px;
     background-color: aquamarine;
-    position: relative;
+    /* position: relative; */
 }
 
 .otro {

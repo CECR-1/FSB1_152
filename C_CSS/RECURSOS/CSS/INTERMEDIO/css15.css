@@ -9,7 +9,7 @@
     width: 500px;
     height: 400px;
     margin: 30px auto;
-    background-image: url(../FOTOS/fox.svg);
+    background-image: url(../../FOTOS/fox.svg);
     background-size: contain;
     background-repeat: no-repeat;
     background-color: #f0f0f0; /* Color de fondo de respaldo */
@@ -20,7 +20,7 @@
     height: 600px;
     margin: 30px auto;
     background-color: #f0f0f0; 
-    background-image: url(../FOTOS/lion.svg),linear-gradient(to right, #ff7e5f, #feb47b);
+    background-image: url(../../FOTOS/lion.svg),linear-gradient(to right, #ff7e5f, #feb47b);
     background-size: contain, cover; /* Asegura que ambas imágenes cubran el área */
     background-repeat: no-repeat, no-repeat; /* Evita que las imágenes se repitan */
     background-position: center, center; /* Centra ambas imágenes */
@@ -30,7 +30,7 @@
     height: 600px;
     margin: 30px auto;
     background-color: #f0f0f0; 
-    background-image: url(../FOTOS/noPets.svg),linear-gradient(to right,greenYellow, limeGreen);
+    background-image: url(../../FOTOS/noPets.svg),linear-gradient(to right,greenYellow, limeGreen);
     background-size: contain, cover; /* Asegura que ambas imágenes cubran el área */
     background-repeat: no-repeat, no-repeat; /* Evita que las imágenes se repitan */
     background-position: center, center; /* Centra ambas imágenes */

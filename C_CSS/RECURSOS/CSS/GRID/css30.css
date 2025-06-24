@@ -1,0 +1,45 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.container{
+    width: 90%;
+    margin: 40px auto;
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
+    grid-auto-rows: 250px;
+}
+
+.item{
+    /* width: 100px;
+    height: 100px; */
+    color: #fff;
+    font-size: 2em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-size: contain;
+    background-position: center;
+}
+
+.item1{
+    background-image: url(".././../FOTOS/gworking1.png");
+}
+.item2{
+    background-image: url(".././../FOTOS/gworking2.png");
+}
+.item3{
+    background-image: url(".././../FOTOS/gworking3.png");       
+}
+.item4{
+    background-image: url(".././../FOTOS/gworking4.png");
+}
+.item5{
+    background-image: url(".././../FOTOS/gworking5.png");
+}
+.item6{
+    background-image: url(".././../FOTOS/gworking6.png");
+}
