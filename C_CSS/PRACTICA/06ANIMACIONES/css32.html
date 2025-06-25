@@ -3,9 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link 
-      rel="stylesheet" 
-      href="../../RECURSOS/CSS/ANIMACIONES/css32.css" />
+    <link rel="stylesheet" href="../../RECURSOS/CSS/ANIMACIONES/css32.css" />
     <link
       rel="shortcut icon"
       href="../../RECURSOS/FOTOS/letter-a.png"
@@ -14,21 +12,84 @@
     <title>CSS32</title>
   </head>
   <body>
-    
-      
-      <a href="#" class="button btn-red">1.Soy un botón</a>
-      <a href="#" class="button btn-blue">2.Soy un botón</a>
-      <a href="#" class="button btn-tomato">3.Soy un botón</a>
-      <a href="#" class="button btn-tomato">4.Soy un botón</a>
-      <a href="#" class="button btn-tomato">5.Soy un botón</a>
-      <a href="#" class="button btn-pink">6.Soy un botón</a>
-      <a href="#" class="button btn-crimson">7.Soy un botón</a>
-      <br>
-      <hr>
-      <br>
-      <div class="element"></div>
+    <a href="#element" class="button btn-red">1.Botón</a>
+    <a href="#" class="button btn-blue">2.Botón</a>
+    <a href="#" class="button btn-tomato">3.Botón</a>
+    <a href="#" class="button btn-tomato">4.Botón</a>
+    <a href="#" class="button btn-tomato">5.Botón</a>
+    <a href="#" class="button btn-pink">6.Botón</a>
+    <a href="#" class="button btn-crimson">7.Botón</a>
+    <br />
+    <input type="text" class="input" placeholder="Escriba algo aquí..." />
+    <input type="checkbox" class="check" id="check" />
+    <label for="checkbox" class="label"> Acepta terminos y condiciones </label>
 
-
-
+    <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+    <hr />
+    <br />
+    <div class="element" id="element"></div>
+    <br>
+    <br>
+    <hr />
+    <br />
+    <table class="table" border="1">
+  <thead>
+    <tr>
+      <th>Selector</th>
+      <th>Descripción</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr><td>:active</td><td>Selecciona un elemento cuando el usuario lo activa (por ejemplo, con un clic).</td></tr>
+    <tr><td>:any-link</td><td>Selecciona los estados :link y :visited de un enlace.</td></tr>
+    <tr><td>:blank</td><td>Selecciona un elemento &lt;input&gt; cuyo valor de entrada está vacío.</td></tr>
+    <tr><td>:checked</td><td>Selecciona un botón de opción o casilla de verificación en el estado que determines.</td></tr>
+    <tr><td>:current</td><td>Selecciona el elemento que se muestra en ese momento, o un ancestro de ese elemento.</td></tr>
+    <tr><td>:default</td><td>Selecciona uno o más elementos de interfaz de usuario cuyo valor es el predeterminado de entre un conjunto de elementos similares.</td></tr>
+    <tr><td>:dir</td><td>Selecciona un elemento según su direccionalidad (valor del atributo dir de HTML o propiedad direction de CSS).</td></tr>
+    <tr><td>:disabled</td><td>Selecciona elementos de la interfaz de usuario que están en estado inactivo.</td></tr>
+    <tr><td>:empty</td><td>Selecciona un elemento que no tiene elementos hijo, excepto por algún espacio en blanco opcional.</td></tr>
+    <tr><td>:enabled</td><td>Selecciona elementos de la interfaz de usuario que están en estado activo.</td></tr>
+    <tr><td>:first</td><td>En Paged Media, selecciona la primera página.</td></tr>
+    <tr><td>:first-child</td><td>Selecciona el primero entre elementos hermanos.</td></tr>
+    <tr><td>:first-of-type</td><td>Selecciona el primero entre un tipo determinado de elementos hermanos.</td></tr>
+    <tr><td>:focus</td><td>Selecciona el elemento que tiene el foco.</td></tr>
+    <tr><td>:focus-visible</td><td>Selecciona el elemento que tiene el foco cuando el foco tiene que estar visible para el usuario.</td></tr>
+    <tr><td>:focus-within</td><td>Selecciona el elemento que tiene el foco y el elemento con un descendiente que tiene el foco.</td></tr>
+    <tr><td>:future</td><td>Selecciona los elementos que van después del elemento en curso.</td></tr>
+    <tr><td>:hover</td><td>Selecciona un elemento cuando el usuario interactúa con él.</td></tr>
+    <tr><td>:indeterminate</td><td>Selecciona elementos de interfaz de usuario cuyo valor está en un estado no determinado, por lo general se trata de casillas de verificación.</td></tr>
+    <tr><td>:in-range</td><td>Selecciona un elemento cuyo valor se encuentra dentro de un rango de valores determinado.</td></tr>
+    <tr><td>:invalid</td><td>Selecciona un elemento, como por ejemplo un &lt;input&gt;, cuyo estado es no válido.</td></tr>
+    <tr><td>:lang</td><td>Selecciona un elemento según el idioma (valor del atributo lang de HTML).</td></tr>
+    <tr><td>:last-child</td><td>Selecciona el último elemento de entre sus elementos hermanos.</td></tr>
+    <tr><td>:last-of-type</td><td>Selecciona el último de entre los elementos hermanos de un tipo determinado.</td></tr>
+    <tr><td>:left</td><td>En Paged Media selecciona las páginas de la izquierda.</td></tr>
+    <tr><td>:link</td><td>Selecciona los enlaces no visitados.</td></tr>
+    <tr><td>:local-link</td><td>Selecciona los enlaces que dirigen a páginas que se encuentran en la misma página web que el documento activo.</td></tr>
+    <tr><td>:is()</td><td>Selecciona cualquiera de los selectores de la lista de selección que se pase como valor de este selector.</td></tr>
+    <tr><td>:not</td><td>Selecciona elementos que otros selectores no han seleccionado antes y que se han pasado como valor de este selector.</td></tr>
+    <tr><td>:nth-child</td><td>Selecciona elementos de entre una lista de elementos hermanos. Los elementos hermanos están relacionados por una fórmula del tipo an + b (por ejemplo, 2n + 1 seleccionaría los elementos 1, 3, 5, 7, etc., es decir, todos los impares).</td></tr>
+    <tr><td>:nth-of-type</td><td>Selecciona elementos de entre una lista de elementos hermanos de un tipo determinado (por ejemplo, todos los elementos &lt;p&gt;). Los elementos hermanos están relacionados por una fórmula del tipo an + b (por ejemplo, 2n + 1 relacionaría en la secuencia ese tipo de elementos, los números 1, 3, 5, 7, etc., es decir, todos los impares).</td></tr>
+    <tr><td>:nth-last-child</td><td>Selecciona elementos de entre una lista de elementos hermanos, contando hacia atrás desde el final. Los elementos hermanos están relacionados por una fórmula del tipo an+b (por ejemplo, 2n + 1 relacionaría en la secuencia el último de los elementos de este tipo con el que se encuentra dos por delante, y así sucesivamente. Todos los impares, contando desde el final).</td></tr>
+    <tr><td>:nth-last-of-type</td><td>Selecciona los elementos de entre una lista de elementos hermanos que son de un tipo determinado (por ejemplo, elementos &lt;p&gt;), contando hacia atrás desde el final. Los elementos hermanos están relacionados por una fórmula del tipo an+b (por ejemplo, 2n + 1 relacionaría en la secuencia el último de los elementos de ese tipo con el que se encuentra dos por delante, y así sucesivamente. Todos los impares, contando desde el final).</td></tr>
+    <tr><td>:only-child</td><td>Selecciona un elemento que no tiene elementos hermanos.</td></tr>
+    <tr><td>:only-of-type</td><td>Selecciona un elemento que es el único de su tipo entre sus elementos hermanos.</td></tr>
+    <tr><td>:optional</td><td>Selecciona los elementos de formulario que son innecesarios.</td></tr>
+    <tr><td>:out-of-range</td><td>Selecciona un elemento cuyo valor está fuera de rango.</td></tr>
+    <tr><td>:past</td><td>Selecciona los elementos que se encuentran antes del elemento activo.</td></tr>
+    <tr><td>:placeholder-shown</td><td>Selecciona el elemento de entrada que muestra texto de marcador de posición.</td></tr>
+    <tr><td>:playing</td><td>Selecciona un elemento que representa un audio, un vídeo o un recurso similar que se puede «reproducir» o «pausar», cuando el elemento está «en reproducción».</td></tr>
+    <tr><td>:paused</td><td>Selecciona un elemento que representa un audio, un vídeo o un recurso similar que se puede «reproducir» o «pausar» cuando el elemento está «pausado».</td></tr>
+    <tr><td>:read-only</td><td>Selecciona los elementos que el usuario no puede modificar.</td></tr>
+    <tr><td>:read-write</td><td>Selecciona los elementos que el usuario puede modificar.</td></tr>
+    <tr><td>:required</td><td>Selecciona los elementos de formulario que son necesarios.</td></tr>
+    <tr><td>:right</td><td>En Paged Media selecciona las páginas de la derecha.</td></tr>
+    <tr><td>:root</td><td>Selecciona un elemento que es la raíz del documento.</td></tr>
+    <tr><td>:scope</td><td>Selecciona cualquier elemento de ámbito.</td></tr>
+    <tr><td>:valid</td><td>Selecciona un elemento como &lt;input&gt;, en un estado válido.</td></tr>
+    <tr><td>:target</td><td>Selecciona el elemento al que apunta la URL activa (es decir, cuyo ID coincide con el identificador de fragmento de la URL activo).</td></tr>
+    <tr><td>:visited</td><td>Selecciona los enlaces visitados.</td></tr>
   </body>
+  </table>
 </html>

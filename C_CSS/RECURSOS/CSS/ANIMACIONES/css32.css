@@ -4,70 +4,176 @@
   box-sizing: border-box;
 }
 
-body{
+/* La pseudo-clase :hover en CSS se utiliza para aplicar estilos a un elemento cuando el usuario pasa el cursor del mouse sobre él. Permite crear efectos visuales interactivos, como cambiar colores, tamaños o mostrar animaciones, mejorando la experiencia del usuario al interactuar con la página. */
+
+body {
   font-family: Arial, Helvetica, sans-serif;
 }
 
-.button{
+.button {
   margin: 10px;
   display: block;
   color: white;
   text-decoration: none;
   padding: 20px 0;
+  margin: 10px auto;
   text-align: center;
   width: 200px;
-  transition: 2s all;
+  transition: 1s all;
 }
 
-.btn-red{
+.btn-red {
   background-color: red;
 }
 
-.btn-blue{
+.btn-blue {
   background-color: blue;
 }
 
-.btn-tomato{
+.btn-tomato {
   background-color: tomato;
 }
 
-.btn-pink{
+.btn-pink {
   background-color: pink;
 }
 
-.btn-crimson{
+.btn-crimson {
   background-color: crimson;
 }
 
-.button:hover{
+.button:hover {
   color: black;
   text-decoration: none;
   transform: scale(1.2);
 }
 
-.btn-blue:hover + .btn-tomato{
+.btn-crimson:active {
+  background-color: cyan;
+  color: crimson;
+}
+
+
+/* La pseudo-clase :hover en CSS se utiliza para aplicar estilos a un elemento cuando el usuario pasa el cursor del mouse sobre él. Permite crear efectos visuales interactivos, como cambiar colores, tamaños o mostrar animaciones, mejorando la experiencia del usuario al interactuar con la página. */
+
+.btn-blue:hover+.btn-tomato {
+  /* Cuando el botón azul está en hover, el siguiente .btn-tomato cambia de color y margen */
   background-color: black;
   margin-top: 50px;
 }
 
-.btn-tomato:hover ~ .btn-tomato{
+.btn-tomato:hover~.btn-tomato {
+  /* Cuando cualquier .btn-tomato está en hover, todos los .btn-tomato siguientes cambian de color, margen y se mueven a la derecha */
   background-color: black;
   margin-top: 50px;
   transform: translate(100%);
 }
 
-.btn-red:hover ~ *{
+.btn-red:hover~* {
+  /* Cuando el botón rojo está en hover, todos los elementos hermanos siguientes cambian de color y margen */
   background-color: brown;
   margin-top: 50px;
 }
 
-.element{
-    width: 200px;
-    height: 200px;
-    margin: 100px;
-    background-color: slateblue;
-    margin: 80px auto;
-    box-shadow: 10px -10px 10px lightblue, 100px 100px 10px salmon;
-    border-radius: 50px 100px 40px 30px;
-    
+/* Cuando se habla de "siguientes" en los selectores de relación como + (hermano adyacente) y ~ (hermanos generales), se refiere a elementos hermanos (siblings) en el DOM, es decir, elementos que están al mismo nivel dentro del mismo contenedor/padre.
+.a.b    — Selecciona elementos que tienen ambas clases a la vez.
+.a .b   — Selecciona todos los descendientes .b dentro de .a (cualquier nivel).
+.a > .b — Selecciona los hijos directos .b de .a.
+.a + .b — Selecciona el hermano adyacente .b que está inmediatamente después de .a.
+.a ~ .b — Selecciona todos los hermanos siguientes .b que están después de .a (no necesariamente inmediatos).
+ */
+
+.element {
+  width: 200px;
+  height: 200px;
+  margin: 100px;
+  background-color: slateblue;
+  margin: 80px auto;
+  box-shadow: 10px -10px 10px lightblue, 100px 100px 10px salmon;
+  border-radius: 50px 100px 40px 30px;
+  transition: .3s all;
+
+}
+
+.element:hover {
+  background-color: lightblue;
+  box-shadow: 10px -10px 10px salmon, 100px 100px 10px lightblue;
+  transform: rotate(360deg);
+}
+
+.element:target {
+  background-color: lightcoral;
+  box-shadow: 10px -10px 10px lightblue, 100px 100px 10px salmon;
+  transform: rotate(360deg);
+}
+
+.input {
+  display: block;
+  margin: 20px;
+  padding: 16px;
+  font-size: inherit;
+  font-family: inherit;
+}
+
+.input:focus {
+  outline: none;
+  border: 2px solid blue;
+  box-shadow: 0 0 10px blue;
+}
+
+.input:focus~.label {
+  color: blue;
+  font-weight: bold;
+}
+
+.check {
+  display: inline-block;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  margin-left: 20px;
+}
+
+.label {
+  background-color: crimson;
+  color: white;
+}
+
+.check:checked+.label {
+  background-color: blue;
+  color: white;
+  font-weight: bold;
+  transition: all .3s;
+}
+
+.check:checked {
+  transform: scale(2);
+}
+
+.table {
+  margin: 30px auto;
+  border-collapse: collapse;
+  min-width: 400px;
+  font-family: Arial, Helvetica, sans-serif;
+  background: #fff;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+}
+
+.table th {
+  background: #507687;
+  color: #fff;
+  padding: 10px 16px;
+  font-size: 1.1em;
+  text-align: left;
+}
+
+.table td {
+  padding: 8px 14px;
+  border: 1px solid #384B70;
+  color: #384B70;
+  background: #FCFAEE;
+  font-size: 1em;
+}
+
+.table tr:nth-child(even) td {
+  background: #f3f6fa;
 }

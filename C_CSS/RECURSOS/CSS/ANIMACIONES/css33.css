@@ -1,0 +1,143 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/* Los pseudo-elementos en CSS se usan para aplicar estilos a partes específicas de un elemento sin necesidad de modificar el HTML. Permiten seleccionar y estilizar fragmentos como la primera línea, la primera letra, insertar contenido antes o después de un elemento, entre otros */
+
+.element {
+    width: max-content;
+    padding: 20px;
+    background-color: steelblue;
+    color: white;
+    font-size: 30px;
+    margin: 60px;
+}
+
+.element::first-line {
+    color: brown;
+    font-weight: bold;
+}
+
+.element::first-letter {
+    color: red;
+    font-size: 50px;
+    font-weight: bold;
+}
+
+.element::after {
+    content: "Después del elemento";
+    display: block;
+    color: black;
+    font-size: 20px;
+    width: 300px;
+    height: 300px;
+    background-color: lightgreen;
+}
+
+.element::before {
+    content: "Antes del elemento";
+    display: block;
+    color: black;
+    font-size: 20px;
+    background-color: lightcyan;
+}
+
+.ejemplo-pseudo {
+  font-size: 2em;
+  color: #333;
+  margin: 40px;
+  padding: 20px;
+  background: #e0eaff;
+  border-radius: 10px;
+}
+
+.ejemplo-pseudo::before {
+  content: "★★ ";
+  color: orange;
+  font-size: 1.2em;
+}
+
+.ejemplo-pseudo::after {
+  content: " \2605★";
+  color: orange;
+  font-size: 1.2em;
+}
+
+.ejemplo-pseudo::first-letter {
+  color: #B8001F;
+  font-size: 2em;
+  font-weight: bold;
+}
+
+.input {
+    display: block;
+    margin: 20px;
+    padding: 16px;
+    font-size: inherit;
+    font-family: inherit;
+}
+
+.input:focus {
+    outline: none;
+    border: 2px solid blue;
+    box-shadow: 0 0 10px blue;
+}
+
+.input:focus~.label {
+    color: blue;
+    font-weight: bold;
+}
+
+.check {
+    display: inline-block;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-left: 20px;
+}
+
+.label {
+    background-color: crimson;
+    color: white;
+}
+
+.check:checked+.label {
+    background-color: blue;
+    color: white;
+    font-weight: bold;
+    transition: all .3s;
+}
+
+.check:checked {
+    transform: scale(2);
+}
+
+.table {
+    margin: 30px auto;
+    border-collapse: collapse;
+    min-width: 400px;
+    font-family: Arial, Helvetica, sans-serif;
+    background: #fff;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+}
+
+.table th {
+    background: #507687;
+    color: #fff;
+    padding: 10px 16px;
+    font-size: 1.1em;
+    text-align: left;
+}
+
+.table td {
+    padding: 8px 14px;
+    border: 1px solid #384B70;
+    color: #384B70;
+    background: #FCFAEE;
+    font-size: 1em;
+}
+
+.table tr:nth-child(even) td {
+    background: #f3f6fa;
+}
