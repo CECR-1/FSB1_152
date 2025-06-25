@@ -16,11 +16,13 @@
 .item{
     /* width: 100px;
     height: 100px; */
-    color: #fff;
+    color: black;
+    background-color: white;
     font-size: 2em;
+    font-weight: bold;
     display: flex;
     align-items: center;
-    justify-content: center;
+    /* justify-content: center; */
     background-size: contain;
     background-position: center;
 }

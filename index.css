@@ -1,0 +1,53 @@
+body {
+    background: #FCFAEE;
+    color: #384B70;
+    font-family: 'Segoe UI', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+}
+
+h1 {
+    color: #B8001F;
+    text-align: center;
+    margin-top: 40px;
+    margin-bottom: 20px;
+    letter-spacing: 2px;
+}
+
+hr {
+    border: none;
+    border-top: 3px solid #507687;
+    margin: 18px 0;
+}
+
+ol {
+    background: #507687;
+    max-width: 600px;
+    margin: 30px auto 0 auto;
+    padding: 24px 32px;
+    border-radius: 12px;
+    box-shadow: 0 2px 12px rgba(56,75,112,0.08);
+    list-style-type: upper-roman;
+}
+
+ol li {
+    margin: 16px 0;
+    font-size: 1.15rem;
+    color: #FCFAEE;
+}
+
+a {
+    color: #FCFAEE;
+    background: #B8001F;
+    padding: 6px 16px;
+    border-radius: 6px;
+    text-decoration: none;
+    transition: background 0.2s, color 0.2s;
+    font-weight: bold;
+}
+
+a:hover {
+    background: #384B70;
+    color: #FCFAEE;
+}
