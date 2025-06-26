@@ -1,0 +1,100 @@
+Core Modules de Node.js
+
+1. assert
+   Proporciona un conjunto de funciones de aserción útiles para pruebas.
+
+2. buffer
+   Permite manejar buffers que contienen datos binarios.
+
+3. child_process
+   Permite crear y controlar procesos secundarios.
+
+4. cluster
+   Permite dividir un proceso de Node.js en múltiples trabajadores para aprovechar sistemas multicore.
+
+5. console
+   Proporciona una consola de depuración simple.
+
+6. crypto
+   Proporciona funcionalidades criptográficas.
+
+7. dgram
+   Implementa sockets de datagramas UDP.
+
+8. dns
+   Proporciona funciones de resolución de nombres y búsquedas DNS.
+
+9. events
+   Proporciona una API para gestionar eventos.
+
+10. fs
+    Proporciona una API para interactuar con el sistema de archivos.
+
+11. http
+    Implementa un cliente/servidor HTTP.
+
+12. http2
+    Implementa un cliente/servidor HTTP/2.
+
+13. https
+    Implementa un cliente/servidor HTTPS.
+
+14. net
+    Proporciona una API de red asíncrona.
+
+15. os
+    Proporciona métodos y propiedades relacionadas con el sistema operativo.
+
+16. path
+    Proporciona utilidades para trabajar con rutas de archivos y directorios.
+
+17. perf_hooks
+    Permite la recopilación de métricas de rendimiento.
+
+18. process
+    Proporciona información sobre y control sobre el proceso actual de Node.js.
+
+19. querystring
+    Proporciona utilidades para analizar y formatear cadenas de consulta URL.
+
+20. readline
+    Proporciona una interfaz para leer datos de un flujo legible línea por línea.
+
+21. repl
+    Implementa un bucle Read-Eval-Print (REPL) que está disponible como programa independiente o integrable en otras aplicaciones.
+
+22. stream
+    Interfaz abstracta para trabajar con datos en streaming.
+
+23. string_decoder
+    Proporciona una API para decodificar objetos Buffer en cadenas.
+
+24. timers
+    Proporciona funciones para programar la ejecución de funciones después de un período determinado.
+
+25. tls
+    Implementa los protocolos Transport Layer Security (TLS) y Secure Socket Layer (SSL).
+
+26. tty
+    Proporciona funcionalidad utilizada para realizar operaciones de E/S en un terminal de texto.
+
+27. url
+    Proporciona utilidades para la resolución y análisis de URLs.
+
+28. util
+    Soporta las necesidades de las APIs internas de Node.js, útil para desarrolladores de aplicaciones y módulos también.
+
+29. v8
+    Expone APIs específicas para la versión de V8 integrada en el binario de Node.js.
+
+30. vm
+    Permite compilar y ejecutar código dentro de contextos del Máquina Virtual V8.
+
+31. wasi
+    Implementa la especificación del WebAssembly System Interface (WASI).
+
+32. worker_threads
+    Permite el uso de hilos que ejecutan JavaScript en paralelo.
+
+33. zlib
+    Proporciona funcionalidad de compresión y descompresión.
